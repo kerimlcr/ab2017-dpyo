@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="next" xml:lang="cs">
+
+  <info>
+    <link type="guide" xref="index#main" group="#first"/>
+    <revision pkgversion="1.8" date="2016-12-01" status="candidate"/>
+    <credit type="author copyright">
+      <name>Ole Aamot</name>
+      <email>ole@src.gnome.org</email>
+    </credit>
+    
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>    
+    <desc>Jak vyhledat stanici internetového rádia podle místa.</desc>
+  </info>
+
+  <title>Následující</title>
+
+  <p>Na poslech následující podporované stanice rádia se můžete v <app>GIRL</app> přepnout tlačítkem „Následující“.</p>
+  
+  <p>Usnadňuje to změnu stanice rádia, když už vás ta současná stanice nudí a když si uvědomíte, že vás aktuální rádio začalo nudit a chcete poslouchat další stanici.</p>
+
+  <p>Na jinou stanici rádia se můžete dostat také kliknutím na „Stanice“ nebo vyhledáním rádia podle místa kliknutím na „Hledat“.</p>
+
+  <title><media type="image" mime="image/png" src="media/girl-next-station.png"/> Následující stanice</title>
+  
+</page>

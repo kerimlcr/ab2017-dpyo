@@ -1,0 +1,9 @@
+The latest version number is available as a TXT record in DNS:
+
+    $ dig -t TXT latest.girl.software
+    ...
+    latest.girl.software.	3600	IN	TXT	"7.0.0"
+    ...
+
+Tarball with the latest version of the GIRL software is
+available from https://download.gnome.org/sources/girl/

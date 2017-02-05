@@ -1,0 +1,16 @@
+Source: girl
+Section: gnome
+Priority: optional
+Maintainer: Ali Guven Odabasioglu <agodabasioglu@gmail.com>
+Build-Depends: debhelper (>=9),autotools-dev, libgtk2.0-dev, libglib2.0-dev, libgnome2-dev, libgnomeui-dev, libxml2-dev, libgnomevfs2-dev, libgstreamer1.0-dev, libgstreamer-plugins-base1.0-dev, intltool, itstool
+Standards-Version: 3.9.6
+Homepage: https://wiki.gnome.org/Apps/Girl
+#Vcs-Git: git://anonscm.debian.org/collab-maint/girl.git
+#Vcs-Browser: http://anonscm.debian.org/?p=collab-maint/girl.git;a=summary
+
+Package: girl
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libgtk2.0-0, libglib2.0-0, libgnome2-0, libgnomeui-0, libxml2, libgnomevfs2-0, libgstreamer1.0-0, libgstreamer-plugins-base1.0-0
+Description: GNOME Internet Radio Locator
+ GNOME Internet Radio Locator allows users to easily locate live radio
+ programs on radio broadcasters on the Internet.

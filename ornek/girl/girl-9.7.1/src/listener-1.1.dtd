@@ -1,0 +1,6 @@
+<!ELEMENT listener EMPTY >
+<!ATTLIST listener name CDATA #REQUIRED >
+<!ATTLIST listener mail CDATA #REQUIRED >
+<!ATTLIST listener uri CDATA #REQUIRED >
+<!ATTLIST listener location CDATA #REQUIRED >
+<!ATTLIST listener version NMTOKEN #REQUIRED >

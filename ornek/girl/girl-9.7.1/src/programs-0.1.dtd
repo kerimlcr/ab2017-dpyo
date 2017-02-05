@@ -1,0 +1,17 @@
+<!ELEMENT description ( #PCDATA ) >
+<!ELEMENT frequency ( #PCDATA ) >
+<!ATTLIST frequency uri CDATA #REQUIRED >
+<!ELEMENT location ( lat | lon )* >
+<!ELEMENT girl ( program+ ) >
+<!ATTLIST girl version NMTOKEN #REQUIRED >
+<!ELEMENT program ( description | frequency | location | stream | uri | rank | type | release)* >
+<!ATTLIST program id NMTOKEN #REQUIRED >
+<!ATTLIST program name CDATA #REQUIRED >
+<!ELEMENT archive EMPTY >
+<!ATTLIST archive bitrate NMTOKEN #REQUIRED >
+<!ATTLIST archive channels NMTOKEN #IMPLIED >
+<!ATTLIST archive mime CDATA #REQUIRED >
+<!ATTLIST archive samplerate NMTOKEN #REQUIRED >
+<!ATTLIST archive uri CDATA #REQUIRED >
+<!ATTLIST archive codec CDATA #REQUIRED >
+<!ELEMENT uri ( #PCDATA ) >

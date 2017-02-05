@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="exit" xml:lang="es">
+
+  <info>
+    <link type="guide" xref="index#main" group="#first"/>
+    <revision pkgversion="1.8" date="2016-12-01" status="candidate"/>
+    <credit type="author copyright">
+      <name>Ole Aamot</name>
+      <email>ole@src.gnome.org</email>
+    </credit>
+    
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>    
+    <desc>Search for Internet radio stations by location.</desc>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Andy Daniel Cruz Ramos</mal:name>
+      <mal:email>god_of_war_2@hotmail.com</mal:email>
+      <mal:years>2016</mal:years>
+    </mal:credit>
+  </info>
+
+  <title>Salir</title>
+
+  <p>Es posible salir de <app>GIRL</app> usando el botón «Salir».</p>
+
+  <title>
+    <media type="image" mime="image/png" src="media/girl-exit.png"/>
+    GNOME Internet Radio Locator
+  </title>
+
+  <p>However, in order to stop streaming the radio station, you must click on "Stop" first.</p>
+  
+</page>

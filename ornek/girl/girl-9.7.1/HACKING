@@ -1,0 +1,40 @@
+Introduction to girl-list (http://mail.gnome.org/listinfo/girl-list):
+
+The initial work on this program began in 2002 at Norwegian Computing
+Center (http://www.nr.no/) and PING, a computer club at University of
+Oslo (http://www.ping.uio.no/).  Work on GIRL continued in 2014 after
+a visit to SIPB (http://sipb.mit.edu/) at MIT, reached version 1.0 in
+2015, and continues in 2016.
+
+The GNOME Internet Radio Locator is currently available as a GNOME
+desktop program with source code released under GNU General Public
+License version 2.
+
+The Git source code repository is at https://git.gnome.org/girl and
+the Wiki page is available at http://wiki.gnome.org/Apps/Girl
+
+You are welcome to contribute to the GNOME Internet Radio Locator code
+either by translating Girl into your language and contributing patches
+and adding new Internet radio stations in src/girl.xml
+
+The most recent list of supported Internet radio stations are also
+available in XML format from http://girl.software/girl.xml
+
+The mailing list for discussing this program is girl-list@gnome.org --
+see http://mail.gnome.org/listinfo/girl-list for subscription and
+https://mail.gnome.org/archives/girl-list/ for mailing list archives.
+
+Any contribution is welcome and always credited in AUTHORS and THANKS.
+
+To enable debugging messages, modifiy the CC compilation definition flag
+from -DGIRL_DEBUG=1 to -DGIRL_DEBUG=0 in src/Makefile.am allthough it is
+not be necessary, only if you want to debug personal station definitions
+in $HOME/.girl/girl.xml
+
+See src/girl.xml (or ${PREFIX}/share/girl/girl.xml where PREFIX is the
+install path specified as ./configure --prefix=${PREFIX}, see INSTALL)
+for the GIRL radio station format.
+
+
+Enjoy Internet radio,
+Ole Aamot <ole@src.gnome.org>

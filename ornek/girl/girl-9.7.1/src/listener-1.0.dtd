@@ -1,0 +1,14 @@
+<!ELEMENT location ( #PCDATA ) >
+<!ELEMENT listener ( location+ ) >
+<!ATTLIST listener name CDATA #REQUIRED >
+<!ATTLIST listener mail CDATA #REQUIRED >
+<!ATTLIST listener uri CDATA #REQUIRED >
+<!ATTLIST listener location CDATA #REQUIRED >
+<!ELEMENT location EMPTY >
+<!ATTLIST location name CDATA #REQUIRED >
+<!ATTLIST location link CDATA #REQUIRED >
+<!ATTLIST location glat NMTOKEN #REQUIRED >
+<!ATTLIST location glon NMTOKEN #REQUIRED >
+<!ATTLIST location grad NMTOKEN #REQUIRED >
+<!ATTLIST location vote NMTOKEN #REQUIRED >
+<!ATTLIST location rack NMTOKEN #REQUIRED >

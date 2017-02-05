@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE listener SYSTEM "listener-1.0.dtd">
+
+<girl version="0.6">
+
+  <listener name="oka" mail="oka+girl@oka.no" uri="http://linux.oka.no:8000/" location="Oslo, Norway" release="1.0" description="Maintainer of GNOME Internet Radio Locator" />
+
+</girl>

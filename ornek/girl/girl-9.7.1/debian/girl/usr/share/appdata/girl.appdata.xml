@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <id type="desktop">girl.desktop</id>
+  <name>GNOME Internet Radio Locator</name>
+  <summary>Listen to and record from Internet radio</summary>
+  <licence>CC0</licence>
+  <description>
+    <p>GIRL, the GNOME Internet Radio Locator program, allows users to easily find and record live radio programs on radio broadcasters on the Internet.</p>
+    <p xml:lang="bs">Girl, Gnomov pronalazač internet radia (GNOME Internet Radio Locator), omogućava korisnicima da s lakoćom nađu i da snimaju radio programe uživo na radio stanicama koje emituju preko interneta.</p>
+    <p xml:lang="cs">GIRL, GNOME Internet Radio Locator (naladění internetových rádií v GNOME) je aplikace, pomocí které si uživatel může snadno najít, a připadně i nahrát, živé vysílání rádií na Internetu.</p>
+    <p xml:lang="de">Girl, das GNOME Internet-Radio-Ortungsprogramm, ermöglicht es Benutzern Live-Radioprogramme von Sendern leicht im Internet zu finden und aufzuzeichnen.</p>
+    <p xml:lang="el">Το GIRL, το πρόγραμμα εντοπισμού διαδικτυακών ραδιοφώνων του GNOME, επιτρέπει στους χρήστες να βρουν και να εγγράψουν εύκολα ραδιοφωνικά προγράμματα των ραδιοφωνικών σταθμών.</p>
+    <p xml:lang="es">GIRL, el programa para buscar emisoras de radio de Internet, permite a los usuarios buscar y grabar fácilmente programas de radio en vivo o en difusión de Internet.</p>
+    <p xml:lang="fr">GIRL, le programme GNOME de recherche de radios Internet, permet de trouver facilement des programmes radio en direct diffusés sur Internet et de les enregistrer.</p>
+    <p xml:lang="hu">A GIRL, a GNOME Internetes rádió felderítő lehetővé teszi a felhasználóknak az Interneten lévő rádió műsorszórók élő rádióprogramjainak könnyű megtalálását és rögzítését.</p>
+    <p xml:lang="is">GIRL, eða GNOME Internet Radio Locator forritið, gerir notendum kleift að finna auðveldlega, hlusta og taka upp efni frá útvarpsstöðvum í beinni útsendingu á internetinu.</p>
+    <p xml:lang="pl">GIRL jest programem do wykrywania i nagrywania internetowych stacji radiowych dla środowiska GNOME.</p>
+    <p xml:lang="pt">GIRL, o programa GNOME de localização de rádio, permite aos utilizadores encontrar e gravar facilmente programas de rádio ao vivo em emissoras na Internet.</p>
+    <p xml:lang="pt_BR">GIRL, o programa localizador de rádio na Internet para o GNOME (do inglês, GNOME Internet Radio Locator), permite que os usuários localizem e gravem facilmente programas de rádio ao vivo em transmissões de rádio na Internet.</p>
+    <p xml:lang="sr">Гирл, Гномов проналазач интернет радиа (GNOME Internet Radio Locator), омогућава корисницима да с лакоћом нађу и да снимају радио програме уживо на радио станицама које емитују преко интернета.</p>
+    <p xml:lang="sr@latin">Girl, Gnomov pronalazač internet radia (GNOME Internet Radio Locator), omogućava korisnicima da s lakoćom nađu i da snimaju radio programe uživo na radio stanicama koje emituju preko interneta.</p>
+    <p xml:lang="sv">GIRL, GNOME:s internetradioletare, låter användare lätt hitta direktsända radioprogram från radiosändningar på internet.</p>
+    <p xml:lang="tr">GIRL, GNOME Internet Radyo Bulucu programı, kullanıcıların İnternetteki radyo yayıncılarının canlı radyo programlarını kolayca bulmalarına olanak tanır.</p>
+    <p>GIRL is developed for the GNOME desktop and requires one audio helper such as Totem to be installed for playback and streamripper to be installed for recording live radio streams of supported radio stations.</p>
+    <p xml:lang="bs">Girl je napravljen za Gnomovu radnu površ i zahtjeva audio pomoćnika kao što je Totem za puštanje i izdvajača tokova za uživo snimanje radio tokova podržanih radio stanica.</p>
+    <p xml:lang="cs">GIRL je vyvíjen pro pracovní prostředí GNOME a vyžaduje, aby byl nainstalován podpůrný program pro práci se zvukem, jako je Totem, který hudbu přehrává a další program, který umí u podporovaných stanic živé vysílání nahrávat.</p>
+    <p xml:lang="de">GIRL wird für die GNOME-Arbeitsumgebung entwickelt und benötigt ein Audio-Hilfsprogramm für die Wiedergabe (zum Beispiel Totem) und Streamripper für die Aufzeichnung der Datenströme der unterstützten Radiostationen.</p>
+    <p xml:lang="el">Το GIRL έχει αναπτυχθεί για το GNOME και απαιτεί να είναι εγκατεστημένο ένα πρόγραμμα αναπαραγωγής ήχου όπως το Totem και ένα πρόγραμμα εγγραφής ροών για εγγραφή ζωντανών αναμεταδώσεων των υποστηριζόμενων ραδιοφώνων.</p>
+    <p xml:lang="es">GIRL está desarrollado para el escritorio GNOME y necesita que estén instalados un programa de sonido auxiliar, como Totem, para reproducir y un capturador de flujos para grabar los flujos de radio de las emisoras de radio soportadas.</p>
+    <p xml:lang="fr">GIRL est développé pour le bureau GNOME et demande la présence d'un lecteur audio tel que Totem pour l'écoute, et la présence de streamripper pour l'enregistrement de flux radios en direct des stations radios prises en charge.</p>
+    <p xml:lang="hu">A GIRL programot a GNOME asztalhoz fejlesztették, és a lejátszáshoz egy telepített hangsegítőt igényel, mint például a Totem, illetve a támogatott rádióállomások élő hangfolyamának rögzítéséhez egy hangfolyam feldolgozó telepítése szükséges.</p>
+    <p xml:lang="is">GIRL er þróað fyrir GNOME skjáborðsumhverfið og krefst einhverra hjálparforrita á borð við Totem, sem þarf fyrir afspilun, og streamripper svo hægt sé að hljóðrita útvarpsstrauma frá studdum netútvarpsstöðvum.</p>
+    <p xml:lang="pl">Program GIRL został zaprojektowany dla platformy GNOME i wymaga zainstalowania co najmniej jednego programu pomocniczego do odtwarzania dźwięku, takiego jak Totem, oraz programu streamripper do nagrywania.</p>
+    <p xml:lang="pt">O GIRL é desenvolvido para o ambiente GNOME e reuqer um ajudante áudio instalado, tal como o Totem, para reprodução e o streamripper para gravação de fluxos de rádio ao vivo de estações de rádio suportadas.</p>
+    <p xml:lang="pt_BR">GIRL é desenvolvido para o ambiente GNOME e requer que um auxiliar de áudio, como o Totem, esteja instalado para reprodução e que o streamripper esteja instalado como gravador rádios ao vivo das estações de rádio.</p>
+    <p xml:lang="sr">Гирл је направљен за Гномову радну површ и захтева аудио помоћника као што је Тотем за пуштање и издвајача токова за уживо снимање радио токова подржаних радио станица.</p>
+    <p xml:lang="sr@latin">Girl je napravljen za Gnomovu radnu površ i zahteva audio pomoćnika kao što je Totem za puštanje i izdvajača tokova za uživo snimanje radio tokova podržanih radio stanica.</p>
+    <p xml:lang="sv">GIRL är utvecklat för GNOME-skrivbordet och kräver att en ljudhjälpare som Totem finns installerad för uppspelning, och att streamripper är installerad för att spela in direktsända radioströmmar från radiostationer som stöds.</p>
+    <p xml:lang="tr">GIRL GNOME masaüstü için geliştirilir ve oynatma için Totem gibi bir ses yardımcısına, desteklenen radyo istasyonlarının canlı radyo yayınlarının kaydedilmesi için de streamripper'ın yüklenmesine ihtiyaç duyar.</p>
+    <p>Enjoy listening to and recording from supported Internet Radio stations in GIRL.</p>
+    <p xml:lang="bs">Uživajte slušajući i snimajući podržane Internet radio stanice u Girlu.</p>
+    <p xml:lang="cs">Uživejte si poslech a nahrávání z podporovaných internetových rádií v aplikaci GIRL.</p>
+    <p xml:lang="de">Viel Spaß beim Hören und Aufzeichenen der unterstützten Internet-Radiostationen in GIRL.</p>
+    <p xml:lang="el">Απολαύστε την ακρόαση και εγγραφή από τους υποστηριζόμενους διαδικτυακούς ραδιοφωνικούς σταθμούς στο GIRL.</p>
+    <p xml:lang="es">Disfrute escuchando y grabando desde las emisoras de radio de Internet soportadas en GIRL.</p>
+    <p xml:lang="fr">Appréciez l'écoute et l'enregistrement des stations Radio Internet prises en charges par GIRL.</p>
+    <p xml:lang="hu">Élvezze a műsorok hallgatását, és rögzítse azokat a GIRL programban támogatott Internetes rádióállomásokból.</p>
+    <p xml:lang="is">Njóttu þess að hlusta á og taka upp efni af studdum netútvarpsstöðvum með GIRL.</p>
+    <p xml:lang="pl">Ciesz się radiem internetowym w programie GIRL.</p>
+    <p xml:lang="pt">Ouça e grave de estações de rádio da Internet suportadas pelo GIRL.</p>
+    <p xml:lang="pt_BR">Curta ouvir e gravar músicas de estações de rádio na Internet que GIRL tem suporte.</p>
+    <p xml:lang="sr">Уживајте слушајући и снимајући подржане Интернет радио станице у Гирлу.</p>
+    <p xml:lang="sr@latin">Uživajte slušajući i snimajući podržane Internet radio stanice u Girlu.</p>
+    <p xml:lang="sv">Njut av att lyssna och spela in från internetradiostationer som stöds i GIRL.</p>
+    <p xml:lang="tr">GIRL'de desteklenen İnternet Radyo istasyonlarını dinleme ve kaydetme keyfini sürün.</p>
+  </description>
+  <url type="homepage">https://wiki.gnome.org/Apps/Girl</url>
+  <screenshots>
+    <screenshot type="default">https://git.gnome.org/browse/girl/plain/data/screenshot.png</screenshot>
+  </screenshots>
+  <updatecontact>girl-list@gnome.org</updatecontact>
+</application>
