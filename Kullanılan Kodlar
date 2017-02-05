@@ -1,0 +1,20 @@
+Kaynaktan Orig Klasörü ve Debian klasörü Oluşturma:
+	dh_make -c gpl3 (Paketin lisansını giriyoruz) -s (Paketin ürettiği çıktı S single binary demektir örnektir başka seçenekler de mevcuttur) --createorig (orig.tar.gz kısmını oluşturur) 
+
+Doldurulması zorunlu dosyalar:
+	debian/rules	(debhelperın çalışması ve ek işler yapılır)
+	debian/control	(bağımlılıkları ve meta bilgileri tutar)
+	debian/copyright (lisansları tutar)
+	debian/changelog (dch kullanılarak değiştirilebilir)
+
+Bağımlılıkları control dosyasına göre indirme:
+	sudo mk-build-deps -r (oluşan dosyanın yüklemeden sonra silinmesi için parametre) --install control (control dosyasının yolu )
+
+Debian Paketi oluşturma komutu:
+	debuild -us (imzasız demektir imzamız varsa eklenir) -uc
+
+Oluşturulan paketin izole ortamda testi:
+	(ortamı oluşturma) 	
+	sudo pbuilder --create --distribution jessie (dağıtımın sürümü kararlı kararsız test gibi)
+	(test kısmı)
+	sudo pbuilder --build xyz.dsc (Debian source kontrol dosyasının yolu olmalı burada) 
