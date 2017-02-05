@@ -1,0 +1,143 @@
+# Indonesian translation for girl.
+# Copyright (C) 2015 girl's COPYRIGHT HOLDER
+# This file is distributed under the same license as the girl package.
+# Andika Triwidada <andika@gmail.com>, 2015.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: girl master\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=girl&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2015-01-04 06:30+0000\n"
+"PO-Revision-Date: 2015-01-04 20:26+0700\n"
+"Last-Translator: Andika Triwidada <andika@gmail.com>\n"
+"Language-Team: Indonesian <gnome-l10n-id@googlegroups.com>\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.1\n"
+
+#: ../data/girl.appdata.xml.in.h:1
+msgid ""
+"Girl, the GNOME Internet Radio Locator program, allows users to easily find "
+"live radio programs on radio broadcasters on the Internet."
+msgstr ""
+"Girl, program Pelacak Radio Internet GNOME, memungkinkan pengguna dengan "
+"mudah menemukan program radio siaran langsung pada pemancar radio di "
+"Internet."
+
+#: ../data/girl.appdata.xml.in.h:2
+msgid ""
+"Girl is developed on the GNOME platform and requires at least one audio "
+"helper such as totem to be installed."
+msgstr ""
+"Girl dikembangkan pada platform GNOME dan memerlukan terpasangnya paling "
+"tidak satu pembantu audio seperti misalnya totem."
+
+#: ../data/girl.appdata.xml.in.h:3
+msgid "Enjoy Internet Radio."
+msgstr "Nikmatilah Radio Internet."
+
+#: ../data/girl.desktop.in.in.h:1
+msgid "Internet Radio Locator"
+msgstr "Pelacak Radio Internet"
+
+#: ../data/girl.desktop.in.in.h:2 ../src/girl.c:534
+msgid "Locate Internet Radio Stations"
+msgstr "Temukan Stasiun Radio Internet"
+
+#. Extra keywords that can be used to search for girl in GNOME Shell and Unity
+#: ../data/girl.desktop.in.in.h:4
+msgid "Live;Radio;Program;Station;Locator;"
+msgstr "Langsung;Radio;Program;Stasiun;Pencari;"
+
+#: ../src/girl.c:210 ../src/girl.c:269 ../src/girl.c:368 ../src/girl.c:415
+#, c-format
+msgid "Selected %s in %s: %s"
+msgstr "Dipilih %s dalam %s: %s"
+
+#: ../src/girl.c:320
+#, c-format
+msgid "Selected %s in %s: %s (%f)"
+msgstr "Dipilih %s dalam %s: %s (%f)"
+
+#: ../src/girl.c:461
+#, c-format
+msgid "Selected %s [%s] [%s] [%s]"
+msgstr "Dipilih %s [%s] [%s] [%s]"
+
+#: ../src/girl.c:527
+msgid "translator_credits"
+msgstr "Andika Triwidada <andika@gmail.com>, 2014"
+
+#: ../src/girl.c:534
+msgid "GNOME Internet Radio Locator"
+msgstr "GNOME Pelacak Radio Internet"
+
+#: ../src/girl.c:534
+msgid ""
+"Copyright 2014 Ole Aamot Software\n"
+"Copyright 2002 Free Software Foundation"
+msgstr ""
+"Hak Cipta 2014 Ole Aamot Software\n"
+"Hak Cipta 2002 Free Software Foundation"
+
+#. girl_stream_player(a, user_data);
+#: ../src/girl.c:680
+#, c-format
+msgid "Listening to %s in %s: %s "
+msgstr "Mendengarkan %s dalam %s: %s "
+
+#: ../src/girl.c:702
+#, c-format
+msgid "Recording from %s in %s: %s "
+msgstr "Merekam dari %s dalam %s: %s "
+
+#: ../src/girl.c:756
+#, c-format
+msgid "Archiving %s"
+msgstr "Mengarsipkan %s"
+
+#: ../src/girl-station.c:182
+#, c-format
+msgid ""
+"An error happened trying to play %s\n"
+"Either the file doesn't exist, or you don't have a player for it."
+msgstr ""
+"Terjadi galat saat mencoba memutar %s\n"
+"Mungkin berkas tak ada, atau Anda tak memiliki pemutar untuknya."
+
+#: ../src/girl-station.c:188
+#, c-format
+msgid ""
+"An error happened trying to record %s\n"
+"Either the file doesn't exist, or you don't have a recorder for it."
+msgstr ""
+"Terjadi galat saat mencoba merekam %s\n"
+"Mungkin berkas tak ada, atau Anda tak memiliki perekam untuknya."
+
+#: ../src/girl-station.c:202
+#, c-format
+msgid ""
+"Failed to open URL: '%s'\n"
+"Details: %s"
+msgstr ""
+"Gagal membuka URL: '%s'\n"
+"Rincian: %s"
+
+#: ../src/girl-station.c:235 ../src/girl-station.c:253
+#, c-format
+msgid "Failed to run %s (%i)\n"
+msgstr "Gagal menjalankan %s (%i)\n"
+
+#: ../src/girl-station.c:277
+#, c-format
+msgid ""
+"Failed to open URL: '%s'\n"
+"Status code: %i\n"
+"Details: %s"
+msgstr ""
+"Gagal membuka URL: '%s'\n"
+"Kode status: %i\n"
+"Rincian: %s"

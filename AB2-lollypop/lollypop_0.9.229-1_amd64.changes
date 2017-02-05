@@ -1,0 +1,32 @@
+Format: 1.8
+Date: Sun, 05 Feb 2017 15:35:16 +0300
+Source: lollypop
+Binary: lollypop
+Architecture: source amd64
+Version: 0.9.229-1
+Distribution: unstable
+Urgency: low
+Maintainer: Ali Guven Odabasioglu <agodabasioglu@gmail.com>
+Changed-By: Ali Guven Odabasioglu <agodabasioglu@gmail.com>
+Description:
+ lollypop   - A Music player for GNOME
+Closes: 847937
+Changes:
+ lollypop (0.9.229-1) unstable; urgency=low
+ .
+   * Initial release (Closes: #847937)
+Checksums-Sha1:
+ de3490cc3761e4cdb603f243c8cec46b87ad509a 1089 lollypop_0.9.229-1.dsc
+ cbea39ce58d68a97d627b5598ac67bfadd666728 976664 lollypop_0.9.229.orig.tar.xz
+ 89365640cf8af9d34040e8d3331ccae7a54f4135 9236 lollypop_0.9.229-1.debian.tar.xz
+ 4072c9477fe88f5546a779b12bdecfb5e1c131db 333074 lollypop_0.9.229-1_amd64.deb
+Checksums-Sha256:
+ 70f67b03b5121932d4be1c3536f9a9f81936461f728ed92223d0716ae382684a 1089 lollypop_0.9.229-1.dsc
+ e44b6abb755ee46929e24267bedcb6f5c76bbc27f8bf0fd670cc518a9971edf2 976664 lollypop_0.9.229.orig.tar.xz
+ 7b1144e76c73b3b3bd5765bab32423245692ea274541591ed70844a6cc035a24 9236 lollypop_0.9.229-1.debian.tar.xz
+ 27bafb3552c455fa0e765b6c60eccea43daf542d5b316bef197340bce9f54cab 333074 lollypop_0.9.229-1_amd64.deb
+Files:
+ 7df8bc618d0a75b74d5ca1ab1256d38a 1089 gnome optional lollypop_0.9.229-1.dsc
+ 41ae56a155de636af5fe77a43c28192d 976664 gnome optional lollypop_0.9.229.orig.tar.xz
+ ef23452bd7cd1ba13f272ad86ed7d46b 9236 gnome optional lollypop_0.9.229-1.debian.tar.xz
+ 53f1830715735a7925112400ca95d5e0 333074 gnome optional lollypop_0.9.229-1_amd64.deb

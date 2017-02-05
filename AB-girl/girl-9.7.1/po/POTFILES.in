@@ -1,0 +1,10 @@
+# List of source files containing translatable strings.
+# Please keep this file sorted alphabetically.
+[encoding: UTF-8]
+data/girl.appdata.xml.in
+data/girl.desktop.in
+data/girl.desktop.in.in
+src/girl-gui.c
+src/girl-listener.c
+src/girl-station.c
+src/girl.c

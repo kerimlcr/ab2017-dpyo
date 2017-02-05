@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="prev" xml:lang="sv">
+  <info>
+    <link type="guide" xref="index#main" group="#first"/>
+    <revision pkgversion="1.8" date="2016-12-01" status="candidate"/>
+    <credit type="author copyright">
+      <name>Ole Aamot</name>
+      <email>ole@src.gnome.org</email>
+    </credit>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+    <desc>Sök efter radiostationer på internet efter plats.</desc>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Josef Andersson</mal:name>
+      <mal:email>josef.andersson@fripost.org</mal:email>
+      <mal:years>2015</mal:years>
+    </mal:credit>
+  </info>
+  <title>Föregående</title>
+    <p>Det är möjligt att lyssna på föregående radiostationer i <app>GIRL</app> med knappen ”Föregående”.</p>
+    <p>Det gör det enkelt att byta radiostation om du har tröttnat på aktuell radiostation.</p>
+    <p>Du kan också navigera mellan radiostationer genom att klicka på ”Stationer” eller genom att söka en radiostation efter plats genom att klicka på ”Sök”.</p>
+    <title><media type="image" mime="image/png" src="media/girl-prev-station.png"/> Föregående radiostation</title>
+</page>

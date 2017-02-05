@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="search" xml:lang="de">
+
+  <info>
+    <link type="guide" xref="index#main" group="#first"/>
+    <revision pkgversion="1.8" date="2016-12-01" status="candidate"/>
+    <credit type="author copyright">
+      <name>Ole Aamot</name>
+      <email>ole@src.gnome.org</email>
+    </credit>
+    
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>    
+    <desc>Search for Internet radio stations by location.</desc>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Mario Blättermann</mal:name>
+      <mal:email>mario.blaettermann@gmail.com</mal:email>
+      <mal:years>2015.</mal:years>
+    </mal:credit>
+  </info>
+
+  <title>Stations</title>
+
+  <p>It is possible to select a supported radio station from a list in the <app>GIRL</app> program.</p>
+
+  <title>
+    <media type="image" mime="image/png" src="media/girl-select-station.png"/>
+    GNOME Internet Radio Locator
+  </title>
+
+</page>

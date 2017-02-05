@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="record" xml:lang="es">
+
+  <info>
+    <link type="guide" xref="index#main" group="#first"/>
+    <revision pkgversion="1.8" date="2016-12-01" status="candidate"/>
+    <credit type="author copyright">
+      <name>Ole Aamot</name>
+      <email>ole@src.gnome.org</email>
+    </credit>
+    
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>    
+    <desc>Search for Internet radio stations by location.</desc>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Andy Daniel Cruz Ramos</mal:name>
+      <mal:email>god_of_war_2@hotmail.com</mal:email>
+      <mal:years>2016</mal:years>
+    </mal:credit>
+  </info>
+
+  <title>Grabar</title>
+
+  <p>A planned feature in <app>GIRL</app> is to make it possible to
+  record audio files from supported radio stations in <app>GIRL</app>
+  if you have installed the gstreamer library.</p>
+  
+  <p>If you select the radio station from "Stations" and click on "Listen" in the <app>GIRL</app>
+  program after you listened to a radio station previously, and then click on "Record", the radio
+  station would be recorded and the recorded audio file would be stored in your home directory.</p>
+
+  <p>Please get in touch and check out src/girl-record.c for the code if you want to implement recording with gstreamer.</p>
+  
+  <title><media type="image" mime="image/png" src="media/girl-record.png"/> Grabar</title>
+  
+  <p>If you want to stop the recording process of the radio station, click on "Stop".</p>
+
+  <title><media type="image" mime="image/png" src="media/girl-stop.png"/> Detener</title>
+  
+</page>

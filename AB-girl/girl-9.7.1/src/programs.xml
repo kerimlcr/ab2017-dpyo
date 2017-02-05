@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!DOCTYPE girl SYSTEM "programs-0.1.dtd">
+<girl version="0.1">
+  <program id="Radio-Norwegian-Gary-Gramolini-2014-08-21" name="Interview with American guitarist Gary Gramolini" rank="1.0" type="interview" release="2014-12-06">
+    <frequency uri="http://radionorwegian.com/">Internet</frequency>
+    <location>Oslo, Norway</location>
+    <description>Gary Gramolini is known for his lead and solo guitar work on the movie soundtrack of the 1980′s blockbuster movie ‘Eddie and the Cruisers‘ (1983), based on the novel by P.F. Kluge, with John Cafferty and The Beaver Brown Band, and the sequel ‘Eddie and the Cruisers II: Eddie Lives!‘ (1989). Gramolini plays lead electric guitar with John Cafferty and The Beaver Brown Band and as the band leader of Gary ‘Guitar’ Gramolini and The Grinders.  In this interview you’ll hear Gary Gramolini talk about radio royalties, ASCAP, his musical background and hear two of his solo tracks.</description>
+    <archive mime="audio/mpeg" uri="http://radionorwegian.com/wp-content/uploads/2014/08/Radio-Norwegian-Gary-Gramolini-2014-08-21.mp3" codec="MPEG 1 Audio, Layer 3 (MP3)" samplerate="48000 Hz" channels="Stereo" bitrate="64 kbps" />
+    <uri>http://radionorwegian.com/</uri>
+  </program>
+</girl>

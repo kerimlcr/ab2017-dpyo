@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="search" xml:lang="cs">
+
+  <info>
+    <link type="guide" xref="index#main" group="#first"/>
+    <revision pkgversion="1.8" date="2016-12-01" status="candidate"/>
+    <credit type="author copyright">
+      <name>Ole Aamot</name>
+      <email>ole@src.gnome.org</email>
+    </credit>
+    
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>    
+    <desc>Jak vyhledat stanici internetového rádia podle místa.</desc>
+  </info>
+
+  <title>Vyhledání podle místa</title>
+
+  <p>V aplikaci <app>GIRL</app> můžete vyhledávat stanice rádií podle místa, ve kterém se nachází vysílání.</p>
+
+  <p>Do textového pole zadejte název města, ve kterém hledáte podporovanou stanici rádia, a zmáčkněte <key>Enter</key>.</p>
+  
+  <title><media type="image" mime="image/png" src="media/girl-search-station-by-location.png"/> Hledání stanice rádia podle místa</title>
+  
+</page>

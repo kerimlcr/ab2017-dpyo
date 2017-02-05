@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:its="http://www.w3.org/2005/11/its" xmlns:e="http://projectmallard.org/experimental/" type="guide" style="2column task" id="index" xml:lang="cs">
+
+  <info>
+    <desc>Naladění internetových rádií v GNOME</desc>
+    <title type="link">Naladění internetových rádií v GNOME</title>
+    <title type="text">Naladění internetových rádií v GNOME</title>
+
+    <revision pkgversion="1.8" date="2016-12-01" status="candidate"/>
+    <credit type="author copyright">
+      <name>Ole Aamot</name>
+      <email>ole@src.gnome.org</email>
+      <years>2016</years>
+    </credit>
+
+   <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/> 
+
+    <desc>Díky aplikaci <app>GIRL</app> můžete najít stanice internetových rádií z celého světa.</desc>
+	
+  </info>
+
+  <p>Vítejte v příručce k <app>Naladění internetových rádií v GNOME</app>. Abyste získali rychlý přehled o funkcích aplikace <app>GIRL</app>, podívejte se na <link xref="intro">úvodní</link> stránku.</p>
+
+  <p>Další témata nápovědy jsou níže rozdělena do skupin. Užívejte si vyhledání neziskových nezávislých internetových rádií v aplikaci <app>GIRL</app>.</p>
+
+  <section id="search" style="2column">
+    <title>Nová</title>
+    <p><link xref="new">Nová</link> stanice podle místa.</p>
+  </section>
+
+  <section id="search" style="2column">
+    <title>Hledat</title>
+    <p><link xref="search">Vyhledejte</link> si stanici rádia podle místa.</p>
+  </section>
+
+  <section id="listen" style="2column">
+    <title>Poslouchat</title>
+    <p>Jak <link xref="listen">poslouchat</link> svoje výchozí rádio.</p>
+  </section>
+
+  <section id="record">
+    <title>Nahrávat</title>
+    <p>Jak si <link xref="record">nahrávat</link> z vysílání rádia.</p>
+    <links type="topic" groups="first" style="2column"/>
+  </section>
+
+  <section id="prev" style="2column">
+    <title>Předchozí</title>
+    <p>Jak přejít na <link xref="prev">předchozí</link> stanici rádia.</p>
+  </section>
+
+  <section id="next" style="2column">
+    <title>Následující</title>
+    <p>Jak přejít na <link xref="next">následující</link> stanici rádia.</p>
+  </section>
+
+  <section id="aboutstation" style="2column">
+    <title>O stanici</title>
+    <p>Jak se dozvědět něco <link xref="aboutstation">o aktuální stanici rádia</link>.</p>
+  </section>
+
+  <section id="aboutprogram" style="2column">
+    <title>O aplikaci</title>
+    <p>Jak se dozvědět něco <link xref="aboutprogram">o aplikaci GIRL</link> a jejích přispěvatelích.</p>
+  </section>
+  
+</page>

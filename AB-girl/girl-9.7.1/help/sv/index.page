@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page xmlns="http://projectmallard.org/1.0/" xmlns:its="http://www.w3.org/2005/11/its" xmlns:e="http://projectmallard.org/experimental/" type="guide" style="2column task" id="index" xml:lang="sv">
+
+  <info>
+    <desc>GNOME Internetradioletare</desc>
+    <title type="link">GNOME Internetradioletare</title>
+    <title type="text">GNOME Internetradioletare</title>
+
+    <revision pkgversion="1.8" date="2016-12-01" status="candidate"/>
+    <credit type="author copyright">
+      <name>Ole Aamot</name>
+      <email>ole@src.gnome.org</email>
+      <years>2016</years>
+    </credit>
+
+   <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/> 
+
+    <desc>GIRL låter dig hitta Internetradiostationer världen över.</desc>
+	
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Josef Andersson</mal:name>
+      <mal:email>josef.andersson@fripost.org</mal:email>
+      <mal:years>2015</mal:years>
+    </mal:credit>
+  </info>
+
+  <p>Välkommen till hjälpguiden för <app>GNOME Internetradioletare</app>. För en snabb introduktion till egenskaperna för <app>GNOME Internetradioletare</app>, besök sidan <link xref="intro">Introduktion</link>.</p>
+
+  <p>Andra hjälpkategorier grupperas samman i avsnitten nedan. Ha det så kul med att leta icke-kommersiella, oberoende Internetradiostationer med <app>GNOME Internetradioletare</app>!</p>
+
+  <section id="search" style="2column">
+    <title>New</title>
+    <p><link xref="new">New</link> radio station by location.</p>
+  </section>
+
+  <section id="search" style="2column">
+    <title>Sök</title>
+    <p><link xref="search">Sök</link> radiostationer efter plats.</p>
+  </section>
+
+  <section id="listen" style="2column">
+    <title>Lyssna</title>
+    <p>Lär dig att <link xref="listen">lyssna</link> på din standardradiostation.</p>
+  </section>
+
+  <section id="record">
+    <title>Spela in</title>
+    <p>Lär dig att <link xref="record">spela in</link> från radiostationer.</p>
+    <links type="topic" groups="first" style="2column"/>
+  </section>
+
+  <section id="prev" style="2column">
+    <title>Föregående</title>
+    <p>Gå till <link xref="prev">föregående</link> radiostation.</p>
+  </section>
+
+  <section id="next" style="2column">
+    <title>Nästa</title>
+    <p>Gå till <link xref="next">nästa</link> radiostation.</p>
+  </section>
+
+  <section id="aboutstation" style="2column">
+    <title>Om station</title>
+    <p>Läs mer om <link xref="aboutstation">den aktuella radiostationen</link>.</p>
+  </section>
+
+  <section id="aboutprogram" style="2column">
+    <title>Om programmet</title>
+    <p>Läs <link xref="aboutprogram">om GNOME Internetradioletare</link> och dess bidragsgivare.</p>
+  </section>
+  
+</page>

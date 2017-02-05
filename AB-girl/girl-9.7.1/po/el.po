@@ -1,0 +1,409 @@
+# Greek translation for girl.
+# Copyright (C) 2015 girl's COPYRIGHT HOLDER
+# This file is distributed under the same license as the girl package.
+# Γιάννης Κουτσούκος <giankoyt@gmail.com>, 2015.
+# Efstathios Iosifidis <iosifidis@opensuse.org>, 2015.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: girl master\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=girl&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2015-02-23 06:28+0000\n"
+"PO-Revision-Date: 2015-02-24 00:58+0200\n"
+"Last-Translator: Efstathios Iosifidis <iosifidis@opensuse.org>\n"
+"Language-Team: Greek, Modern (1453-) <opensuse-translation-el@opensuse.org>\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Gtranslator 2.91.6\n"
+
+#: ../data/girl.appdata.xml.in.h:1
+msgid ""
+"GIRL, the GNOME Internet Radio Locator program, allows users to easily find "
+"and record live radio programs on radio broadcasters on the Internet."
+msgstr ""
+"Το GIRL, το πρόγραμμα εντοπισμού διαδικτυακών ραδιοφώνων του GNOME, "
+"επιτρέπει στους χρήστες να βρουν και να εγγράψουν εύκολα ραδιοφωνικά "
+"προγράμματα των ραδιοφωνικών σταθμών."
+
+#: ../data/girl.appdata.xml.in.h:2
+msgid ""
+"GIRL is developed for the GNOME desktop and requires one audio helper such "
+"as Totem to be installed for playback and streamripper to be installed for "
+"recording live radio streams of supported radio stations."
+msgstr ""
+"Το GIRL έχει αναπτυχθεί για το GNOME και απαιτεί να είναι εγκατεστημένο ένα "
+"πρόγραμμα αναπαραγωγής ήχου όπως το Totem και ένα πρόγραμμα εγγραφής ροών "
+"για εγγραφή ζωντανών αναμεταδώσεων των υποστηριζόμενων ραδιοφώνων."
+
+#: ../data/girl.appdata.xml.in.h:3
+msgid ""
+"Enjoy listening to and recording from supported Internet Radio stations in "
+"GIRL."
+msgstr ""
+"Απολαύστε την ακρόαση και εγγραφή από τους υποστηριζόμενους διαδικτυακούς "
+"ραδιοφωνικούς σταθμούς στο GIRL."
+
+#: ../data/girl.desktop.in.in.h:1
+msgid "Internet Radio Locator"
+msgstr "Εντοπισμός διαδικτυακών ραδιοφώνων"
+
+#: ../data/girl.desktop.in.in.h:2 ../src/girl.c:511
+msgid "Locate Internet Radio Stations"
+msgstr "Εντοπισμός διαδικτυακών ραδιοφωνικών σταθμών"
+
+#. Extra keywords that can be used to search for girl in GNOME Shell and Unity
+#: ../data/girl.desktop.in.in.h:4
+msgid "Live;Radio;Program;Station;Locator;"
+msgstr ""
+"Ζωντανά;Ραδιόφωνο;Πρόγραμμα;Σταθμός;Εντοπισμός;Live;Radio;Program;Station;"
+"Locator;"
+
+#: ../src/girl.c:64
+msgid "GNOME VFS initialization failed!\n"
+msgstr "Αποτυχία αρχικοποίησης του GNOME VFS!\n"
+
+#: ../src/girl.c:181
+#, c-format
+msgid "Selected the previous radio station: %s in %s: %s"
+msgstr "Επιλέχθηκε ο προηγούμενος ραδιοφωνικός σταθμός: %s στο %s: %s"
+
+#: ../src/girl.c:240
+#, c-format
+msgid "Selected the next radio station %s in %s: %s"
+msgstr "Επιλέχθηκε ο επόμενος ραδιοφωνικός σταθμός %s στο %s: %s"
+
+#: ../src/girl.c:293
+#, c-format
+msgid "Selected %s in %s: %s (%f)"
+msgstr "Επιλέχθηκε %s στο %s: %s (%f)"
+
+#: ../src/girl.c:341
+#, c-format
+msgid "Selected %s in %s: %s"
+msgstr "Επιλέχθηκε %s στο %s:  %s"
+
+#: ../src/girl.c:388
+#, c-format
+msgid "Selected the radio station %s in %s: %s"
+msgstr "Επιλέχθηκε ο ραδιοφωνικός σταθμός %s στο %s: %s"
+
+#: ../src/girl.c:434
+#, c-format
+msgid "Selected %s [%s] [%s] [%s]"
+msgstr "Επιλέχθηκε %s [%s] [%s] [%s]"
+
+#: ../src/girl.c:499
+msgid ""
+"Marek Černocký <marek@manet.cz> (Czech translation)\n"
+"Rafael Fontenelle <rafaelff@gnome.org> (Brazilian Portuguese translation)\n"
+"Miroslav Nikolić <miroslavnikolic@rocketmail.com> (Serbian translation)\n"
+"Wolfgang Stöggl <c72578@yahoo.de> (German translation)\n"
+"Piotr Drąg <piotrdrag@gmail.com> (Polish translation)\n"
+"Muhammet Kara <muhammetk@gmail.com> (Turkish translation)\n"
+"Balázs Úr <urbalazs@gmail.com> (Hungarian translation)\n"
+"Andika Triwidada <andika@gmail.com> (Indonesian translation)\n"
+"Daniel Mustieles <daniel.mustieles@gmail.com> (Spanish translation)"
+msgstr ""
+"Marek Černocký <marek@manet.cz> (Τσεχική μετάφραση)\n"
+"Rafael Fontenelle <rafaelff@gnome.org> (Βραζιλιάνικη πορτογαλική "
+"μετάφραση)\n"
+"Miroslav Nikolić <miroslavnikolic@rocketmail.com> (Σέρβικη μετάφραση)\n"
+"Wolfgang Stöggl <c72578@yahoo.de> (Γερμανική μετάφραση)\n"
+"Piotr Drąg <piotrdrag@gmail.com> (Πολωνική μετάφραση)\n"
+"Muhammet Kara <muhammetk@gmail.com> (Τουρκική μετάφραση)\n"
+"Balázs Úr <urbalazs@gmail.com> (Ουγγρική μετάφραση)\n"
+"Andika Triwidada <andika@gmail.com> (Iνδονησιακή μετάφραση)\n"
+"Daniel Mustieles <daniel.mustieles@gmail.com> (Ισπανική μετάφραση)"
+
+#: ../src/girl.c:512
+msgid "Copyright (C) 2014, 2015  Ole Aamot Software"
+msgstr "Πνευματικά δικαιώματα (C) 2014, 2015  Ole Aamot Software"
+
+#: ../src/girl.c:513
+msgid "See http://wiki.gnome.org/DocumentationProject"
+msgstr "Δείτε http://wiki.gnome.org/DocumentationProject"
+
+#: ../src/girl.c:520
+msgid ""
+"This program is free software; you can redistribute it and/or modify it "
+"under the terms of the GNU General Public License as published by the Free "
+"Software Foundation; either version 2 of the License, or (at your option) "
+"any later version.\n"
+"This program is distributed in the hope that it will be useful, but WITHOUT "
+"ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
+"FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
+"more details.\n"
+"You should have received a copy of the GNU General Public License along with "
+"this program; if not, write to the Free Software Foundation, Inc., 59 Temple "
+"Place, Suite 330, Boston, MA 02111-1307, USA."
+msgstr ""
+"Αυτό το πρόγραμμα είναι ελεύθερο λογισμικό· μπορείτε να το αναδιανείμετε και/"
+"ή να το τροποποιήσετε υπό τους όρους της GNU Γενικής Δημόσιας Άδειας Χρήσης "
+"όπως είναι δημοσιευμένη από το Free Software Foundation· είτε με την έκδοση "
+"2 της άδειας, είτε (κατά την επιλογή σας) με οποιαδήποτε νεότερη έκδοση. Το "
+"πρόγραμμα αυτό διανέμεται με την ελπίδα ότι θα είναι χρήσιμο αλλά ΧΩΡΙΣ "
+"ΚΑΜΙΑ ΑΠΟΛΥΤΩΣ ΕΓΓΥΗΣΗ για συγκεκριμένο σκοπό. Δείτε για περισσότερες "
+"λεπτομέρειες την GNU General Public License. Θα πρέπει να έχετε λάβει ένα "
+"αντίγραφο της GNU General Public License μαζί με το πρόγραμμα· αν όχι γράψτε "
+"στο Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA "
+"02111-1307 USA."
+
+#: ../src/girl.c:526
+#, c-format
+msgid "Unable to load GIRL logo: %s\n"
+msgstr "Αδυναμία φόρτωσης λογότυπου του GIRL:%s\n"
+
+#: ../src/girl.c:682
+msgid "Search radio station by location"
+msgstr "Αναζήτηση ραδιοφωνικού σταθμού με βάση την τοποθεσία"
+
+#. girl_stream_player(a, user_data);
+#: ../src/girl.c:691
+#, c-format
+msgid "Listening to the radio station %s in %s: %s "
+msgstr "Ακρόαση ραδιοφωνικoύ σταθμού %s στο %s: %s"
+
+#: ../src/girl.c:713
+#, c-format
+msgid "Recording from the radio station %s in %s: %s "
+msgstr "Εγγραφή από τον ραδιοφωνικό σταθμό %s στο %s: %s"
+
+#: ../src/girl.c:748
+#, c-format
+msgid "Finished recording from the radio station %s in %s: %s"
+msgstr "Ολοκληρώθηκε η εγγραφή από τον ραδιοφωνικό σταθμό %s στο %s: %s"
+
+#: ../src/girl.c:762
+#, c-format
+msgid ""
+"To finish playing from the radio station %s in %s, exit the application "
+"Videos."
+msgstr ""
+"Για να ολοκληρωθεί η αναπαραγωγή από το ραδιοφωνικό σταθμό %s στο %s, "
+"τερματίστε την εφαρμογή Βίντεο."
+
+#: ../src/girl.c:772
+msgid ""
+"Stop what?  You can \"Search\" by location, select a radio station from "
+"\"Stations\", or click on \"Listen\" and/or \"Record\".  Or go to \"Prev\" "
+"or \"Next\" radio station."
+msgstr ""
+"Σταματήστε τι; Μπορείτε να κάνετε \"Αναζήτηση\" με βάση την τοποθεσία, "
+"επιλέξτε ένα ραδιοφωνικό σταθμό από το \"Σταθμοί\", ή κάντε κλικ στο "
+"\"Ακούστε\" και/ή \"Εγγραφή\". Ή μετακινηθείτε στον \"Προηγούμενο\" ή "
+"\"Επόμενο\" ραδιοφωνικό σταθμό."
+
+#: ../src/girl.c:812
+#, c-format
+msgid "Archiving %s"
+msgstr "Aρχειοθέτηση %s"
+
+#: ../src/girl-gui.c:54
+msgid "Search"
+msgstr "Αναζήτηση"
+
+#: ../src/girl-gui.c:54
+msgid "Search by location for radio stations"
+msgstr "Αναζήτηση βάση τοποθεσίας για ραδιοφωνικούς σταθμούς"
+
+#: ../src/girl-gui.c:58
+msgid "Stations"
+msgstr "Σταθμοί"
+
+#: ../src/girl-gui.c:58
+msgid "Internet Radio Stations"
+msgstr "Διαδικτυακοί ραδιοφωνικοί σταθμοί"
+
+#: ../src/girl-gui.c:62
+msgid "Listen"
+msgstr "Ακρόαση"
+
+#: ../src/girl-gui.c:62
+msgid "Listen to selected radio station"
+msgstr "Ακρόαση επιλεγμένου ραδιοφωνικού σταθμού"
+
+#: ../src/girl-gui.c:66
+msgid "Record"
+msgstr "Eγγραφή"
+
+#: ../src/girl-gui.c:66
+msgid "Record selected radio station"
+msgstr "Εγγραφή επιλεγμένου ραδιοφωνικού σταθμού"
+
+#: ../src/girl-gui.c:69
+msgid "Stop"
+msgstr "Διακοπή"
+
+#: ../src/girl-gui.c:69
+msgid "Stop recording selected radio station"
+msgstr "Διακοπή εγγραφής επιλεγμένου ραδιοφωνικού σταθμού"
+
+#: ../src/girl-gui.c:74
+msgid "Previous"
+msgstr "Προηγούμενο"
+
+#: ../src/girl-gui.c:75
+msgid "Go back to the previous radio station"
+msgstr "Επιστροφή στο προηγούμενο ραδιοφωνικό σταθμό"
+
+#: ../src/girl-gui.c:77
+msgid "Next"
+msgstr "Επόμενο"
+
+#: ../src/girl-gui.c:77
+msgid "Proceed to the next radio station"
+msgstr "Προχωρήστε στο επόμενο ραδιοφωνικό σταθμό"
+
+#: ../src/girl-gui.c:80
+msgid "About Station"
+msgstr "Περί Σταθμού"
+
+#: ../src/girl-gui.c:81
+msgid "About the current Station"
+msgstr "Περί του τρέχοντα σταθμού"
+
+#: ../src/girl-gui.c:84
+msgid "About Program"
+msgstr "Περί προγράμματος"
+
+#: ../src/girl-gui.c:85
+msgid "About the GNOME Internet Radio Locator"
+msgstr "Περί εντοπισμού διαδικτυακών ραδιοφώνων του GNOME"
+
+#: ../src/girl-gui.c:89
+msgid "Exit"
+msgstr "Έξοδος"
+
+#: ../src/girl-gui.c:90
+msgid "Quit the GNOME Internet Radio Locator"
+msgstr "Τερματισμός του εντοπισμού διαδικτυακών ραδιοφώνων του GNOME (GIRL)"
+
+#. The Listeners dialog
+#: ../src/girl-gui.c:119
+msgid "Select a listener"
+msgstr "Επιλογή ενός ακροατή"
+
+#: ../src/girl-gui.c:146
+#, c-format
+msgid "Failed to open %s.  Please install it.\n"
+msgstr "Αποτυχία ανοίγματος %s. Παρακαλώ εγκαταστήστε το.\n"
+
+#: ../src/girl-gui.c:156 ../src/girl-gui.c:658 ../src/girl-gui.c:802
+#, c-format
+msgid "Failed to open %s\n"
+msgstr "Αποτυχία ανοίγματος %s\n"
+
+#. The Programs dialog
+#: ../src/girl-gui.c:257
+msgid "Select a program"
+msgstr "Επιλογή ενός προγράμματος"
+
+#: ../src/girl-gui.c:288 ../src/girl-gui.c:298 ../src/girl-gui.c:475
+#: ../src/girl-gui.c:644 ../src/girl-gui.c:787
+#, c-format
+msgid "Failed to open %s.\n"
+msgstr "Αποτυχία ανοίγματος %s.\n"
+
+#: ../src/girl-gui.c:402
+#, c-format
+msgid "Your search by location resulted in the radio station %s in %s: %s"
+msgstr ""
+"Η αναζήτησή σας με βάση την τοποθεσία οδήγησε στο ραδιοφωνικό σταθμό %s στο "
+"%s: %s"
+
+#. The Stations dialog
+#: ../src/girl-gui.c:433
+msgid "Search by location"
+msgstr "Αναζήτηση βάση τοποθεσίας"
+
+#. The Stations dialog
+#: ../src/girl-gui.c:613
+msgid "Select a station"
+msgstr "Επιλογή ενός σταθμού"
+
+#. The Streams dialog
+#: ../src/girl-gui.c:758
+msgid "Select a stream"
+msgstr "Επιλογή μια ροής"
+
+#: ../src/girl-gui.c:889
+#, c-format
+msgid "Selection cleared!\n"
+msgstr "H επιλογή εκκαθαρίστηκε!\n"
+
+#: ../src/girl-gui.c:925
+msgid "GIRL"
+msgstr "GIRL"
+
+#: ../src/girl-gui.c:927
+msgid "GNOME Internet Radio Locator"
+msgstr "Εντοπισμός διαδικτυακών ραδιοφώνων του GNOME (GIRL)"
+
+#: ../src/girl-gui.c:939
+msgid "Couldn't create pixmap"
+msgstr "Αδυναμία δημιουργίας pixmap"
+
+#: ../src/girl-gui.c:957
+msgid ""
+"Search by location from \"Search\" or select a radio station from \"Stations"
+"\".  Click \"Listen\" to listen to, or \"Record\" to record from the station."
+msgstr ""
+"Αναζητήστε βάση τοποθεσίας από την \"Αναζήτηση\" ή  επιλέξτε έναν "
+"ραδιοφωνικό σταθμό από το \"Σταθμοί\". Κάντε κλικ στο \"Ακρόαση\" για να "
+"ακούσετε, ή \"Εγγραφή\" για την εγγραφή από το σταθμό."
+
+#: ../src/girl-gui.c:960
+msgid ""
+"Select a radio station from \"Stations\" and click \"Listen\" to listen to "
+"the station."
+msgstr ""
+"Επιλέξτε ένα ραδιοφωνικό σταθμό από το \"Σταθμοί\" και κάντε κλικ στο "
+"\"Ακρόαση\" για να ακούσετε το σταθμό."
+
+#: ../src/girl-station.c:189
+#, c-format
+msgid ""
+"An error happened trying to play %s\n"
+"Either the file doesn't exist, or you don't have a player for it."
+msgstr ""
+"Παρουσιάστηκε σφάλμα κατά την αναπαραγωγή %s\n"
+"Είτε το αρχείο δεν υπάρχει, ή δεν έχετε αναπαραγωγέα γι'αυτό."
+
+#: ../src/girl-station.c:195
+#, c-format
+msgid ""
+"An error happened trying to record %s\n"
+"Either the file doesn't exist, or you don't have a recorder for it."
+msgstr ""
+"Παρουσιάστηκε σφάλμα κατά την εγγραφή %s\n"
+"Είτε το αρχείο δεν υπάρχει, ή δεν έχετε μια συσκευή εγγραφής για αυτό."
+
+#: ../src/girl-station.c:228 ../src/girl-station.c:248
+#: ../src/girl-station.c:325 ../src/girl-station.c:345
+#, c-format
+msgid "Failed to run %s (%i)\n"
+msgstr "Αποτυχία εκτέλεσης %s (%i)\n"
+
+#: ../src/girl-station.c:272 ../src/girl-station.c:369
+#, c-format
+msgid ""
+"Failed to open URL: '%s'\n"
+"Status code: %i\n"
+"Details: %s"
+msgstr ""
+"Αποτυχία ανοίγματος URL: '%s'\n"
+"Κωδικός κατάστασης: %i\n"
+"Λεπτομέρειες: %s"
+
+#: ../src/girl-station.c:290
+#, c-format
+msgid ""
+"Failed to open URL: '%s'\n"
+"Details: %s"
+msgstr ""
+"Αποτυχία ανοίγματος URL: '%s'\n"
+"Λεπτομέρειες: %s"

@@ -1,0 +1,396 @@
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Sveinn í Felli <sv1@fellsnet.is>, 2015.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=girl&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2015-03-13 06:34+0000\n"
+"PO-Revision-Date: 2015-04-29 11:38+0000\n"
+"Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
+"Language-Team: Icelandic <translation-team-is@lists.sourceforge.net>\n"
+"Language: is\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 1.5\n"
+
+#: ../data/girl.appdata.xml.in.h:1
+msgid ""
+"GIRL, the GNOME Internet Radio Locator program, allows users to easily find "
+"and record live radio programs on radio broadcasters on the Internet."
+msgstr ""
+"GIRL, eða GNOME Internet Radio Locator forritið, gerir notendum kleift að "
+"finna auðveldlega, hlusta og taka upp efni frá útvarpsstöðvum í beinni "
+"útsendingu á internetinu."
+
+#: ../data/girl.appdata.xml.in.h:2
+msgid ""
+"GIRL is developed for the GNOME desktop and requires one audio helper such "
+"as Totem to be installed for playback and streamripper to be installed for "
+"recording live radio streams of supported radio stations."
+msgstr ""
+"GIRL er þróað fyrir GNOME skjáborðsumhverfið og krefst einhverra "
+"hjálparforrita á borð við Totem, sem þarf fyrir afspilun, og streamripper svo "
+"hægt sé að hljóðrita útvarpsstrauma frá studdum netútvarpsstöðvum."
+
+#: ../data/girl.appdata.xml.in.h:3
+msgid ""
+"Enjoy listening to and recording from supported Internet Radio stations in "
+"GIRL."
+msgstr ""
+"Njóttu þess að hlusta á og taka upp efni af studdum netútvarpsstöðvum með "
+"GIRL."
+
+#: ../data/girl.desktop.in.in.h:1
+msgid "Internet Radio Locator"
+msgstr "Internet Radio Locator Netútvarp"
+
+#: ../data/girl.desktop.in.in.h:2 ../src/girl.c:516
+msgid "Locate Internet Radio Stations"
+msgstr "Finndu netútvarpsstöðvar"
+
+#. Extra keywords that can be used to search for girl in GNOME Shell and Unity
+#: ../data/girl.desktop.in.in.h:4
+msgid "Live;Radio;Program;Station;Locator;"
+msgstr "Í beinni;Útvarp;Dagskrá;Útvarpsstöð;Leitarvél;"
+
+#: ../src/girl.c:69
+msgid "GNOME VFS initialization failed!\n"
+msgstr "Frumstilling GNOME VFS brást!\n"
+
+#: ../src/girl.c:186
+#, c-format
+msgid "Selected the previous radio station: %s in %s: %s"
+msgstr "Valdi fyrri útvarpsstöðina %s í %s: %s"
+
+#: ../src/girl.c:245
+#, c-format
+msgid "Selected the next radio station %s in %s: %s"
+msgstr "Valdi næstu útvarpsstöðina %s í %s: %s"
+
+#: ../src/girl.c:298
+#, c-format
+msgid "Selected %s in %s: %s (%f)"
+msgstr "Valdi %s í %s: %s (%f)"
+
+#: ../src/girl.c:346
+#, c-format
+msgid "Selected %s in %s: %s"
+msgstr "Valdi  %s í %s: %s"
+
+#: ../src/girl.c:393
+#, c-format
+msgid "Selected the radio station %s in %s: %s"
+msgstr "Valdi útvarpsstöðina %s í %s: %s"
+
+#: ../src/girl.c:439
+#, c-format
+msgid "Selected %s [%s] [%s] [%s]"
+msgstr "Valdi  %s [%s] [%s] [%s]"
+
+#: ../src/girl.c:504
+msgid ""
+"Marek Černocký <marek@manet.cz> (Czech translation)\n"
+"Rafael Fontenelle <rafaelff@gnome.org> (Brazilian Portuguese translation)\n"
+"Miroslav Nikolić <miroslavnikolic@rocketmail.com> (Serbian translation)\n"
+"Wolfgang Stöggl <c72578@yahoo.de> (German translation)\n"
+"Piotr Drąg <piotrdrag@gmail.com> (Polish translation)\n"
+"Muhammet Kara <muhammetk@gmail.com> (Turkish translation)\n"
+"Balázs Úr <urbalazs@gmail.com> (Hungarian translation)\n"
+"Andika Triwidada <andika@gmail.com> (Indonesian translation)\n"
+"Daniel Mustieles <daniel.mustieles@gmail.com> (Spanish translation)"
+msgstr ""
+"Marek Černocký <marek@manet.cz> (Tékknesk þýðing)\n"
+"Rafael Fontenelle <rafaelff@gnome.org> (Brasilísk-portúgölsk þýðing)\n"
+"Miroslav Nikolić <miroslavnikolic@rocketmail.com> (Serbnesk þýðing)\n"
+"Wolfgang Stöggl <c72578@yahoo.de> (Þýsk þýðing)\n"
+"Piotr Drąg <piotrdrag@gmail.com> (Pólsk þýðing)\n"
+"Muhammet Kara <muhammetk@gmail.com> (Tyrknesk þýðing)\n"
+"Balázs Úr <urbalazs@gmail.com> (Ungversk þýðing)\n"
+"Andika Triwidada <andika@gmail.com> (Indónesísk þýðing)\n"
+"Daniel Mustieles <daniel.mustieles@gmail.com> (Spænsk þýðing)"
+
+#: ../src/girl.c:517
+msgid "Copyright (C) 2014, 2015  Ole Aamot Software"
+msgstr "Höfundarréttur (C) 2014, 2015  Ole Aamot Software"
+
+#: ../src/girl.c:518
+msgid "See http://wiki.gnome.org/DocumentationProject"
+msgstr "Skoðaðu http://wiki.gnome.org/DocumentationProject"
+
+#: ../src/girl.c:525
+msgid ""
+"This program is free software; you can redistribute it and/or modify it "
+"under the terms of the GNU General Public License as published by the Free "
+"Software Foundation; either version 2 of the License, or (at your option) "
+"any later version.\n"
+"This program is distributed in the hope that it will be useful, but WITHOUT "
+"ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
+"FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
+"more details.\n"
+"You should have received a copy of the GNU General Public License along with "
+"this program; if not, write to the Free Software Foundation, Inc., 59 Temple "
+"Place, Suite 330, Boston, MA 02111-1307, USA."
+msgstr ""
+"Þetta forrit er frjáls hugbúnaður; þú mátt endurrita hann og/eða breyta "
+"samkvæmt skilmálum \"GNU General Public License\" eins og það er útgefið af "
+"\"Free Software Foundation;\"; annað hvort útgáfa 2 af leyfinu, eða (að þínu "
+"vali) einhver síðari útgáfa.\n"
+"\n"
+"Þessu forriti er dreift í þeirri von að það sé gagnlegt, en ÁN NOKKURAR "
+"ÁBYRGÐAR; einnig án óbeinnar SÖLUÁBYRGÐAR eða HÆFNI TIL NOKKURS HLUTAR. Sjá "
+"nánar í \"GNU General Public License\" leyfinu.\n"
+"\n"
+"Þú ættir að hafa fengið afrit af \"GNU General Public License\" með þessu "
+"forriti; ef ekki, skrifaðu til Free Software Foundation, Inc., 59 Franklin "
+"Street, Fifth Floor, Boston, MA 02111-1307, USA."
+
+#: ../src/girl.c:531
+#, c-format
+msgid "Unable to load GIRL logo: %s\n"
+msgstr "Gat ekki hlaðið inn merki GIRL: %s\n"
+
+#: ../src/girl.c:686
+msgid "Search radio station by location"
+msgstr "Leita að útvarpsstöðvum eftir staðsetningu"
+
+#. girl_stream_player(a, user_data);
+#: ../src/girl.c:695
+#, c-format
+msgid "Listening to the radio station %s in %s: %s "
+msgstr "Hlusta á útvarpsstöðina %s í %s: %s "
+
+#: ../src/girl.c:717
+#, c-format
+msgid "Recording from the radio station %s in %s: %s "
+msgstr "Tek upp frá útvarpsstöðinni %s í %s: %s "
+
+#: ../src/girl.c:752
+#, c-format
+msgid "Finished recording from the radio station %s in %s: %s"
+msgstr "Lauk upptöku frá útvarpsstöðinni %s í %s: %s"
+
+#: ../src/girl.c:766
+#, c-format
+msgid ""
+"To finish playing from the radio station %s in %s, exit the application "
+"Videos."
+msgstr ""
+
+#: ../src/girl.c:776
+msgid ""
+"Stop what?  You can \"Search\" by location, select a radio station from "
+"\"Stations\", or click on \"Listen\" and/or \"Record\".  Or go to \"Prev\" "
+"or \"Next\" radio station."
+msgstr ""
+
+#: ../src/girl.c:816
+#, c-format
+msgid "Archiving %s"
+msgstr "Vista %s í safn"
+
+#: ../src/girl-gui.c:54
+msgid "Stations"
+msgstr "Útvarpsstöðvar"
+
+#: ../src/girl-gui.c:54
+msgid "Internet Radio Stations"
+msgstr "Internet útvarpsstöðvar"
+
+#: ../src/girl-gui.c:58
+msgid "Search"
+msgstr "Leita"
+
+#: ../src/girl-gui.c:58
+msgid "Search by location for radio stations"
+msgstr "Leita að útvarpsstöðvum eftir staðsetningu"
+
+#: ../src/girl-gui.c:62
+msgid "Listen"
+msgstr "Hlusta"
+
+#: ../src/girl-gui.c:62
+msgid "Listen to selected radio station"
+msgstr "Hlusta á valda útvarpsstöð"
+
+#: ../src/girl-gui.c:66
+msgid "Record"
+msgstr "Upptaka"
+
+#: ../src/girl-gui.c:66
+msgid "Record selected radio station"
+msgstr "Taka upp úr valinni útvarpsstöð"
+
+#: ../src/girl-gui.c:69
+msgid "Stop"
+msgstr "Stöðva"
+
+#: ../src/girl-gui.c:69
+msgid "Stop recording selected radio station"
+msgstr "Stöðva upptöku úr valinni útvarpsstöð"
+
+#: ../src/girl-gui.c:74
+msgid "Previous"
+msgstr "Fyrri"
+
+#: ../src/girl-gui.c:75
+msgid "Go back to the previous radio station"
+msgstr "Fara til baka á fyrri útvarpsstöð"
+
+#: ../src/girl-gui.c:77
+msgid "Next"
+msgstr "Næsta"
+
+#: ../src/girl-gui.c:77
+msgid "Proceed to the next radio station"
+msgstr "Fara á næstu útvarpsstöð"
+
+#: ../src/girl-gui.c:80
+msgid "About Station"
+msgstr "Um útvarpsstöðina"
+
+#: ../src/girl-gui.c:81
+msgid "About the current Station"
+msgstr "Um núverandi útvarpsstöð"
+
+#: ../src/girl-gui.c:84
+msgid "About Program"
+msgstr "Upplýsingar um forritið"
+
+#: ../src/girl-gui.c:85
+msgid "About the GNOME Internet Radio Locator"
+msgstr "Um GNOME Internet Radio Locator netútvarpið"
+
+#: ../src/girl-gui.c:89
+msgid "Exit"
+msgstr "Hætta"
+
+#: ../src/girl-gui.c:90
+msgid "Quit the GNOME Internet Radio Locator"
+msgstr "Hætta í GNOME Netútvarpinu"
+
+#. The Listeners dialog
+#: ../src/girl-gui.c:119
+msgid "Select a listener"
+msgstr "Veldu hlustara"
+
+#: ../src/girl-gui.c:146
+#, c-format
+msgid "Failed to open %s.  Please install it.\n"
+msgstr "Mistókst að opna %s.  Settu það inn.\n"
+
+#: ../src/girl-gui.c:156 ../src/girl-gui.c:658 ../src/girl-gui.c:802
+#, c-format
+msgid "Failed to open %s\n"
+msgstr "Mistókst að opna %s\n"
+
+#. The Programs dialog
+#: ../src/girl-gui.c:257
+msgid "Select a program"
+msgstr "Veldu forrit"
+
+#: ../src/girl-gui.c:288 ../src/girl-gui.c:298 ../src/girl-gui.c:475
+#: ../src/girl-gui.c:644 ../src/girl-gui.c:787
+#, c-format
+msgid "Failed to open %s.\n"
+msgstr "Mistókst að opna %s.\n"
+
+#: ../src/girl-gui.c:402
+#, c-format
+msgid "Your search by location resulted in the radio station %s in %s: %s"
+msgstr "Leit eftir staðsetningu gaf sem niðurstöðu útvarpsstöðina %s í %s: %s"
+
+#. The Stations dialog
+#: ../src/girl-gui.c:433
+msgid "Search by location"
+msgstr "Leita eftir staðsetningu"
+
+#. The Stations dialog
+#: ../src/girl-gui.c:613
+msgid "Select a station"
+msgstr "Veldu útvarpsstöð"
+
+#. The Streams dialog
+#: ../src/girl-gui.c:758
+msgid "Select a stream"
+msgstr "Veldu streymi"
+
+#: ../src/girl-gui.c:889
+#, c-format
+msgid "Selection cleared!\n"
+msgstr "Val hreinsað!\n"
+
+#: ../src/girl-gui.c:925
+msgid "GIRL"
+msgstr "GIRL"
+
+#: ../src/girl-gui.c:927
+msgid "GNOME Internet Radio Locator"
+msgstr "GNOME Internet Radio Locator Netútvarp"
+
+#: ../src/girl-gui.c:939
+msgid "Couldn't create pixmap"
+msgstr "Tókst ekki að búa til pixmap mynd"
+
+#: ../src/girl-gui.c:957
+msgid ""
+"Search by location from \"Search\" or select a radio station from \"Stations"
+"\".  Click \"Listen\" to listen to, or \"Record\" to record from the station."
+msgstr ""
+"Leitaðu að stöðvum eftir staðsetningu með því að fara í \"Leita\" eða veldu "
+"útvarpsstöð úr \"Útvarpsstöðvar\" og smelltu á \"Hlusta\" til að hlusta á "
+"hana, eða farðu í \"Upptaka\" til að taka upp efni frá útvarpsstöðinni."
+
+#: ../src/girl-gui.c:960
+msgid ""
+"Select a radio station from \"Stations\" and click \"Listen\" to listen to "
+"the station."
+msgstr ""
+"Veldu útvarpsstöð úr \"Útvarpsstöðvar\" og smelltu á \"Hlusta\" til að hlusta "
+"á hana."
+
+#: ../src/girl-station.c:196
+#, c-format
+msgid ""
+"An error happened trying to play %s\n"
+"Either the file doesn't exist, or you don't have a player for it."
+msgstr ""
+
+#: ../src/girl-station.c:202
+#, c-format
+msgid ""
+"An error happened trying to record %s\n"
+"Either the file doesn't exist, or you don't have a recorder for it."
+msgstr ""
+
+#: ../src/girl-station.c:235 ../src/girl-station.c:255
+#: ../src/girl-station.c:333 ../src/girl-station.c:356
+#, c-format
+msgid "Failed to run %s (%i)\n"
+msgstr "Mistókst að keyra %s (%i)\n"
+
+#: ../src/girl-station.c:280 ../src/girl-station.c:380
+#, c-format
+msgid ""
+"Failed to open URL: '%s'\n"
+"Status code: %i\n"
+"Details: %s"
+msgstr ""
+"Mistókst að opna URL: '%s'\n"
+"Stöðukóði: %i\n"
+"Nánar: %s"
+
+#: ../src/girl-station.c:298
+#, c-format
+msgid ""
+"Failed to open URL: '%s'\n"
+"Details: %s"
+msgstr ""
+"Mistókst að opna URL: '%s'\n"
+"Nánar: %s"
+
+

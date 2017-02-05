@@ -1,0 +1,73 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      xmlns:its="http://www.w3.org/2005/11/its"
+      xmlns:e="http://projectmallard.org/experimental/"
+      type="guide" style="2column task"
+      id="index">
+
+  <info>
+    <desc>GNOME Internet Radio Locator</desc>
+    <title type="link">GNOME Internet Radio Locator</title>
+    <title type="text">GNOME Internet Radio Locator</title>
+
+    <revision pkgversion="1.8" date="2016-12-01" status="candidate"/>
+    <credit type="author copyright">
+      <name>Ole Aamot</name>
+      <email>ole@src.gnome.org</email>
+      <years>2016</years>
+    </credit>
+
+   <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude" /> 
+
+    <desc>GIRL lets you locate Internet radio stations around the world.</desc>
+	
+  </info>
+
+  <p>Welcome to the <app>GNOME Internet Radio Locator</app> help guide.
+  For a quick introduction into the features of the <app>GNOME Internet Radio Locator</app>,
+  visit the <link xref="intro">Introduction</link> page.</p>
+
+  <p>Other help topics are grouped together into sections below.  Enjoy locating
+  non-profit, independent Internet radio stations with the <app>GNOME Internet Radio Locator</app>!</p>
+
+  <section id="search" style="2column">
+    <title>New</title>
+    <p><link xref="new">New</link> radio station by location.</p>
+  </section>
+
+  <section id="search" style="2column">
+    <title>Search</title>
+    <p><link xref="search">Search</link> for radio stations by location.</p>
+  </section>
+
+  <section id="listen" style="2column">
+    <title>Listen</title>
+    <p>Learn how to <link xref="listen">listen</link> to your default radio station.</p>
+  </section>
+
+  <section id="record">
+    <title>Record</title>
+    <p>Learn how to <link xref="record">record</link> from radio stations.</p>
+    <links type="topic" groups="first" style="2column"/>
+  </section>
+
+  <section id="prev" style="2column">
+    <title>Prev</title>
+    <p>Navigate to the <link xref="prev">previous</link> radio station.</p>
+  </section>
+
+  <section id="next" style="2column">
+    <title>Next</title>
+    <p>Navigate to the <link xref="next">next</link> radio station.</p>
+  </section>
+
+  <section id="aboutstation" style="2column">
+    <title>About Station</title>
+    <p>Learn <link xref="aboutstation">about the current radio station</link>.</p>
+  </section>
+
+  <section id="aboutprogram" style="2column">
+    <title>About Program</title>
+    <p>Learn <link xref="aboutprogram">about the GNOME Internet Radio Locator</link> and its contributors.</p>
+  </section>
+  
+</page>

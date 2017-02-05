@@ -1,0 +1,1003 @@
+ dpkg-buildpackage -rfakeroot -D -us -uc
+dpkg-buildpackage: source package girl
+dpkg-buildpackage: source version 9.7.1-1
+dpkg-buildpackage: source distribution unstable
+dpkg-buildpackage: source changed by Ali Guven Odabasioglu <agodabasioglu@gmail.com>
+ dpkg-source --before-build girl-9.7.1
+dpkg-buildpackage: host architecture amd64
+ fakeroot debian/rules clean
+dh clean  --with autotools-dev
+   dh_testdir
+   dh_auto_clean
+make[1]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1'
+Making distclean in data
+make[2]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1/data'
+Making distclean in pixmaps
+make[3]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1/data/pixmaps'
+test -z "" || rm -f 
+test . = "." || test -z "" || rm -f 
+rm -f Makefile
+make[3]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1/data/pixmaps'
+Making distclean in icons
+make[3]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons'
+Making distclean in 16x16
+make[4]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons/16x16'
+test -z "" || rm -f 
+test . = "." || test -z "" || rm -f 
+rm -f Makefile
+make[4]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons/16x16'
+Making distclean in 22x22
+make[4]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons/22x22'
+test -z "" || rm -f 
+test . = "." || test -z "" || rm -f 
+rm -f Makefile
+make[4]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons/22x22'
+Making distclean in 24x24
+make[4]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons/24x24'
+test -z "" || rm -f 
+test . = "." || test -z "" || rm -f 
+rm -f Makefile
+make[4]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons/24x24'
+Making distclean in 32x32
+make[4]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons/32x32'
+test -z "" || rm -f 
+test . = "." || test -z "" || rm -f 
+rm -f Makefile
+make[4]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons/32x32'
+Making distclean in 48x48
+make[4]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons/48x48'
+test -z "" || rm -f 
+test . = "." || test -z "" || rm -f 
+rm -f Makefile
+make[4]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons/48x48'
+Making distclean in 256x256
+make[4]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons/256x256'
+test -z "" || rm -f 
+test . = "." || test -z "" || rm -f 
+rm -f Makefile
+make[4]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons/256x256'
+Making distclean in 512x512
+make[4]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons/512x512'
+test -z "" || rm -f 
+test . = "." || test -z "" || rm -f 
+rm -f Makefile
+make[4]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons/512x512'
+Making distclean in 1024x1024
+make[4]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons/1024x1024'
+test -z "" || rm -f 
+test . = "." || test -z "" || rm -f 
+rm -f Makefile
+make[4]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons/1024x1024'
+make[4]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons'
+test -z "" || rm -f 
+test . = "." || test -z "" || rm -f 
+rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
+make[4]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons'
+rm -f Makefile
+make[3]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons'
+make[3]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1/data'
+test -z "girl.appdata.xml" || rm -f girl.appdata.xml
+test -z "girl.desktop" || rm -f girl.desktop
+test . = "." || test -z "" || rm -f 
+test -z "girl.desktop" || rm -f girl.desktop
+rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
+make[3]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1/data'
+rm -f Makefile
+make[2]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1/data'
+Making distclean in help
+make[2]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1/help'
+rm -f cs/aboutprogram.page cs/aboutstation.page cs/exit.page cs/index.page cs/intro.page cs/legal.xml cs/listen.page cs/new.page cs/next.page cs/prev.page cs/record.page cs/search.page cs/stations.page de/aboutprogram.page de/aboutstation.page de/exit.page de/index.page de/intro.page de/legal.xml de/listen.page de/new.page de/next.page de/prev.page de/record.page de/search.page de/stations.page es/aboutprogram.page es/aboutstation.page es/exit.page es/index.page es/intro.page es/legal.xml es/listen.page es/new.page es/next.page es/prev.page es/record.page es/search.page es/stations.page en_US/aboutprogram.page en_US/aboutstation.page en_US/exit.page en_US/index.page en_US/intro.page en_US/legal.xml en_US/listen.page en_US/new.page en_US/next.page en_US/prev.page en_US/record.page en_US/search.page en_US/stations.page sv/aboutprogram.page sv/aboutstation.page sv/exit.page sv/index.page sv/intro.page sv/legal.xml sv/listen.page sv/new.page sv/next.page sv/prev.page sv/record.page sv/search.page sv/stations.page cs/cs.stamp de/de.stamp es/es.stamp en_US/en_US.stamp sv/sv.stamp cs/cs.mo de/de.mo es/es.mo en_US/en_US.mo sv/sv.mo
+test -z "" || rm -f 
+test . = "." || test -z "" || rm -f 
+rm -f Makefile
+make[2]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1/help'
+Making distclean in man
+make[2]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1/man'
+test -z "" || rm -f 
+test . = "." || test -z "" || rm -f 
+rm -f Makefile
+make[2]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1/man'
+Making distclean in src
+make[2]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1/src'
+test -z "girl" || rm -f girl
+test -z "test-stations-gfx test-endianess test-stations" || rm -f test-stations-gfx test-endianess test-stations
+rm -f *.o
+rm -f *.tab.c
+test -z "" || rm -f 
+test . = "." || test -z "" || rm -f 
+rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
+rm -rf ./.deps
+rm -f Makefile
+make[2]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1/src'
+Making distclean in po
+make[2]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1/po'
+rm -f *.pox girl.pot *.old.po cat-id-tbl.tmp
+rm -f .intltool-merge-cache
+rm -f Makefile Makefile.in POTFILES stamp-it
+rm -f *.mo *.msg *.cat *.cat.m *.gmo
+make[2]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1/po'
+make[2]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1'
+test -z "girl.spec" || rm -f girl.spec
+test . = "." || test -z "" || rm -f 
+test -z "intltool-extract intltool-merge intltool-update" || rm -f intltool-extract intltool-merge intltool-update
+rm -f config.h stamp-h1
+rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
+rm -f cscope.out cscope.in.out cscope.po.out cscope.files
+make[2]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1'
+rm -f config.status config.cache config.log configure.lineno config.status.lineno
+rm -f Makefile
+make[1]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1'
+   dh_autotools-dev_restoreconfig
+   dh_clean
+ dpkg-source -b girl-9.7.1
+dpkg-source: info: using source format `3.0 (quilt)'
+dpkg-source: info: building girl using existing ./girl_9.7.1.orig.tar.xz
+dpkg-source: warning: ignoring deletion of file config.log, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file help/en_US/next.page, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file help/en_US/index.page, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file help/en_US/search.page, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file help/en_US/exit.page, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file help/en_US/aboutprogram.page, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file help/en_US/stations.page, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file help/en_US/listen.page, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file help/en_US/prev.page, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file help/en_US/en_US.stamp, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file help/en_US/record.page, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file help/en_US/en_US.mo, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file help/en_US/aboutstation.page, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file help/en_US/intro.page, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file help/en_US/new.page, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file help/en_US/legal.xml, use --include-removal to override
+dpkg-source: warning: ignoring deletion of directory autom4te.cache
+dpkg-source: warning: ignoring deletion of file autom4te.cache/output.1, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file autom4te.cache/requests, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file autom4te.cache/traces.2, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file autom4te.cache/traces.1, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file autom4te.cache/traces.0, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file autom4te.cache/output.2, use --include-removal to override
+dpkg-source: warning: ignoring deletion of file autom4te.cache/output.0, use --include-removal to override
+dpkg-source: info: building girl in girl_9.7.1-1.debian.tar.xz
+dpkg-source: info: building girl in girl_9.7.1-1.dsc
+ debian/rules build
+dh build  --with autotools-dev
+   dh_testdir
+   dh_autotools-dev_updateconfig
+   dh_auto_configure
+configure: WARNING: unrecognized options: --disable-maintainer-mode
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /bin/mkdir -p
+checking for gawk... no
+checking for mawk... mawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking for style of include used by make... GNU
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking whether gcc understands -c and -o together... yes
+checking dependency style of gcc... none
+checking for pow in -lm... yes
+checking for pkg-config... /usr/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking for GIRL... yes
+checking for gtk-doc... yes
+checking for gtkdoc-check... gtkdoc-check.test
+checking for gtkdoc-check... /usr/bin/gtkdoc-check
+checking for gtkdoc-rebase... /usr/bin/gtkdoc-rebase
+checking for gtkdoc-mkpdf... /usr/bin/gtkdoc-mkpdf
+checking whether to build gtk-doc documentation... no
+checking for GTKDOC_DEPS... yes
+checking how to run the C preprocessor... gcc -E
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for stdlib.h... (cached) yes
+checking for string.h... (cached) yes
+checking for unistd.h... (cached) yes
+checking for stdlib.h... (cached) yes
+checking for GNU libc compatible malloc... yes
+checking for strdup... yes
+checking locale.h usability... yes
+checking locale.h presence... yes
+checking for locale.h... yes
+checking for LC_MESSAGES... yes
+checking libintl.h usability... yes
+checking libintl.h presence... yes
+checking for libintl.h... yes
+checking for ngettext in libc... yes
+checking for dgettext in libc... yes
+checking for bind_textdomain_codeset... yes
+checking for msgfmt... /usr/bin/msgfmt
+checking for dcgettext... yes
+checking if msgfmt accepts -c... yes
+checking for gmsgfmt... /usr/bin/msgfmt
+checking for xgettext... /usr/bin/xgettext
+checking whether NLS is requested... yes
+checking for intltool >= 0.50.1... 0.50.2 found
+checking for intltool-update... /usr/bin/intltool-update
+checking for intltool-merge... /usr/bin/intltool-merge
+checking for intltool-extract... /usr/bin/intltool-extract
+checking for xgettext... (cached) /usr/bin/xgettext
+checking for msgmerge... /usr/bin/msgmerge
+checking for msgfmt... (cached) /usr/bin/msgfmt
+checking for gmsgfmt... (cached) /usr/bin/msgfmt
+checking for perl... /usr/bin/perl
+checking for perl >= 5.8.1... 5.20.2
+checking for XML::Parser... ok
+checking whether ln -s works... yes
+checking for itstool... itstool
+checking for xmllint... xmllint
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating data/Makefile
+config.status: creating data/girl.desktop
+config.status: creating data/pixmaps/Makefile
+config.status: creating data/icons/Makefile
+config.status: creating data/icons/16x16/Makefile
+config.status: creating data/icons/22x22/Makefile
+config.status: creating data/icons/24x24/Makefile
+config.status: creating data/icons/32x32/Makefile
+config.status: creating data/icons/48x48/Makefile
+config.status: creating data/icons/256x256/Makefile
+config.status: creating data/icons/512x512/Makefile
+config.status: creating data/icons/1024x1024/Makefile
+config.status: creating help/Makefile
+config.status: creating man/Makefile
+config.status: creating po/Makefile.in
+config.status: creating src/Makefile
+config.status: creating girl.spec
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing default-1 commands
+config.status: executing po/stamp-it commands
+configure: WARNING: unrecognized options: --disable-maintainer-mode
+   dh_auto_build
+make[1]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1'
+make  all-recursive
+make[2]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1'
+Making all in data
+make[3]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1/data'
+Making all in pixmaps
+make[4]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1/data/pixmaps'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1/data/pixmaps'
+Making all in icons
+make[4]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons'
+Making all in 16x16
+make[5]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons/16x16'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons/16x16'
+Making all in 22x22
+make[5]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons/22x22'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons/22x22'
+Making all in 24x24
+make[5]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons/24x24'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons/24x24'
+Making all in 32x32
+make[5]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons/32x32'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons/32x32'
+Making all in 48x48
+make[5]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons/48x48'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons/48x48'
+Making all in 256x256
+make[5]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons/256x256'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons/256x256'
+Making all in 512x512
+make[5]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons/512x512'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons/512x512'
+Making all in 1024x1024
+make[5]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons/1024x1024'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons/1024x1024'
+make[5]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons'
+make[5]: Nothing to be done for 'all-am'.
+make[5]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons'
+make[4]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons'
+make[4]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1/data'
+LC_ALL=C /usr/bin/intltool-merge  -x -u -c ../po/.intltool-merge-cache ../po girl.appdata.xml.in girl.appdata.xml
+Generating and caching the translation database
+Merging translations into girl.appdata.xml.
+CREATED girl.appdata.xml
+make[4]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1/data'
+make[3]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1/data'
+Making all in help
+make[3]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1/help'
+if ! test -d "cs/"; then mkdir "cs/"; fi
+msgfmt -o "cs/cs.mo" "cs/cs.po"
+if ! test -d "cs/"; then mkdir "cs/"; fi
+if test -d "C"; then d="../"; else d="/home/omedia/Desktop/AB/girl-9.7.1/help/"; fi; \
+mo="cs/cs.mo"; \
+if test -f "${mo}"; then mo="../${mo}"; else mo="/home/omedia/Desktop/AB/girl-9.7.1/help/${mo}"; fi; \
+(cd "cs/" && itstool -m "${mo}" ${d}/C/aboutprogram.page ${d}/C/aboutstation.page ${d}/C/exit.page ${d}/C/index.page ${d}/C/intro.page ${d}/C/legal.xml ${d}/C/listen.page ${d}/C/new.page ${d}/C/next.page ${d}/C/prev.page ${d}/C/record.page ${d}/C/search.page ${d}/C/stations.page) && \
+touch "cs/cs.stamp"
+if ! test -d "de/"; then mkdir "de/"; fi
+msgfmt -o "de/de.mo" "de/de.po"
+if ! test -d "de/"; then mkdir "de/"; fi
+if test -d "C"; then d="../"; else d="/home/omedia/Desktop/AB/girl-9.7.1/help/"; fi; \
+mo="de/de.mo"; \
+if test -f "${mo}"; then mo="../${mo}"; else mo="/home/omedia/Desktop/AB/girl-9.7.1/help/${mo}"; fi; \
+(cd "de/" && itstool -m "${mo}" ${d}/C/aboutprogram.page ${d}/C/aboutstation.page ${d}/C/exit.page ${d}/C/index.page ${d}/C/intro.page ${d}/C/legal.xml ${d}/C/listen.page ${d}/C/new.page ${d}/C/next.page ${d}/C/prev.page ${d}/C/record.page ${d}/C/search.page ${d}/C/stations.page) && \
+touch "de/de.stamp"
+if ! test -d "es/"; then mkdir "es/"; fi
+msgfmt -o "es/es.mo" "es/es.po"
+if ! test -d "es/"; then mkdir "es/"; fi
+if test -d "C"; then d="../"; else d="/home/omedia/Desktop/AB/girl-9.7.1/help/"; fi; \
+mo="es/es.mo"; \
+if test -f "${mo}"; then mo="../${mo}"; else mo="/home/omedia/Desktop/AB/girl-9.7.1/help/${mo}"; fi; \
+(cd "es/" && itstool -m "${mo}" ${d}/C/aboutprogram.page ${d}/C/aboutstation.page ${d}/C/exit.page ${d}/C/index.page ${d}/C/intro.page ${d}/C/legal.xml ${d}/C/listen.page ${d}/C/new.page ${d}/C/next.page ${d}/C/prev.page ${d}/C/record.page ${d}/C/search.page ${d}/C/stations.page) && \
+touch "es/es.stamp"
+if ! test -d "en_US/"; then mkdir "en_US/"; fi
+msgfmt -o "en_US/en_US.mo" "en_US/en_US.po"
+if ! test -d "en_US/"; then mkdir "en_US/"; fi
+if test -d "C"; then d="../"; else d="/home/omedia/Desktop/AB/girl-9.7.1/help/"; fi; \
+mo="en_US/en_US.mo"; \
+if test -f "${mo}"; then mo="../${mo}"; else mo="/home/omedia/Desktop/AB/girl-9.7.1/help/${mo}"; fi; \
+(cd "en_US/" && itstool -m "${mo}" ${d}/C/aboutprogram.page ${d}/C/aboutstation.page ${d}/C/exit.page ${d}/C/index.page ${d}/C/intro.page ${d}/C/legal.xml ${d}/C/listen.page ${d}/C/new.page ${d}/C/next.page ${d}/C/prev.page ${d}/C/record.page ${d}/C/search.page ${d}/C/stations.page) && \
+touch "en_US/en_US.stamp"
+if ! test -d "sv/"; then mkdir "sv/"; fi
+msgfmt -o "sv/sv.mo" "sv/sv.po"
+if ! test -d "sv/"; then mkdir "sv/"; fi
+if test -d "C"; then d="../"; else d="/home/omedia/Desktop/AB/girl-9.7.1/help/"; fi; \
+mo="sv/sv.mo"; \
+if test -f "${mo}"; then mo="../${mo}"; else mo="/home/omedia/Desktop/AB/girl-9.7.1/help/${mo}"; fi; \
+(cd "sv/" && itstool -m "${mo}" ${d}/C/aboutprogram.page ${d}/C/aboutstation.page ${d}/C/exit.page ${d}/C/index.page ${d}/C/intro.page ${d}/C/legal.xml ${d}/C/listen.page ${d}/C/new.page ${d}/C/next.page ${d}/C/prev.page ${d}/C/record.page ${d}/C/search.page ${d}/C/stations.page) && \
+touch "sv/sv.stamp"
+make[3]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1/help'
+Making all in man
+make[3]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1/man'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1/man'
+Making all in src
+make[3]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1/src'
+gcc -DHAVE_CONFIG_H -I. -I..  -D_REENTRANT -DORBIT2=1 -pthread -I/usr/include/libgnomeui-2.0 -I/usr/include/gnome-keyring-1 -I/usr/include/libbonoboui-2.0 -I/usr/include/libgnome-2.0 -I/usr/include/libbonobo-2.0 -I/usr/include/bonobo-activation-2.0 -I/usr/include/orbit-2.0 -I/usr/include/libgnomecanvas-2.0 -I/usr/include/gail-1.0 -I/usr/include/libart-2.0 -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/gio-unix-2.0/ -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/libpng12 -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/freetype2 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng12 -I/usr/include/libxml2 -I/usr/include/gnome-vfs-2.0 -I/usr/lib/x86_64-linux-gnu/gnome-vfs-2.0/include -I/usr/include/gconf/2 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/gstreamer-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include   -D_FORTIFY_SOURCE=2 -D_REENTRANT -DORBIT2=1 -pthread -I/usr/include/libgnomeui-2.0 -I/usr/include/gnome-keyring-1 -I/usr/include/libbonoboui-2.0 -I/usr/include/libgnome-2.0 -I/usr/include/libbonobo-2.0 -I/usr/include/bonobo-activation-2.0 -I/usr/include/orbit-2.0 -I/usr/include/libgnomecanvas-2.0 -I/usr/include/gail-1.0 -I/usr/include/libart-2.0 -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/gio-unix-2.0/ -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/libpng12 -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/freetype2 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng12 -I/usr/include/libxml2 -I/usr/include/gnome-vfs-2.0 -I/usr/lib/x86_64-linux-gnu/gnome-vfs-2.0/include -I/usr/include/gconf/2 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/gstreamer-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include  -DGIRL_DATADIR=\"/usr/share/girl\" -DDATADIR=\"/usr/share\" -DGIRL_DEBUG=1 -DGIRL_CFG -DGNOMELOCALEDIR=\"/usr/share/locale\" -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -c -o girl-girl-gui.o `test -f 'girl-gui.c' || echo './'`girl-gui.c
+gcc -DHAVE_CONFIG_H -I. -I..  -D_REENTRANT -DORBIT2=1 -pthread -I/usr/include/libgnomeui-2.0 -I/usr/include/gnome-keyring-1 -I/usr/include/libbonoboui-2.0 -I/usr/include/libgnome-2.0 -I/usr/include/libbonobo-2.0 -I/usr/include/bonobo-activation-2.0 -I/usr/include/orbit-2.0 -I/usr/include/libgnomecanvas-2.0 -I/usr/include/gail-1.0 -I/usr/include/libart-2.0 -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/gio-unix-2.0/ -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/libpng12 -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/freetype2 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng12 -I/usr/include/libxml2 -I/usr/include/gnome-vfs-2.0 -I/usr/lib/x86_64-linux-gnu/gnome-vfs-2.0/include -I/usr/include/gconf/2 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/gstreamer-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include   -D_FORTIFY_SOURCE=2 -D_REENTRANT -DORBIT2=1 -pthread -I/usr/include/libgnomeui-2.0 -I/usr/include/gnome-keyring-1 -I/usr/include/libbonoboui-2.0 -I/usr/include/libgnome-2.0 -I/usr/include/libbonobo-2.0 -I/usr/include/bonobo-activation-2.0 -I/usr/include/orbit-2.0 -I/usr/include/libgnomecanvas-2.0 -I/usr/include/gail-1.0 -I/usr/include/libart-2.0 -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/gio-unix-2.0/ -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/libpng12 -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/freetype2 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng12 -I/usr/include/libxml2 -I/usr/include/gnome-vfs-2.0 -I/usr/lib/x86_64-linux-gnu/gnome-vfs-2.0/include -I/usr/include/gconf/2 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/gstreamer-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include  -DGIRL_DATADIR=\"/usr/share/girl\" -DDATADIR=\"/usr/share\" -DGIRL_DEBUG=1 -DGIRL_CFG -DGNOMELOCALEDIR=\"/usr/share/locale\" -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -c -o girl-girl-listener.o `test -f 'girl-listener.c' || echo './'`girl-listener.c
+gcc -DHAVE_CONFIG_H -I. -I..  -D_REENTRANT -DORBIT2=1 -pthread -I/usr/include/libgnomeui-2.0 -I/usr/include/gnome-keyring-1 -I/usr/include/libbonoboui-2.0 -I/usr/include/libgnome-2.0 -I/usr/include/libbonobo-2.0 -I/usr/include/bonobo-activation-2.0 -I/usr/include/orbit-2.0 -I/usr/include/libgnomecanvas-2.0 -I/usr/include/gail-1.0 -I/usr/include/libart-2.0 -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/gio-unix-2.0/ -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/libpng12 -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/freetype2 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng12 -I/usr/include/libxml2 -I/usr/include/gnome-vfs-2.0 -I/usr/lib/x86_64-linux-gnu/gnome-vfs-2.0/include -I/usr/include/gconf/2 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/gstreamer-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include   -D_FORTIFY_SOURCE=2 -D_REENTRANT -DORBIT2=1 -pthread -I/usr/include/libgnomeui-2.0 -I/usr/include/gnome-keyring-1 -I/usr/include/libbonoboui-2.0 -I/usr/include/libgnome-2.0 -I/usr/include/libbonobo-2.0 -I/usr/include/bonobo-activation-2.0 -I/usr/include/orbit-2.0 -I/usr/include/libgnomecanvas-2.0 -I/usr/include/gail-1.0 -I/usr/include/libart-2.0 -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/gio-unix-2.0/ -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/libpng12 -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/freetype2 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng12 -I/usr/include/libxml2 -I/usr/include/gnome-vfs-2.0 -I/usr/lib/x86_64-linux-gnu/gnome-vfs-2.0/include -I/usr/include/gconf/2 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/gstreamer-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include  -DGIRL_DATADIR=\"/usr/share/girl\" -DDATADIR=\"/usr/share\" -DGIRL_DEBUG=1 -DGIRL_CFG -DGNOMELOCALEDIR=\"/usr/share/locale\" -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -c -o girl-girl-program.o `test -f 'girl-program.c' || echo './'`girl-program.c
+gcc -DHAVE_CONFIG_H -I. -I..  -D_REENTRANT -DORBIT2=1 -pthread -I/usr/include/libgnomeui-2.0 -I/usr/include/gnome-keyring-1 -I/usr/include/libbonoboui-2.0 -I/usr/include/libgnome-2.0 -I/usr/include/libbonobo-2.0 -I/usr/include/bonobo-activation-2.0 -I/usr/include/orbit-2.0 -I/usr/include/libgnomecanvas-2.0 -I/usr/include/gail-1.0 -I/usr/include/libart-2.0 -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/gio-unix-2.0/ -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/libpng12 -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/freetype2 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng12 -I/usr/include/libxml2 -I/usr/include/gnome-vfs-2.0 -I/usr/lib/x86_64-linux-gnu/gnome-vfs-2.0/include -I/usr/include/gconf/2 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/gstreamer-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include   -D_FORTIFY_SOURCE=2 -D_REENTRANT -DORBIT2=1 -pthread -I/usr/include/libgnomeui-2.0 -I/usr/include/gnome-keyring-1 -I/usr/include/libbonoboui-2.0 -I/usr/include/libgnome-2.0 -I/usr/include/libbonobo-2.0 -I/usr/include/bonobo-activation-2.0 -I/usr/include/orbit-2.0 -I/usr/include/libgnomecanvas-2.0 -I/usr/include/gail-1.0 -I/usr/include/libart-2.0 -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/gio-unix-2.0/ -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/libpng12 -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/freetype2 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng12 -I/usr/include/libxml2 -I/usr/include/gnome-vfs-2.0 -I/usr/lib/x86_64-linux-gnu/gnome-vfs-2.0/include -I/usr/include/gconf/2 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/gstreamer-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include  -DGIRL_DATADIR=\"/usr/share/girl\" -DDATADIR=\"/usr/share\" -DGIRL_DEBUG=1 -DGIRL_CFG -DGNOMELOCALEDIR=\"/usr/share/locale\" -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -c -o girl-girl-player.o `test -f 'girl-player.c' || echo './'`girl-player.c
+gcc -DHAVE_CONFIG_H -I. -I..  -D_REENTRANT -DORBIT2=1 -pthread -I/usr/include/libgnomeui-2.0 -I/usr/include/gnome-keyring-1 -I/usr/include/libbonoboui-2.0 -I/usr/include/libgnome-2.0 -I/usr/include/libbonobo-2.0 -I/usr/include/bonobo-activation-2.0 -I/usr/include/orbit-2.0 -I/usr/include/libgnomecanvas-2.0 -I/usr/include/gail-1.0 -I/usr/include/libart-2.0 -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/gio-unix-2.0/ -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/libpng12 -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/freetype2 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng12 -I/usr/include/libxml2 -I/usr/include/gnome-vfs-2.0 -I/usr/lib/x86_64-linux-gnu/gnome-vfs-2.0/include -I/usr/include/gconf/2 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/gstreamer-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include   -D_FORTIFY_SOURCE=2 -D_REENTRANT -DORBIT2=1 -pthread -I/usr/include/libgnomeui-2.0 -I/usr/include/gnome-keyring-1 -I/usr/include/libbonoboui-2.0 -I/usr/include/libgnome-2.0 -I/usr/include/libbonobo-2.0 -I/usr/include/bonobo-activation-2.0 -I/usr/include/orbit-2.0 -I/usr/include/libgnomecanvas-2.0 -I/usr/include/gail-1.0 -I/usr/include/libart-2.0 -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/gio-unix-2.0/ -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/libpng12 -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/freetype2 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng12 -I/usr/include/libxml2 -I/usr/include/gnome-vfs-2.0 -I/usr/lib/x86_64-linux-gnu/gnome-vfs-2.0/include -I/usr/include/gconf/2 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/gstreamer-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include  -DGIRL_DATADIR=\"/usr/share/girl\" -DDATADIR=\"/usr/share\" -DGIRL_DEBUG=1 -DGIRL_CFG -DGNOMELOCALEDIR=\"/usr/share/locale\" -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -c -o girl-girl-player-backend.o `test -f 'girl-player-backend.c' || echo './'`girl-player-backend.c
+gcc -DHAVE_CONFIG_H -I. -I..  -D_REENTRANT -DORBIT2=1 -pthread -I/usr/include/libgnomeui-2.0 -I/usr/include/gnome-keyring-1 -I/usr/include/libbonoboui-2.0 -I/usr/include/libgnome-2.0 -I/usr/include/libbonobo-2.0 -I/usr/include/bonobo-activation-2.0 -I/usr/include/orbit-2.0 -I/usr/include/libgnomecanvas-2.0 -I/usr/include/gail-1.0 -I/usr/include/libart-2.0 -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/gio-unix-2.0/ -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/libpng12 -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/freetype2 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng12 -I/usr/include/libxml2 -I/usr/include/gnome-vfs-2.0 -I/usr/lib/x86_64-linux-gnu/gnome-vfs-2.0/include -I/usr/include/gconf/2 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/gstreamer-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include   -D_FORTIFY_SOURCE=2 -D_REENTRANT -DORBIT2=1 -pthread -I/usr/include/libgnomeui-2.0 -I/usr/include/gnome-keyring-1 -I/usr/include/libbonoboui-2.0 -I/usr/include/libgnome-2.0 -I/usr/include/libbonobo-2.0 -I/usr/include/bonobo-activation-2.0 -I/usr/include/orbit-2.0 -I/usr/include/libgnomecanvas-2.0 -I/usr/include/gail-1.0 -I/usr/include/libart-2.0 -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/gio-unix-2.0/ -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/libpng12 -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/freetype2 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng12 -I/usr/include/libxml2 -I/usr/include/gnome-vfs-2.0 -I/usr/lib/x86_64-linux-gnu/gnome-vfs-2.0/include -I/usr/include/gconf/2 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/gstreamer-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include  -DGIRL_DATADIR=\"/usr/share/girl\" -DDATADIR=\"/usr/share\" -DGIRL_DEBUG=1 -DGIRL_CFG -DGNOMELOCALEDIR=\"/usr/share/locale\" -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -c -o girl-girl-player-frontend.o `test -f 'girl-player-frontend.c' || echo './'`girl-player-frontend.c
+gcc -DHAVE_CONFIG_H -I. -I..  -D_REENTRANT -DORBIT2=1 -pthread -I/usr/include/libgnomeui-2.0 -I/usr/include/gnome-keyring-1 -I/usr/include/libbonoboui-2.0 -I/usr/include/libgnome-2.0 -I/usr/include/libbonobo-2.0 -I/usr/include/bonobo-activation-2.0 -I/usr/include/orbit-2.0 -I/usr/include/libgnomecanvas-2.0 -I/usr/include/gail-1.0 -I/usr/include/libart-2.0 -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/gio-unix-2.0/ -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/libpng12 -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/freetype2 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng12 -I/usr/include/libxml2 -I/usr/include/gnome-vfs-2.0 -I/usr/lib/x86_64-linux-gnu/gnome-vfs-2.0/include -I/usr/include/gconf/2 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/gstreamer-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include   -D_FORTIFY_SOURCE=2 -D_REENTRANT -DORBIT2=1 -pthread -I/usr/include/libgnomeui-2.0 -I/usr/include/gnome-keyring-1 -I/usr/include/libbonoboui-2.0 -I/usr/include/libgnome-2.0 -I/usr/include/libbonobo-2.0 -I/usr/include/bonobo-activation-2.0 -I/usr/include/orbit-2.0 -I/usr/include/libgnomecanvas-2.0 -I/usr/include/gail-1.0 -I/usr/include/libart-2.0 -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/gio-unix-2.0/ -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/libpng12 -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/freetype2 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng12 -I/usr/include/libxml2 -I/usr/include/gnome-vfs-2.0 -I/usr/lib/x86_64-linux-gnu/gnome-vfs-2.0/include -I/usr/include/gconf/2 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/gstreamer-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include  -DGIRL_DATADIR=\"/usr/share/girl\" -DDATADIR=\"/usr/share\" -DGIRL_DEBUG=1 -DGIRL_CFG -DGNOMELOCALEDIR=\"/usr/share/locale\" -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -c -o girl-girl-record.o `test -f 'girl-record.c' || echo './'`girl-record.c
+gcc -DHAVE_CONFIG_H -I. -I..  -D_REENTRANT -DORBIT2=1 -pthread -I/usr/include/libgnomeui-2.0 -I/usr/include/gnome-keyring-1 -I/usr/include/libbonoboui-2.0 -I/usr/include/libgnome-2.0 -I/usr/include/libbonobo-2.0 -I/usr/include/bonobo-activation-2.0 -I/usr/include/orbit-2.0 -I/usr/include/libgnomecanvas-2.0 -I/usr/include/gail-1.0 -I/usr/include/libart-2.0 -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/gio-unix-2.0/ -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/libpng12 -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/freetype2 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng12 -I/usr/include/libxml2 -I/usr/include/gnome-vfs-2.0 -I/usr/lib/x86_64-linux-gnu/gnome-vfs-2.0/include -I/usr/include/gconf/2 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/gstreamer-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include   -D_FORTIFY_SOURCE=2 -D_REENTRANT -DORBIT2=1 -pthread -I/usr/include/libgnomeui-2.0 -I/usr/include/gnome-keyring-1 -I/usr/include/libbonoboui-2.0 -I/usr/include/libgnome-2.0 -I/usr/include/libbonobo-2.0 -I/usr/include/bonobo-activation-2.0 -I/usr/include/orbit-2.0 -I/usr/include/libgnomecanvas-2.0 -I/usr/include/gail-1.0 -I/usr/include/libart-2.0 -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/gio-unix-2.0/ -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/libpng12 -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/freetype2 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng12 -I/usr/include/libxml2 -I/usr/include/gnome-vfs-2.0 -I/usr/lib/x86_64-linux-gnu/gnome-vfs-2.0/include -I/usr/include/gconf/2 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/gstreamer-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include  -DGIRL_DATADIR=\"/usr/share/girl\" -DDATADIR=\"/usr/share\" -DGIRL_DEBUG=1 -DGIRL_CFG -DGNOMELOCALEDIR=\"/usr/share/locale\" -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -c -o girl-girl-record-backend.o `test -f 'girl-record-backend.c' || echo './'`girl-record-backend.c
+gcc -DHAVE_CONFIG_H -I. -I..  -D_REENTRANT -DORBIT2=1 -pthread -I/usr/include/libgnomeui-2.0 -I/usr/include/gnome-keyring-1 -I/usr/include/libbonoboui-2.0 -I/usr/include/libgnome-2.0 -I/usr/include/libbonobo-2.0 -I/usr/include/bonobo-activation-2.0 -I/usr/include/orbit-2.0 -I/usr/include/libgnomecanvas-2.0 -I/usr/include/gail-1.0 -I/usr/include/libart-2.0 -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/gio-unix-2.0/ -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/libpng12 -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/freetype2 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng12 -I/usr/include/libxml2 -I/usr/include/gnome-vfs-2.0 -I/usr/lib/x86_64-linux-gnu/gnome-vfs-2.0/include -I/usr/include/gconf/2 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/gstreamer-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include   -D_FORTIFY_SOURCE=2 -D_REENTRANT -DORBIT2=1 -pthread -I/usr/include/libgnomeui-2.0 -I/usr/include/gnome-keyring-1 -I/usr/include/libbonoboui-2.0 -I/usr/include/libgnome-2.0 -I/usr/include/libbonobo-2.0 -I/usr/include/bonobo-activation-2.0 -I/usr/include/orbit-2.0 -I/usr/include/libgnomecanvas-2.0 -I/usr/include/gail-1.0 -I/usr/include/libart-2.0 -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/gio-unix-2.0/ -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/libpng12 -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/freetype2 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng12 -I/usr/include/libxml2 -I/usr/include/gnome-vfs-2.0 -I/usr/lib/x86_64-linux-gnu/gnome-vfs-2.0/include -I/usr/include/gconf/2 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/gstreamer-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include  -DGIRL_DATADIR=\"/usr/share/girl\" -DDATADIR=\"/usr/share\" -DGIRL_DEBUG=1 -DGIRL_CFG -DGNOMELOCALEDIR=\"/usr/share/locale\" -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -c -o girl-girl-record-frontend.o `test -f 'girl-record-frontend.c' || echo './'`girl-record-frontend.c
+gcc -DHAVE_CONFIG_H -I. -I..  -D_REENTRANT -DORBIT2=1 -pthread -I/usr/include/libgnomeui-2.0 -I/usr/include/gnome-keyring-1 -I/usr/include/libbonoboui-2.0 -I/usr/include/libgnome-2.0 -I/usr/include/libbonobo-2.0 -I/usr/include/bonobo-activation-2.0 -I/usr/include/orbit-2.0 -I/usr/include/libgnomecanvas-2.0 -I/usr/include/gail-1.0 -I/usr/include/libart-2.0 -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/gio-unix-2.0/ -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/libpng12 -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/freetype2 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng12 -I/usr/include/libxml2 -I/usr/include/gnome-vfs-2.0 -I/usr/lib/x86_64-linux-gnu/gnome-vfs-2.0/include -I/usr/include/gconf/2 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/gstreamer-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include   -D_FORTIFY_SOURCE=2 -D_REENTRANT -DORBIT2=1 -pthread -I/usr/include/libgnomeui-2.0 -I/usr/include/gnome-keyring-1 -I/usr/include/libbonoboui-2.0 -I/usr/include/libgnome-2.0 -I/usr/include/libbonobo-2.0 -I/usr/include/bonobo-activation-2.0 -I/usr/include/orbit-2.0 -I/usr/include/libgnomecanvas-2.0 -I/usr/include/gail-1.0 -I/usr/include/libart-2.0 -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/gio-unix-2.0/ -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/libpng12 -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/freetype2 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng12 -I/usr/include/libxml2 -I/usr/include/gnome-vfs-2.0 -I/usr/lib/x86_64-linux-gnu/gnome-vfs-2.0/include -I/usr/include/gconf/2 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/gstreamer-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include  -DGIRL_DATADIR=\"/usr/share/girl\" -DDATADIR=\"/usr/share\" -DGIRL_DEBUG=1 -DGIRL_CFG -DGNOMELOCALEDIR=\"/usr/share/locale\" -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -c -o girl-girl-runners.o `test -f 'girl-runners.c' || echo './'`girl-runners.c
+gcc -DHAVE_CONFIG_H -I. -I..  -D_REENTRANT -DORBIT2=1 -pthread -I/usr/include/libgnomeui-2.0 -I/usr/include/gnome-keyring-1 -I/usr/include/libbonoboui-2.0 -I/usr/include/libgnome-2.0 -I/usr/include/libbonobo-2.0 -I/usr/include/bonobo-activation-2.0 -I/usr/include/orbit-2.0 -I/usr/include/libgnomecanvas-2.0 -I/usr/include/gail-1.0 -I/usr/include/libart-2.0 -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/gio-unix-2.0/ -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/libpng12 -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/freetype2 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng12 -I/usr/include/libxml2 -I/usr/include/gnome-vfs-2.0 -I/usr/lib/x86_64-linux-gnu/gnome-vfs-2.0/include -I/usr/include/gconf/2 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/gstreamer-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include   -D_FORTIFY_SOURCE=2 -D_REENTRANT -DORBIT2=1 -pthread -I/usr/include/libgnomeui-2.0 -I/usr/include/gnome-keyring-1 -I/usr/include/libbonoboui-2.0 -I/usr/include/libgnome-2.0 -I/usr/include/libbonobo-2.0 -I/usr/include/bonobo-activation-2.0 -I/usr/include/orbit-2.0 -I/usr/include/libgnomecanvas-2.0 -I/usr/include/gail-1.0 -I/usr/include/libart-2.0 -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/gio-unix-2.0/ -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/libpng12 -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/freetype2 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng12 -I/usr/include/libxml2 -I/usr/include/gnome-vfs-2.0 -I/usr/lib/x86_64-linux-gnu/gnome-vfs-2.0/include -I/usr/include/gconf/2 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/gstreamer-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include  -DGIRL_DATADIR=\"/usr/share/girl\" -DDATADIR=\"/usr/share\" -DGIRL_DEBUG=1 -DGIRL_CFG -DGNOMELOCALEDIR=\"/usr/share/locale\" -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -c -o girl-girl-station.o `test -f 'girl-station.c' || echo './'`girl-station.c
+gcc -DHAVE_CONFIG_H -I. -I..  -D_REENTRANT -DORBIT2=1 -pthread -I/usr/include/libgnomeui-2.0 -I/usr/include/gnome-keyring-1 -I/usr/include/libbonoboui-2.0 -I/usr/include/libgnome-2.0 -I/usr/include/libbonobo-2.0 -I/usr/include/bonobo-activation-2.0 -I/usr/include/orbit-2.0 -I/usr/include/libgnomecanvas-2.0 -I/usr/include/gail-1.0 -I/usr/include/libart-2.0 -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/gio-unix-2.0/ -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/libpng12 -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/freetype2 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng12 -I/usr/include/libxml2 -I/usr/include/gnome-vfs-2.0 -I/usr/lib/x86_64-linux-gnu/gnome-vfs-2.0/include -I/usr/include/gconf/2 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/gstreamer-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include   -D_FORTIFY_SOURCE=2 -D_REENTRANT -DORBIT2=1 -pthread -I/usr/include/libgnomeui-2.0 -I/usr/include/gnome-keyring-1 -I/usr/include/libbonoboui-2.0 -I/usr/include/libgnome-2.0 -I/usr/include/libbonobo-2.0 -I/usr/include/bonobo-activation-2.0 -I/usr/include/orbit-2.0 -I/usr/include/libgnomecanvas-2.0 -I/usr/include/gail-1.0 -I/usr/include/libart-2.0 -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/gio-unix-2.0/ -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/libpng12 -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/freetype2 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng12 -I/usr/include/libxml2 -I/usr/include/gnome-vfs-2.0 -I/usr/lib/x86_64-linux-gnu/gnome-vfs-2.0/include -I/usr/include/gconf/2 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/gstreamer-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include  -DGIRL_DATADIR=\"/usr/share/girl\" -DDATADIR=\"/usr/share\" -DGIRL_DEBUG=1 -DGIRL_CFG -DGNOMELOCALEDIR=\"/usr/share/locale\" -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -c -o girl-girl-stations-map.o `test -f 'girl-stations-map.c' || echo './'`girl-stations-map.c
+gcc -DHAVE_CONFIG_H -I. -I..  -D_REENTRANT -DORBIT2=1 -pthread -I/usr/include/libgnomeui-2.0 -I/usr/include/gnome-keyring-1 -I/usr/include/libbonoboui-2.0 -I/usr/include/libgnome-2.0 -I/usr/include/libbonobo-2.0 -I/usr/include/bonobo-activation-2.0 -I/usr/include/orbit-2.0 -I/usr/include/libgnomecanvas-2.0 -I/usr/include/gail-1.0 -I/usr/include/libart-2.0 -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/gio-unix-2.0/ -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/libpng12 -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/freetype2 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng12 -I/usr/include/libxml2 -I/usr/include/gnome-vfs-2.0 -I/usr/lib/x86_64-linux-gnu/gnome-vfs-2.0/include -I/usr/include/gconf/2 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/gstreamer-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include   -D_FORTIFY_SOURCE=2 -D_REENTRANT -DORBIT2=1 -pthread -I/usr/include/libgnomeui-2.0 -I/usr/include/gnome-keyring-1 -I/usr/include/libbonoboui-2.0 -I/usr/include/libgnome-2.0 -I/usr/include/libbonobo-2.0 -I/usr/include/bonobo-activation-2.0 -I/usr/include/orbit-2.0 -I/usr/include/libgnomecanvas-2.0 -I/usr/include/gail-1.0 -I/usr/include/libart-2.0 -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/gio-unix-2.0/ -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/libpng12 -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/freetype2 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng12 -I/usr/include/libxml2 -I/usr/include/gnome-vfs-2.0 -I/usr/lib/x86_64-linux-gnu/gnome-vfs-2.0/include -I/usr/include/gconf/2 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/gstreamer-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include  -DGIRL_DATADIR=\"/usr/share/girl\" -DDATADIR=\"/usr/share\" -DGIRL_DEBUG=1 -DGIRL_CFG -DGNOMELOCALEDIR=\"/usr/share/locale\" -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -c -o girl-girl-streams.o `test -f 'girl-streams.c' || echo './'`girl-streams.c
+gcc -DHAVE_CONFIG_H -I. -I..  -D_REENTRANT -DORBIT2=1 -pthread -I/usr/include/libgnomeui-2.0 -I/usr/include/gnome-keyring-1 -I/usr/include/libbonoboui-2.0 -I/usr/include/libgnome-2.0 -I/usr/include/libbonobo-2.0 -I/usr/include/bonobo-activation-2.0 -I/usr/include/orbit-2.0 -I/usr/include/libgnomecanvas-2.0 -I/usr/include/gail-1.0 -I/usr/include/libart-2.0 -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/gio-unix-2.0/ -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/libpng12 -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/freetype2 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng12 -I/usr/include/libxml2 -I/usr/include/gnome-vfs-2.0 -I/usr/lib/x86_64-linux-gnu/gnome-vfs-2.0/include -I/usr/include/gconf/2 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/gstreamer-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include   -D_FORTIFY_SOURCE=2 -D_REENTRANT -DORBIT2=1 -pthread -I/usr/include/libgnomeui-2.0 -I/usr/include/gnome-keyring-1 -I/usr/include/libbonoboui-2.0 -I/usr/include/libgnome-2.0 -I/usr/include/libbonobo-2.0 -I/usr/include/bonobo-activation-2.0 -I/usr/include/orbit-2.0 -I/usr/include/libgnomecanvas-2.0 -I/usr/include/gail-1.0 -I/usr/include/libart-2.0 -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/gio-unix-2.0/ -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/libpng12 -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/freetype2 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng12 -I/usr/include/libxml2 -I/usr/include/gnome-vfs-2.0 -I/usr/lib/x86_64-linux-gnu/gnome-vfs-2.0/include -I/usr/include/gconf/2 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/gstreamer-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include  -DGIRL_DATADIR=\"/usr/share/girl\" -DDATADIR=\"/usr/share\" -DGIRL_DEBUG=1 -DGIRL_CFG -DGNOMELOCALEDIR=\"/usr/share/locale\" -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -c -o girl-girl-tz.o `test -f 'girl-tz.c' || echo './'`girl-tz.c
+gcc -DHAVE_CONFIG_H -I. -I..  -D_REENTRANT -DORBIT2=1 -pthread -I/usr/include/libgnomeui-2.0 -I/usr/include/gnome-keyring-1 -I/usr/include/libbonoboui-2.0 -I/usr/include/libgnome-2.0 -I/usr/include/libbonobo-2.0 -I/usr/include/bonobo-activation-2.0 -I/usr/include/orbit-2.0 -I/usr/include/libgnomecanvas-2.0 -I/usr/include/gail-1.0 -I/usr/include/libart-2.0 -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/gio-unix-2.0/ -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/libpng12 -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/freetype2 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng12 -I/usr/include/libxml2 -I/usr/include/gnome-vfs-2.0 -I/usr/lib/x86_64-linux-gnu/gnome-vfs-2.0/include -I/usr/include/gconf/2 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/gstreamer-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include   -D_FORTIFY_SOURCE=2 -D_REENTRANT -DORBIT2=1 -pthread -I/usr/include/libgnomeui-2.0 -I/usr/include/gnome-keyring-1 -I/usr/include/libbonoboui-2.0 -I/usr/include/libgnome-2.0 -I/usr/include/libbonobo-2.0 -I/usr/include/bonobo-activation-2.0 -I/usr/include/orbit-2.0 -I/usr/include/libgnomecanvas-2.0 -I/usr/include/gail-1.0 -I/usr/include/libart-2.0 -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/gio-unix-2.0/ -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/libpng12 -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/freetype2 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng12 -I/usr/include/libxml2 -I/usr/include/gnome-vfs-2.0 -I/usr/lib/x86_64-linux-gnu/gnome-vfs-2.0/include -I/usr/include/gconf/2 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/gstreamer-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include  -DGIRL_DATADIR=\"/usr/share/girl\" -DDATADIR=\"/usr/share\" -DGIRL_DEBUG=1 -DGIRL_CFG -DGNOMELOCALEDIR=\"/usr/share/locale\" -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -c -o girl-girl.o `test -f 'girl.c' || echo './'`girl.c
+gcc -D_REENTRANT -DORBIT2=1 -pthread -I/usr/include/libgnomeui-2.0 -I/usr/include/gnome-keyring-1 -I/usr/include/libbonoboui-2.0 -I/usr/include/libgnome-2.0 -I/usr/include/libbonobo-2.0 -I/usr/include/bonobo-activation-2.0 -I/usr/include/orbit-2.0 -I/usr/include/libgnomecanvas-2.0 -I/usr/include/gail-1.0 -I/usr/include/libart-2.0 -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/gio-unix-2.0/ -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/libpng12 -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/freetype2 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng12 -I/usr/include/libxml2 -I/usr/include/gnome-vfs-2.0 -I/usr/lib/x86_64-linux-gnu/gnome-vfs-2.0/include -I/usr/include/gconf/2 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/gstreamer-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include  -DGIRL_DATADIR=\"/usr/share/girl\" -DDATADIR=\"/usr/share\" -DGIRL_DEBUG=1 -DGIRL_CFG -DGNOMELOCALEDIR=\"/usr/share/locale\" -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -lgnomeui-2 -lSM -lICE -lbonoboui-2 -lgnome-2 -lpopt -lbonobo-2 -lbonobo-activation -lORBit-2 -lgnomecanvas-2 -lart_lgpl_2 -lgtk-x11-2.0 -lgdk-x11-2.0 -lpangocairo-1.0 -latk-1.0 -lcairo -lgio-2.0 -lpangoft2-1.0 -lpango-1.0 -lfontconfig -lfreetype -lgdk_pixbuf-2.0 -lxml2 -lgnomevfs-2 -lgconf-2 -lgthread-2.0 -pthread -lgmodule-2.0 -pthread -lgstvideo-1.0 -lgstbase-1.0 -lgstreamer-1.0 -lgobject-2.0 -lglib-2.0  -Wl,-z,relro -o girl girl-girl-gui.o girl-girl-listener.o girl-girl-program.o girl-girl-player.o girl-girl-player-backend.o girl-girl-player-frontend.o girl-girl-record.o girl-girl-record-backend.o girl-girl-record-frontend.o girl-girl-runners.o girl-girl-station.o girl-girl-stations-map.o girl-girl-streams.o girl-girl-tz.o girl-girl.o -lgnomeui-2 -lSM -lICE -lbonoboui-2 -lgnome-2 -lpopt -lbonobo-2 -lbonobo-activation -lORBit-2 -lgnomecanvas-2 -lart_lgpl_2 -lgtk-x11-2.0 -lgdk-x11-2.0 -lpangocairo-1.0 -latk-1.0 -lcairo -lgio-2.0 -lpangoft2-1.0 -lpango-1.0 -lfontconfig -lfreetype -lgdk_pixbuf-2.0 -lxml2 -lgnomevfs-2 -lgconf-2 -lgthread-2.0 -pthread -lgmodule-2.0 -pthread -lgstvideo-1.0 -lgstbase-1.0 -lgstreamer-1.0 -lgobject-2.0 -lglib-2.0  -lm 
+gcc -DHAVE_CONFIG_H -I. -I..  -D_REENTRANT -DORBIT2=1 -pthread -I/usr/include/libgnomeui-2.0 -I/usr/include/gnome-keyring-1 -I/usr/include/libbonoboui-2.0 -I/usr/include/libgnome-2.0 -I/usr/include/libbonobo-2.0 -I/usr/include/bonobo-activation-2.0 -I/usr/include/orbit-2.0 -I/usr/include/libgnomecanvas-2.0 -I/usr/include/gail-1.0 -I/usr/include/libart-2.0 -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/gio-unix-2.0/ -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/libpng12 -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/freetype2 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng12 -I/usr/include/libxml2 -I/usr/include/gnome-vfs-2.0 -I/usr/lib/x86_64-linux-gnu/gnome-vfs-2.0/include -I/usr/include/gconf/2 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/gstreamer-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include   -D_FORTIFY_SOURCE=2 -D_REENTRANT -DORBIT2=1 -pthread -I/usr/include/libgnomeui-2.0 -I/usr/include/gnome-keyring-1 -I/usr/include/libbonoboui-2.0 -I/usr/include/libgnome-2.0 -I/usr/include/libbonobo-2.0 -I/usr/include/bonobo-activation-2.0 -I/usr/include/orbit-2.0 -I/usr/include/libgnomecanvas-2.0 -I/usr/include/gail-1.0 -I/usr/include/libart-2.0 -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/gio-unix-2.0/ -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/libpng12 -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/freetype2 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng12 -I/usr/include/libxml2 -I/usr/include/gnome-vfs-2.0 -I/usr/lib/x86_64-linux-gnu/gnome-vfs-2.0/include -I/usr/include/gconf/2 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/gstreamer-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include  -DGIRL_DATADIR="\"/usr/share/girl\"" -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -c -o test_stations_gfx-test-stations-gfx.o `test -f 'test-stations-gfx.c' || echo './'`test-stations-gfx.c
+gcc -DHAVE_CONFIG_H -I. -I..  -D_REENTRANT -DORBIT2=1 -pthread -I/usr/include/libgnomeui-2.0 -I/usr/include/gnome-keyring-1 -I/usr/include/libbonoboui-2.0 -I/usr/include/libgnome-2.0 -I/usr/include/libbonobo-2.0 -I/usr/include/bonobo-activation-2.0 -I/usr/include/orbit-2.0 -I/usr/include/libgnomecanvas-2.0 -I/usr/include/gail-1.0 -I/usr/include/libart-2.0 -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/gio-unix-2.0/ -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/libpng12 -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/freetype2 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng12 -I/usr/include/libxml2 -I/usr/include/gnome-vfs-2.0 -I/usr/lib/x86_64-linux-gnu/gnome-vfs-2.0/include -I/usr/include/gconf/2 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/gstreamer-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include   -D_FORTIFY_SOURCE=2 -D_REENTRANT -DORBIT2=1 -pthread -I/usr/include/libgnomeui-2.0 -I/usr/include/gnome-keyring-1 -I/usr/include/libbonoboui-2.0 -I/usr/include/libgnome-2.0 -I/usr/include/libbonobo-2.0 -I/usr/include/bonobo-activation-2.0 -I/usr/include/orbit-2.0 -I/usr/include/libgnomecanvas-2.0 -I/usr/include/gail-1.0 -I/usr/include/libart-2.0 -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/gio-unix-2.0/ -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/libpng12 -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/freetype2 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng12 -I/usr/include/libxml2 -I/usr/include/gnome-vfs-2.0 -I/usr/lib/x86_64-linux-gnu/gnome-vfs-2.0/include -I/usr/include/gconf/2 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/gstreamer-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include  -DGIRL_DATADIR="\"/usr/share/girl\"" -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -c -o test_stations_gfx-girl-tz.o `test -f 'girl-tz.c' || echo './'`girl-tz.c
+gcc -D_REENTRANT -DORBIT2=1 -pthread -I/usr/include/libgnomeui-2.0 -I/usr/include/gnome-keyring-1 -I/usr/include/libbonoboui-2.0 -I/usr/include/libgnome-2.0 -I/usr/include/libbonobo-2.0 -I/usr/include/bonobo-activation-2.0 -I/usr/include/orbit-2.0 -I/usr/include/libgnomecanvas-2.0 -I/usr/include/gail-1.0 -I/usr/include/libart-2.0 -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/gio-unix-2.0/ -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/libpng12 -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/freetype2 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng12 -I/usr/include/libxml2 -I/usr/include/gnome-vfs-2.0 -I/usr/lib/x86_64-linux-gnu/gnome-vfs-2.0/include -I/usr/include/gconf/2 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/gstreamer-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include  -DGIRL_DATADIR="\"/usr/share/girl\"" -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -lgnomeui-2 -lSM -lICE -lbonoboui-2 -lgnome-2 -lpopt -lbonobo-2 -lbonobo-activation -lORBit-2 -lgnomecanvas-2 -lart_lgpl_2 -lgtk-x11-2.0 -lgdk-x11-2.0 -lpangocairo-1.0 -latk-1.0 -lcairo -lgio-2.0 -lpangoft2-1.0 -lpango-1.0 -lfontconfig -lfreetype -lgdk_pixbuf-2.0 -lxml2 -lgnomevfs-2 -lgconf-2 -lgthread-2.0 -pthread -lgmodule-2.0 -pthread -lgstvideo-1.0 -lgstbase-1.0 -lgstreamer-1.0 -lgobject-2.0 -lglib-2.0  -Wl,-z,relro -o test-stations-gfx test_stations_gfx-test-stations-gfx.o test_stations_gfx-girl-tz.o -lgnomeui-2 -lSM -lICE -lbonoboui-2 -lgnome-2 -lpopt -lbonobo-2 -lbonobo-activation -lORBit-2 -lgnomecanvas-2 -lart_lgpl_2 -lgtk-x11-2.0 -lgdk-x11-2.0 -lpangocairo-1.0 -latk-1.0 -lcairo -lgio-2.0 -lpangoft2-1.0 -lpango-1.0 -lfontconfig -lfreetype -lgdk_pixbuf-2.0 -lxml2 -lgnomevfs-2 -lgconf-2 -lgthread-2.0 -pthread -lgmodule-2.0 -pthread -lgstvideo-1.0 -lgstbase-1.0 -lgstreamer-1.0 -lgobject-2.0 -lglib-2.0  -lm 
+gcc -DHAVE_CONFIG_H -I. -I..  -D_REENTRANT -DORBIT2=1 -pthread -I/usr/include/libgnomeui-2.0 -I/usr/include/gnome-keyring-1 -I/usr/include/libbonoboui-2.0 -I/usr/include/libgnome-2.0 -I/usr/include/libbonobo-2.0 -I/usr/include/bonobo-activation-2.0 -I/usr/include/orbit-2.0 -I/usr/include/libgnomecanvas-2.0 -I/usr/include/gail-1.0 -I/usr/include/libart-2.0 -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/gio-unix-2.0/ -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/libpng12 -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/freetype2 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng12 -I/usr/include/libxml2 -I/usr/include/gnome-vfs-2.0 -I/usr/lib/x86_64-linux-gnu/gnome-vfs-2.0/include -I/usr/include/gconf/2 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/gstreamer-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include   -D_FORTIFY_SOURCE=2 -D_REENTRANT -DORBIT2=1 -pthread -I/usr/include/libgnomeui-2.0 -I/usr/include/gnome-keyring-1 -I/usr/include/libbonoboui-2.0 -I/usr/include/libgnome-2.0 -I/usr/include/libbonobo-2.0 -I/usr/include/bonobo-activation-2.0 -I/usr/include/orbit-2.0 -I/usr/include/libgnomecanvas-2.0 -I/usr/include/gail-1.0 -I/usr/include/libart-2.0 -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/gio-unix-2.0/ -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/libpng12 -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/freetype2 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng12 -I/usr/include/libxml2 -I/usr/include/gnome-vfs-2.0 -I/usr/lib/x86_64-linux-gnu/gnome-vfs-2.0/include -I/usr/include/gconf/2 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/gstreamer-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include  -DGIRL_DATADIR="\"/usr/share/girl\"" -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -c -o test_endianess-test-endianess.o `test -f 'test-endianess.c' || echo './'`test-endianess.c
+gcc -DHAVE_CONFIG_H -I. -I..  -D_REENTRANT -DORBIT2=1 -pthread -I/usr/include/libgnomeui-2.0 -I/usr/include/gnome-keyring-1 -I/usr/include/libbonoboui-2.0 -I/usr/include/libgnome-2.0 -I/usr/include/libbonobo-2.0 -I/usr/include/bonobo-activation-2.0 -I/usr/include/orbit-2.0 -I/usr/include/libgnomecanvas-2.0 -I/usr/include/gail-1.0 -I/usr/include/libart-2.0 -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/gio-unix-2.0/ -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/libpng12 -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/freetype2 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng12 -I/usr/include/libxml2 -I/usr/include/gnome-vfs-2.0 -I/usr/lib/x86_64-linux-gnu/gnome-vfs-2.0/include -I/usr/include/gconf/2 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/gstreamer-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include   -D_FORTIFY_SOURCE=2 -D_REENTRANT -DORBIT2=1 -pthread -I/usr/include/libgnomeui-2.0 -I/usr/include/gnome-keyring-1 -I/usr/include/libbonoboui-2.0 -I/usr/include/libgnome-2.0 -I/usr/include/libbonobo-2.0 -I/usr/include/bonobo-activation-2.0 -I/usr/include/orbit-2.0 -I/usr/include/libgnomecanvas-2.0 -I/usr/include/gail-1.0 -I/usr/include/libart-2.0 -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/gio-unix-2.0/ -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/libpng12 -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/freetype2 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng12 -I/usr/include/libxml2 -I/usr/include/gnome-vfs-2.0 -I/usr/lib/x86_64-linux-gnu/gnome-vfs-2.0/include -I/usr/include/gconf/2 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/gstreamer-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include  -DGIRL_DATADIR="\"/usr/share/girl\"" -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -c -o test_endianess-date-endian.o `test -f 'date-endian.c' || echo './'`date-endian.c
+gcc -D_REENTRANT -DORBIT2=1 -pthread -I/usr/include/libgnomeui-2.0 -I/usr/include/gnome-keyring-1 -I/usr/include/libbonoboui-2.0 -I/usr/include/libgnome-2.0 -I/usr/include/libbonobo-2.0 -I/usr/include/bonobo-activation-2.0 -I/usr/include/orbit-2.0 -I/usr/include/libgnomecanvas-2.0 -I/usr/include/gail-1.0 -I/usr/include/libart-2.0 -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/gio-unix-2.0/ -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/libpng12 -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/freetype2 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng12 -I/usr/include/libxml2 -I/usr/include/gnome-vfs-2.0 -I/usr/lib/x86_64-linux-gnu/gnome-vfs-2.0/include -I/usr/include/gconf/2 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/gstreamer-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include  -DGIRL_DATADIR="\"/usr/share/girl\"" -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -lgnomeui-2 -lSM -lICE -lbonoboui-2 -lgnome-2 -lpopt -lbonobo-2 -lbonobo-activation -lORBit-2 -lgnomecanvas-2 -lart_lgpl_2 -lgtk-x11-2.0 -lgdk-x11-2.0 -lpangocairo-1.0 -latk-1.0 -lcairo -lgio-2.0 -lpangoft2-1.0 -lpango-1.0 -lfontconfig -lfreetype -lgdk_pixbuf-2.0 -lxml2 -lgnomevfs-2 -lgconf-2 -lgthread-2.0 -pthread -lgmodule-2.0 -pthread -lgstvideo-1.0 -lgstbase-1.0 -lgstreamer-1.0 -lgobject-2.0 -lglib-2.0  -Wl,-z,relro -o test-endianess test_endianess-test-endianess.o test_endianess-date-endian.o -lgnomeui-2 -lSM -lICE -lbonoboui-2 -lgnome-2 -lpopt -lbonobo-2 -lbonobo-activation -lORBit-2 -lgnomecanvas-2 -lart_lgpl_2 -lgtk-x11-2.0 -lgdk-x11-2.0 -lpangocairo-1.0 -latk-1.0 -lcairo -lgio-2.0 -lpangoft2-1.0 -lpango-1.0 -lfontconfig -lfreetype -lgdk_pixbuf-2.0 -lxml2 -lgnomevfs-2 -lgconf-2 -lgthread-2.0 -pthread -lgmodule-2.0 -pthread -lgstvideo-1.0 -lgstbase-1.0 -lgstreamer-1.0 -lgobject-2.0 -lglib-2.0  -lm 
+gcc -DHAVE_CONFIG_H -I. -I..  -D_REENTRANT -DORBIT2=1 -pthread -I/usr/include/libgnomeui-2.0 -I/usr/include/gnome-keyring-1 -I/usr/include/libbonoboui-2.0 -I/usr/include/libgnome-2.0 -I/usr/include/libbonobo-2.0 -I/usr/include/bonobo-activation-2.0 -I/usr/include/orbit-2.0 -I/usr/include/libgnomecanvas-2.0 -I/usr/include/gail-1.0 -I/usr/include/libart-2.0 -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/gio-unix-2.0/ -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/libpng12 -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/freetype2 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng12 -I/usr/include/libxml2 -I/usr/include/gnome-vfs-2.0 -I/usr/lib/x86_64-linux-gnu/gnome-vfs-2.0/include -I/usr/include/gconf/2 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/gstreamer-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include   -D_FORTIFY_SOURCE=2 -D_REENTRANT -DORBIT2=1 -pthread -I/usr/include/libgnomeui-2.0 -I/usr/include/gnome-keyring-1 -I/usr/include/libbonoboui-2.0 -I/usr/include/libgnome-2.0 -I/usr/include/libbonobo-2.0 -I/usr/include/bonobo-activation-2.0 -I/usr/include/orbit-2.0 -I/usr/include/libgnomecanvas-2.0 -I/usr/include/gail-1.0 -I/usr/include/libart-2.0 -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/gio-unix-2.0/ -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/libpng12 -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/freetype2 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng12 -I/usr/include/libxml2 -I/usr/include/gnome-vfs-2.0 -I/usr/lib/x86_64-linux-gnu/gnome-vfs-2.0/include -I/usr/include/gconf/2 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/gstreamer-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include  -DGIRL_DATADIR="\"/usr/share/girl\"" -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -c -o test_stations-test-stations.o `test -f 'test-stations.c' || echo './'`test-stations.c
+gcc -DHAVE_CONFIG_H -I. -I..  -D_REENTRANT -DORBIT2=1 -pthread -I/usr/include/libgnomeui-2.0 -I/usr/include/gnome-keyring-1 -I/usr/include/libbonoboui-2.0 -I/usr/include/libgnome-2.0 -I/usr/include/libbonobo-2.0 -I/usr/include/bonobo-activation-2.0 -I/usr/include/orbit-2.0 -I/usr/include/libgnomecanvas-2.0 -I/usr/include/gail-1.0 -I/usr/include/libart-2.0 -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/gio-unix-2.0/ -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/libpng12 -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/freetype2 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng12 -I/usr/include/libxml2 -I/usr/include/gnome-vfs-2.0 -I/usr/lib/x86_64-linux-gnu/gnome-vfs-2.0/include -I/usr/include/gconf/2 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/gstreamer-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include   -D_FORTIFY_SOURCE=2 -D_REENTRANT -DORBIT2=1 -pthread -I/usr/include/libgnomeui-2.0 -I/usr/include/gnome-keyring-1 -I/usr/include/libbonoboui-2.0 -I/usr/include/libgnome-2.0 -I/usr/include/libbonobo-2.0 -I/usr/include/bonobo-activation-2.0 -I/usr/include/orbit-2.0 -I/usr/include/libgnomecanvas-2.0 -I/usr/include/gail-1.0 -I/usr/include/libart-2.0 -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/gio-unix-2.0/ -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/libpng12 -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/freetype2 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng12 -I/usr/include/libxml2 -I/usr/include/gnome-vfs-2.0 -I/usr/lib/x86_64-linux-gnu/gnome-vfs-2.0/include -I/usr/include/gconf/2 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/gstreamer-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include  -DGIRL_DATADIR="\"/usr/share/girl\"" -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -c -o test_stations-girl-stations-map.o `test -f 'girl-stations-map.c' || echo './'`girl-stations-map.c
+gcc -DHAVE_CONFIG_H -I. -I..  -D_REENTRANT -DORBIT2=1 -pthread -I/usr/include/libgnomeui-2.0 -I/usr/include/gnome-keyring-1 -I/usr/include/libbonoboui-2.0 -I/usr/include/libgnome-2.0 -I/usr/include/libbonobo-2.0 -I/usr/include/bonobo-activation-2.0 -I/usr/include/orbit-2.0 -I/usr/include/libgnomecanvas-2.0 -I/usr/include/gail-1.0 -I/usr/include/libart-2.0 -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/gio-unix-2.0/ -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/libpng12 -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/freetype2 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng12 -I/usr/include/libxml2 -I/usr/include/gnome-vfs-2.0 -I/usr/lib/x86_64-linux-gnu/gnome-vfs-2.0/include -I/usr/include/gconf/2 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/gstreamer-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include   -D_FORTIFY_SOURCE=2 -D_REENTRANT -DORBIT2=1 -pthread -I/usr/include/libgnomeui-2.0 -I/usr/include/gnome-keyring-1 -I/usr/include/libbonoboui-2.0 -I/usr/include/libgnome-2.0 -I/usr/include/libbonobo-2.0 -I/usr/include/bonobo-activation-2.0 -I/usr/include/orbit-2.0 -I/usr/include/libgnomecanvas-2.0 -I/usr/include/gail-1.0 -I/usr/include/libart-2.0 -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/gio-unix-2.0/ -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/libpng12 -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/freetype2 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng12 -I/usr/include/libxml2 -I/usr/include/gnome-vfs-2.0 -I/usr/lib/x86_64-linux-gnu/gnome-vfs-2.0/include -I/usr/include/gconf/2 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/gstreamer-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include  -DGIRL_DATADIR="\"/usr/share/girl\"" -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -c -o test_stations-girl-tz.o `test -f 'girl-tz.c' || echo './'`girl-tz.c
+gcc -D_REENTRANT -DORBIT2=1 -pthread -I/usr/include/libgnomeui-2.0 -I/usr/include/gnome-keyring-1 -I/usr/include/libbonoboui-2.0 -I/usr/include/libgnome-2.0 -I/usr/include/libbonobo-2.0 -I/usr/include/bonobo-activation-2.0 -I/usr/include/orbit-2.0 -I/usr/include/libgnomecanvas-2.0 -I/usr/include/gail-1.0 -I/usr/include/libart-2.0 -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/gio-unix-2.0/ -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/libpng12 -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/freetype2 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng12 -I/usr/include/libxml2 -I/usr/include/gnome-vfs-2.0 -I/usr/lib/x86_64-linux-gnu/gnome-vfs-2.0/include -I/usr/include/gconf/2 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/gstreamer-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include  -DGIRL_DATADIR="\"/usr/share/girl\"" -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -lgnomeui-2 -lSM -lICE -lbonoboui-2 -lgnome-2 -lpopt -lbonobo-2 -lbonobo-activation -lORBit-2 -lgnomecanvas-2 -lart_lgpl_2 -lgtk-x11-2.0 -lgdk-x11-2.0 -lpangocairo-1.0 -latk-1.0 -lcairo -lgio-2.0 -lpangoft2-1.0 -lpango-1.0 -lfontconfig -lfreetype -lgdk_pixbuf-2.0 -lxml2 -lgnomevfs-2 -lgconf-2 -lgthread-2.0 -pthread -lgmodule-2.0 -pthread -lgstvideo-1.0 -lgstbase-1.0 -lgstreamer-1.0 -lgobject-2.0 -lglib-2.0  -Wl,-z,relro -o test-stations test_stations-test-stations.o test_stations-girl-stations-map.o test_stations-girl-tz.o -lgnomeui-2 -lSM -lICE -lbonoboui-2 -lgnome-2 -lpopt -lbonobo-2 -lbonobo-activation -lORBit-2 -lgnomecanvas-2 -lart_lgpl_2 -lgtk-x11-2.0 -lgdk-x11-2.0 -lpangocairo-1.0 -latk-1.0 -lcairo -lgio-2.0 -lpangoft2-1.0 -lpango-1.0 -lfontconfig -lfreetype -lgdk_pixbuf-2.0 -lxml2 -lgnomevfs-2 -lgconf-2 -lgthread-2.0 -pthread -lgmodule-2.0 -pthread -lgstvideo-1.0 -lgstbase-1.0 -lgstreamer-1.0 -lgobject-2.0 -lglib-2.0   -lm 
+make[3]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1/src'
+Making all in po
+make[3]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1/po'
+file=`echo bs | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/bin/msgfmt -o $file bs.po
+file=`echo cs | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/bin/msgfmt -o $file cs.po
+file=`echo de | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/bin/msgfmt -o $file de.po
+file=`echo el | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/bin/msgfmt -o $file el.po
+file=`echo es | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/bin/msgfmt -o $file es.po
+file=`echo fr | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/bin/msgfmt -o $file fr.po
+file=`echo hu | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/bin/msgfmt -o $file hu.po
+file=`echo id | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/bin/msgfmt -o $file id.po
+file=`echo is | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/bin/msgfmt -o $file is.po
+file=`echo nb | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/bin/msgfmt -o $file nb.po
+file=`echo pl | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/bin/msgfmt -o $file pl.po
+file=`echo pt | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/bin/msgfmt -o $file pt.po
+file=`echo pt_BR | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/bin/msgfmt -o $file pt_BR.po
+file=`echo sl | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/bin/msgfmt -o $file sl.po
+file=`echo sr | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/bin/msgfmt -o $file sr.po
+file=`echo sr@latin | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/bin/msgfmt -o $file sr@latin.po
+file=`echo sv | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/bin/msgfmt -o $file sv.po
+file=`echo tr | sed 's,.*/,,'`.gmo \
+  && rm -f $file && /usr/bin/msgfmt -o $file tr.po
+make[3]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1/po'
+make[3]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1'
+make[3]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1'
+make[2]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1'
+make[1]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1'
+   dh_auto_test
+make[1]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1'
+Making check in data
+make[2]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1/data'
+Making check in pixmaps
+make[3]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1/data/pixmaps'
+make[3]: Nothing to be done for 'check'.
+make[3]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1/data/pixmaps'
+Making check in icons
+make[3]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons'
+Making check in 16x16
+make[4]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons/16x16'
+make[4]: Nothing to be done for 'check'.
+make[4]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons/16x16'
+Making check in 22x22
+make[4]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons/22x22'
+make[4]: Nothing to be done for 'check'.
+make[4]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons/22x22'
+Making check in 24x24
+make[4]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons/24x24'
+make[4]: Nothing to be done for 'check'.
+make[4]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons/24x24'
+Making check in 32x32
+make[4]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons/32x32'
+make[4]: Nothing to be done for 'check'.
+make[4]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons/32x32'
+Making check in 48x48
+make[4]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons/48x48'
+make[4]: Nothing to be done for 'check'.
+make[4]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons/48x48'
+Making check in 256x256
+make[4]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons/256x256'
+make[4]: Nothing to be done for 'check'.
+make[4]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons/256x256'
+Making check in 512x512
+make[4]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons/512x512'
+make[4]: Nothing to be done for 'check'.
+make[4]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons/512x512'
+Making check in 1024x1024
+make[4]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons/1024x1024'
+make[4]: Nothing to be done for 'check'.
+make[4]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons/1024x1024'
+make[4]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons'
+make[4]: Nothing to be done for 'check-am'.
+make[4]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons'
+make[3]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons'
+make[3]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1/data'
+make[3]: Nothing to be done for 'check-am'.
+make[3]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1/data'
+make[2]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1/data'
+Making check in help
+make[2]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1/help'
+for lc in C cs de es en_US sv; do \
+  if test -d "$lc"; \
+    then d=; \
+    xmlpath="$lc"; \
+  else \
+    d="./"; \
+    xmlpath="$lc:./$lc"; \
+  fi; \
+  for page in aboutprogram.page aboutstation.page exit.page index.page intro.page legal.xml listen.page new.page next.page prev.page record.page search.page stations.page; do \
+    echo "xmllint --noout --noent --path $xmlpath --xinclude $d$lc/$page"; \
+    xmllint --noout --noent --path "$xmlpath" --xinclude "$d$lc/$page"; \
+  done; \
+done
+xmllint --noout --noent --path C --xinclude C/aboutprogram.page
+xmllint --noout --noent --path C --xinclude C/aboutstation.page
+xmllint --noout --noent --path C --xinclude C/exit.page
+xmllint --noout --noent --path C --xinclude C/index.page
+xmllint --noout --noent --path C --xinclude C/intro.page
+xmllint --noout --noent --path C --xinclude C/legal.xml
+xmllint --noout --noent --path C --xinclude C/listen.page
+xmllint --noout --noent --path C --xinclude C/new.page
+xmllint --noout --noent --path C --xinclude C/next.page
+xmllint --noout --noent --path C --xinclude C/prev.page
+xmllint --noout --noent --path C --xinclude C/record.page
+xmllint --noout --noent --path C --xinclude C/search.page
+xmllint --noout --noent --path C --xinclude C/stations.page
+xmllint --noout --noent --path cs --xinclude cs/aboutprogram.page
+xmllint --noout --noent --path cs --xinclude cs/aboutstation.page
+xmllint --noout --noent --path cs --xinclude cs/exit.page
+xmllint --noout --noent --path cs --xinclude cs/index.page
+xmllint --noout --noent --path cs --xinclude cs/intro.page
+xmllint --noout --noent --path cs --xinclude cs/legal.xml
+xmllint --noout --noent --path cs --xinclude cs/listen.page
+xmllint --noout --noent --path cs --xinclude cs/new.page
+xmllint --noout --noent --path cs --xinclude cs/next.page
+xmllint --noout --noent --path cs --xinclude cs/prev.page
+xmllint --noout --noent --path cs --xinclude cs/record.page
+xmllint --noout --noent --path cs --xinclude cs/search.page
+xmllint --noout --noent --path cs --xinclude cs/stations.page
+xmllint --noout --noent --path de --xinclude de/aboutprogram.page
+xmllint --noout --noent --path de --xinclude de/aboutstation.page
+xmllint --noout --noent --path de --xinclude de/exit.page
+xmllint --noout --noent --path de --xinclude de/index.page
+xmllint --noout --noent --path de --xinclude de/intro.page
+xmllint --noout --noent --path de --xinclude de/legal.xml
+xmllint --noout --noent --path de --xinclude de/listen.page
+xmllint --noout --noent --path de --xinclude de/new.page
+xmllint --noout --noent --path de --xinclude de/next.page
+xmllint --noout --noent --path de --xinclude de/prev.page
+xmllint --noout --noent --path de --xinclude de/record.page
+xmllint --noout --noent --path de --xinclude de/search.page
+xmllint --noout --noent --path de --xinclude de/stations.page
+xmllint --noout --noent --path es --xinclude es/aboutprogram.page
+xmllint --noout --noent --path es --xinclude es/aboutstation.page
+xmllint --noout --noent --path es --xinclude es/exit.page
+xmllint --noout --noent --path es --xinclude es/index.page
+xmllint --noout --noent --path es --xinclude es/intro.page
+xmllint --noout --noent --path es --xinclude es/legal.xml
+xmllint --noout --noent --path es --xinclude es/listen.page
+xmllint --noout --noent --path es --xinclude es/new.page
+xmllint --noout --noent --path es --xinclude es/next.page
+xmllint --noout --noent --path es --xinclude es/prev.page
+xmllint --noout --noent --path es --xinclude es/record.page
+xmllint --noout --noent --path es --xinclude es/search.page
+xmllint --noout --noent --path es --xinclude es/stations.page
+xmllint --noout --noent --path en_US --xinclude en_US/aboutprogram.page
+xmllint --noout --noent --path en_US --xinclude en_US/aboutstation.page
+xmllint --noout --noent --path en_US --xinclude en_US/exit.page
+xmllint --noout --noent --path en_US --xinclude en_US/index.page
+xmllint --noout --noent --path en_US --xinclude en_US/intro.page
+xmllint --noout --noent --path en_US --xinclude en_US/legal.xml
+xmllint --noout --noent --path en_US --xinclude en_US/listen.page
+xmllint --noout --noent --path en_US --xinclude en_US/new.page
+xmllint --noout --noent --path en_US --xinclude en_US/next.page
+xmllint --noout --noent --path en_US --xinclude en_US/prev.page
+xmllint --noout --noent --path en_US --xinclude en_US/record.page
+xmllint --noout --noent --path en_US --xinclude en_US/search.page
+xmllint --noout --noent --path en_US --xinclude en_US/stations.page
+xmllint --noout --noent --path sv --xinclude sv/aboutprogram.page
+xmllint --noout --noent --path sv --xinclude sv/aboutstation.page
+xmllint --noout --noent --path sv --xinclude sv/exit.page
+xmllint --noout --noent --path sv --xinclude sv/index.page
+xmllint --noout --noent --path sv --xinclude sv/intro.page
+xmllint --noout --noent --path sv --xinclude sv/legal.xml
+xmllint --noout --noent --path sv --xinclude sv/listen.page
+xmllint --noout --noent --path sv --xinclude sv/new.page
+xmllint --noout --noent --path sv --xinclude sv/next.page
+xmllint --noout --noent --path sv --xinclude sv/prev.page
+xmllint --noout --noent --path sv --xinclude sv/record.page
+xmllint --noout --noent --path sv --xinclude sv/search.page
+xmllint --noout --noent --path sv --xinclude sv/stations.page
+make[2]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1/help'
+Making check in man
+make[2]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1/man'
+make[2]: Nothing to be done for 'check'.
+make[2]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1/man'
+Making check in src
+make[2]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1/src'
+make  check-local
+make[3]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1/src'
+make[3]: Nothing to be done for 'check-local'.
+make[3]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1/src'
+make[2]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1/src'
+Making check in po
+make[2]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1/po'
+INTLTOOL_EXTRACT="/usr/bin/intltool-extract" XGETTEXT="/usr/bin/xgettext" srcdir=. /usr/bin/intltool-update --gettext-package girl --pot
+rm -f missing notexist
+srcdir=. /usr/bin/intltool-update -m
+if [ -r missing -o -r notexist ]; then \
+  exit 1; \
+fi
+make[2]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1/po'
+make[2]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1'
+make[2]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1'
+make[1]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1'
+ fakeroot debian/rules binary
+dh binary  --with autotools-dev
+   dh_testroot
+   dh_prep
+   dh_auto_install
+make[1]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1'
+Making install in data
+make[2]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1/data'
+Making install in pixmaps
+make[3]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1/data/pixmaps'
+make[4]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1/data/pixmaps'
+make[4]: Nothing to be done for 'install-exec-am'.
+ /bin/mkdir -p '/home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/girl/pixmaps'
+ /usr/bin/install -c -m 644 girl-map.png '/home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/girl/pixmaps'
+make[4]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1/data/pixmaps'
+make[3]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1/data/pixmaps'
+Making install in icons
+make[3]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons'
+Making install in 16x16
+make[4]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons/16x16'
+make[5]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons/16x16'
+make[5]: Nothing to be done for 'install-exec-am'.
+ /bin/mkdir -p '/home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/icons/hicolor/16x16/apps'
+ /usr/bin/install -c -m 644 apps/girl.png '/home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/icons/hicolor/16x16/apps'
+make[5]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons/16x16'
+make[4]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons/16x16'
+Making install in 22x22
+make[4]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons/22x22'
+make[5]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons/22x22'
+make[5]: Nothing to be done for 'install-exec-am'.
+ /bin/mkdir -p '/home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/icons/hicolor/22x22/apps'
+ /usr/bin/install -c -m 644 apps/girl.png '/home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/icons/hicolor/22x22/apps'
+make[5]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons/22x22'
+make[4]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons/22x22'
+Making install in 24x24
+make[4]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons/24x24'
+make[5]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons/24x24'
+make[5]: Nothing to be done for 'install-exec-am'.
+ /bin/mkdir -p '/home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/icons/hicolor/24x24/apps'
+ /usr/bin/install -c -m 644 apps/girl.png '/home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/icons/hicolor/24x24/apps'
+make[5]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons/24x24'
+make[4]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons/24x24'
+Making install in 32x32
+make[4]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons/32x32'
+make[5]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons/32x32'
+make[5]: Nothing to be done for 'install-exec-am'.
+ /bin/mkdir -p '/home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/icons/hicolor/32x32/apps'
+ /usr/bin/install -c -m 644 apps/girl.png '/home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/icons/hicolor/32x32/apps'
+make[5]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons/32x32'
+make[4]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons/32x32'
+Making install in 48x48
+make[4]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons/48x48'
+make[5]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons/48x48'
+make[5]: Nothing to be done for 'install-exec-am'.
+ /bin/mkdir -p '/home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/icons/hicolor/48x48/apps'
+ /usr/bin/install -c -m 644 apps/girl.png '/home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/icons/hicolor/48x48/apps'
+make[5]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons/48x48'
+make[4]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons/48x48'
+Making install in 256x256
+make[4]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons/256x256'
+make[5]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons/256x256'
+make[5]: Nothing to be done for 'install-exec-am'.
+ /bin/mkdir -p '/home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/icons/hicolor/256x256/apps'
+ /usr/bin/install -c -m 644 apps/girl.png '/home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/icons/hicolor/256x256/apps'
+make[5]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons/256x256'
+make[4]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons/256x256'
+Making install in 512x512
+make[4]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons/512x512'
+make[5]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons/512x512'
+make[5]: Nothing to be done for 'install-exec-am'.
+ /bin/mkdir -p '/home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/icons/hicolor/512x512/apps'
+ /usr/bin/install -c -m 644 apps/girl.png '/home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/icons/hicolor/512x512/apps'
+make[5]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons/512x512'
+make[4]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons/512x512'
+Making install in 1024x1024
+make[4]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons/1024x1024'
+make[5]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons/1024x1024'
+make[5]: Nothing to be done for 'install-exec-am'.
+ /bin/mkdir -p '/home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/icons/hicolor/1024x1024/apps'
+ /usr/bin/install -c -m 644 apps/girl.png '/home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/icons/hicolor/1024x1024/apps'
+make[5]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons/1024x1024'
+make[4]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons/1024x1024'
+make[4]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons'
+make[5]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons'
+make[5]: Nothing to be done for 'install-exec-am'.
+make  install-data-hook
+make[6]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons'
+*** Icon cache not updated.  After (un)install, run this:
+***   gtk-update-icon-cache -f -t /usr/share/icons/hicolor
+make[6]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons'
+make[5]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons'
+make[4]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons'
+make[3]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1/data/icons'
+make[3]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1/data'
+make[4]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1/data'
+make[4]: Nothing to be done for 'install-exec-am'.
+ /bin/mkdir -p '/home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/appdata'
+ /usr/bin/install -c -m 644 girl.appdata.xml '/home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/appdata'
+ /bin/mkdir -p '/home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/applications'
+ /usr/bin/install -c -m 644 girl.desktop '/home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/applications'
+make[4]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1/data'
+make[3]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1/data'
+make[2]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1/data'
+Making install in help
+make[2]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1/help'
+make[3]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1/help'
+make[3]: Nothing to be done for 'install-exec-am'.
+/usr/bin/install -c -m 644 C/aboutprogram.page /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/C/girl/aboutprogram.page
+/usr/bin/install -c -m 644 C/aboutstation.page /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/C/girl/aboutstation.page
+/usr/bin/install -c -m 644 C/exit.page /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/C/girl/exit.page
+/usr/bin/install -c -m 644 C/index.page /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/C/girl/index.page
+/usr/bin/install -c -m 644 C/intro.page /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/C/girl/intro.page
+/usr/bin/install -c -m 644 C/legal.xml /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/C/girl/legal.xml
+/usr/bin/install -c -m 644 C/listen.page /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/C/girl/listen.page
+/usr/bin/install -c -m 644 C/new.page /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/C/girl/new.page
+/usr/bin/install -c -m 644 C/next.page /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/C/girl/next.page
+/usr/bin/install -c -m 644 C/prev.page /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/C/girl/prev.page
+/usr/bin/install -c -m 644 C/record.page /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/C/girl/record.page
+/usr/bin/install -c -m 644 C/search.page /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/C/girl/search.page
+/usr/bin/install -c -m 644 C/stations.page /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/C/girl/stations.page
+/usr/bin/install -c -m 644 cs/aboutprogram.page /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/cs/girl/aboutprogram.page
+/usr/bin/install -c -m 644 cs/aboutstation.page /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/cs/girl/aboutstation.page
+/usr/bin/install -c -m 644 cs/exit.page /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/cs/girl/exit.page
+/usr/bin/install -c -m 644 cs/index.page /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/cs/girl/index.page
+/usr/bin/install -c -m 644 cs/intro.page /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/cs/girl/intro.page
+/usr/bin/install -c -m 644 cs/legal.xml /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/cs/girl/legal.xml
+/usr/bin/install -c -m 644 cs/listen.page /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/cs/girl/listen.page
+/usr/bin/install -c -m 644 cs/new.page /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/cs/girl/new.page
+/usr/bin/install -c -m 644 cs/next.page /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/cs/girl/next.page
+/usr/bin/install -c -m 644 cs/prev.page /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/cs/girl/prev.page
+/usr/bin/install -c -m 644 cs/record.page /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/cs/girl/record.page
+/usr/bin/install -c -m 644 cs/search.page /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/cs/girl/search.page
+/usr/bin/install -c -m 644 cs/stations.page /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/cs/girl/stations.page
+/usr/bin/install -c -m 644 de/aboutprogram.page /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/de/girl/aboutprogram.page
+/usr/bin/install -c -m 644 de/aboutstation.page /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/de/girl/aboutstation.page
+/usr/bin/install -c -m 644 de/exit.page /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/de/girl/exit.page
+/usr/bin/install -c -m 644 de/index.page /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/de/girl/index.page
+/usr/bin/install -c -m 644 de/intro.page /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/de/girl/intro.page
+/usr/bin/install -c -m 644 de/legal.xml /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/de/girl/legal.xml
+/usr/bin/install -c -m 644 de/listen.page /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/de/girl/listen.page
+/usr/bin/install -c -m 644 de/new.page /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/de/girl/new.page
+/usr/bin/install -c -m 644 de/next.page /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/de/girl/next.page
+/usr/bin/install -c -m 644 de/prev.page /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/de/girl/prev.page
+/usr/bin/install -c -m 644 de/record.page /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/de/girl/record.page
+/usr/bin/install -c -m 644 de/search.page /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/de/girl/search.page
+/usr/bin/install -c -m 644 de/stations.page /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/de/girl/stations.page
+/usr/bin/install -c -m 644 es/aboutprogram.page /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/es/girl/aboutprogram.page
+/usr/bin/install -c -m 644 es/aboutstation.page /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/es/girl/aboutstation.page
+/usr/bin/install -c -m 644 es/exit.page /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/es/girl/exit.page
+/usr/bin/install -c -m 644 es/index.page /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/es/girl/index.page
+/usr/bin/install -c -m 644 es/intro.page /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/es/girl/intro.page
+/usr/bin/install -c -m 644 es/legal.xml /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/es/girl/legal.xml
+/usr/bin/install -c -m 644 es/listen.page /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/es/girl/listen.page
+/usr/bin/install -c -m 644 es/new.page /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/es/girl/new.page
+/usr/bin/install -c -m 644 es/next.page /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/es/girl/next.page
+/usr/bin/install -c -m 644 es/prev.page /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/es/girl/prev.page
+/usr/bin/install -c -m 644 es/record.page /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/es/girl/record.page
+/usr/bin/install -c -m 644 es/search.page /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/es/girl/search.page
+/usr/bin/install -c -m 644 es/stations.page /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/es/girl/stations.page
+/usr/bin/install -c -m 644 en_US/aboutprogram.page /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/en_US/girl/aboutprogram.page
+/usr/bin/install -c -m 644 en_US/aboutstation.page /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/en_US/girl/aboutstation.page
+/usr/bin/install -c -m 644 en_US/exit.page /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/en_US/girl/exit.page
+/usr/bin/install -c -m 644 en_US/index.page /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/en_US/girl/index.page
+/usr/bin/install -c -m 644 en_US/intro.page /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/en_US/girl/intro.page
+/usr/bin/install -c -m 644 en_US/legal.xml /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/en_US/girl/legal.xml
+/usr/bin/install -c -m 644 en_US/listen.page /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/en_US/girl/listen.page
+/usr/bin/install -c -m 644 en_US/new.page /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/en_US/girl/new.page
+/usr/bin/install -c -m 644 en_US/next.page /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/en_US/girl/next.page
+/usr/bin/install -c -m 644 en_US/prev.page /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/en_US/girl/prev.page
+/usr/bin/install -c -m 644 en_US/record.page /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/en_US/girl/record.page
+/usr/bin/install -c -m 644 en_US/search.page /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/en_US/girl/search.page
+/usr/bin/install -c -m 644 en_US/stations.page /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/en_US/girl/stations.page
+/usr/bin/install -c -m 644 sv/aboutprogram.page /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/sv/girl/aboutprogram.page
+/usr/bin/install -c -m 644 sv/aboutstation.page /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/sv/girl/aboutstation.page
+/usr/bin/install -c -m 644 sv/exit.page /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/sv/girl/exit.page
+/usr/bin/install -c -m 644 sv/index.page /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/sv/girl/index.page
+/usr/bin/install -c -m 644 sv/intro.page /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/sv/girl/intro.page
+/usr/bin/install -c -m 644 sv/legal.xml /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/sv/girl/legal.xml
+/usr/bin/install -c -m 644 sv/listen.page /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/sv/girl/listen.page
+/usr/bin/install -c -m 644 sv/new.page /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/sv/girl/new.page
+/usr/bin/install -c -m 644 sv/next.page /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/sv/girl/next.page
+/usr/bin/install -c -m 644 sv/prev.page /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/sv/girl/prev.page
+/usr/bin/install -c -m 644 sv/record.page /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/sv/girl/record.page
+/usr/bin/install -c -m 644 sv/search.page /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/sv/girl/search.page
+/usr/bin/install -c -m 644 sv/stations.page /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/sv/girl/stations.page
+/usr/bin/install -c -m 644 ./C/media/girl-aboutprogram.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/C/girl/media/girl-aboutprogram.png
+ln -s -f /usr/share/help/C/girl/media/girl-aboutprogram.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/cs/girl/media/girl-aboutprogram.png
+ln -s -f /usr/share/help/C/girl/media/girl-aboutprogram.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/de/girl/media/girl-aboutprogram.png
+ln -s -f /usr/share/help/C/girl/media/girl-aboutprogram.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/es/girl/media/girl-aboutprogram.png
+ln -s -f /usr/share/help/C/girl/media/girl-aboutprogram.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/en_US/girl/media/girl-aboutprogram.png
+ln -s -f /usr/share/help/C/girl/media/girl-aboutprogram.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/sv/girl/media/girl-aboutprogram.png
+/usr/bin/install -c -m 644 ./C/media/girl-aboutstation.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/C/girl/media/girl-aboutstation.png
+ln -s -f /usr/share/help/C/girl/media/girl-aboutstation.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/cs/girl/media/girl-aboutstation.png
+ln -s -f /usr/share/help/C/girl/media/girl-aboutstation.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/de/girl/media/girl-aboutstation.png
+ln -s -f /usr/share/help/C/girl/media/girl-aboutstation.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/es/girl/media/girl-aboutstation.png
+ln -s -f /usr/share/help/C/girl/media/girl-aboutstation.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/en_US/girl/media/girl-aboutstation.png
+ln -s -f /usr/share/help/C/girl/media/girl-aboutstation.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/sv/girl/media/girl-aboutstation.png
+/usr/bin/install -c -m 644 ./C/media/girl-exit.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/C/girl/media/girl-exit.png
+ln -s -f /usr/share/help/C/girl/media/girl-exit.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/cs/girl/media/girl-exit.png
+ln -s -f /usr/share/help/C/girl/media/girl-exit.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/de/girl/media/girl-exit.png
+ln -s -f /usr/share/help/C/girl/media/girl-exit.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/es/girl/media/girl-exit.png
+ln -s -f /usr/share/help/C/girl/media/girl-exit.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/en_US/girl/media/girl-exit.png
+ln -s -f /usr/share/help/C/girl/media/girl-exit.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/sv/girl/media/girl-exit.png
+/usr/bin/install -c -m 644 ./C/media/girl-listen.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/C/girl/media/girl-listen.png
+ln -s -f /usr/share/help/C/girl/media/girl-listen.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/cs/girl/media/girl-listen.png
+ln -s -f /usr/share/help/C/girl/media/girl-listen.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/de/girl/media/girl-listen.png
+ln -s -f /usr/share/help/C/girl/media/girl-listen.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/es/girl/media/girl-listen.png
+ln -s -f /usr/share/help/C/girl/media/girl-listen.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/en_US/girl/media/girl-listen.png
+ln -s -f /usr/share/help/C/girl/media/girl-listen.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/sv/girl/media/girl-listen.png
+/usr/bin/install -c -m 644 ./C/media/girl-main.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/C/girl/media/girl-main.png
+ln -s -f /usr/share/help/C/girl/media/girl-main.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/cs/girl/media/girl-main.png
+ln -s -f /usr/share/help/C/girl/media/girl-main.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/de/girl/media/girl-main.png
+ln -s -f /usr/share/help/C/girl/media/girl-main.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/es/girl/media/girl-main.png
+ln -s -f /usr/share/help/C/girl/media/girl-main.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/en_US/girl/media/girl-main.png
+ln -s -f /usr/share/help/C/girl/media/girl-main.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/sv/girl/media/girl-main.png
+/usr/bin/install -c -m 644 ./C/media/girl-new.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/C/girl/media/girl-new.png
+ln -s -f /usr/share/help/C/girl/media/girl-new.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/cs/girl/media/girl-new.png
+ln -s -f /usr/share/help/C/girl/media/girl-new.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/de/girl/media/girl-new.png
+ln -s -f /usr/share/help/C/girl/media/girl-new.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/es/girl/media/girl-new.png
+ln -s -f /usr/share/help/C/girl/media/girl-new.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/en_US/girl/media/girl-new.png
+ln -s -f /usr/share/help/C/girl/media/girl-new.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/sv/girl/media/girl-new.png
+/usr/bin/install -c -m 644 ./C/media/girl-newstation.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/C/girl/media/girl-newstation.png
+ln -s -f /usr/share/help/C/girl/media/girl-newstation.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/cs/girl/media/girl-newstation.png
+ln -s -f /usr/share/help/C/girl/media/girl-newstation.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/de/girl/media/girl-newstation.png
+ln -s -f /usr/share/help/C/girl/media/girl-newstation.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/es/girl/media/girl-newstation.png
+ln -s -f /usr/share/help/C/girl/media/girl-newstation.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/en_US/girl/media/girl-newstation.png
+ln -s -f /usr/share/help/C/girl/media/girl-newstation.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/sv/girl/media/girl-newstation.png
+/usr/bin/install -c -m 644 ./C/media/girl-next-station.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/C/girl/media/girl-next-station.png
+ln -s -f /usr/share/help/C/girl/media/girl-next-station.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/cs/girl/media/girl-next-station.png
+ln -s -f /usr/share/help/C/girl/media/girl-next-station.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/de/girl/media/girl-next-station.png
+ln -s -f /usr/share/help/C/girl/media/girl-next-station.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/es/girl/media/girl-next-station.png
+ln -s -f /usr/share/help/C/girl/media/girl-next-station.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/en_US/girl/media/girl-next-station.png
+ln -s -f /usr/share/help/C/girl/media/girl-next-station.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/sv/girl/media/girl-next-station.png
+/usr/bin/install -c -m 644 ./C/media/girl-prev-station.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/C/girl/media/girl-prev-station.png
+ln -s -f /usr/share/help/C/girl/media/girl-prev-station.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/cs/girl/media/girl-prev-station.png
+ln -s -f /usr/share/help/C/girl/media/girl-prev-station.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/de/girl/media/girl-prev-station.png
+ln -s -f /usr/share/help/C/girl/media/girl-prev-station.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/es/girl/media/girl-prev-station.png
+ln -s -f /usr/share/help/C/girl/media/girl-prev-station.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/en_US/girl/media/girl-prev-station.png
+ln -s -f /usr/share/help/C/girl/media/girl-prev-station.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/sv/girl/media/girl-prev-station.png
+/usr/bin/install -c -m 644 ./C/media/girl-prev-station.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/C/girl/media/girl-prev-station.png
+ln -s -f /usr/share/help/C/girl/media/girl-prev-station.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/cs/girl/media/girl-prev-station.png
+ln -s -f /usr/share/help/C/girl/media/girl-prev-station.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/de/girl/media/girl-prev-station.png
+ln -s -f /usr/share/help/C/girl/media/girl-prev-station.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/es/girl/media/girl-prev-station.png
+ln -s -f /usr/share/help/C/girl/media/girl-prev-station.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/en_US/girl/media/girl-prev-station.png
+ln -s -f /usr/share/help/C/girl/media/girl-prev-station.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/sv/girl/media/girl-prev-station.png
+/usr/bin/install -c -m 644 ./C/media/girl-record.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/C/girl/media/girl-record.png
+ln -s -f /usr/share/help/C/girl/media/girl-record.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/cs/girl/media/girl-record.png
+ln -s -f /usr/share/help/C/girl/media/girl-record.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/de/girl/media/girl-record.png
+ln -s -f /usr/share/help/C/girl/media/girl-record.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/es/girl/media/girl-record.png
+ln -s -f /usr/share/help/C/girl/media/girl-record.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/en_US/girl/media/girl-record.png
+ln -s -f /usr/share/help/C/girl/media/girl-record.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/sv/girl/media/girl-record.png
+/usr/bin/install -c -m 644 ./C/media/girl-search-station-by-location.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/C/girl/media/girl-search-station-by-location.png
+ln -s -f /usr/share/help/C/girl/media/girl-search-station-by-location.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/cs/girl/media/girl-search-station-by-location.png
+ln -s -f /usr/share/help/C/girl/media/girl-search-station-by-location.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/de/girl/media/girl-search-station-by-location.png
+ln -s -f /usr/share/help/C/girl/media/girl-search-station-by-location.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/es/girl/media/girl-search-station-by-location.png
+ln -s -f /usr/share/help/C/girl/media/girl-search-station-by-location.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/en_US/girl/media/girl-search-station-by-location.png
+ln -s -f /usr/share/help/C/girl/media/girl-search-station-by-location.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/sv/girl/media/girl-search-station-by-location.png
+/usr/bin/install -c -m 644 ./C/media/girl-select-station.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/C/girl/media/girl-select-station.png
+ln -s -f /usr/share/help/C/girl/media/girl-select-station.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/cs/girl/media/girl-select-station.png
+ln -s -f /usr/share/help/C/girl/media/girl-select-station.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/de/girl/media/girl-select-station.png
+ln -s -f /usr/share/help/C/girl/media/girl-select-station.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/es/girl/media/girl-select-station.png
+ln -s -f /usr/share/help/C/girl/media/girl-select-station.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/en_US/girl/media/girl-select-station.png
+ln -s -f /usr/share/help/C/girl/media/girl-select-station.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/sv/girl/media/girl-select-station.png
+/usr/bin/install -c -m 644 ./C/media/girl-stations.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/C/girl/media/girl-stations.png
+ln -s -f /usr/share/help/C/girl/media/girl-stations.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/cs/girl/media/girl-stations.png
+ln -s -f /usr/share/help/C/girl/media/girl-stations.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/de/girl/media/girl-stations.png
+ln -s -f /usr/share/help/C/girl/media/girl-stations.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/es/girl/media/girl-stations.png
+ln -s -f /usr/share/help/C/girl/media/girl-stations.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/en_US/girl/media/girl-stations.png
+ln -s -f /usr/share/help/C/girl/media/girl-stations.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/sv/girl/media/girl-stations.png
+/usr/bin/install -c -m 644 ./C/media/girl-stop.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/C/girl/media/girl-stop.png
+ln -s -f /usr/share/help/C/girl/media/girl-stop.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/cs/girl/media/girl-stop.png
+ln -s -f /usr/share/help/C/girl/media/girl-stop.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/de/girl/media/girl-stop.png
+ln -s -f /usr/share/help/C/girl/media/girl-stop.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/es/girl/media/girl-stop.png
+ln -s -f /usr/share/help/C/girl/media/girl-stop.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/en_US/girl/media/girl-stop.png
+ln -s -f /usr/share/help/C/girl/media/girl-stop.png /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/help/sv/girl/media/girl-stop.png
+make[3]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1/help'
+make[2]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1/help'
+Making install in man
+make[2]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1/man'
+make[3]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1/man'
+make[3]: Nothing to be done for 'install-exec-am'.
+ /bin/mkdir -p '/home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/man/man1'
+ /usr/bin/install -c -m 644 girl.1 '/home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/man/man1'
+make[3]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1/man'
+make[2]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1/man'
+Making install in src
+make[2]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1/src'
+make[3]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1/src'
+ /bin/mkdir -p '/home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/bin'
+  /usr/bin/install -c girl '/home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/bin'
+ /bin/mkdir -p '/home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/girl'
+ /usr/bin/install -c -m 644 girl-9.7.dtd girl-logo.png girl.png girl.xml girl.xsl '/home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/girl'
+make[3]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1/src'
+make[2]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1/src'
+Making install in po
+make[2]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1/po'
+linguas="bs cs de el es fr hu id is nb pl pt pt_BR sl sr sr@latin sv tr "; \
+for lang in $linguas; do \
+  dir=/home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/locale/$lang/LC_MESSAGES; \
+  /bin/bash /home/omedia/Desktop/AB/girl-9.7.1/install-sh -d $dir; \
+  if test -r $lang.gmo; then \
+    /usr/bin/install -c -m 644 $lang.gmo $dir/girl.mo; \
+    echo "installing $lang.gmo as $dir/girl.mo"; \
+  else \
+    /usr/bin/install -c -m 644 ./$lang.gmo $dir/girl.mo; \
+    echo "installing ./$lang.gmo as" \
+	 "$dir/girl.mo"; \
+  fi; \
+  if test -r $lang.gmo.m; then \
+    /usr/bin/install -c -m 644 $lang.gmo.m $dir/girl.mo.m; \
+    echo "installing $lang.gmo.m as $dir/girl.mo.m"; \
+  else \
+    if test -r ./$lang.gmo.m ; then \
+      /usr/bin/install -c -m 644 ./$lang.gmo.m \
+	$dir/girl.mo.m; \
+      echo "installing ./$lang.gmo.m as" \
+	   "$dir/girl.mo.m"; \
+    else \
+      true; \
+    fi; \
+  fi; \
+done
+installing bs.gmo as /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/locale/bs/LC_MESSAGES/girl.mo
+installing cs.gmo as /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/locale/cs/LC_MESSAGES/girl.mo
+installing de.gmo as /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/locale/de/LC_MESSAGES/girl.mo
+installing el.gmo as /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/locale/el/LC_MESSAGES/girl.mo
+installing es.gmo as /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/locale/es/LC_MESSAGES/girl.mo
+installing fr.gmo as /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/locale/fr/LC_MESSAGES/girl.mo
+installing hu.gmo as /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/locale/hu/LC_MESSAGES/girl.mo
+installing id.gmo as /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/locale/id/LC_MESSAGES/girl.mo
+installing is.gmo as /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/locale/is/LC_MESSAGES/girl.mo
+installing nb.gmo as /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/locale/nb/LC_MESSAGES/girl.mo
+installing pl.gmo as /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/locale/pl/LC_MESSAGES/girl.mo
+installing pt.gmo as /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/locale/pt/LC_MESSAGES/girl.mo
+installing pt_BR.gmo as /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/locale/pt_BR/LC_MESSAGES/girl.mo
+installing sl.gmo as /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/locale/sl/LC_MESSAGES/girl.mo
+installing sr.gmo as /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/locale/sr/LC_MESSAGES/girl.mo
+installing sr@latin.gmo as /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/locale/sr@latin/LC_MESSAGES/girl.mo
+installing sv.gmo as /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/locale/sv/LC_MESSAGES/girl.mo
+installing tr.gmo as /home/omedia/Desktop/AB/girl-9.7.1/debian/girl/usr/share/locale/tr/LC_MESSAGES/girl.mo
+make[2]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1/po'
+make[2]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1'
+make[3]: Entering directory '/home/omedia/Desktop/AB/girl-9.7.1'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1'
+make[2]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1'
+make[1]: Leaving directory '/home/omedia/Desktop/AB/girl-9.7.1'
+   dh_installdocs
+   dh_installchangelogs
+   dh_installman
+   dh_icons
+   dh_perl
+   dh_link
+   dh_compress
+   dh_fixperms
+   dh_strip
+   dh_makeshlibs
+   dh_shlibdeps
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/girl/usr/bin/girl was not linked against libgconf-2.so.4 (it uses none of the library's symbols)
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/girl/usr/bin/girl was not linked against libICE.so.6 (it uses none of the library's symbols)
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/girl/usr/bin/girl was not linked against libpangocairo-1.0.so.0 (it uses none of the library's symbols)
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/girl/usr/bin/girl was not linked against libatk-1.0.so.0 (it uses none of the library's symbols)
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/girl/usr/bin/girl was not linked against libbonobo-2.so.0 (it uses none of the library's symbols)
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/girl/usr/bin/girl was not linked against libgnomecanvas-2.so.0 (it uses none of the library's symbols)
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/girl/usr/bin/girl was not linked against libgmodule-2.0.so.0 (it uses none of the library's symbols)
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/girl/usr/bin/girl was not linked against libart_lgpl_2.so.2 (it uses none of the library's symbols)
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/girl/usr/bin/girl was not linked against libSM.so.6 (it uses none of the library's symbols)
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/girl/usr/bin/girl was not linked against libbonobo-activation.so.4 (it uses none of the library's symbols)
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/girl/usr/bin/girl was not linked against libpango-1.0.so.0 (it uses none of the library's symbols)
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/girl/usr/bin/girl was not linked against libORBit-2.so.0 (it uses none of the library's symbols)
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/girl/usr/bin/girl was not linked against libgstbase-1.0.so.0 (it uses none of the library's symbols)
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/girl/usr/bin/girl was not linked against libpangoft2-1.0.so.0 (it uses none of the library's symbols)
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/girl/usr/bin/girl was not linked against libpthread.so.0 (it uses none of the library's symbols)
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/girl/usr/bin/girl was not linked against libgthread-2.0.so.0 (it uses none of the library's symbols)
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/girl/usr/bin/girl was not linked against libbonoboui-2.so.0 (it uses none of the library's symbols)
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/girl/usr/bin/girl was not linked against libfreetype.so.6 (it uses none of the library's symbols)
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/girl/usr/bin/girl was not linked against libfontconfig.so.1 (it uses none of the library's symbols)
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/girl/usr/bin/girl was not linked against libpopt.so.0 (it uses none of the library's symbols)
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/girl/usr/bin/girl was not linked against libcairo.so.2 (it uses none of the library's symbols)
+   dh_installdeb
+   dh_gencontrol
+   dh_md5sums
+   dh_builddeb
+dpkg-deb: building package `girl' in `../girl_9.7.1-1_amd64.deb'.
+ dpkg-genchanges  >../girl_9.7.1-1_amd64.changes
+dpkg-genchanges: including full source code in upload
+ dpkg-source --after-build girl-9.7.1
+dpkg-buildpackage: full upload (original source is included)
+Now running lintian...
+W: girl source: configure-generated-file-in-source config.log
+Finished running lintian.

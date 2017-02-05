@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+    <enum id="org.gnome.Lollypop.Shuffle">
+       <value nick="none" value="0"/>
+       <value nick="tracks" value="1"/>
+       <value nick="albums" value="2"/>
+    </enum>
+    <enum id="org.gnome.Lollypop.Playback">
+       <value nick="none" value="0"/>
+       <value nick="repeat_track" value="1"/>
+       <value nick="stop" value="2"/>
+    </enum>
+    <enum id="org.gnome.Lollypop.OrderBy">
+       <value nick="artist" value="0"/>
+       <value nick="album" value="1"/>
+       <value nick="year" value="2"/>
+       <value nick="popularity" value="3"/>
+    </enum>
+    <enum id="org.gnome.Lollypop.Charts">
+       <value nick="itunes" value="0"/>
+       <value nick="spotify" value="1"/>
+    </enum>
+    <schema path="/org/gnome/Lollypop/" id="org.gnome.Lollypop" gettext-domain="lollypop">
+        <key type="ai" name="window-size">
+            <default>[768, 600]</default>
+            <summary>Window size</summary>
+            <description>Window size (width and height).</description>
+        </key>
+        <key type="ai" name="window-position">
+            <default>[]</default>
+            <summary>Window position</summary>
+            <description>Window position (x and y).</description>
+        </key>
+        <key type="ai" name="mini-size">
+            <default>[1,1]</default>
+            <summary>Mini player size</summary>
+            <description>Window size (width and height).</description>
+        </key>
+        <key type="ai" name="mini-position">
+            <default>[]</default>
+            <summary>Mini player position</summary>
+            <description>Window position (x and y).</description>
+        </key>
+        <key type="b" name="network-access">
+            <default>true</default>
+            <summary>Access network</summary>
+            <description></description>
+        </key>
+        <key type="b" name="network-search">
+            <default>false</default>
+            <summary>Search over network</summary>
+            <description></description>
+        </key>
+        <key type="b" name="save-to-tags">
+            <default>false</default>
+            <summary>Save artwork/popularity in tags</summary>
+            <description></description>
+        </key>
+        <key type="b" name="window-maximized">
+            <default>true</default>
+            <summary>Window maximized</summary>
+            <description>Window maximized state.</description>
+        </key>
+  	    <key type="ai" name="party-ids">
+            <default>[]</default>
+            <summary>Enabled genres in party mode</summary>
+            <description>Ids for genres.</description>
+        </key>
+ 	<key type="as" name="music-path">
+            <default>[]</default>
+            <summary></summary>
+            <description></description>
+        </key>
+ 	<key type="as" name="music-uris">
+            <default>[]</default>
+            <summary>Music uris</summary>
+            <description>When empty, use XDG_MUSIC_DIR</description>
+        </key>
+        <key type="b" name="use-librefm">
+            <default>false</default>
+            <summary>Use Librefm instead of Lastfm</summary>
+            <description></description>
+        </key>
+        <key type="s" name="lastfm-login">
+            <default>""</default>
+            <summary>Last.fm login</summary>
+            <description></description>
+        </key>
+        <key type="s" name="cs-api-key">
+            <default>"AIzaSyBiaYluG8pVYxgKRGcc4uEbtgE9q8la0dw"</default>
+            <summary>Google Custom Search API key</summary>
+            <description></description>
+        </key>
+        <key type="s" name="tag-editor">
+            <default>""</default>
+            <summary>Favorite tag editor</summary>
+            <description></description>
+        </key>
+        <key type="s" name="infoswitch">
+            <default>"albums"</default>
+            <summary>INTERNAL</summary>
+            <description></description>
+        </key>
+        <key type="b" name="inforeload">
+            <default>false</default>
+            <summary>INTERNAL</summary>
+            <description></description>
+        </key>
+	<key type="s" name="preview-output">
+            <default>""</default>
+            <summary>Audio output preview on track hover</summary>
+            <description>Pulseaudio only. Example: alsa_output.pci-0000_00_14.2.analog-stereo. Command to get outputs: $ pacmd list-sinks|grep 'name:'</description>
+        </key>
+        <key type="s" name="favorite-cover">
+            <default>"cover.jpg"</default>
+            <summary>Favorite cover file</summary>
+            <description>Restart needed</description>
+        </key>
+        <key type="i" name="db-version">
+            <default>0</default>
+            <summary>Database version</summary>
+            <description>Reset this value will reset the database, popular albums will be restored</description>
+        </key>
+        <key type="i" name="cover-size">
+            <default>200</default>
+            <summary>Albums cover size</summary>
+            <description></description>
+        </key>
+        <key type="d" name="replaygain">
+            <default>3.0</default>
+            <summary>Replay gain value in db</summary>
+            <description>Between -15 and 15</description>
+        </key>
+         <key type="b" name="sync-albums">
+            <default>false</default>
+            <summary>Sync all albums(MTP)</summary>
+            <description></description>
+        </key>
+         <key type="b" name="convert-mp3">
+            <default>false</default>
+            <summary>Convert to MP3(MTP)</summary>
+            <description></description>
+        </key>
+        <key type="i" name="mp3-quality">
+            <default>4</default>
+            <summary>Quality for converting mp3s</summary>
+            <description></description>
+        </key>
+         <key type="b" name="normalize-mp3">
+            <default>false</default>
+            <summary>Normalize MP3(MTP)</summary>
+            <description></description>
+        </key>
+         <key type="b" name="auto-update">
+            <default>true</default>
+            <summary>Auto update music</summary>
+            <description></description>
+        </key>
+         <key type="b" name="split-view">
+            <default>true</default>
+            <summary>Split playlists view</summary>
+            <description></description>
+        </key>
+         <key type="b" name="show-genres">
+            <default>false</default>
+            <summary>Show genres list</summary>
+            <description></description>
+        </key>
+         <key type="b" name="show-navigation-list">
+            <default>true</default>
+            <summary>Show navigation list</summary>
+            <description></description>
+        </key>
+         <key type="b" name="show-charts">
+            <default>true</default>
+            <summary>Show charts</summary>
+            <description></description>
+        </key>
+	<key type="b" name="artist-artwork">
+            <default>false</default>
+            <summary>Show artist artwork</summary>
+            <description></description>
+        </key>
+	 <key type="b" name="dark-ui">
+            <default>false</default>
+            <summary>Use dark gtk theme</summary>
+            <description></description>
+        </key>
+         <key type="b" name="disable-csd">
+            <default>false</default>
+            <summary>Disable the use of client side window decorations (headerbar)</summary>
+            <description></description>
+        </key>
+     	 <key type="b" name="show-compilations">
+            <default>false</default>
+            <summary>Show compilations in albums view</summary>
+            <description></description>
+        </key>
+     	 <key type="b" name="background-mode">
+            <default>false</default>
+            <summary>Continue playback when closed</summary>
+            <description></description>
+        </key>
+        <key type="b" name="smart-artist-sort">
+            <default>true</default>
+            <summary>Smart sort for artist</summary>
+            <description>Ex: The Beatles sorted as Beatles. Resetting database needed.</description>
+        </key>
+     	 <key type="b" name="save-state">
+            <default>false</default>
+            <summary>Restore previous state</summary>
+            <description></description>
+        </key>
+        <key type="b" name="disable-mpris">
+            <default>false</default>
+            <summary>Disable MPRIS</summary>
+            <description>Restart needed</description>
+        </key>
+        <key type="b" name="disable-notifications">
+            <default>false</default>
+            <summary>Disable notifications</summary>
+            <description>Restart needed</description>
+        </key>
+        <key type="b" name="show-tag-tracknumber">
+            <default>false</default>
+            <summary>Show track number from tags</summary>
+            <description></description>
+        </key>
+        <key type="i" name="paned-mainlist-width">
+            <default>150</default>
+            <summary>INTERNAL</summary>
+            <description></description>
+        </key>
+	    <key type="i" name="paned-listview-width">
+            <default>200</default>
+            <summary>INTERNAL</summary>
+            <description></description>
+        </key>
+        <key type="i" name="cover-quality">
+            <default>90</default>
+            <summary>JPG cover quality</summary>
+            <description>0-100</description>
+        </key>
+		<key type="ai" name="list-one-ids">
+            <default>[0]</default>
+            <summary>INTERNAL</summary>
+            <description></description>
+        </key>
+		<key type="ai" name="list-two-ids">
+            <default>[-1]</default>
+            <summary>INTERNAL</summary>
+            <description></description>
+        </key>
+        <key type="b" name="mix">
+            <default>false</default>
+            <summary>Mix songs</summary>
+            <description></description>
+        </key>
+        <key type="b" name="party-mix">
+            <default>false</default>
+            <summary>Mix songs only in party mode</summary>
+            <description></description>
+        </key>
+        <key type="b" name="search-itunes">
+            <default>true</default>
+            <summary>Search tracks on Itunes</summary>
+            <description></description>
+        </key>
+        <key type="b" name="search-spotify">
+            <default>true</default>
+            <summary>Search tracks on Spotify</summary>
+            <description></description>
+        </key>
+        <key type="i" name="mix-duration">
+            <default>3</default>
+            <summary>Mix duration</summary>
+            <description></description>
+        </key>
+        <key enum="org.gnome.Lollypop.Shuffle" name="shuffle">
+            <default>'none'</default>
+            <summary>Shuffle mode</summary>
+            <description></description>
+        </key>
+        <key enum="org.gnome.Lollypop.Playback" name="playback">
+            <default>'none'</default>
+            <summary>Playback behaviour</summary>
+            <description></description>
+        </key>
+	    <key enum="org.gnome.Lollypop.OrderBy" name="orderby">
+            <default>'artist'</default>
+            <summary>Order albums by</summary>
+            <description></description>
+        </key>
+	    <key enum="org.gnome.Lollypop.Charts" name="charts">
+            <default>'itunes'</default>
+            <summary>Charts provider</summary>
+            <description></description>
+        </key>
+    </schema>
+</schemalist>

@@ -1,0 +1,18 @@
+[Desktop Entry]
+Name=Internet Radio Locator
+Comment=Locate Internet Radio Stations
+TryExec=girl
+Exec=girl %U
+Icon=girl
+StartupNotify=true
+Terminal=false
+Type=Application
+Categories=GNOME;GTK;Music;Audio;AudioVideo;
+X-GNOME-Bugzilla-Bugzilla=GNOME
+X-GNOME-Bugzilla-Product=Girl
+X-GNOME-Bugzilla-Component=general
+X-GNOME-Bugzilla-Version=@VERSION@
+X-GNOME-DocPath=girl/girl.xml
+MimeType=application/girl;
+# Extra keywords that can be used to search for girl in GNOME Shell and Unity
+Keywords=Live;Radio;Program;Station;Locator;

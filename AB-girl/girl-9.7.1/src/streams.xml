@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!DOCTYPE girl SYSTEM "girl-0.7.dtd">
+<girl version="0.7">
+
+  <stream mime="audio/mpeg" uri="http://ury.york.ac.uk/audio/live-mobile.m3u" codec="MPEG 1 Audio, Layer 3 (MP3)" samplerate="44100 Hz" channels="Stereo" bitrate="48 kbps" />
+  <stream mime="audio/mpeg" uri="http://ury.york.ac.uk/audio/live-low.m3u" codec="MPEG 1 Audio, Layer 3 (MP3)" samplerate="44100 Hz" channels="Stereo" bitrate="96 kbps" />
+  <stream mime="audio/mpeg" uri="http://ury.york.ac.uk/audio/live-high.m3u" codec="MPEG 1 Audio, Layer 3 (MP3)" samplerate="44100 Hz" channels="Stereo" bitrate="192 kbps" />
+  <stream mime="audio/mpeg" uri="http://radio.elte.hu:8000/eper2" codec="MPEG 1 Audio, Layer 3 (MP3)" samplerate="44100 Hz" channels="Mono" bitrate="64 kbps" />
+  <stream mime="audio/mpeg" uri="http://radio.elte.hu:8000/eper24" codec="MPEG 1 Audio, Layer 3 (MP3)" samplerate="22050 Hz" channels="Mono" bitrate="24 kbps" />
+  <stream mime="audio/mpeg" uri="http://radio.elte.hu:8000/live24" codec="MPEG-2 AAC" samplerate="32000 Hz" channels="Stereo" bitrate="24 kbps" />
+  <stream mime="audio/mpeg" uri="http://burst.brighton.ac.uk:8000/burst.mp3" codec="MPEG 1 Audio, Layer 3 (MP3)" samplerate="22050 Hz" channels="Mono" bitrate="24 kbps" />
+  <stream mime="audio/mpeg" uri="http://burst.brighton.ac.uk:8000/burst.mp3" codec="MPEG 1 Audio, Layer 3 (MP3)" samplerate="44100 Hz" channels="Stereo" bitrate="128 kbps" />    
+  <stream mime="audio/mpeg" uri="http://studio.fusefm.co.uk:8000/livehi" codec="MPEG 1 Audio, Layer 3 (MP3)" samplerate="44100 Hz" channels="Stereo" bitrate="320 kbps" />
+  <stream mime="audio/ogg" uri="http://studio.fusefm.co.uk:8000/livehi"  codec="Ogg Vorbis" samplerate="44100 Hz" channels="Stereo" bitrate="320 kbps" />
+  <stream mime="audio/mpeg" uri="http://studio.fusefm.co.uk:8000/live" codec="MPEG 1 Audio, Layer 3 (MP3)" samplerate="44100 Hz" channels="Stereo" bitrate="128 kbps" />
+  <stream mime="audio/ogg" uri="http://studio.fusefm.co.uk:8000/live"  codec="Ogg Vorbis" samplerate="44100 Hz" channels="Stereo" bitrate="128 kbps" />
+  <stream mime="audio/mpeg" uri="http://stream.cjsw.com/cjsw.mp3.m3u" codec="MPEG 1 Audio, Layer 3 (MP3)" samplerate="44100 Hz" channels="Stereo" bitrate="128 kbps" />
+  <stream mime="audio/mpeg" uri="http://142.12.32.15:8000/stream.m3u" codec="MPEG 1 Audio, Layer 3 (MP3)" samplerate="44100 Hz" channels="Stereo" bitrate="128 kbps" />
+  <stream mime="audio/mpeg" uri="http://wxou.oakland.edu:8000/listen.pls" codec="MPEG 1 Audio, Layer 3 (MP3)" samplerate="22050 Hz" channels="Mono" bitrate="24 kbps" />
+  <stream mime="audio/mpeg" uri="http://wxou.oakland.edu:8002/listen.pls" codec="MPEG 1 Audio, Layer 3 (MP3)" samplerate="44100 Hz" channels="Mono" bitrate="128 kbps" />
+  <stream mime="audio/mpeg" uri="http://wamu-1.streamguys.com/" codec="MPEG 1 Audio, Layer 3 (MP3)" samplerate="44100 Hz" channels="Mono" bitrate="48 kbps" />
+  <stream mime="audio/ogg" uri="http://icecast.up.edu:8000/mystream.ogg.m3u" codec="Ogg Vorbis" samplerate="32000 Hz" channels="Stereo" bitrate="192 kbps" />
+  <stream mime="audio/mpeg" uri="http://streams.95bfm.com/stream95" codec="MPEG 1 Audio, Layer 3 (MP3)" samplerate="22050 Hz" channels="Mono" bitrate="32 kbps" />
+  <stream mime="audio/aacp" uri="http://broadcaster1.newcastle.edu.au:8000/2NURFM-aacPlus" codec="MPEG-2 AAC (AAC+)" samplerate="44100 Hz" channels="Stereo" bitrate="29 kbps" />
+  <stream mime="audio/mpeg" uri="http://stream.radio.adelaide.edu.au:8000/radadl-128.mp3" codec="MPEG 1 Audio, Layer 3 (MP3)" samplerate="44100 Hz" channels="Stereo" bitrate="128 kbps" />
+  <stream mime="audio/mpeg" uri="http://stream.radio.adelaide.edu.au:8000/radadl-64.mp3" codec="MPEG 1 Audio, Layer 3 (MP3)" samplerate="44100 Hz" channels="Stereo" bitrate="64 kbps" />
+  <stream mime="audio/ogg" uri="http://radior.video.muni.cz:8000/FSS_ogg-q0.ogg.m3u" codec="Ogg Vorbis" samplerate="44100 Hz" channels="Stereo" bitrate="64 kbps" />
+  <stream mime="audio/ogg" uri="http://radior.video.muni.cz:8000/FSS_ogg-q4.ogg.m3u" codec="Ogg Vorbis" samplerate="44100 Hz" channels="Stereo" bitrate="128 kbps" />
+  <stream mime="audio/ogg" uri="http://radior.video.muni.cz:8000/FSS_ogg-q8.ogg.m3u" codec="Ogg Vorbis" samplerate="44100 Hz" channels="Stereo" bitrate="256 kbps" />
+  <stream mime="audio/ogg" uri="http://relay.radio.ethz.ch/sender.ogg.m3u" codec="Ogg Vorbis" samplerate="44100 Hz" channels="Stereo" bitrate="128 kbps" />
+  <stream mime="audio/mpeg" uri="http://soho.wavestreamer.com:6648/listen.pls?sid=1" codec="MPEG 1 Audio, Layer 3 (MP3)" samplerate="44100 Hz" channels="Stereo" bitrate="128 kbps" />
+  <stream mime="audio/mpeg" uri="http://posurnl.nottingham.ac.uk:8080/urn_high.mp3" codec="MPEG 1 Audio, Layer 3 (MP3)" samplerate="44100 Hz" channels="Stereo" bitrate="128 kbps" />
+  <stream mime="audio/mpeg" uri="http://159.92.75.8:8080/KCLR" codec="MPEG 1 Audio, Layer 3 (MP3)" samplerate="44100 Hz" channels="Stereo" bitrate="128 kbps" />
+  <stream mime="audio/mpeg" uri="http://icecast.icradio.com:8000/live-mp3-high" codec="MPEG 1 Audio, Layer 3 (MP3)" samplerate="44100 Hz" channels="Stereo" bitrate="192 kbps" />
+  <stream mime="audio/mpeg" uri="http://ruc.midi-club.net:8000/;stream/1" codec="MPEG 1 Audio, Layer 3 (MP3)" samplerate="44100 Hz" channels="Stereo" bitrate="128 kbps" />
+  <stream mime="audio/ogg" uri="http://streamer.radiocampus.be:8000/stream_hi.ogg" codec="Ogg Vorbis" samplerate="44100 Hz" channels="Stereo" bitrate="192 kbps" />
+  <stream mime="audio/mpeg" uri="http://www.radiocampusparis.org:8000/stream_rcp" codec="MPEG 1 Audio, Layer 3 (MP3)" samplerate="44100 Hz" channels="Stereo" bitrate="128 kbps" />
+  <stream mime="audio/mpeg" uri="http://cent7.directhostingcenter.com/tunein.php/ubtevcdv/playlist.pls" codec="MPEG 1 Audio, Layer 3 (MP3)" samplerate="44100 Hz" channels="Stereo" bitrate="128 kbps" />
+  <stream mime="audio/mpeg" uri="http://s3.radioboss.fm:8223/stream" codec="MPEG 1 Audio, Layer 3 (MP3)" samplerate="44100 Hz" channels="Stereo" bitrate="128 kbps" />
+  <stream mime="audio/mpeg" uri="http://listen.oxideradio.co.uk:8000/oxide-radio.m3u" codec="MPEG 1 Audio, Layer 3 (MP3)" samplerate="44100 Hz" channels="Stereo" bitrate="128 kbps" />
+  <stream mime="audio/mpeg" uri="http://stream.camfm.co.uk/camfm" codec="MPEG 1 Audio, Layer 3 (MP3)" samplerate="44100 Hz" channels="Stereo" bitrate="128 kbps" />
+  <stream mime="audio/mpeg" uri="http://www.radiounam.unam.mx/templates/player/reproductor/CREA_FM/listen.m3u" codec="MPEG 1 Audio, Layer 3 (MP3)" samplerate="44100 Hz" channels="Stereo" bitrate="128 kbps" />
+  <stream mime="audio/ogg" uri="http://www.wxyc.org/files/streams/wxyc-ogg.pls" codec="Ogg Vorbis" samplerate="44100 Hz" channels="Stereo" bitrate="96 kbps" />
+  <stream mime="audio/mpeg" uri="http://wxyc.org/files/streams/wxyc-mp3.m3u" codec="MPEG 1 Audio, Layer 3 (MP3)" samplerate="44100 Hz" channels="Stereo" bitrate="128 kbps" />
+  <stream mime="audio/ogg" uri="http://icecast.media.berkeley.edu:8000/kalx-128.ogg.m3u" codec="Ogg Vorbis" samplerate="44100 Hz" channels="Stereo" bitrate="128 kbps" />
+  <stream mime="audio/mpeg" uri="http://icecast.media.berkeley.edu:8000/kalx-128.mp3.m3u" codec="MPEG 1 Audio, Layer 3 (MP3)" samplerate="44100 Hz" channels="Stereo" bitrate="128 kbps" />
+  <stream mime="audio/mpeg" uri="http://www.whrb.org/streams/whrb.m3u" codec="MPEG 1 Audio, Layer 3 (MP3)" samplerate="44100 Hz" channels="Stereo" bitrate="96 kbps" />
+  <stream mime="audio/mpeg" uri="http://stream.radionova.no/mp3.m3u" codec="MPEG 1 Audio, Layer 3 (MP3)" samplerate="44100 Hz" channels="Stereo" bitrate="192 kbps" />
+  <stream mime="audio/mpeg" uri="http://www.publicbroadcasting.net/wwno/ppr/wwno_128.m3u" codec="MPEG 1 Audio, Layer 3 (MP3)" samplerate="44100 Hz" channels="Stereo" bitrate="128 kbps" />
+  <stream mime="audio/mpeg" uri="http://ktru.org/audiometa/listen3.m3u" codec="MPEG 1 Audio, Layer 3 (MP3)" samplerate="44100 Hz" channels="Stereo" bitrate="128 kbps" />
+  <stream mime="audio/mpeg" uri="http://www.bbc.co.uk/worldservice/meta/live/mp3/eneuk.pls" codec="MPEG 1 Audio, Layer 3 (MP3)" samplerate="44100 Hz" channels="Stereo" bitrate="48 kbps" />
+  <stream mime="audio/aac" uri="http://lyd.nrk.no/nrk_radio_alltid_nyheter_aac_h" codec="AAC, v4 LC" samplerate="48000 Hz" channels="Stereo" bitrate="128 kbps" />
+  <stream mime="audio/mpeg" uri="http://kanga.college.columbia.edu:8000/listen.pls" codec="MPEG 1 Audio, Layer 3 (MP3)" samplerate="44100 Hz" channels="Stereo" bitrate="96 kbps" />
+  <stream mime="audio/mpeg" uri="http://kzsulive.stanford.edu/audio/kzsu-1-128.m3u" codec="MPEG 1 Audio, Layer 3 (MP3)" samplerate="44100 Hz" channels="Stereo" bitrate="128 kbps" />
+  <stream mime="audio/mpeg" uri="http://wmbr.org/WMBR_live_128.m3u" codec="MPEG 1 Audio, Layer 3 (MP3)" samplerate="44100 Hz" channels="Stereo" bitrate="128 kbps" />
+  <stream mime="audio/mpeg" uri="http://live-mp3-128.kexp.org:8000/listen.pls" codec="MPEG 1 Audio, Layer 3 (MP3)" samplerate="44100 Hz" channels="Stereo" bitrate="128 kbps" />
+</girl>

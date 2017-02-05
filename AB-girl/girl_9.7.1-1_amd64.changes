@@ -1,0 +1,32 @@
+Format: 1.8
+Date: Sun, 05 Feb 2017 10:32:28 +0300
+Source: girl
+Binary: girl
+Architecture: source amd64
+Version: 9.7.1-1
+Distribution: unstable
+Urgency: low
+Maintainer: Ali Guven Odabasioglu <agodabasioglu@gmail.com>
+Changed-By: Ali Guven Odabasioglu <agodabasioglu@gmail.com>
+Description:
+ girl       - GNOME Internet Radio Locator
+Closes: 849324
+Changes:
+ girl (9.7.1-1) unstable; urgency=low
+ .
+   * Initial release (Closes:  #849324)
+Checksums-Sha1:
+ a05560b498972f7fe74cd0a9d5e141edd05f5f19 985 girl_9.7.1-1.dsc
+ db0524820f79f7132c960eae4971edf1ba35c8b7 1524112 girl_9.7.1.orig.tar.xz
+ 4076f25ed7a115a7755b91f528ec924fd05d9dd6 2460 girl_9.7.1-1.debian.tar.xz
+ 86c1cfd2757248008f1802fcb34e082a45bb192c 609468 girl_9.7.1-1_amd64.deb
+Checksums-Sha256:
+ 5da9bb2f748b1e83dcdd157773614c1cf33555bd1f4085cb5535ae23eff12753 985 girl_9.7.1-1.dsc
+ d890b31cfc3c007d0ba0cae03310ad820bc6d6c5cc531294ba6a2ba267b11d02 1524112 girl_9.7.1.orig.tar.xz
+ 70f8de0badb7f270604f5783eee575b63937d74303dfd05a8cb2be863d8d3e3f 2460 girl_9.7.1-1.debian.tar.xz
+ a6fe3e54fc5c48f3e0a8732d80689801229b47293331bddbc3744e4161c37e1d 609468 girl_9.7.1-1_amd64.deb
+Files:
+ 9b558482ff15d680fefa36d12f369aef 985 gnome optional girl_9.7.1-1.dsc
+ a90991fc7ae076212ada828dd9b45468 1524112 gnome optional girl_9.7.1.orig.tar.xz
+ a20e96ebb9e237aa8d75f070d9d5f238 2460 gnome optional girl_9.7.1-1.debian.tar.xz
+ 2c2ce5183fbfd4bf0f52dddecc4d694a 609468 gnome optional girl_9.7.1-1_amd64.deb
