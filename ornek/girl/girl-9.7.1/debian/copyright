@@ -6,9 +6,13 @@ Files: *
 Copyright:2015 Ole Aamot <oka@oka.no>
 License: GPL-2.0+
 
-Files: help/yelp.js
+Files: jquery.js
+Copyright: 2010 John Resig <jeresig@gmail.com>
+License: GPL-2.0+
+
+Files: help/jquery.syntax.*
 Copyright: 2011 Samuel G. D. Williams <samuel.williams@oriontransfer.co.nz>
-License: MIT
+License: MIT or GPL-2.0+
 
 Files: debian/*
 Copyright: 2017 Ali Guven Odabasioglu <agodabasioglu@gmail.com>
