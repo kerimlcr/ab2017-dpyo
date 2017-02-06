@@ -1,0 +1,33 @@
+Source: basenji
+Section: gnome
+Priority: optional
+Maintainer: Canberk Koç <canberkkoc@gmail.com>
+Build-Depends: autotools-dev,
+               cli-common-dev,
+               debhelper (>= 8.0.0),
+               libtaglib-cil-dev (>= 2.0.4.0),
+               libgdk-pixbuf2.0-dev,
+               libgio2.0-cil-dev,
+               libglib2.0-cil-dev,
+               libgnome-desktop-3-dev,
+               libgtk2.0-cil-dev,
+               libmono-cairo4.0-cil,
+               mono-devel (>= 2.6.7),
+               pkg-config
+Standards-Version: 3.9.8
+Homepage: http://launchpad.net/basenji
+
+Package: basenji
+Architecture: all
+Depends: librsvg2-common (>= 2.26.0),
+		 udisks2,
+         ${cli:Depends},
+         ${misc:Depends}
+Description: Cross-platform media indexing/search tool
+ Basenji is an indexing and search tool designed for easy and fast indexing
+ of media collections. Once indexed, removable media such as CDs and
+ USB sticks can be browsed and searched for specific files very quickly,
+ without actually being connected to the computer. Besides file hierarchies
+ and audio track listings, Basenji also presents extracted metadata
+ (image dimensions, mp3 tags etc.) and content previews of indexed media in a
+ clean and straightforward user interface.

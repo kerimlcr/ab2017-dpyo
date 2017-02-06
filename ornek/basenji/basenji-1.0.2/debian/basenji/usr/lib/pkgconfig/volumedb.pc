@@ -1,0 +1,6 @@
+Name: VolumeDB
+Description: VolumeDB
+Version: 0.1
+
+Requires: 
+Libs: -r:/usr/lib/basenji/VolumeDB.dll

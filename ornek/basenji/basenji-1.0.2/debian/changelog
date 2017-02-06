@@ -1,0 +1,83 @@
+basenji (1.0.2-1) UNRELEASED; urgency=low
+
+  * Repack and close bugreport (#838224)
+
+ -- Canberk Koç <canberkkoc@gmail.com>  Mon, 06 Feb 2017 00:23:07 +0300
+
+basenji (1.0.2-0) unstable; urgency=low
+
+  * New upstream release
+
+ -- Patrick Ulbrich <zulu99@gmx.net>  Sun, 18 Sep 2016 18:33:09 +0200
+
+basenji (1.0.1-0) unstable; urgency=low
+
+  * New upstream release
+
+ -- Patrick Ulbrich <zulu99@gmx.net>  Fri, 28 Dec 2012 19:56:46 +0100
+
+basenji (1.0.0-0) unstable; urgency=low
+
+  * New upstream release
+
+ -- Patrick Ulbrich <zulu99@gmx.net>  Sun, 04 Nov 2012 15:20:50 +0100
+
+basenji (0.9.0-0) unstable; urgency=low
+
+  * New upstream release
+
+ -- Patrick Ulbrich <zulu99@gmx.net>  Sun, 19 Feb 2012 11:32:46 +0100
+ 
+basenji (0.8.0-0) unstable; urgency=low
+
+  * New upstream release
+
+ -- Patrick Ulbrich <zulu99@gmx.net>  Mon, 25 Apr 2011 19:23:46 +0200
+
+basenji (0.7.1-0) unstable; urgency=low
+
+  * New upstream release
+
+ -- Patrick Ulbrich <zulu99@gmx.net>  Sun, 15 Aug 2010 15:31:56 +0200
+
+basenji (0.7.0-0) unstable; urgency=low
+
+  * New upstream release
+
+ -- Patrick Ulbrich <zulu99@gmx.net>  Sat, 07 Aug 2010 15:38:20 +0200
+
+basenji (0.6.1-0) unstable; urgency=low
+
+  * New upstream release
+
+ -- Patrick Ulbrich <zulu99@gmx.net>  Fri, 23 Apr 2010 14:02:59 +0200
+
+basenji (0.6.0-0) unstable; urgency=low
+
+  * New upstream release
+
+ -- Patrick Ulbrich <zulu99@gmx.net>  Tue, 20 Apr 2010 16:51:48 +0200
+
+basenji (0.5.1-0) unstable; urgency=low
+
+  * New upstream release
+
+ -- Patrick Ulbrich <zulu99@gmx.net>  Mon, 11 Jan 2010 16:27:30 +0100
+
+basenji (0.5.0-0) unstable; urgency=low
+
+  * New upstream release
+
+ -- Patrick Ulbrich <zulu99@gmx.net>  Mon, 04 Jan 2010 14:20:03 +0100
+
+basenji (0.4.1-0) unstable; urgency=low
+
+  * New upstream release
+
+ -- Patrick Ulbrich <zulu99@gmx.net>  Thu, 10 Dec 2009 21:08:05 +0100
+
+basenji (0.4-0) unstable; urgency=low
+
+  * Initial release
+
+ -- Patrick Ulbrich <zulu99@gmx.net>  Fri, 04 Dec 2009 01:35:22 +0100

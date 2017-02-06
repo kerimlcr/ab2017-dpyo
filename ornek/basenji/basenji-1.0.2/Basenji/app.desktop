@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Basenji
+Exec=basenji
+Terminal=false
+Icon=@expanded_datadir@/@PACKAGE@/basenji.svg
+Categories=Utility;
+Comment=A portable volume indexer.
+Comment[de]=Ein portierbares Datenträger-Indizierungswerkzeug.

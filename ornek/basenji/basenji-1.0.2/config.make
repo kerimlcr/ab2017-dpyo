@@ -1,0 +1,9 @@
+prefix=/usr
+libdir=/usr/lib
+bindir=/usr/bin
+datadir=/usr/share
+RUNTIME=mono
+ASSEMBLY_VERSION=0.1.0.0
+VERSION=0.1
+PACKAGE=basenji
+CONFIG=GNOME_RELEASE
