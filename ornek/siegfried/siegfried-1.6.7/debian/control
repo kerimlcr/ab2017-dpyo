@@ -1,0 +1,17 @@
+Source: siegfried
+Section: misc
+Priority: optional
+Maintainer: Kerim Ölçer <kerimlcr@gmail.com>
+Build-Depends: debhelper (>=9)
+Standards-Version: 3.9.8
+Homepage: http://www.itforarchivists.com/siegfried
+#Vcs-Git: git://anonscm.debian.org/collab-maint/siegfried.git
+#Vcs-Browser: https://anonscm.debian.org/cgit/collab-maint/siegfried.git
+
+Package: siegfried
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: signature-based file format identification tool
+ This goes beyond the simple `file`-based identification approach. It
+ is interesting because it supports official file signatures like the
+ UK national archives or the Library of congress's.

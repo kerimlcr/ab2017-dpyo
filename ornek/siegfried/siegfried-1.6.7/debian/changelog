@@ -1,0 +1,5 @@
+siegfried (1.6.7-1) yakkety; urgency=medium
+
+  * Initial release (Closes: #851706)
+
+ -- Kerim Ölçer <kerimlcr@gmail.com>  Sun, 05 Feb 2017 19:30:47 +0300
