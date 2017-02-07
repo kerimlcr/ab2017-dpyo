@@ -1,0 +1,12 @@
+Package: girl
+Version: 9.8.0-1
+Architecture: amd64
+Maintainer: Kerim Ölçer <kerimlcr@gmail.com>
+Installed-Size: 1294
+Depends: libc6 (>= 2.4), libgdk-pixbuf2.0-0 (>= 2.25.2), libglib2.0-0 (>= 2.39.4), libgnome-2-0, libgnomeui-0 (>= 2.22.0), libgnomevfs2-0 (>= 1:2.17.90), libgstreamer-plugins-base1.0-0 (>= 1.0.0), libgstreamer1.0-0 (>= 1.0.0), libgtk2.0-0 (>= 2.24.0), libxml2 (>= 2.7.4), libgnome2-0
+Section: gnome
+Priority: optional
+Homepage: https://git.gnome.org//browse/girl
+Description: users to easily locate live radio programs
+ GNOME Internet Radio Locator allows users to easily locate live radio programs
+ on radio broadcasters on the Internet.

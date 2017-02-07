@@ -1,0 +1,4 @@
+# watch control file for uscan
+
+version=3
+https://ftp.gnome.org/pub/GNOME/sources/girl/9.8/girl-(.*)\.tar\.xz

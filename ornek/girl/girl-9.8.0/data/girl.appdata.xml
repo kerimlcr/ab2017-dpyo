@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <id type="desktop">girl.desktop</id>
+  <name>GNOME Internet Radio Locator</name>
+  <summary>Listen to and record from Internet radio</summary>
+  <licence>CC0</licence>
+  <description>
+    <p>GNOME Internet Radio Locator (GIRL) allows users to easily find and listen to live radio programs on radio broadcasters on the Internet.</p>
+    <p xml:lang="pl">GIRL umożliwia łatwe wyszukiwanie i słuchanie internetowych stacji radiowych.</p>
+    <p xml:lang="pt_BR">GNOME Internet Radio Locator (GIRL), ou localizador de rádio na Internet para o GNOME, permite que os usuários localizem e ouçam facilmente programas de rádio ao vivo em transmissões de rádio na Internet.</p>
+    <p>GIRL is developed for the GNOME desktop and requires gstreamer 1.0 to be installed for playback of supported radio stations.</p>
+    <p xml:lang="pl">Program GIRL został zaprojektowany dla środowiska GNOME i wymaga zainstalowania biblioteki GStreamer 1.0 do odtwarzania obsługiwanych stacji radiowych.</p>
+    <p xml:lang="pt_BR">GIRL é desenvolvido para o ambiente GNOME e requer que o gstreamer 1.0 esteja instalado para reprodução de estações de rádio.</p>
+    <p>Enjoy listening to and recording from supported Internet Radio stations in GIRL.</p>
+    <p xml:lang="bs">Uživajte slušajući i snimajući podržane Internet radio stanice u Girlu.</p>
+    <p xml:lang="cs">Uživejte si poslech a nahrávání z podporovaných internetových rádií v aplikaci GIRL.</p>
+    <p xml:lang="de">Viel Spaß beim Hören und Aufzeichenen der unterstützten Internet-Radiostationen in GIRL.</p>
+    <p xml:lang="el">Απολαύστε την ακρόαση και εγγραφή από τους υποστηριζόμενους διαδικτυακούς ραδιοφωνικούς σταθμούς στο GIRL.</p>
+    <p xml:lang="es">Disfrute escuchando y grabando desde las emisoras de radio de Internet soportadas en GIRL.</p>
+    <p xml:lang="fr">Appréciez l'écoute et l'enregistrement des stations Radio Internet prises en charges par GIRL.</p>
+    <p xml:lang="hu">Élvezze a műsorok hallgatását, és rögzítse azokat a GIRL programban támogatott Internetes rádióállomásokból.</p>
+    <p xml:lang="is">Njóttu þess að hlusta á og taka upp efni af studdum netútvarpsstöðvum með GIRL.</p>
+    <p xml:lang="pl">Ciesz się radiem internetowym w programie GIRL.</p>
+    <p xml:lang="pt">Ouça e grave de estações de rádio da Internet suportadas pelo GIRL.</p>
+    <p xml:lang="pt_BR">Curta ouvir e gravar músicas de estações de rádio na Internet que GIRL tem suporte.</p>
+    <p xml:lang="sr">Уживајте слушајући и снимајући подржане Интернет радио станице у Гирлу.</p>
+    <p xml:lang="sr@latin">Uživajte slušajući i snimajući podržane Internet radio stanice u Girlu.</p>
+    <p xml:lang="sv">Njut av att lyssna och spela in från internetradiostationer som stöds i GIRL.</p>
+    <p xml:lang="tr">GIRL'de desteklenen İnternet Radyo istasyonlarını dinleme ve kaydetme keyfini sürün.</p>
+  </description>
+  <url type="homepage">https://wiki.gnome.org/Apps/Girl</url>
+  <screenshots>
+    <screenshot type="default">https://git.gnome.org/browse/girl/plain/data/screenshot.png</screenshot>
+  </screenshots>
+  <updatecontact>girl-list@gnome.org</updatecontact>
+</application>
