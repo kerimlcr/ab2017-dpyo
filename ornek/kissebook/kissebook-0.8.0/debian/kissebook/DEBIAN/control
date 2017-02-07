@@ -1,0 +1,17 @@
+Package: kissebook
+Version: 0.8.0-1
+Architecture: amd64
+Maintainer: ELIF AKDAG <elifakkdag@gmail.com>
+Installed-Size: 149
+Depends: libatk1.0-0 (>= 1.12.4), libc6 (>= 2.14), libcairo-gobject2 (>= 1.10.0), libcairo2 (>= 1.2.4), libgdk-pixbuf2.0-0 (>= 2.22.0), libglib2.0-0 (>= 2.31.18), libgtk-3-0 (>= 3.9.10), libpango-1.0-0 (>= 1.14.0), libpangocairo-1.0-0 (>= 1.14.0), libsqlite3-0 (>= 3.5.9), libzip2 (>= 0.11.2)
+Section: text
+Priority: optional
+Homepage: https://github.com/jrie/kisslib
+Description: principle ebook quick launcher application
+ kisslib aka "KISS Ebook" or "KISS Ebook Starter" is a
+ work in progress ebook launcher
+ supporting .pdf, .epub, .mobi, .chm ebook files, works
+ completely offline and
+ helps you manage and launch your ebooks from a single
+ place, giving you hints about the authors and tiles
+ and the format of your ebooks.

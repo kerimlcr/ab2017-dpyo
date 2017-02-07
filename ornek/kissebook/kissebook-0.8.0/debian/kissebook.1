@@ -1,0 +1,82 @@
+.TH KISSLIB 1 "Jan 21, 2017"
+.SH NAME
+kissebook \- ebook organizer
+.SH SYNOPSIS
+.B kissebook
+.SH DESCRIPTION
+This manual page documents briefly the
+.B kissebook
+command.
+.TP
+Supported file types which are handled are:
+ -pdf
+ -epub
+ -mobi
+ -chm
+
+.PP
+In order to make use of 
+.B KISS Ebook,
+ you have to first import any supported ebook files. Its possible to import files and folders using the menu 
+.B "Import files and folders"
+ or by dragging and dropping files and or folders onto the ebook list, data then is processed in order to display information like author, title and file format when available of the supported ebook file formats, for pdf-files if no title is found, the filename is used in the list view.
+.PP
+In order to quickstart any ebook file, you have to go under the menu 
+.B "Operations"
+ and select 
+.B "Set launcher applications".
+ In this dialog, you can enter for each ebook type a program name, for example "evince" for .pdf files.
+.PP
+After saving and doing so once pdfs and other set then can be opened by clicking in the 
+.B "Open icon"
+ in the 
+.B "Open"
+ column of the particular ebook in the list or by pressing 
+.B "Control-S"
+ when the ebook is selected. If thats a pdf, 
+.B "evince /home/tux/YourPDF.pdf"
+ becomes executed and should happily open the PDF for you in this viewer.
+.PP
+Please note, launcher applications can have now parameters added to them, for example 
+.B evince -f
+ would start evince in fullscreen when launched with all files associated with this command.
+.PP
+Also the author and title fields can be edited and are saved instantly in the table view or by pressing 
+.B Control-E,
+ this will open the edit ebook details dialog, which is also available in 
+.B "Operations" > "Edit ebook details".
+.PP
+Also the columns which are shown, can be set temporary in the 
+.B "View" > "Show
+ or hide columns" menu or permanently by using 
+.B "Options" dialog,
+ selecting or deselecting the desired columns to display and saving.
+.PP
+In the 
+.B "Options"
+ dialog, it is also possible to set if ebooks on import of existing filenames should be overwritten. Resetting the author(s) and title columns, but leaving all other data intact.
+.PP
+For a quick search in the collection, it is possible to use type ahead find on the titles. Meaning, searching the titles can be done by simply typing in the application going with the first letters of the title as displayed in 
+.B KISS Ebook.
+.TP
+Shortcuts:
+ -"Ctrl-S" (Open a ebook)
+ -"Ctrl-E" (Edit ebook details)
+ -"Ctrl-W" (Set launcher dialog)
+ -"Ctrl-A" (Add files or folders dialog)
+.TP
+Default detected readers:
+ -Calibre
+ -evince
+ -FBReader
+ -Cool Reader 3
+ -LUCIDOR
+ -xCHM
+ -Easy eBook Viewer
+ -If you miss your default reader, please open an issue and I will add detection for it
+
+.SH AUTHOR
+guayadeque was written by Jan Riechers <jan@dwrox.net>.
+.PP
+This manual page was written by Elif Akdag <elifakkdag@gmail.com>,
+for the Debian project (and may be used by others).

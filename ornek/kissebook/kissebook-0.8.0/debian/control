@@ -1,0 +1,21 @@
+Source: kissebook
+Section: text
+Priority: optional
+Maintainer: ELIF AKDAG <elifakkdag@gmail.com>
+Build-Depends: debhelper (>= 9), libzip-dev, libsqlite3-dev, lzip, libgtk-3-dev
+Standards-Version: 3.9.6
+Homepage: https://github.com/jrie/kisslib
+#Vcs-Git: git://anonscm.debian.org/collab-maint/kissebook.git
+#Vcs-Browser: http://anonscm.debian.org/?p=collab-maint/kissebook.git;a=summary
+
+Package: kissebook
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: principle ebook quick launcher application
+ kisslib aka "KISS Ebook" or "KISS Ebook Starter" is a 
+ work in progress ebook launcher 
+ supporting .pdf, .epub, .mobi, .chm ebook files, works
+ completely offline and 
+ helps you manage and launch your ebooks from a single
+ place, giving you hints about the authors and tiles
+ and the format of your ebooks.
