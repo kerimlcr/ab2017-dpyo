@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2015 Martin Gansser <martinkg@fedoraproject.org> -->
+<application>
+  <id type="desktop">sayonara.desktop</id>
+  <metadata_license>CC0</metadata_license>
+  <project_license>GPL-3.0+</project_license>
+  <name>Sayonara</name>
+  <summary>A lightweight Qt Audio player</summary>
+  <description>
+    <p> Sayonara is a small, clear, not yet platform-independent music player. Low CPU usage, low memory consumption and no long loading times are only three
+      benefits of this player.
+    </p>
+    <p> Sayonara should be easy and intuitive to use and
+      therefore it should be able to compete with the most popular music players.
+    </p>
+  </description>
+  <screenshots>
+    <screenshot type="default">http://sayonara-player.com/images/screenshots/screenshot1.png</screenshot>
+    <screenshot>http://sayonara-player.com/images/screenshots/screenshot2.png</screenshot>
+    <screenshot>http://sayonara-player.com/images/screenshots/screenshot3.png</screenshot>
+    <screenshot>http://sayonara-player.com/images/screenshots/screenshot4.png</screenshot>
+  </screenshots>
+  <url type="homepage">http://sayonara-player.com</url>
+  <updatecontact>LucioCarreras_at_gmail.com</updatecontact>
+  <kudos>
+    <kudo>HiDpiIcon</kudo>
+    <kudo>ModernToolkit</kudo>
+    <kudo>Notifications</kudo>
+  </kudos>
+  <keywords>
+    <keyword>audio</keyword>
+    <keyword>music</keyword>
+    <keyword>player</keyword>
+    <keyword>tag</keyword>
+    <keyword>library</keyword>
+  </keywords>
+</application>

@@ -1,0 +1,24 @@
+CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
+PROJECT(say_comp_tagedit)
+
+INCLUDE_DIRECTORIES(
+    ${TAGLIB_INCLUDE_DIRS}
+)
+
+LINK_DIRECTORIES(${TAGLIB_LIBRARY_DIRS})
+
+
+SET(SOURCES
+	MetaDataChangeNotifier.cpp  
+	TagEdit.cpp  
+	TagExpression.cpp
+)
+
+
+ADD_LIBRARY(${PROJECT_NAME} STATIC ${SOURCES})
+TARGET_LINK_LIBRARIES(${PROJECT_NAME}
+	say_helper
+)
+
+#cotire(${PROJECT_NAME})
+

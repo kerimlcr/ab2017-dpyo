@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   width="64"
+   height="64"
+   id="svg4110"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="rec_off.svg">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1440"
+     inkscape:window-height="825"
+     id="namedview101"
+     showgrid="false"
+     inkscape:zoom="3.6875"
+     inkscape:cx="-42.847458"
+     inkscape:cy="32"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4110" />
+  <defs
+     id="defs4112">
+    <filter
+       color-interpolation-filters="sRGB"
+       id="filter6770-5-0"
+       inkscape:label="diff_light">
+      <feGaussianBlur
+         stdDeviation="5.0454676258992803"
+         in="SourceAlpha"
+         result="result0"
+         id="feGaussianBlur6772-3-6" />
+      <feSpecularLighting
+         kernelUnitLength="0.01"
+         in="result0"
+         result="result1"
+         lighting-color="#ffffff"
+         surfaceScale="4.30000019"
+         specularConstant="0.97719872"
+         specularExponent="27.60952377"
+         id="feSpecularLighting6774-5-9">
+        <feDistantLight
+           elevation="44"
+           azimuth="235"
+           id="feDistantLight6776-3-5" />
+      </feSpecularLighting>
+      <feComposite
+         in2="result1"
+         operator="arithmetic"
+         k1="0.74918567"
+         k2="1"
+         k3="1"
+         k4="0"
+         in="SourceGraphic"
+         result="result4"
+         id="feComposite6778-0-8" />
+      <feComposite
+         in2="SourceAlpha"
+         operator="atop"
+         in="result4"
+         result="result2"
+         id="feComposite6780-2-9" />
+    </filter>
+    <filter
+       x="-0.11452282"
+       y="-0.11452282"
+       width="1.2290456"
+       height="1.2290456"
+       color-interpolation-filters="sRGB"
+       id="filter4089-9"
+       inkscape:label="inner_button">
+      <feGaussianBlur
+         result="fbSourceGraphic"
+         id="feGaussianBlur4091-7"
+         stdDeviation="13.882262" />
+      <feColorMatrix
+         id="feColorMatrix3424-1"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         in="fbSourceGraphic"
+         result="fbSourceGraphicAlpha" />
+      <feGaussianBlur
+         stdDeviation="6"
+         in="fbSourceGraphicAlpha"
+         result="result0"
+         id="feGaussianBlur3426-7" />
+      <feSpecularLighting
+         in="result0"
+         result="result1"
+         lighting-color="#ffffff"
+         surfaceScale="10"
+         specularConstant="1"
+         specularExponent="25"
+         id="feSpecularLighting3428-5">
+        <feDistantLight
+           elevation="45"
+           azimuth="235"
+           id="feDistantLight3430-0" />
+      </feSpecularLighting>
+      <feComposite
+         in2="result1"
+         operator="arithmetic"
+         k1="0"
+         k2="1"
+         k3="1"
+         k4="0"
+         in="fbSourceGraphic"
+         result="result4"
+         id="feComposite3432-9" />
+      <feComposite
+         in2="fbSourceGraphicAlpha"
+         operator="in"
+         in="result4"
+         result="result2"
+         id="feComposite3434-8" />
+    </filter>
+  </defs>
+  <metadata
+     id="metadata4115">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1">
+    <g
+       transform="matrix(0.46153845,0,0,0.46153845,142.76923,-483.24408)"
+       id="g4783"
+       style="filter:url(#filter6770-5-0)">
+      <path
+         d="m -557.60419,227.06755 a 374.7666,374.7666 0 1 1 -749.53321,0 374.7666,374.7666 0 1 1 749.53321,0 z"
+         transform="matrix(0.17077296,0,0,0.17077296,-80.776281,1077.5852)"
+         id="path4766-1-2-8"
+         style="fill:#323232;fill-opacity:1;fill-rule:nonzero;stroke:#000048;stroke-width:0;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:10" />
+      <path
+         d="m 868.73119,409.90515 a 145.46196,145.46196 0 1 1 -290.92392,0 145.46196,145.46196 0 1 1 290.92392,0 z"
+         transform="matrix(0.17586652,0,0,0.17586652,-367.572,1042.9588)"
+         id="path5164-6"
+         style="fill:#999999;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:0;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:10;filter:url(#filter4089-9)" />
+    </g>
+  </g>
+</svg>

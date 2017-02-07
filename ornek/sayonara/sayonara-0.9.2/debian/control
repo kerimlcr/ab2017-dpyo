@@ -1,0 +1,31 @@
+Source: sayonara
+Section: sound
+Priority: optional
+Maintainer: Ali Guven Odabasioglu <agodabasioglu@gmail.com>
+Build-Depends: cmake,
+               debhelper (>= 9),
+               libgstreamer-plugins-bad1.0-dev,
+               libgstreamer-plugins-base1.0-dev,
+               libgstreamer1.0-dev,
+               libmtp-dev,
+               libtag1-dev,
+               pkg-config,
+               qtbase5-dev,
+               qttools5-dev,
+               qttools5-dev-tools,
+               zlib1g-dev
+Standards-Version: 3.9.6
+Homepage: http://sayonara-player.com
+#Vcs-Git: git://anonscm.debian.org/collab-maint/sayonara.git
+#Vcs-Browser: http://anonscm.debian.org/?p=collab-maint/sayonara.git;a=summary
+
+Package: sayonara
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends},
+         gstreamer1.0-plugins-ugly,
+         gstreamer1.0-plugins-bad,
+         libgstreamer-plugins-bad1.0-0,
+         libqt5sql5-sqlite,
+Description: Small and lightweight music player.
+ Sayonara is as a lightweight and fast 
+ library manager and music player.

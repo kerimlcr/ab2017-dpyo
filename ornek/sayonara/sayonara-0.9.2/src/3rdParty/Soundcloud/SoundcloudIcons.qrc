@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/sc_icons">
+        <file>ui/icon.png</file>
+    </qresource>
+</RCC>

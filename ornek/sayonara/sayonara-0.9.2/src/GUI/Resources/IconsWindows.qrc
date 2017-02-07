@@ -1,0 +1,32 @@
+<RCC>
+    <qresource prefix="/">
+		<file>IconsWindows/accessories-text-editor.png</file>
+		<file>IconsWindows/dialog-info.png</file>
+		<file>IconsWindows/dialog-information.png</file>
+		<file>IconsWindows/document-new.png</file>
+		<file>IconsWindows/document-open.png</file>
+		<file>IconsWindows/document-properties.png</file>
+		<file>IconsWindows/document-save-as.png</file>
+		<file>IconsWindows/document-save.png</file>
+		<file>IconsWindows/edit-clear.png</file>
+		<file>IconsWindows/edit-delete.png</file>
+		<file>IconsWindows/edit-undo.png</file>
+		<file>IconsWindows/gtk-info.png</file>
+		<file>IconsWindows/list-add.png</file>
+		<file>IconsWindows/list-remove.png</file>
+		<file>IconsWindows/media-playback-pause.png</file>
+		<file>IconsWindows/media-playback-start.png</file>
+		<file>IconsWindows/media-playback-stop.png</file>
+		<file>IconsWindows/media-record.png</file>
+		<file>IconsWindows/media-skip-backward.png</file>
+		<file>IconsWindows/media-skip-forward.png</file>
+		<file>IconsWindows/undo.png</file>
+		<file>IconsWindows/view-refresh.png</file>
+		<file>IconsWindows/window-close.png</file>
+		<file>IconsWindows/folder.png</file>
+		<file>IconsWindows/stock_close.png</file>
+		<file>IconsWindows/system-run.png</file>
+	</qresource>
+</RCC>
+
+

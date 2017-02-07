@@ -1,0 +1,215 @@
+
+ SSSSS    AA  YY   YY OOO  N   N    AA    RRRR     AA 
+SS 	AA  AA  Y Y  OO OO NN  N  AA  AA  R  RR  AA  AA
+ SSSS  AA    AA  Y   O   O N N N AA    AA RRRR  AA    AA
+    SS AAAAAAAA  Y   OO OO N  NN AAAAAAAA R  R  AAAAAAAA
+SSSSS  AA    AA  Y    OOO  N   N AA    AA R   R AA    AA
+
+
+=== Howto ===
+
+1. Menubar
+
+2. Player
+
+3. Playlist
+
+4. Library
+
+5. ID3 tag editor
+
+6. LastFM
+
+5. Tricks and Hints
+
+==============================================================================================
+
+== Menubar ==
+
+       File:
+		* Open File: Select one or multiple files you want to play
+	
+                * Open Folder: Select folders to play
+		
+                * Import Folder: Select a folder that should be imported to library 
+                               and optionally copied to a user specified path in library
+                               You can choose if this folder should be copied. 
+                               Recommended: activate this option
+                
+                * Reload Library: Reload your library if you did any changes not within
+                                  the player (e.g. extern id3 editors, or deleted files)
+                                  All tracks in your library folder will be checked again.
+                
+                * Fetch all covers: Will fetch all covers for all your albums.
+                                    This is only necessary, if you are offline sometimes
+                                    because single cover fetching is pretty fast
+
+
+        View:
+		* Library: switch from compact mode to extended mode
+                
+                * Small playlist items: You will see more of your tracks in the playlist
+                
+                * LastFM radio (Extension): Only available if LastFM is activated
+                
+                * Stream (Extension) Custom radio station (you also can save them)
+                
+                * Equalizer: An graphical 10-band equalizer
+                
+                * Playlists: Save your favorite playlist
+                
+                * Notifications: Show notification if player changes
+                
+                * Close to tray: Sayonara won't be minimized, it will be closed to the
+                                 System tray. You can click on the system tray icon to reopen 
+                                 it
+                
+                * Dark skin: Darken sayonara (but this does not look that well atm)
+
+
+        Preferences:
+                * LastFM: (de)activate LastFM and type your user credentials. You also can switch
+                          if LastFM should show you id3 corrections (there will be a little "ID3" 
+                          Icon in the player then, if necesary)
+
+                * Streamripper: Activate or deactivate streamripper. If activated, a record button 
+                                will appear instead of the pause button. If you only want to store 
+                                entire LastFM tracks and not only parts of them if you forwarded them,
+                                you should choose this option. For single radio streams deactivate this 
+                                option. Otherwise there would be no result. In future, streamripper 
+                                also will create a playlist of your recorded tracks. The folder where 
+                                all the tracks will go is not imported to library. You can do this 
+                                manually.
+
+
+=== Player ===
+
+        * The stars indicate bitrate quality of your file (just check out the tooltip)
+
+        * If LastFM id3 corrections are activated the player shows you a little id3 button next to the 
+          title, if your id3 tags are not correct
+
+        * If streamripper is activated there will be a record button instead of the play / pause button.
+          If you press the button too late, it's no problem. You will get the entire track nevertheless. 
+          *** IMPORTANT *** The record button the button must be activated before you click the stop 
+          button or the stream ends
+
+        * Click on the cover if you want to have your own picture. You can specify any search term there.
+          The cover will be shown for all tracks with this artist/album combination.
+
+        * Click on the loudspeaker icon for mute/unmute
+
+        * In LastFM streams you cannot move the progress bar
+
+        * Everything else should be clear
+
+
+=== Playlist ===
+
+        * You can drag and drop from your desktop, file-manager, library, within playlist
+
+        * You can delete tracks by marking them (you also can select multiple tracks with Ctrl-key) 
+          and press the delete button on your keyboard
+
+        * Right click on a track or multiple tracks will allow you to edit these tracks, show the 
+          lyrics or just information
+
+        * You can not mix up www-streams and library tracks yet!
+
+        * If there are tracks the library does not know, a litte icon will appear in the upper right 
+          that will allow you to import tracks to library, so you can search for them. 
+          THE TRACKS WON'T BE COPIED TO YOUR LIBRARY FOLDER! If you want so use the 
+          "File->Import Folder" or "File->reload library" instead.
+
+        * There are four buttons at the bottom: Repeat, shuffle, dynamic and append
+          For repeat and shuffle please have a look at the manual of your discman.
+
+        * Dynamic means that the player will automatically insert a new track at the bottom of the 
+          playlist, that matches the music taste. This track will come from your library. So don't 
+          wonder if it is not working and your library is only 5 tracks big. 
+          *** IMPORTANT *** This feature is only available if you are logged in to LastFM
+
+        * Append means, that if you choose "Open track" or "Open folder" or double click anything in 
+          the library that it will be appended to the current playlist. Else your playlist will be 
+          cleared and substituted with new tracks
+
+        * Everything else should be clear
+
+
+=== Library ===
+
+        * Double click clears the playlist and will insert the chosen tracks, albums or artists if the 
+          append button in playlist is not checked. Otherwise these tracks will be appended at the end 
+          of your playlist
+
+        * You can drag and drop to playlist
+
+        * Right click should be clear
+ 
+        * Middle click will insert this track / album / artist after the current played track in 
+          playlist. Functionality is the same as right click->play next
+
+        * If you chose an artist or album and you want to undo it click the clear button or alter the 
+          searchstring
+
+        * You can search by fulltext (searches in artists/albums/title), filesystem path or genre.
+          HINT: if you dont want to click on the drop down every time just type "f:", "p:" or "g:" at 
+          the beginning of your search term. So search mode will change as indicated in the drop down 
+          menu.
+
+        * If you don't like some tracks/albums/artists delete them. But make sure you press the "only
+          from library" button. If you really hate them deactivate this function. Tracks will be lost
+          forever then.
+
+        * Everything else should be clear.
+
+
+
+=== ID3 Tag editor ===
+
+        * You can edit your ID3 Data. The "all" checkboxes will apply it to all tracks loaded by the
+          ID3 tag editor. Sometimes the artists, albums, genres... SHOULD differ. So be careful with
+          this checkbox
+
+        * In the next version you can extract your metadata from filepath. It is implemented but the
+          player crashes when saving files. I have to overview it...
+
+	* You can set genres and find tracks via the search functionality in library
+
+        * Everything else should be clear
+
+
+=== LastFM ===
+
+        * Many functions depend of LastFM. The dynamic play button in playlist, the ID3 corrections in
+          the player, LastFM radio.. So create an account and enjoy a lot of additional functionality
+
+        * For the first two functionalities have a look at the section "Playlist" respectively "Player"
+
+        * There are 4 options for radio: Artist, tag, user radio and recommended.
+          Artist: play songs that are similar to the artists songs. Type an artist
+          Tag: play songs that match the tag (e.g. death metal). Type a genre
+          User radio: Choose one of your friends or yourself if she or he has great music taste and enjoy
+                      her or his sound
+          Recommended: Choose on of your friends or bla bla and enjoy sound that is recommended for this
+                       user
+
+        * If stream recorder is active it will create a folder for artist and create a tagged MP3 file for
+          each of the played tracks. Make sure the record button is pressed when the track stops or changes
+          otherwise the track will NOT be saved.
+
+        * You cannot use the progress bar because of LastFM restrictions.
+
+        * Everything else should be clear.
+
+
+=== Streams === 
+
+        * Choose a pls or m3u playlist or some soundfile from the internet and type it there. Click on listen
+          Tadaaa!
+
+        * Sometimes it does not work. Choose another one
+        
+        * If you like this station you can save it.
+
+        

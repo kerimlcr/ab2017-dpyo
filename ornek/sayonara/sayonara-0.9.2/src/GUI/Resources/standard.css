@@ -1,0 +1,74 @@
+/*QListView, QTableView{
+background: #FFFFFF;
+alternate-background-color: #DADADA;
+}
+ */
+
+QWidget {
+	font-family: <<FONT_FAMILY>>;
+	font-size: <<FONT_SIZE>>pt;
+}
+
+
+LibraryView,
+LibraryGenreView,
+DirectoryTreeView,
+FileListView
+{
+	      font-size: <<FONT_SIZE_LIB>>pt;
+		  font-weight: <<FONT_WEIGHT_LIB>>;
+}
+
+PlaylistView
+{
+    font-size: <<FONT_SIZE_PL>>pt;
+}
+
+QFrame#player_frame, 
+	QFrame#genre_frame
+	QFrame#my_frame, 
+	QFrame#my_frame_2, 
+	QFrame#my_frame_3
+{
+	padding: 0px;
+	background-repeat: no-repeat;
+	border: none;
+}
+
+
+QLabel#lab_title,
+QLabel#lab_title_2,
+QLabel#lab_title_3,
+QLabel#lab_title_4,
+QLabel#lab_sayonara
+{
+        font-size: 12px;
+}
+
+QListView,
+LibraryView,
+LibraryGenreView,
+DirectoryTreeView,
+FileListView
+{
+    font-size: <<FONT_SIZE_LIB>>pt;
+    font-weight: <<FONT_WEIGHT_LIB>>;
+}
+
+PlaylistView
+{
+    font-size: <<FONT_SIZE_PL>>pt;
+}
+
+QComboBox
+{
+	padding-left: 2px;
+	padding-right: 12px;
+}
+
+QComboBox,
+QLineEdit
+{
+	min-height: 22px;
+	height: 22px;
+}

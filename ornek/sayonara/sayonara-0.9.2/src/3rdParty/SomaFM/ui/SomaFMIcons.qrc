@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/soma_icons">
+        <file>soma.png</file>
+        <file>soma_logo.png</file>
+    </qresource>
+</RCC>

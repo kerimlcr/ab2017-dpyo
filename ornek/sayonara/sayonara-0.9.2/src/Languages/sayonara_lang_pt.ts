@@ -1,0 +1,1 @@
+sayonara_lang_br.ts
