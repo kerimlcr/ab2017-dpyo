@@ -1,0 +1,17 @@
+Source: powerzz
+Section: utils
+Priority: optional
+Maintainer: Oğuzhan DUYAR <bilgi@oguzhanduyar.org>
+Build-Depends: debhelper (>= 9)
+Standards-Version: 3.9.6
+Homepage: https://www.adoradeal.com/powerzz
+#Vcs-Git: git://anonscm.debian.org/collab-maint/powerzz.git
+#Vcs-Browser: http://anonscm.debian.org/?p=collab-maint/powerzz.git;a=summary
+
+Package: powerzz
+Architecture: all
+Depends: ${misc:Depends}
+Description: Battery power monitor
+ Powerzz is a battery power monitor. It will warn the
+ user of low battery power when the charge level reaches 15%, and it  will
+ start the critical action when the battery charge level reaches 7%.

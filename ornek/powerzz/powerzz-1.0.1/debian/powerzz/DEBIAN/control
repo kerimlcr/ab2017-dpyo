@@ -1,0 +1,12 @@
+Package: powerzz
+Version: 1.0.1-1
+Architecture: all
+Maintainer: Oğuzhan DUYAR <bilgi@oguzhanduyar.org>
+Installed-Size: 45
+Section: utils
+Priority: optional
+Homepage: https://www.adoradeal.com/powerzz
+Description: Battery power monitor
+ Powerzz is a battery power monitor. It will warn the
+ user of low battery power when the charge level reaches 15%, and it  will
+ start the critical action when the battery charge level reaches 7%.
