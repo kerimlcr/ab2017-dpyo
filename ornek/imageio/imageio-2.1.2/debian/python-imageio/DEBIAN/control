@@ -1,0 +1,15 @@
+Package: python-imageio
+Source: imageio
+Version: 2.1.2-1
+Architecture: all
+Maintainer: Kerim Ölçer <kerimlcr@gmail.com>
+Installed-Size: 675
+Depends: python-numpy, python-pil, python:any (<< 2.8), python:any (>= 2.7.5-5~)
+Suggests: python-imageio-doc
+Section: unknown
+Priority: optional
+Homepage: <insert the upstream URL, if relevant>
+Description: <insert up to 60 chars description> (Python 2)
+ <insert long description, indented with spaces>
+ .
+ This package installs the library for Python 2.

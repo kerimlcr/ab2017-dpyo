@@ -1,0 +1,5 @@
+imageio (2.1.2-1) unstable; urgency=medium
+
+  * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+
+ -- Kerim Ölçer <kerimlcr@gmail.com>  Mon, 06 Feb 2017 13:28:14 +0300

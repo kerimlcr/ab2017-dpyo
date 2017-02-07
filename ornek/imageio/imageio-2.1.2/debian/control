@@ -1,0 +1,41 @@
+Source: imageio
+Section: python
+Priority: optional
+Maintainer: Kerim Ölçer <kerimlcr@gmail.com>
+Build-Depends: debhelper (>=9),dh-python,python-all (>= 2.6.6-3~),python-setuptools,python3-all,python3-setuptools,python-pytest,python3-pytest
+Standards-Version: 3.9.8
+Homepage: http://imageio.github.io/
+X-Python-Version: >= 2.6
+X-Python3-Version: >= 3.2
+#Vcs-Git: git://anonscm.debian.org/collab-maint/imageio.git
+#Vcs-Browser: https://anonscm.debian.org/cgit/collab-maint/imageio.git
+
+Package: python-imageio
+Architecture: all
+Depends: ${python:Depends}, ${misc:Depends},python-numpy, python-pil
+Suggests: python-imageio-doc
+Description: scale images, crop images etc.
+ Imageio is a Python library that provides an easy interface to read and write
+ a wide range of image data, including animated images, volumetric data, and 
+ scientific formats. It is cross-platform, runs on Python 2.x and 3.x, and is 
+ easy to install.
+
+Package: python3-imageio
+Architecture: all
+Depends: ${python3:Depends}, ${misc:Depends},python3-numpy, python3-pil
+Suggests: python-imageio-doc
+Description: scale images, crop images etc.
+ Imageio is a Python library that provides an easy interface to read and write
+ a wide range of image data, including animated images, volumetric data, and 
+ scientific formats. It is cross-platform, runs on Python 2.x and 3.x, and is 
+ easy to install.
+
+Package: python-imageio-doc
+Architecture: all
+Section: doc
+Depends: ${sphinxdoc:Depends}, ${misc:Depends}
+Description: scale images, crop images etc.
+ Imageio is a Python library that provides an easy interface to read and write
+ a wide range of image data, including animated images, volumetric data, and 
+ scientific formats. It is cross-platform, runs on Python 2.x and 3.x, and is 
+ easy to install.

@@ -1,0 +1,15 @@
+Package: python3-imageio
+Source: imageio
+Version: 2.1.2-1
+Architecture: all
+Maintainer: Kerim Ölçer <kerimlcr@gmail.com>
+Installed-Size: 10
+Depends: python3-numpy, python3-pil
+Suggests: python-imageio-doc
+Section: unknown
+Priority: optional
+Homepage: <insert the upstream URL, if relevant>
+Description: <insert up to 60 chars description> (Python 3)
+ <insert long description, indented with spaces>
+ .
+ This package installs the library for Python 3.

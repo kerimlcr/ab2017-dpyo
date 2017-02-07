@@ -1,0 +1,13 @@
+Package: python-imageio-doc
+Source: imageio
+Version: 2.1.2-1
+Architecture: all
+Maintainer: Kerim Ölçer <kerimlcr@gmail.com>
+Installed-Size: 10
+Section: doc
+Priority: optional
+Homepage: <insert the upstream URL, if relevant>
+Description: <insert up to 60 chars description> (common documentation)
+ <insert long description, indented with spaces>
+ .
+ This is the common documentation package.
