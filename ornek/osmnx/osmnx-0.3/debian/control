@@ -1,0 +1,39 @@
+Source: osmnx
+Section: python
+Priority: optional
+Maintainer: Canberk Koç <canberkkoc@gmail.com>
+Build-Depends: debhelper (>= 9), dh-python, python-all, python-setuptools, python3-all, python3-setuptools, python-requests(>=2.11), python-numpy(>=1.11), python-pandas(>=0.19), python-geopandas(>=0.2.1), python-networkx(>=1.11), python-matplotlib(>=2.0), python-shapely(>=1.5), python-descartes(>=1.0), python-geopy(>=1.11), python-rtree(>=0.8.3), python3-requests(>=2.11), python3-numpy(>=1.11), python3-pandas(>=0.19), python3-geopandas(>=0.2.1), python3-networkx(>=1.11), python3-matplotlib(>=2.0), python3-shapely(>=1.5), python3-descartes(>=1.0), python3-geopy(>=1.11), python3-rtree(>=0.8.3)    
+Standards-Version: 3.9.8
+Homepage: https://github.com/gboeing/osmnx
+X-Python-Version: >= 2.6
+X-Python3-Version: >= 3.2
+
+
+Package: python-osmnx
+Architecture: all
+Depends: ${python:Depends}, ${misc:Depends},   
+Suggests: python-osmnx-doc
+Description: Osmnx python for street networks (Python 2)
+ Osmnx is a package to easily download, construct, project, visualize, and
+ analyze complex street networks from OpenStreetMap in Python with NetworkX. 
+ You can get a city's or neighborhood's walking, driving, or biking network
+ with a single line of Python code. Then you can easily 
+ visualize cul-de-sacs or one-way streets, plot shortest-path routes, or 
+ calculate stats like intersection density, average node connectivity, 
+ betweenness centrality, etc.
+ This package installs the library for Python 2.
+
+Package: python3-osmnx
+Architecture: all
+Depends: ${python3:Depends}, ${misc:Depends}   
+Suggests: python-osmnx-doc
+Description: Osmnx python for street networks (Python 3)
+ Osmnx is a package to easily download, construct, project, visualize, and
+ analyze complex street networks from OpenStreetMap in Python with NetworkX. 
+ You can get a city's or neighborhood's walking, driving, or biking network
+ with a single line of Python code. Then you can easily 
+ visualize cul-de-sacs or one-way streets, plot shortest-path routes, or 
+ calculate stats like intersection density, average node connectivity, 
+ betweenness centrality, etc.
+ This package installs the library for Python 3.
+

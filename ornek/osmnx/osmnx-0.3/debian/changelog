@@ -1,0 +1,5 @@
+osmnx (0.3-1) unstable; urgency=medium
+
+  * Initial release (Closes: #852200) 
+
+ -- Canberk Koç <canberkkoc@gmail.com>  Tue, 07 Feb 2017 10:11:40 +0300
