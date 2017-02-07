@@ -1,0 +1,11 @@
+--- a/moviepy/config_defaults.py
++++ b/moviepy/config_defaults.py
+@@ -50,5 +50,5 @@
+ 
+ import os
+ 
+-FFMPEG_BINARY = os.getenv('FFMPEG_BINARY', 'ffmpeg-imageio')
+-IMAGEMAGICK_BINARY = os.getenv('IMAGEMAGICK_BINARY', 'auto-detect')
+\ No newline at end of file
++FFMPEG_BINARY = os.system(r"which ffmpeg")
++IMAGEMAGICK_BINARY = os.getenv('IMAGEMAGICK_BINARY', 'auto-detect')

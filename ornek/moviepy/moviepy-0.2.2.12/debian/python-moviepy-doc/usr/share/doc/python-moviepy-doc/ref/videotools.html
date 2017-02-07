@@ -1,0 +1,527 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>video.tools &mdash; MoviePy 0.2 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="MoviePy 0.2 documentation" href="../index.html"/>
+        <link rel="up" title="Reference Manual" href="ref.html"/>
+        <link rel="next" title="audio.tools" href="audiotools.html"/>
+        <link rel="prev" title="moviepy.audio.fx.all.volumex" href="audiofx/moviepy.audio.fx.all.volumex.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> MoviePy
+          
+
+          
+            
+            <img src="../_static/logo_small.jpeg" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.2
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../install.html">Download and Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/getting_started.html">Getting started with MoviePy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gallery.html">Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/examples.html">Example Scripts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../FAQ.html">FAQ and troubleshooting</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="ref.html">Reference Manual</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Clip.html">Clip</a></li>
+<li class="toctree-l2"><a class="reference internal" href="VideoClip/VideoClip.html">Classes of Video Clips</a></li>
+<li class="toctree-l2"><a class="reference internal" href="AudioClip.html">AudioClip</a></li>
+<li class="toctree-l2"><a class="reference internal" href="videofx.html">moviepy.video.fx (vfx)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="audiofx.html">audio.fx</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">video.tools</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#module-moviepy.video.tools.credits">Credits</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-moviepy.video.tools.drawing">Drawing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-moviepy.video.tools.segmenting">Segmenting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-moviepy.video.tools.subtitles">Subtitles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tracking">Tracking</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="audiotools.html">audio.tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ffmpeg.html">FFMPEG tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="decorators.html">Decorators</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">MoviePy</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="ref.html">Reference Manual</a> &raquo;</li>
+      
+    <li>video.tools</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/ref/videotools.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="video-tools">
+<span id="ref-videotools"></span><h1>video.tools<a class="headerlink" href="#video-tools" title="Permalink to this headline">¶</a></h1>
+<p>This module regroups advanced, useful (and less useful) functions for editing videos, by alphabetical order.</p>
+<div class="section" id="module-moviepy.video.tools.credits">
+<span id="credits"></span><h2>Credits<a class="headerlink" href="#module-moviepy.video.tools.credits" title="Permalink to this headline">¶</a></h2>
+<p>This module contains different functions to make end and opening
+credits, even though it is difficult to fill everyone needs in this
+matter.</p>
+<dl class="function">
+<dt id="moviepy.video.tools.credits.credits1">
+<code class="descclassname">moviepy.video.tools.credits.</code><code class="descname">credits1</code><span class="sig-paren">(</span><em>creditfile</em>, <em>width</em>, <em>stretch=30</em>, <em>color='white'</em>, <em>stroke_color='black'</em>, <em>stroke_width=2</em>, <em>font='Impact-Normal'</em>, <em>fontsize=60</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/moviepy/video/tools/credits.html#credits1"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moviepy.video.tools.credits.credits1" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>creditfile</strong></p>
+<blockquote>
+<div><p>A text file whose content must be as follows:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># This is a comment</span>
+<span class="c1"># The next line says : leave 4 blank lines</span>
+<span class="o">.</span><span class="n">blank</span> <span class="mi">4</span>
+
+<span class="o">..</span><span class="n">Executive</span> <span class="n">Story</span> <span class="n">Editor</span>
+<span class="n">MARCEL</span> <span class="n">DURAND</span>
+
+<span class="o">..</span><span class="n">Associate</span> <span class="n">Producers</span>
+<span class="n">MARTIN</span> <span class="n">MARCEL</span>
+<span class="n">DIDIER</span> <span class="n">MARTIN</span>
+
+<span class="o">..</span><span class="n">Music</span> <span class="n">Supervisor</span>
+<span class="n">JEAN</span> <span class="n">DIDIER</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p><strong>width</strong></p>
+<blockquote>
+<div><p>Total width of the credits text in pixels</p>
+</div></blockquote>
+<p><strong>gap</strong></p>
+<blockquote>
+<div><p>Gap in pixels between the jobs and the names.</p>
+</div></blockquote>
+<p><strong>**txt_kw</strong></p>
+<blockquote>
+<div><p>Additional argument passed to TextClip (font, colors, etc.)</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">image</p>
+<blockquote class="last">
+<div><p>An ImageClip instance that looks like this and can be scrolled
+to make some credits :</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>Executive Story Editor    MARCEL DURAND</dt>
+<dd><dl class="first last docutils">
+<dt>Associate Producers    MARTIN MARCEL</dt>
+<dd><blockquote class="first">
+<div><p>DIDIER MARTIN</p>
+</div></blockquote>
+<p class="last">Music Supervisor    JEAN DIDIER</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div></blockquote>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-moviepy.video.tools.drawing">
+<span id="drawing"></span><h2>Drawing<a class="headerlink" href="#module-moviepy.video.tools.drawing" title="Permalink to this headline">¶</a></h2>
+<p>This module deals with making images (np arrays). It provides drawing
+methods that are difficult to do with the existing Python libraries.</p>
+<dl class="function">
+<dt id="moviepy.video.tools.drawing.blit">
+<code class="descclassname">moviepy.video.tools.drawing.</code><code class="descname">blit</code><span class="sig-paren">(</span><em>im1, im2, pos=[0, 0], mask=None, ismask=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/moviepy/video/tools/drawing.html#blit"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moviepy.video.tools.drawing.blit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Blit an image over another.</p>
+<p>Blits <code class="docutils literal"><span class="pre">im1</span></code> on <code class="docutils literal"><span class="pre">im2</span></code> as position <code class="docutils literal"><span class="pre">pos=(x,y)</span></code>, using the
+<code class="docutils literal"><span class="pre">mask</span></code> if provided. If <code class="docutils literal"><span class="pre">im1</span></code> and <code class="docutils literal"><span class="pre">im2</span></code> are mask pictures
+(2D float arrays) then <code class="docutils literal"><span class="pre">ismask</span></code> must be <code class="docutils literal"><span class="pre">True</span></code>.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="moviepy.video.tools.drawing.circle">
+<code class="descclassname">moviepy.video.tools.drawing.</code><code class="descname">circle</code><span class="sig-paren">(</span><em>screensize</em>, <em>center</em>, <em>radius</em>, <em>col1=1.0</em>, <em>col2=0</em>, <em>blur=1</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/moviepy/video/tools/drawing.html#circle"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moviepy.video.tools.drawing.circle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draw an image with a circle.</p>
+<p>Draws a circle of color <code class="docutils literal"><span class="pre">col1</span></code>, on a background of color <code class="docutils literal"><span class="pre">col2</span></code>,
+on a screen of size <code class="docutils literal"><span class="pre">screensize</span></code> at the position <code class="docutils literal"><span class="pre">center=(x,y)</span></code>,
+with a radius <code class="docutils literal"><span class="pre">radius</span></code> but slightly blurred on the border by <code class="docutils literal"><span class="pre">blur</span></code>
+pixels</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="moviepy.video.tools.drawing.color_gradient">
+<code class="descclassname">moviepy.video.tools.drawing.</code><code class="descname">color_gradient</code><span class="sig-paren">(</span><em>size</em>, <em>p1</em>, <em>p2=None</em>, <em>vector=None</em>, <em>r=None</em>, <em>col1=0</em>, <em>col2=1.0</em>, <em>shape='linear'</em>, <em>offset=0</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/moviepy/video/tools/drawing.html#color_gradient"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moviepy.video.tools.drawing.color_gradient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draw a linear, bilinear, or radial gradient.</p>
+<p>The result is a picture of size <code class="docutils literal"><span class="pre">size</span></code>, whose color varies
+gradually from color <cite>col1</cite> in position <code class="docutils literal"><span class="pre">p1</span></code> to color <code class="docutils literal"><span class="pre">col2</span></code>
+in position <code class="docutils literal"><span class="pre">p2</span></code>.</p>
+<p>If it is a RGB picture the result must be transformed into
+a &#8216;uint8&#8217; array to be displayed normally:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>size</strong></p>
+<blockquote>
+<div><p>Size (width, height) in pixels of the final picture/array.</p>
+</div></blockquote>
+<p><strong>p1, p2</strong></p>
+<blockquote>
+<div><p>Coordinates (x,y) in pixels of the limit point for <code class="docutils literal"><span class="pre">col1</span></code>
+and <code class="docutils literal"><span class="pre">col2</span></code>. The color &#8216;before&#8217; <code class="docutils literal"><span class="pre">p1</span></code> is <code class="docutils literal"><span class="pre">col1</span></code> and it
+gradually changes in the direction of <code class="docutils literal"><span class="pre">p2</span></code> until it is <code class="docutils literal"><span class="pre">col2</span></code>
+when it reaches <code class="docutils literal"><span class="pre">p2</span></code>.</p>
+</div></blockquote>
+<p><strong>vector</strong></p>
+<blockquote>
+<div><p>A vector [x,y] in pixels that can be provided instead of <code class="docutils literal"><span class="pre">p2</span></code>.
+<code class="docutils literal"><span class="pre">p2</span></code> is then defined as (p1 + vector).</p>
+</div></blockquote>
+<p><strong>col1, col2</strong></p>
+<blockquote>
+<div><p>Either floats between 0 and 1 (for gradients used in masks)
+or [R,G,B] arrays (for colored gradients).</p>
+</div></blockquote>
+<p><strong>shape</strong></p>
+<blockquote>
+<div><p>&#8216;linear&#8217;, &#8216;bilinear&#8217;, or &#8216;circular&#8217;.
+In a linear gradient the color varies in one direction,
+from point <code class="docutils literal"><span class="pre">p1</span></code> to point <code class="docutils literal"><span class="pre">p2</span></code>.
+In a bilinear gradient it also varies symetrically form <code class="docutils literal"><span class="pre">p1</span></code>
+in the other direction.
+In a circular gradient it goes from <code class="docutils literal"><span class="pre">col1</span></code> to <code class="docutils literal"><span class="pre">col2</span></code> in all
+directions.</p>
+</div></blockquote>
+<p><strong>offset</strong></p>
+<blockquote>
+<div><p>Real number between 0 and 1 indicating the fraction of the vector
+at which the gradient actually starts. For instance if <code class="docutils literal"><span class="pre">offset</span></code>
+is 0.9 in a gradient going from p1 to p2, then the gradient will
+only occur near p2 (before that everything is of color <code class="docutils literal"><span class="pre">col1</span></code>)
+If the offset is 0.9 in a radial gradient, the gradient will
+occur in the region located between 90% and 100% of the radius,
+this creates a blurry disc of radius d(p1,p2).</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">image</p>
+<blockquote class="last">
+<div><p>An Numpy array of dimensions (W,H,ncolors) of type float
+representing the image of the gradient.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Examples</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">grad</span> <span class="o">=</span> <span class="n">color_gradient</span><span class="p">(</span><span class="n">blabla</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;uint8&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="moviepy.video.tools.drawing.color_split">
+<code class="descclassname">moviepy.video.tools.drawing.</code><code class="descname">color_split</code><span class="sig-paren">(</span><em>size</em>, <em>x=None</em>, <em>y=None</em>, <em>p1=None</em>, <em>p2=None</em>, <em>vector=None</em>, <em>col1=0</em>, <em>col2=1.0</em>, <em>grad_width=0</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/moviepy/video/tools/drawing.html#color_split"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moviepy.video.tools.drawing.color_split" title="Permalink to this definition">¶</a></dt>
+<dd><p>Make an image splitted in 2 colored regions.</p>
+<p>Returns an array of size <code class="docutils literal"><span class="pre">size</span></code> divided in two regions called 1 and
+2 in wht follows, and which will have colors col&amp; and col2
+respectively.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>x: (int)</strong></p>
+<blockquote>
+<div><p>If provided, the image is splitted horizontally in x, the left
+region being region 1.</p>
+</div></blockquote>
+<p><strong>y: (int)</strong></p>
+<blockquote>
+<div><p>If provided, the image is splitted vertically in y, the top region
+being region 1.</p>
+</div></blockquote>
+<p><strong>p1,p2:</strong></p>
+<blockquote>
+<div><p>Positions (x1,y1),(x2,y2) in pixels, where the numbers can be
+floats. Region 1 is defined as the whole region on the left when
+going from <code class="docutils literal"><span class="pre">p1</span></code> to <code class="docutils literal"><span class="pre">p2</span></code>.</p>
+</div></blockquote>
+<p><strong>p1, vector:</strong></p>
+<blockquote>
+<div><p><code class="docutils literal"><span class="pre">p1</span></code> is (x1,y1) and vector (v1,v2), where the numbers can be
+floats. Region 1 is then the region on the left when starting
+in position <code class="docutils literal"><span class="pre">p1</span></code> and going in the direction given by <code class="docutils literal"><span class="pre">vector</span></code>.</p>
+</div></blockquote>
+<p><strong>gradient_width</strong></p>
+<blockquote class="last">
+<div><p>If not zero, the split is not sharp, but gradual over a region of
+width <code class="docutils literal"><span class="pre">gradient_width</span></code> (in pixels). This is preferable in many
+situations (for instance for antialiasing).</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Examples</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">size</span> <span class="o">=</span> <span class="p">[</span><span class="mi">200</span><span class="p">,</span><span class="mi">200</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># an image with all pixels with x&lt;50 =0, the others =1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">color_split</span><span class="p">(</span><span class="n">size</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">col1</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">col2</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># an image with all pixels with y&lt;50 red, the others green</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">color_split</span><span class="p">(</span><span class="n">size</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">col1</span><span class="o">=</span><span class="p">[</span><span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="n">col2</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># An image splitted along an arbitrary line (see below) </span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">color_split</span><span class="p">(</span><span class="n">size</span><span class="p">,</span> <span class="n">p1</span><span class="o">=</span><span class="p">[</span><span class="mi">20</span><span class="p">,</span><span class="mi">50</span><span class="p">],</span> <span class="n">p2</span><span class="o">=</span><span class="p">[</span><span class="mi">25</span><span class="p">,</span><span class="mi">70</span><span class="p">]</span> <span class="n">col1</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">col2</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="module-moviepy.video.tools.segmenting">
+<span id="segmenting"></span><h2>Segmenting<a class="headerlink" href="#module-moviepy.video.tools.segmenting" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="moviepy.video.tools.segmenting.findObjects">
+<code class="descclassname">moviepy.video.tools.segmenting.</code><code class="descname">findObjects</code><span class="sig-paren">(</span><em>clip</em>, <em>rem_thr=500</em>, <em>preview=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/moviepy/video/tools/segmenting.html#findObjects"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moviepy.video.tools.segmenting.findObjects" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of ImageClips representing each a separate object on
+the screen.</p>
+<dl class="docutils">
+<dt>rem_thr</dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">all objects found with size &lt; rem_Thr will be</span><dd>considered false positives and will be removed</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-moviepy.video.tools.subtitles">
+<span id="subtitles"></span><h2>Subtitles<a class="headerlink" href="#module-moviepy.video.tools.subtitles" title="Permalink to this headline">¶</a></h2>
+<p>Experimental module for subtitles support.</p>
+<dl class="class">
+<dt id="moviepy.video.tools.subtitles.SubtitlesClip">
+<em class="property">class </em><code class="descclassname">moviepy.video.tools.subtitles.</code><code class="descname">SubtitlesClip</code><span class="sig-paren">(</span><em>subtitles</em>, <em>make_textclip=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/moviepy/video/tools/subtitles.html#SubtitlesClip"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moviepy.video.tools.subtitles.SubtitlesClip" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="VideoClip/VideoClip.html#moviepy.video.VideoClip.VideoClip" title="moviepy.video.VideoClip.VideoClip"><code class="xref py py-class docutils literal"><span class="pre">moviepy.video.VideoClip.VideoClip</span></code></a></p>
+<p>A Clip that serves as &#8220;subtitle track&#8221; in videos.</p>
+<p>One particularity of this class is that the images of the
+subtitle texts are not generated beforehand, but only if
+needed.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>subtitles</strong></p>
+<blockquote class="last">
+<div><p>Either the name of a file, or a list</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Examples</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">moviepy.video.tools.subtitles</span> <span class="k">import</span> <span class="n">SubtitlesClip</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">moviepy.video.io.VideoFileClip</span> <span class="k">import</span> <span class="n">VideoFileClip</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">generator</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">txt</span><span class="p">:</span> <span class="n">TextClip</span><span class="p">(</span><span class="n">txt</span><span class="p">,</span> <span class="n">font</span><span class="o">=</span><span class="s1">&#39;Georgia-Regular&#39;</span><span class="p">,</span>
+<span class="go">                                    fontsize=24, color=&#39;white&#39;)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sub</span> <span class="o">=</span> <span class="n">SubtitlesClip</span><span class="p">(</span><span class="s2">&quot;subtitles.srt&quot;</span><span class="p">,</span> <span class="n">generator</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">myvideo</span> <span class="o">=</span> <span class="n">VideoFileClip</span><span class="p">(</span><span class="s2">&quot;myvideo.avi&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">final</span> <span class="o">=</span> <span class="n">CompositeVideoClip</span><span class="p">([</span><span class="n">clip</span><span class="p">,</span> <span class="n">subtitles</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">final</span><span class="o">.</span><span class="n">to_videofile</span><span class="p">(</span><span class="s2">&quot;final.mp4&quot;</span><span class="p">,</span> <span class="n">fps</span><span class="o">=</span><span class="n">myvideo</span><span class="o">.</span><span class="n">fps</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="method">
+<dt id="moviepy.video.tools.subtitles.SubtitlesClip.in_subclip">
+<code class="descname">in_subclip</code><span class="sig-paren">(</span><em>t_start=None</em>, <em>t_end=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/moviepy/video/tools/subtitles.html#SubtitlesClip.in_subclip"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moviepy.video.tools.subtitles.SubtitlesClip.in_subclip" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a sequence of [(t1,t2), txt] covering all the given subclip
+from t_start to t_end. The first and last times will be cropped so as
+to be exactly t_start and t_end if possible.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="moviepy.video.tools.subtitles.file_to_subtitles">
+<code class="descclassname">moviepy.video.tools.subtitles.</code><code class="descname">file_to_subtitles</code><span class="sig-paren">(</span><em>filename</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/moviepy/video/tools/subtitles.html#file_to_subtitles"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#moviepy.video.tools.subtitles.file_to_subtitles" title="Permalink to this definition">¶</a></dt>
+<dd><p>Converts a srt file into subtitles.</p>
+<p>The returned list is of the form <code class="docutils literal"><span class="pre">[((ta,tb),'some</span> <span class="pre">text'),...]</span></code>
+and can be fed to SubtitlesClip.</p>
+<p>Only works for &#8216;.srt&#8217; format for the moment.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="tracking">
+<h2>Tracking<a class="headerlink" href="#tracking" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="audiotools.html" class="btn btn-neutral float-right" title="audio.tools" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="audiofx/moviepy.audio.fx.all.volumex.html" class="btn btn-neutral" title="moviepy.audio.fx.all.volumex" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Zulko.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.2',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

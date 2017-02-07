@@ -1,0 +1,4314 @@
+.\" Man page generated from reStructuredText.
+.
+.TH "MOVIEPY" "1" "Feb 06, 2017" "0.2" "MoviePy"
+.SH NAME
+moviepy \- MoviePy Documentation
+.
+.nr rst2man-indent-level 0
+.
+.de1 rstReportMargin
+\\$1 \\n[an-margin]
+level \\n[rst2man-indent-level]
+level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
+-
+\\n[rst2man-indent0]
+\\n[rst2man-indent1]
+\\n[rst2man-indent2]
+..
+.de1 INDENT
+.\" .rstReportMargin pre:
+. RS \\$1
+. nr rst2man-indent\\n[rst2man-indent-level] \\n[an-margin]
+. nr rst2man-indent-level +1
+.\" .rstReportMargin post:
+..
+.de UNINDENT
+. RE
+.\" indent \\n[an-margin]
+.\" old: \\n[rst2man-indent\\n[rst2man-indent-level]]
+.nr rst2man-indent-level -1
+.\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
+.in \\n[rst2man-indent\\n[rst2man-indent-level]]u
+..
+[image]
+.sp
+MoviePy is a Python module for video editing, which can be used for basic operations (like cuts, concatenations, title insertions), video compositing (a.k.a. non\-linear editing), video processing, or to create advanced effects. It can read and write the most common video formats, including GIF.
+.sp
+Here it is in action (run in an IPython Notebook):
+[image]
+.SH DOWNLOAD AND INSTALLATION
+.SS Installation
+.sp
+\fBMethod with pip:\fP if you have \fBpip\fP installed, just type this in a terminal (it will install ez_setup if you don\(aqt already have it)
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+(sudo) pip install moviepy
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+If you have neither \fBsetuptools\fP nor \fBez_setup\fP installed the command above will fail, is this case type this before installing:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+(sudo) pip install ez_setup
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+\fBMethod by hand:\fP download the sources, either on \fI\%PyPI\fP or (if you want the development version) on \fI\%Github\fP, unzip everything in one folder, open a terminal and type
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+(sudo) python setup.py install
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+MoviePy depends on the Python modules \fI\%Numpy\fP, \fI\%imageio\fP, \fI\%Decorator\fP, and \fI\%tqdm\fP, which will be automatically installed during MoviePy\(aqs installation. It should work  on Windows/Mac/Linux, with Python 2.7+ and 3 ; if you have trouble installing MoviePy or one of its dependencies, please provide feedback !
+.sp
+MoviePy depends on the software FFMPEG for video reading and writing. You don\(aqt need to worry about that, as FFMPEG should be automatically downloaded/installed by ImageIO during your first use of MoviePy (it takes a few seconds). If you want to use a specific version of FFMPEG, you can set the FFMPEG_BINARY environment variable See \fBmoviepy/config_defaults.py\fP for details.
+.SS Other optional but useful dependencies
+.sp
+\fI\%ImageMagick\fP is not strictly required, only if you want to write texts. It can also be used as a backend for GIFs but you can do GIFs with MoviePy without ImageMagick.
+.sp
+Once you have installed it, ImageMagick will be automatically detected by MoviePy, \fBexcept on Windows !\fP\&. Windows user, before installing MoviePy by hand, go into the \fBmoviepy/config_defaults.py\fP file and provide the path to the ImageMagick binary called \fIconvert\fP\&. It should look like this
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+IMAGEMAGICK_BINARY = "C:\e\eProgram Files\e\eImageMagick_VERSION\e\econvert.exe"
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+You can also set the IMAGEMAGICK_BINARY environment variable See \fBmoviepy/config_defaults.py\fP for details.
+.sp
+\fI\%PyGame\fP is needed for video and sound previews (useless if you intend to work with MoviePy on a server but really essential for advanced video editing \fIby hand\fP).
+.sp
+For advanced image processing you will need one or several of these packages. For instance using the method \fBclip.resize\fP requires that at least one of Scipy, PIL, Pillow or OpenCV are installed.
+.INDENT 0.0
+.IP \(bu 2
+The Python Imaging Library (PIL) or, better, its branch \fI\%Pillow\fP .
+.IP \(bu 2
+\fI\%Scipy\fP (for tracking, segmenting, etc.), and can be used for resizing video clips if PIL and OpenCV aren\(aqt installed on your computer.
+.IP \(bu 2
+\fI\%Scikit Image\fP may be needed for some advanced image manipulation.
+.IP \(bu 2
+\fI\%OpenCV 2.4.6\fP or more recent (provides the package \fBcv2\fP) or more recent may be needed for some advanced image manipulation.
+.UNINDENT
+.sp
+If you are on linux, these softwares will surely be in your repos.
+.SH GETTING STARTED WITH MOVIEPY
+.sp
+These pages explain everything you need to start editing with MoviePy. To go further, have a look at the gallery and the examples\&.
+.SS Quick presentation
+.sp
+This section explains when MoviePy can be used and how it works.
+.SS Do I need MoviePy ?
+.sp
+Here are a few reasons why you may want to edit videos in Python:
+.INDENT 0.0
+.IP \(bu 2
+You have many videos to process or to compose in a complicated way.
+.IP \(bu 2
+You want to automatize the creation of videos or GIFs on a web server (Django, Flask, etc.)
+.IP \(bu 2
+You want to automatize tedious tasks, like title insertions tracking objects, cuting scenes, making end credits, subtitles, etc...
+.IP \(bu 2
+You want to code your own video effects to do something no existing video editor can.
+.IP \(bu 2
+You want to create animations from images generated by another python library (Matplotlib, Mayavi, Gizeh, scikit\-images...)
+.UNINDENT
+.sp
+And here are a few uses for which MoviePy is NOT the best solution:
+.INDENT 0.0
+.IP \(bu 2
+You only need to do frame\-by\-frame video analysis (with face detection or other fancy stuff). This could be done with MoviePy in association with other libraries, but really, just use \fI\%imageio\fP, \fI\%OpenCV\fP or SimpleCV, these are libraries that specialize in these tasks.
+.IP \(bu 2
+You only want to convert a video file, or turn a series of image files into a movie. In this case it is better to directly call \fBffmpeg\fP (or \fBavconv\fP or \fBmencoder\fP\&...) it will be faster more memory\-efficient than going through MoviePy.
+.UNINDENT
+.SS Advantages and limitations
+.sp
+MoviePy has been developed with the following goals in mind:
+.INDENT 0.0
+.IP \(bu 2
+\fBSimple an intuitive\fP\&. Basic operations can be done in one line. The code is easy to learn and easy to understand for newcomers.
+.IP \(bu 2
+\fBFlexible\fP\&. You have total control over the frames of the video and audio, and creating your own effects is easy as Py.
+.IP \(bu 2
+\fBPortable\fP\&. The code uses very common software (Numpy and FFMPEG) and can run on (almost) any machine with (almost) any version of Python.
+.UNINDENT
+.sp
+For the limitations: MoviePy cannot (yet) stream videos (read from a webcam, or render a video live on a distant machine), and is not really designed for video processing involving many successive frames of a movie (like video stabilization, you\(aqll need another software for that). You can also have memory problems if you use many video, audio, and image sources at the same time (>100), but this will be fixed in future versions.
+.SS Example code
+.sp
+In a typical MoviePy script, you load video or audio files, modify them, put them together, and write the final result to a new video file. As an example, let us load a video of my last holidays, lower the volume, add a title in the center of the video for the first ten seconds, and write the result in a file:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+# Import everything needed to edit video clips
+from moviepy.editor import *
+
+# Load myHolidays.mp4 and select the subclip 00:00:50 \- 00:00:60
+clip = VideoFileClip("myHolidays.mp4").subclip(50,60)
+
+# Reduce the audio volume (volume x 0.8)
+clip = clip.volumex(0.8)
+
+# Generate a text clip. You can customize the font, color, etc.
+txt_clip = TextClip("My Holidays 2013",fontsize=70,color=\(aqwhite\(aq)
+
+# Say that you want it to appear 10s at the center of the screen
+txt_clip = txt_clip.set_pos(\(aqcenter\(aq).set_duration(10)
+
+# Overlay the text clip on the first video clip
+video = CompositeVideoClip([clip, txt_clip])
+
+# Write the result to a file (many options available !)
+video.write_videofile("myHolidays_edited.webm")
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.SS How MoviePy works
+.sp
+MoviePy uses the software \fBffmpeg\fP to read and to export video and audio files. It also (optionally) uses ImageMagick to generate texts and write GIF files. The processing of the different media is ensured by Python\(aqs fast numerical library Numpy. Advanced effects and enhancements use some of Python\(aqs numerous image processing libraries (PIL, Scikit\-image, scipy, etc.).
+[image]
+.SS Basic concepts
+.sp
+The central objects of MoviePy are \fIclips\fP, which can be \fBAudioClips\fP or \fBVideoClips\fP\&. They can be modified (cut, slowed down, darkened...) or put mixed with clips to form new clips, they can be previewed (using either PyGame or the IPython Notebook) and rendered to a file (as a MP4, a GIF, a MP3, etc.). \fBVideoClips\fP for instance can be created from a video file, an image, a text, or a custom animation. They can have an audio track (which is an \fBAudioClip\fP) and a mask (a special \fBVideoClip\fP indicating which parts of the clip to hide when the clip is mixed with other clips). See clips and CompositeVideoClips for more details.
+.sp
+A clip can be modified using one of moviepy\(aqs numerous effects (like in \fBclip.resize(width="360")\fP, \fBclip.subclip(t1,t2)\fP, or \fBclip.fx(vfx.black_white)\fP) or using a user\-implemented effect. MoviePy implements many functions (like \fBclip.fl\fP, \fBclip.fx\fP, etc.) which make it very easy to code your own effect in a few lines. See effects for more.
+.sp
+You will also find a few advanced goodies in \fBmoviepy.video.tools\fP to track objects in a video, draw simple shapes and color gradients (very useful for masks), generate subtitles and end credits, etc. See advancedtools for a description of these.
+.sp
+Finally, although MoviePy has no graphical user interface, there are many ways to preview a clip which allow you to fine\-tune your scripts and be sure that everything is perfect when you render you video in high quality. See efficient\&.
+.SS Creating and exporting video clips
+.sp
+Video and audio clips are the central objects of MoviePy. In this section we present the different sorts of clips, how to create them, and how to write them to a file. For informations on modifying a clip (cuts, effects, etc.), see effects\&. For how to put clips together see CompositeVideoClips and to see how to preview clips before writing a file, refer to efficient\&.
+.sp
+The following code summarizes the base clips that you can create with moviepy:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+# VIDEO CLIPS
+clip = VideoClip(make_frame, duration=4) # for custom animations (see below)
+clip = VideoFileClip("my_video_file.mp4") # or .avi, .webm, .gif ...
+clip = ImageSequenceClip([\(aqimage_file1.jpeg\(aq, ...], fps=24)
+clip = ImageClip("my_picture.png") # or .jpeg, .tiff, ...
+clip = TextClip("Hello !", font="Amiri\-Bold", fontsize=70, color="black")
+clip = ColorClip(size=(460,380), color=[R,G,B])
+
+# AUDIO CLIPS
+clip = AudioFileClip("my_audiofile.mp3") # or .ogg, .wav... or a video !
+clip = AudioArrayClip(numpy_array, fps=44100) # from a numerical array
+clip = AudioClip(make_frame, duration=3) # uses a function make_frame(t)
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+The best to understand these clips is to read the full documentation for each in the reference_manual\&. The next sections
+In this section we see how to create clips, (for instance from video or audio files), how to mix them together, and how to write them to a file.
+.SS Categories of video clips
+.sp
+Video clips are the building blocks of longer videos. Technically, they are clips with a \fBclip.get_frame(t)\fP method which outputs a HxWx3 numpy array representing the frame of the clip at time \fIt\fP\&. There are two main categories: animated clips (made with \fBVideoFileClip\fP and \fBVideoClip\fP) and unanimated clips which show the same picture for an a\-priori infinite duration (\fBImageClip\fP, \fBTextClip\fP,\(ga\(gaColorClip\(ga\(ga). There are also special video clips call masks, which belong to the categories above but output greyscale frames indicating which parts of another clip are visible or not. A video clip can carry around an audio clip (\fBclip.audio\fP) which is its \fIsoundtrack\fP, and a mask clip.
+.SS VideoClip
+.sp
+\fBVideoClip\fP is the base class for all the other video clips in MoviePy. If all you want is to edit video files, you will never need it. This class is practical when you want to make animations from frames that are generated by another library. All you need is to define a function \fBmake_frame(t)\fP which returns a HxWx3 numpy array (of 8\-bits integers) representing the frame at time t. Here is an example with the graphics library Gizeh:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+import gizeh
+import moviepy.editor as mpy
+
+def make_frame(t):
+    surface = gizeh.Surface(128,128) # width, height
+    radius = W*(1+ (t*(2\-t))**2 )/6 # the radius varies over time
+    circle = gizeh.circle(radius, xy = (64,64), fill=(1,0,0))
+    circle.draw(surface)
+    return surface.get_npimage() # returns a 8\-bit RGB array
+
+clip = mpy.VideoClip(make_frame, duration=2) # 2 seconds
+clip.write_gif("circle.gif",fps=15)
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+[image]
+.sp
+Note that clips make with a \fImake_frame\fP do not have an explicit frame rate, so you must provide a frame rate (\fBfps\fP, frames er second) for \fBwrite_gif\fP and \fBwrite_videofile\fP, and more generally for any methods that requires iterating through the frames.
+.SS VideoFileClip
+.sp
+A VideoFileClip is a clip read from a video file (most formats are supported) or a GIF file. You load the video as follows:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+myclip = VideoFileClip("some_video.avi")
+myclip = VideoFileClip("some_animation.gif")
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+Note that these clips will have an \fBfps\fP (frame per second) attribute, which will be transmitted if you do small modifications of the clip, and will be used by default in \fBwrite_videofile\fP, \fBwrite_gif\fP, etc. For instance:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+myclip = VideoFileClip("some_video.avi")
+print (myclip.fps) # prints for instance \(aq30\(aq
+# Now cut the clip between t=10 and 25 secs. This conserves the fps.
+myclip2 = myclip.subclip(10, 25)
+myclip2.write_gif("test.gif") # the gif will have 30 fps
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+For more, see \fBVideoFileClip\fP\&.
+.SS ImageSequenceClip
+.sp
+This is a clip made from a series of images, you call it with
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+clip = ImageSequenceClip(images_list, fps=25)
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+where \fBimages_list\fP can be either a list of image names (that will be \fIplayed\fP) in that order, a folder name (at which case all the image files in the folder will be played in alphanumerical order), or a list of frames (Numpy arrays), obtained for instance from other clips.
+.sp
+When you provide a folder name or list of file names, you can choose \fBload_images=True\fP to specify that all images should be loaded into the RAM. This is only interesting if you have a small number of images that will be each used more than once (e.g. if the images form a looping animation).
+.SS ImageClip
+.sp
+An ImageClip is a video clip that always displays the same image. You can create one as follows:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+myclip = ImageClip("some_picture.jpeg")
+myclip = ImageClip(somme_array) # a (height x width x 3) RGB numpy array
+myclip = some_video_clip.to_ImageClip(t=\(aq01:00:00\(aq) # frame at t=1 hour.
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+For more, see \fBImageClip\fP\&.
+.sp
+Two examples of ImageClip shown below are the TextClip and ColorClip
+.SS TextClip
+.sp
+Generating a TextClip requires to have ImageMagick installed and (for windows users) linked to MoviePy, see the installation instructions.
+.sp
+Here is how you make a textclip (you won\(aqt need all these options all the time):
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+myclip = TextClip("Hello", font=\(aqAmiri\-Bold\(aq)
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+The font can be any font installed on your computer, but ImageMagick will have specific names for it. For instance the \fInormal\fP Amiri font will be called \fBAmiri\-Regular\fP while the Impact font will be called \fBImpact\-Normal\fP\&. To get a list of the possible fonts, type \fBTextClip.list(\(aqfonts\(aq)\fP\&. To find all the font names related to a given font, use for instance
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+TextClip.search(\(aqAmiri\(aq, \(aqfonts\(aq) # Returns all font names containing Amiri
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+Note also that the use of a stroke (or contour) will not work well on small letters, so if you need a small text with a contour, it is better to generate a big text, then downsize it:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+myclip = TextClip("Hello", fontsize=70, stroke_width=5).resize(height=15)
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+TextClips have many, many options: alignment, kerning (distance between the letters), stroke size, background, word wrapping, etc. see \fBTextClip\fP for more.
+.SS Mask clips
+.sp
+A mask is a special video clip which indicates which pixels will be visible when a video clip carrying this mask will be composed with other video clips (see CompositeVideoClips). Masks are also used to define transparency when you export the clip as GIF file or as a PNG.
+.sp
+The fundamental difference between masks and standard clips is that standard clips output frames with 3 components (R\-G\-B) per pixel, comprised between 0 and 255, while a mask has just one composant per pixel, between 0 and 1 (1 indicating a fully visible pixel and 0 a transparent pixel). Seen otherwise, a mask is always in greyscale.
+.sp
+When you create or load a clip that will be used as a mask you need to declare it:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+maskclip = ImageClip("my_mask.jpeg", ismask=True)
+maskclip = VideoFileClip("myvideo.mp4", ismask=True)
+maskclip = VideoClip(makeframe_function, duration=4, ismask=True)
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+In the case of video and image files, if these are not already black and white they will be converted automatically.
+.sp
+Then you attach this mask to a clip (which must have the same dimensions) with \fBmyclip.set_mask(maskclip)\fP\&.
+.sp
+Some image formats like PNG support transparency with an \fIalpha layer\fP, which MoviePy will use as a mask:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+myclip = ImageClip("image.png", transparent=True) # True is the default
+myclip.mask # <\- the alpha layer of the picture.
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+Any video clip can be turned into a mask with \fBclip.to_mask()\fP, and a mask can be turned to a standard RGB video clip with \fBmy_mask_clip.to_RGB()\fP\&.
+.sp
+Masks are treated differently by many methods (because their frames are different) but you can do with a mask pretty much everything you can do with a standard clip: you can cut it, edit it, preview it, write it to a video file, make snapshots, etc.
+.SS Exporting video clips
+.SS Video files (.mp4, .webm, .ogv...)
+.sp
+To write a clip as a video file, use
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+my_clip.write_videofile("movie.mp4") # default codec: \(aqlibx264\(aq, 24 fps
+my_clip.write_videofile("movie.mp4",fps=15)
+my_clip.write_videofile("movie.webm") # webm format
+my_clip.write_videofile("movie.webm",audio=False) # don\(aqt render audio.
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+MoviePy has default codec names for the most common file extensions. If you want to use exotic formats or if you are not happy with the defaults you can provide the codec with \fBcodec=\(aqmpeg4\(aq\fP for instance. There are many many options when you are writing a video (bitrate, parameters of the audio writing, file size optimization, number of processors to use, etc.). Please refer to \fBwrite_videofile()\fP for more.
+.sp
+Sometimes it is impossible for MoviePy to guess the \fBduration\fP attribute of the clip (keep in mind that some clips, like ImageClips displaying a picture, have \fIa priori\fP an infinite duration). Then, the \fBduration\fP must be set manually with \fBclip.set_duration\fP:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+# Make a video showing a flower for 5 seconds
+my_clip = Image("flower.jpeg") # has infinite duration
+my_clip.write_videofile("flower.mp4") # Will fail ! NO DURATION !
+my_clip.set_duration(5).write_videofile("flower.mp4") # works !
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.SS Animated GIFs
+.sp
+To write your video as an animated GIF, use
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+my_clip.write_gif(\(aqtest.gif\(aq, fps=12)
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+Note that this requires ImageMagick installed. Otherwise you can also create the GIF with ffmpeg by adding the option \fBprogram=\(aqffmpeg\(aq\fP, it will be much faster but won\(aqt look as nice and won\(aqt be optimized.
+.sp
+If the clip has a mask it will be used for transparency.
+.sp
+There are many options to optimize the quality and size of a gif (see \fBwrite_gif()\fP)
+.sp
+Note that when editing gifs the best way to preview them is in the notebook as explained here: ipython_display
+.sp
+For examples of use, see \fI\%this blog post\fP for informations on making GIFs from video files, and \fI\%this other post\fP for GIF animations with vector graphics.
+.SS Export images
+.sp
+You can write a frame to an image file with
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+myclip.save_frame("frame.png") # by default the first frame is extracted
+myclip.save_frame("frame.jpeg", t=\(aq01:00:00\(aq) # frame at time t=1h
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+If the clip has a mask it will be exported as the alpha layer of the image unless you specify \fBwithmask=False\fP\&.
+.SS Audio clips
+.sp
+This section shows how to use MoviePy to create and edit audio clips.
+.sp
+Note that when you import, cut, mix or concatenate video clips in MoviePy, their audio tracks are automatically handled and you don\(aqt need to worry about it. This section is of interest if you just want to edit audio files, or you want custom audio clips for your videos.
+.SS What audioclips are made of
+.sp
+AudioClips are very similar to video clips in moviepy: they have a length, can be cut and composed the same way, etc. A notable difference  is that their method \fBmyclip.get_frame(t)\fP, instead of returning a RGB picture array like for video clips, returns just a couple of values between \-1 and 1 (e.g.\(ga\(ga[\-0.4, 0.2]\(ga\(ga) representing the left\-right stereo sound at time \fBt\fP (for mono sounds, only one value is returned)
+.SS Creating a new audio clip
+.sp
+Audio clips can be created from an audio file or from the soundtrack of a video file
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+from moviepy.editor import *
+audioclip = AudioFileClip("some_audiofile.mp3")
+audioclip = AudioFileClip("some_video.avi")
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+for more, see \fBAudioFileClip\fP\&.
+.sp
+Alternatively you can get the audio track of an already created video clip:
+.INDENT 0.0
+.INDENT 3.5
+videoclip = VideoFileClip("some_video.avi")
+audioclip = videoclip.audio
+.UNINDENT
+.UNINDENT
+.SS Mixing clips
+.sp
+Video composition, also known as non\-linear editing, is the fact of playing several clips together in a new clip. This video is a good example of what compositing you can do with MoviePy:
+.sp
+Before starting, note that video clips generally carry an audio track and a mask, which are also clips. When you compose these clips together, the soundtrack and mask of the final clip are automatically generated by putting together the soundtracks and masks of the clips. So most of the time you don\(aqt need to worry about mixing the audio and masks.
+.SS Stacking and concatenating clips
+.sp
+Two simple ways of putting clips together is to concatenate them (to play them one after the other in a single long clip) or to stack them (to them side by side in a single larger clip).
+.sp
+Concatenation is done with the function \fBconcatenate_videoclips\fP:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+from moviepy.editor import VideoFileClip, concatenate_videoclips
+clip1 = VideoFileClip("myvideo.mp4")
+clip2 = VideoFileClip("myvideo2.mp4").subclip(50,60)
+clip3 = VideoFileClip("myvideo3.mp4")
+final_clip = concatenate_videoclips([clip1,clip2,clip3])
+final_clip.write_videofile("my_concatenation.mp4")
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+The \fBfinal_clip\fP is a clip that plays the clips 1, 2, and 3 one after the other. Note that the clips do not need to be the same size. If they arent\(aqs they will all appear centered in a clip large enough to contain the biggest of them, with optionnally a color of your choosing to fill the borders. You have many other options there (see the doc of the function). You can for instance play a transition clip between the clips with the option \fBtransition=my_clip\fP\&.
+.sp
+Stacking is done with \fBclip_array\fP:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+from moviepy.editor import VideoFileClip, clips_array, vfx
+clip1 = VideoFileClip("myvideo.mp4").margin(10) # add 10px contour
+clip2 = clip1.fx( vfx.mirror_x)
+clip3 = clip1.fx( vfx.mirror_y)
+clip4 = clip1.resize(0.60) # downsize 60%
+final_clip = clips_array([[clip1, clip2],
+                          [clip3, clip4]])
+final_clip.resize(width=480).write_videofile("my_stack.mp4")
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+You obtain a clip which looks like this:
+.INDENT 0.0
+.INDENT 2.5
+[image]
+.UNINDENT
+.UNINDENT
+.SS CompositeVideoClips
+.sp
+The \fICompositeVideoClip\fP class provides a very flexible way to compose clips, but is more complex than \fBconcatenate_videoclips\fP and \fBclips_array\fP
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+video = CompositeVideoClip([clip1,clip2,clip3])
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+Now \fBvideo\fP plays \fBclip1\fP, and \fBclip2\fP \fIon top of\fP \fBclip1\fP, and \fBclip3\fP on top of \fBclip1\fP, and \fBclip2\fP\&. For instance, if \fBclip2\fP and \fBclip3\fP have the same size as \fBclip1\fP, then only \fBclip3\fP, which is on top, will be visible in the video... unless  \fBclip3\fP and \fBclip2\fP have masks which hide parts of them. Note that by default the composition has the size of its first clip (as it is generally a \fIbackground\fP). But sometimes you will want to make your clips \fIfloat\fP in a bigger composition, so you will specify the size of the final composition as follows
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+video = CompositeVideoClip([clip1,clip2,clip3], size=(720,460))
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.SS Starting and stopping times
+.sp
+In a CompositionClip, all the clips start to play at a time that is specified by the \fBclip.start\fP attribute. You can set this starting time as follows:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+clip1 = clip1.set_start(5) # start after 5 seconds
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+So for instance your composition will look like
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+video = CompositeVideoClip([clip1, # starts at t=0
+                            clip2.set_start(5), # start at t=5s
+                            clip3.set_start(9)]) # start at t=9s
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+In the example above, maybe \fBclip2\fP will start before \fBclip1\fP is over. In this case you can make \fBclip2\fP appear with a \fIfade\-in\fP effect of one second:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+video = CompositeVideoClip([clip1, # starts at t=0
+                            clip2.set_start(5).crossfadein(1),
+                            clip3.set_start(9).crossfadein(1.5)])
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.SS Positioning clips
+.sp
+If \fBclip2\fP and \fBclip3\fP are smaller than \fBclip1\fP, you can decide where they will appear in the composition by setting their position. Here we indicate the coordinates of the top\-left pixel of the clips:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+video = CompositeVideoClip([clip1,
+                           clip2.set_pos((45,150)),
+                           clip3.set_pos((90,100))])
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+There are many ways to specify the position:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+clip2.set_pos((45,150)) # x=45, y=150 , in pixels
+
+clip2.set_pos("center") # automatically centered
+
+# clip2 is horizontally centered, and at the top of the picture
+clip2.set_pos(("center","top"))
+
+# clip2 is vertically centered, at the left of the picture
+clip2.set_pos(("left","center"))
+
+# clip2 is at 40% of the width, 70% of the height of the screen:
+clip2.set_pos((0.4,0.7), relative=True)
+
+# clip2\(aqs position is horizontally centered, and moving down !
+clip2.set_pos(lambda t: (\(aqcenter\(aq, 50+t) )
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+When indicating the position keep in mind that the \fBy\fP coordinate has its zero at the top of the picture:
+.INDENT 0.0
+.INDENT 2.5
+[image]
+.UNINDENT
+.UNINDENT
+.SS Compositing audio clips
+.sp
+When you mix video clips together, MoviePy will automatically compose their respective audio tracks to form the audio track of the final clip, so you don\(aqt need to worry about compositing these tracks yourself.
+.sp
+If you want to make a custom audiotrack from several audio sources: audioc clips can be mixed together with \fBCompositeAudioClip\fP and \fBconcatenate_audioclips\fP:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+from moviepy.editor import *
+# ... make some audio clips aclip1, aclip2, aclip3
+concat = concatenate_audioclips([aclip1, aclip2, aclip3])
+compo = CompositeAudioClip([aclip1.volumex(1.2),
+                            aclip2.set_start(5), # start at t=5s
+                            aclip3.set_start(9)])
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+Warning: page in construction.
+.SS Clips transformations and effects
+.sp
+There are several categories of clip modifications in MoviePy:
+.INDENT 0.0
+.IP \(bu 2
+The very common methods to change the attributes of a clip: \fBclip.set_duration\fP, \fBclip.set_audio\fP, \fBclip.set_mask\fP, \fBclip.set_start\fP etc.
+.IP \(bu 2
+The already\-implemented effects. Core effects like \fBclip.subclip(t1, t2)\fP (keep only the cut between t1 and t2), which are very important, are implemented as class methods. More advanced and less common effects like \fBloop\fP (makes the clip play in a loop) or \fBtime_mirror\fP (makes the clip play backwards) are placed in the special modules \fBmoviepy.video.fx\fP and \fBmoviepy.audio.fx\fP and are applied with the \fBclip.fx\fP method, for instance \fBclip.fx(time_mirror)\fP (makes the clip play backwards), \fBclip.fx(black_white)\fP (turns the clip black and white), etc.
+.IP \(bu 2
+The effects that you can create yourself. using
+.UNINDENT
+.sp
+All these effects have in common that they are \fBnot inplace\fP: they do NOT modify the original clip, instead they create a new clip that is a version of the former with the changes applied. For instance:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+my_clip = VideoFileClip("some_file.mp4")
+my_clip.set_start(t=5) # does nothing, changes are lost
+my_new_clip = my_clip.set_start(t=5) # good !
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+Also, when you write \fBclip.resize(width=640)\fP, it does not immediately applies the effect to all the frames of the clip, but only to the first frame: all the other frames will be resized only when required (that is, when you will write the whole clip to a file of when you will preview it). Said otherwise, creating a new clip is neither time nor memory hungry, all the computations happen during the final rendering.
+.SS Time representations in MoviePy
+.sp
+Many methods that we will see accept times as arguments. For instance \fBclip.subclip(t_start,t_end)\fP which cuts the clip between two times. For these methods, times can be represented either in seconds (\fBt_start=230.54\fP), as a couple (minutes, seconds) (\fBt_start=(3,50.54)\fP), as a triplet (hour, min, sec) (\fBt_start=(0,3,50.54)\fP) or as a string (\fBt_start=\(aq00:03:50.54\(aq)\fP).
+.sp
+Most of the time when the times are not provided they are guessed, for instance in \fBclip.subclip(t_start=50)\fP it is implied that \fBt_end\fP corresponds to the end of the clip, in \fBclip.subclip(t_end=20)\fP it is implied that t_start=0. If the time is negative it is considered as the time before the end of the clip: \fBclip.subclip(\-20, \-10)\fP cuts the clip between 20s before the end and 10s before the end.
+.SS Methods to change the clip attributes
+.SS clip.fx
+.sp
+Suppose that you have some functions implementing effects on clips, i.e. functions which, given a clip and some arguments, return a new clip:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+effect_1(clip, args1) \-> new clip
+effect_2(clip, args2) \-> new clip
+effect_3(clip, args3) \-> new clip
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+where \fBargs\fP represent arguments and/or keyword arguments. To apply these functions, in that order, to one clip, you would write something like
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+newclip =  effect_3( effect_2( effect_1(clip, args3), args2), args1)
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+but this is not easy to read. To have a clearer syntax you can use \fBclip.fx\fP:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+newclip = (clip.fx( effect_1, args1)
+               .fx( effect_2, args2)
+               .fx( effect_3, args3))
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+Much better ! There are already many effects implemented in the modules \fBmoviepy.video.fx\fP and \fBmoviepy.audio.fx\fP\&. The fx methods in these modules are automatically applied to the sound and the mask of the clip if it is relevant, so that you don\(aqt have to worry about modifying these. For practicality, when you use \fBfrom moviepy import.editor *\fP, these two modules are loaded as \fBvfx\fP and \fBafx\fP, so you may write something like
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+from moviepy.editor import *
+clip = (VideoFileClip("myvideo.avi")
+        .fx( vfx.resize, width=460) # resize (keep aspect ratio)
+        .fx( vfx.speedx, 2) # double the speed
+        .fx( vfx.colorx, 0.5)) # darken the picture
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+For convenience, when you use \fBmoviepy.editor\fP, frequently used methods such as \fBresize\fP can be called in a simpler way: \fBclip.resize(...)\fP instead of \fBclip.fx( vfx.resize, ...)\fP
+.SS Methods to create custom effects
+.SS clip.fl
+.sp
+You can modify a clip as you want using custom \fIfilters\fP with \fBclip.fl_time\fP, \fBclip.fl_image\fP, and more generally with \fBclip.fl\fP\&.
+.sp
+You can change the timeline of the clip with \fBclip.fl_time\fP like this:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+modifiedClip1 = my_clip.fl_time(lambda t: 3*t)
+modifiedClip2 = my_clip.fl_time(lambda t: 1+sin(t))
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+Now the clip \fBmodifiedClip1\fP plays the same as \fBmy_clip\fP, only three times faster, while \fBmodifiedClip2\fP will play \fBmy_clip\fP by oscillating between the times t=0s and t=2s. Note that in the last case you have created a clip of infinite duration (which is not a problem for the moment).
+.sp
+You can also modify the display of a clip with \fBclip.fl_image\fP\&. The following takes a clip and inverts the green and blue channels of the frames:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+def invert_green_blue(image):
+    return image[:,:,[0,2,1]]
+
+modifiedClip = my_clip.fl_image( invert_green_blue )
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+Finally, you may want to process the clip by taking into account both the time and the frame picture. This is possible with the method \fBclip.fl(filter)\fP\&. The filter must be a function which takes two arguments and returns a picture. the fist argument is a \fBget_frame\fP method (i.e. a function \fBg(t)\fP which given a time returns the clip\(aqs frame at that time), and the second argument is the time.
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+def scroll(get_frame, t):
+    """
+    This function returns a \(aqregion\(aq of the current frame.
+    The position of this region depends on the time.
+    """
+    frame = get_frame(t)
+    frame_region = frame[int(t):int(t)+360,:]
+    return frame_region
+
+modifiedClip = my_clip.fl( scroll )
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+This will scroll down the clip, with a constant height of 360 pixels.
+.sp
+When programming a new effect, whenever it is possible, prefer using \fBfl_time\fP and \fBfl_image\fP instead of \fBfl\fP if possible when implementing new effects. The reason is that, when these effects are applied to
+ImageClips, MoviePy will recognize that these methods do not need to be applied to each frame, which will
+result in faster renderings.
+.SS How to be efficient with MoviePy
+.sp
+This section gathers tips and tricks to help you make the most of what is already known worldwide as \fIthe MoviePy experience\fP\&.
+.sp
+The best way to start with MoviePy is to use it with the IPython Notebook: it makes it easier to preview clips (as we will see in this section), has autocompletion, and can display the documentation for the different methods of the library.
+.SS Should I use \fBmoviepy.editor\fP ?
+.sp
+Most examples in this documentation use the submodule \fBmoviepy.editor\fP, but this submodule is not adapted to all needs so should \fIyou\fP use it ? Short answer: if you use MoviePy to edit videos \fIby hand\fP, use it, but if you use MoviePy inside a larger library or program or webserver, it is better to avoid it and just load the functions that you need.
+.sp
+The module \fBmoviepy.editor\fP can be loaded using one of the three following methods:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+from moviepy.editor import * # imports everything, quick and dirty
+import moviepy.editor as mpy # Clean. Then use mpy.VideoClip, etc.
+from moviepy.editor import VideoFileClip # just import what you need
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+With any of these lines, the \fBmoviepy.editor\fP module will actually do a lot of work behind the curtain: It will fetch all the most common classes, functions and subpackages of MoviePy, initialize a PyGame session (if PyGame is installed) to be able to preview video clips, and implement some shortcuts, like adding the \fBresize\fP transformation to the clips. This way you can use \fBclip.resize(width=240)\fP instead of the longer \fBclip.fx( resize, width=240)\fP\&. In short, \fBmoviepy.editor\fP
+provides all you need to play around and edit your videos but it will  take time to load (circa one second). So if all you need is one or two features inside another library, it is better to import directly what you need, as follows:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+from moviepy.video.io.VideoFileClip import VideoFileClip
+from moviepy.video.fx.resize import resize
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.SS The many ways of previewing a clip
+.sp
+When you are editing a video or trying to achieve an effect with MoviePy through a trial and error process, generating the video at each trial can be very long. This section presents a few tricks to go faster.
+.SS clip.save_frame
+.sp
+Most of the time, just having one frame of the video can tell you if you are doing the right thing. You can save just one frame of the clip to a file as follows:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+my_clip.save_frame("frame.jpeg") # saves the first frame
+my_clip.save_frame("frame.png", t=2) # saves the frame a t=2s
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.SS clip.show and clip.preview
+.sp
+The methods \fBclip.show\fP and \fBclip.preview\fP enable you to vizualise the clip in a Pygame window. They are the fastest way to preview, as the clips are generated and displayed at the same time, and they can be useful to get the coordinates or colors of pixels. These methods require to have PyGame installed, and to use the \fBmoviepy.editor\fP module.
+.sp
+The method \fBclip.show\fP enables preview one frame of a clip without having to write it to a file: the following lines display the frame in a PyGame window
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+my_clip.show() # shows the first frame of the clip
+my_clip.show(10.5) # shows the frame of the clip at t=10.5s
+my_clip.show(10.5, interactive = True)
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+The last line (with \fBinteractive=True\fP) displays the frame in an interactive way: if you click somewhere in the frame, it will print the position and color of the pixel. Press Escape to exit when you are done.
+.sp
+A clip can be previewed as follows
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+my_clip.preview() # preview with default fps=15
+my_clip.preview(fps=25)
+my_clip.preview(fps=15, audio=False) # don\(aqt generate/play the audio.
+my_audio_clip.preview(fps=22000)
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+If you click somewhere in the frames of a video clip being previewed, it will print the position and color of the pixel clicked. Press Escape abort the previewing.
+.sp
+Note that if the clip is complex and your computer not fast enough, the preview will appear slowed down compared to the real speed of the clip. In this case you can try to lower the frame rate (for instance to 10) or reduce the size of the clip with \fBclip.resize\fP, it helps.
+.SS ipython_display
+.sp
+Displaying the clips in a IPython Notebook can be very practical, especially if don\(aqt want to use \fBclip.show()\fP and \fBclip.preview()\fP\&. Here is what it will look like:
+[image]
+.sp
+With \fBipython_display\fP you can embed videos, images and sounds, either from a file or directly from a clip:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+ipython_display(my_video_clip) # embeds a video
+ipython_display(my_imageclip) # embeds an image
+ipython_display(my_audio_clip) # embeds a sound
+
+ipython_display("my_picture.jpeg") # embeds an image
+ipython_display("my_video.mp4") # embeds a video
+ipython_display("my_sound.mp3") # embeds a sound
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+This will only work if \fBipython_display\fP is on the last line a the notebook cell. You can also call \fBipython_display\fP as a clip method:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+my_video_clip.ipython_display()
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+If the rendering of your clip requires to provide a frame rate, you can specify \fBfps=25\fP in \fBipython_display\fP\&.
+.sp
+If you only need to display a snapshot of a video clip at some time \fIt\fP you can write
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+my_video_clip.ipython_display(t=15) # will display a snapshot at t=15s
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+You can also provide any valid HTML5 option as keyword argument. For instance, if the clip is too big, you will write
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+ipython_display(my_clip, width=400) # HTML5 will resize to 400 pixels
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+For instance, when you are editing an animated GIF and want to check that it loops well, you can ask the video to start automatically and to loop (i.e. replay indefinitely) :
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+ipython_display(my_clip, autoplay=1, loop=1)
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+Importantly, \fBipython_display\fP actually embeds the clips physically in your notebook. The advantage is that you can move the notebook or put it online and the videos will work. The drawback is that the file size of the notebook can become very large. Depending on your browser, re\-computing and displaying at video many times can take some place in the cache and the RAM (it will only be a problem for intensive uses). Restarting your browser solves the problem.
+.SH GALLERY
+.sp
+Here are a few projects using MoviePy. The gallery will fill up as more people start using MoviePy (which is currently one year old). If you have a nice project using MoviePy let us know !
+.SS Videos edited with Moviepy
+.SS The Cup Song Covers Mix
+.sp
+This mix of 60 covers of the Cup Song demonstrates the non\-linear video editing capabilities of MoviePy. Here is \fI\%the (undocumented) MoviePy code\fP that generated the video.
+.SS The (old) MoviePy reel video.
+.sp
+Made when MoviePy was a few weeks old and not as good as now. The code for most scenes can be found
+in the examples\&.
+.SS Animations edited with MoviePy
+.SS GIFs made from videos
+.sp
+This  \fI\%tutorial\fP gives you the basics to make gifs from video files (cutting, croping, adding text...). The last example shows how to remove a (still) background to keep only the animated part of a video.
+.SS Vector Animations
+.sp
+This \fI\%tutorial\fP shows how to combine MoviePy with Gizeh to create animations:
+.sp
+It is also possible to combine MoviePy with other graphic librairies like matplotlib, etc.
+.SS 3D animations
+.sp
+This \fI\%tutorial\fP shows how to combine MoviePy with Vapory, a library to render 3D scenes using the free ray\-tracer POV\-Ray
+.sp
+With Vapory and MoviePy you can for instance embed a movie in a 3D scene:
+.sp
+Or render the result of this physics simulation made with PyODE (\fI\%script\fP):
+.sp
+Or use \fI\%this script\fP to make piano animations from MIDI files (which are some sort of electronic sheet music):
+.SS Data animations
+.sp
+This \fI\%tutorial\fP shows how to use MoviePy to animate the different Python vizualization libraries: Mayavi, Vispy, Scikit\-image, Matplotlib, etc.
+.SS Scientific or technological projects
+.SS Piano rolls transcription to sheet music
+.sp
+This \fI\%blog post\fP explains how to transform a video of a piano roll performance into playable sheet music. MoviePy is used for the frame\-by\-frame analysis of the piano roll video. The last video is also edited with MoviePy:
+.SS Misc. Programs and Scripts using MoviePy
+.SS Rinconcam
+.sp
+\fI\%Rincomcam\fP is a camera which films surfers on the Californian beach of Point Rincon. At the end of each day it cuts together a video, puts it online, and tweets it. Everything is entirely automatized with Python.
+MoviePy is used to add transitions, titles and music to the videos.
+.SS Videogrep
+.sp
+Videogrep is a python script written by Sam Lavigne, that goes through the subtitle tracks of movies and makes supercuts based on what it finds. For instance, here is an automatic supercut of every time the White House press secretary tells us what he can tell us:
+.sp
+Here are \fI\%Videogrep\(aqs introductory blog post\fP and the Github \fI\%Videogrep page\fP\&.
+.sp
+If you liked it, also have a look at these Videogrep\-inspired projects:
+.sp
+This \fI\%blog post\fP attempts to cut a video precisely at the beginning and end of sentences or words:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+words = ["Americans", "must", "develop", "open ", "source",
+          " software", "for the", " rest ", "of the world",
+          "instead of", " soldiers"]
+numbers = [3,0,4,3,4,0,1,2,0,1,0] # take clip number \(aqn\(aq
+
+cuts = [find_word(word)[n] for (word,n) in zip(words, numbers)]
+assemble_cuts(cuts, "fake_speech.mp4")
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+This \fI\%other post\fP uses MoviePy to automatically cut together all the highlights of a soccer game, based on the fact that the crowd cheers louder when something interesting happens. All in under 30 lines of Python:
+.SH EXAMPLE SCRIPTS
+.sp
+Here are a few example scripts to get you started. Most are quite old now and will be soon replaced.
+.SS Text with moving letters
+.sp
+I think this example illustrates well the interest of script\-based editing (imagine doing that by hand).
+.sp
+Here is the code:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+import numpy as np
+from moviepy.editor import *
+from moviepy.video.tools.segmenting import findObjects
+
+# WE CREATE THE TEXT THAT IS GOING TO MOVE, WE CENTER IT.
+
+screensize = (720,460)
+txtClip = TextClip(\(aqCool effect\(aq,color=\(aqwhite\(aq, font="Amiri\-Bold",
+                   kerning = 5, fontsize=100)
+cvc = CompositeVideoClip( [txtClip.set_pos(\(aqcenter\(aq)],
+                        size=screensize, transparent=True)
+
+# THE NEXT FOUR FUNCTIONS DEFINE FOUR WAYS OF MOVING THE LETTERS
+
+
+# helper function
+rotMatrix = lambda a: np.array( [[np.cos(a),np.sin(a)], 
+                                 [\-np.sin(a),np.cos(a)]] )
+
+def vortex(screenpos,i,nletters):
+    d = lambda t : 1.0/(0.3+t**8) #damping
+    a = i*np.pi/ nletters # angle of the movement
+    v = rotMatrix(a).dot([\-1,0])
+    if i%2 : v[1] = \-v[1]
+    return lambda t: screenpos+400*d(t)*rotMatrix(0.5*d(t)*a).dot(v)
+    
+def cascade(screenpos,i,nletters):
+    v = np.array([0,\-1])
+    d = lambda t : 1 if t<0 else abs(np.sinc(t)/(1+t**4))
+    return lambda t: screenpos+v*400*d(t\-0.15*i)
+
+def arrive(screenpos,i,nletters):
+    v = np.array([\-1,0])
+    d = lambda t : max(0, 3\-3*t)
+    return lambda t: screenpos\-400*v*d(t\-0.2*i)
+    
+def vortexout(screenpos,i,nletters):
+    d = lambda t : max(0,t) #damping
+    a = i*np.pi/ nletters # angle of the movement
+    v = rotMatrix(a).dot([\-1,0])
+    if i%2 : v[1] = \-v[1]
+    return lambda t: screenpos+400*d(t\-0.1*i)*rotMatrix(\-0.2*d(t)*a).dot(v)
+
+
+
+# WE USE THE PLUGIN findObjects TO LOCATE AND SEPARATE EACH LETTER
+
+letters = findObjects(cvc) # a list of ImageClips
+
+
+# WE ANIMATE THE LETTERS
+
+def moveLetters(letters, funcpos):
+    return [ letter.set_pos(funcpos(letter.screenpos,i,len(letters)))
+              for i,letter in enumerate(letters)]
+
+clips = [ CompositeVideoClip( moveLetters(letters,funcpos),
+                              size = screensize).subclip(0,5)
+          for funcpos in [vortex, cascade, arrive, vortexout] ]
+
+# WE CONCATENATE EVERYTHING AND WRITE TO A FILE
+
+final_clip = concatenate_videoclips(clips)
+final_clip.write_videofile(\(aq../../coolTextEffects.avi\(aq,fps=25,codec=\(aqmpeg4\(aq)
+
+
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.SS A reconstitution of 15th century dancing
+.sp
+And now for something very silly...
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+# \-*\- coding: utf\-8 \-*\-
+
+"""
+Result: https://www.youtube.com/watch?v=Qu7HJrsEYFg
+
+This is how we can imagine knights dancing at the 15th century, based on a very
+serious historical study here: https://www.youtube.com/watch?v=zvCvOC2VwDc
+
+Here is what we do:
+
+0\- Get the video of a dancing knight, and a (Creative Commons) audio music file.
+1\- load the audio file and automatically find the tempo
+2\- load the video and automatically find a segment that loops well
+3\- extract this segment, slow it down so that it matches the audio tempo,
+   and make it loop forever.
+4\- Symmetrize this segment so that we will get two knights instead of one
+5\- Add a title screen and some credits, write to a file.
+
+
+This example has been originally edited in an IPython Notebook, which makes it
+easy to preview and fine\-tune each part of the editing.
+"""
+
+from moviepy.editor import *
+from moviepy.video.tools.cuts import find_video_period
+from moviepy.audio.tools.cuts import find_audio_period
+
+
+# Next lines are for downloading the required videos from Youtube.
+# To do this you must have youtube\-dl installed, otherwise you will need to
+# download the videos by hand and rename them, as follows:
+#     https://www.youtube.com/watch?v=zvCvOC2VwDc => knights.mp4
+#     https://www.youtube.com/watch?v=lkY3Ek9VPtg => frontier.mp4
+
+import os
+if not os.path.exists("knights.mp4"):
+    os.system("youtube\-dl zvCvOC2VwDc \-o knights.mp4")
+    os.system("youtube\-dl lkY3Ek9VPtg \-o frontier.mp4")
+#==========
+
+
+# LOAD, EDIT, ANALYZE THE AUDIO
+
+
+audio = (AudioFileClip("frontier.mp4")
+         .subclip((4,7), (4,18))
+         .audio_fadein(1)
+         .audio_fadeout(1))
+
+audio_period = find_audio_period(audio)
+print (\(aqAnalyzed the audio, found a period of %.02f seconds\(aq%audio_period)
+
+
+# LOAD, EDIT, ANALYZE THE VIDEO
+
+
+clip = (VideoFileClip("./knights.mp4", audio=False)
+        .subclip((1,24.15),(1,26))
+        .crop(x1=332, x2=910, y2=686))
+
+video_period = find_video_period(clip, tmin=.3)
+print (\(aqAnalyzed the video, found a period of %.02f seconds\(aq%video_period)
+
+edited_right = (clip.subclip(0,video_period)
+                .speedx(final_duration=2*audio_period)
+                .fx(vfx.loop, duration=audio.duration)
+                .subclip(.25))
+
+edited_left = edited_right.fx(vfx.mirror_x)
+
+dancing_knights = (clips_array([[edited_left, edited_right]])
+                   .fadein(1).fadeout(1).set_audio(audio).subclip(.3))
+
+# MAKE THE TITLE SCREEN
+
+
+txt_title = (TextClip("15th century dancing\en(hypothetical)", fontsize=70,
+               font="Century\-Schoolbook\-Roman", color="white")
+             .margin(top=15, opacity=0)
+             .set_position(("center","top")))
+
+title = (CompositeVideoClip([dancing_knights.to_ImageClip(), txt_title])
+         .fadein(.5)
+         .set_duration(3.5))
+
+
+# MAKE THE CREDITS SCREEN
+
+
+txt_credits = """
+CREDITS
+
+Video excerpt: Le combat en armure au XVe siècle
+By J. Donzé, D. Jaquet, T. Schmuziger,
+Université de Genève, Musée National de Moyen Age
+
+Music: "Frontier", by DOCTOR VOX
+Under licence Creative Commons
+https://www.youtube.com/user/DOCTORVOXofficial
+
+Video editing © Zulko 2014
+ Licence Creative Commons (CC BY 4.0)
+Edited with MoviePy: http://zulko.github.io/moviepy/
+"""
+
+credits = (TextClip(txt_credits, color=\(aqwhite\(aq,
+            font="Century\-Schoolbook\-Roman", fontsize=35, kerning=\-2,
+            interline=\-1, bg_color=\(aqblack\(aq, size=title.size)
+          .set_duration(2.5)
+          .fadein(.5)
+          .fadeout(.5))
+
+
+# ASSEMBLE EVERYTHING, WRITE TO FILE
+
+final = concatenate_videoclips([title, dancing_knights, credits])
+
+final.write_videofile("dancing_knights.mp4", fps=clip.fps,
+                      audio_bitrate="1000k", bitrate="4000k")
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.SS A simple music video
+.sp
+This is an example, with no sound (lame for a music video), soon to be
+replaced with a real music video example (the code will be 99% the same).
+The philosophy of MoviePy is that for each new music video I will make,
+I will just have to copy/paste this code, and modify a few lines.
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+from moviepy.editor import *
+
+# UKULELE CLIP, OBTAINED BY CUTTING AND CROPPING
+# RAW FOOTAGE
+
+ukulele = VideoFileClip("../../videos/moi_ukulele.MOV", audio=False).\e
+               subclip(60+33, 60+50).\e
+               crop(486, 180, 1196, 570)
+
+w,h = moviesize = ukulele.size
+
+# THE PIANO FOOTAGE IS DOWNSIZED, HAS A WHITE MARGIN, IS
+# IN THE BOTTOM RIGHT CORNER 
+
+piano = (VideoFileClip("../../videos/douceamb.mp4",audio=False).
+         subclip(30,50).
+         resize((w/3,h/3)).    # one third of the total screen
+         margin( 6,color=(255,255,255)).  #white margin
+         margin( bottom=20, right=20, opacity=0). # transparent
+         set_pos((\(aqright\(aq,\(aqbottom\(aq)) )
+
+
+
+# A CLIP WITH A TEXT AND A BLACK SEMI\-OPAQUE BACKGROUND
+
+txt = TextClip("V. Zulkoninov \- Ukulele Sonata", font=\(aqAmiri\-regular\(aq,
+	               color=\(aqwhite\(aq,fontsize=24)
+
+txt_col = txt.on_color(size=(ukulele.w + txt.w,txt.h\-10),
+                  color=(0,0,0), pos=(6,\(aqcenter\(aq), col_opacity=0.6)
+
+
+# THE TEXT CLIP IS ANIMATED.
+# I am *NOT* explaining the formula, understands who can/want.
+txt_mov = txt_col.set_pos( lambda t: (max(w/30,int(w\-0.5*w*t)),
+                                  max(5*h/6,int(100*t))) )
+
+
+
+# FINAL ASSEMBLY
+final = CompositeVideoClip([ukulele,txt_mov,piano])
+final.subclip(0,5).write_videofile("../../ukulele.avi",fps=24,codec=\(aqlibx264\(aq)
+
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.SS An example with sound
+.sp
+An example of using MoviePy to assemble movie clips with sounds. Here are two scenes of Charade put together:
+.sp
+Here is the code:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+"""
+Description of the video:
+The screen is split in two parts showing Carry and Audrey at the phone,
+talking at the same time, because it is actually two scenes of a same
+movie put together.
+"""
+
+from moviepy.editor import *
+from moviepy.video.tools.drawing import color_split
+
+
+duration = 6 # duration of the final clip
+
+# LOAD THE MAIN SCENE
+# this small video contains the two scenes that we will put together.
+
+main_clip = VideoFileClip("../../videos/charadePhone.mp4")
+W,H = main_clip.size
+
+
+
+# MAKE THE LEFT CLIP : cut, crop, add a mask 
+                            
+mask = color_split((2*W/3,H),
+                   p1=(W/3,H), p2=(2*W/3,0),
+                   col1=1, col2=0,
+                   grad_width=2)
+                   
+mask_clip = ImageClip(mask, ismask=True)
+                   
+clip_left = (main_clip.coreader()
+                      .subclip(0,duration)
+                      .crop( x1=60, x2=60 + 2*W/3)
+                      .set_mask(mask_clip))
+
+
+# MAKE THE RIGHT CLIP : cut, crop, add a mask 
+                   
+mask = color_split((2*W/3,H),
+                   p1=(2,H), p2=(W/3+2,0),
+                   col1=0, col2=1,
+                   grad_width=2)
+
+mask_clip = ImageClip(mask, ismask=True)
+
+clip_right = (main_clip.coreader()
+                       .subclip(21,21+duration)
+                       .crop(x1=70, x2=70+2*W/3)
+                       .set_mask(mask_clip))
+
+
+
+
+# ASSEMBLE AND WRITE THE MOVIE TO A FILE
+
+cc = CompositeVideoClip([clip_right.set_pos(\(aqright\(aq).volumex(0.4),
+                         clip_left.set_pos(\(aqleft\(aq).volumex(0.4)],
+                         size = (W,H))
+#cc.preview()
+cc.write_videofile("../../biphone3.avi",fps=24, codec=\(aqmpeg4\(aq)
+
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.SS A Star\-Wars like opening title
+.sp
+This is an approximate effect (the perspective would require some more complex transformations) but it is a nice exercise.
+.sp
+Warning: clip with sound.
+.sp
+Let us also have a look at this tutorial which shows the different steps:
+.sp
+And here you are for the code, and for the code of the tutorial.
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+"""
+Description of the video:
+Mimic of Star Wars\(aq opening title. A text with a (false)
+perspective effect goes towards the end of space, on a
+background made of stars. Slight fading effect on the text.
+
+"""
+
+import numpy as np
+from skimage import transform as tf
+
+from moviepy.editor import *
+from moviepy.video.tools.drawing import color_gradient
+
+
+# RESOLUTION
+
+w = 720
+h = w*9/16 # 16/9 screen
+moviesize = w,h
+
+
+
+# THE RAW TEXT
+txt = "\en".join([
+"A long time ago, in a faraway galaxy,",
+"there lived a prince and a princess",
+"who had never seen the stars, for they",
+"lived deep underground.",
+"",
+"Many years before, the prince\(aqs",
+"grandfather had ventured out to the",
+"surface and had been burnt to ashes by",
+"solar winds.",
+"",
+"One day, as the princess was coding",
+"and the prince was shopping online, a",
+"meteor landed just a few megameters",
+"from the couple\(aqs flat."
+])
+
+
+# Add blanks
+txt = 10*"\en" +txt + 10*"\en"
+
+
+# CREATE THE TEXT IMAGE
+
+
+clip_txt = TextClip(txt,color=\(aqwhite\(aq, align=\(aqWest\(aq,fontsize=25,
+                    font=\(aqXolonium\-Bold\(aq, method=\(aqlabel\(aq)
+
+
+# SCROLL THE TEXT IMAGE BY CROPPING A MOVING AREA
+
+txt_speed = 27
+fl = lambda gf,t : gf(t)[int(txt_speed*t):int(txt_speed*t)+h,:]
+moving_txt= clip_txt.fl(fl, apply_to=[\(aqmask\(aq])
+
+
+# ADD A VANISHING EFFECT ON THE TEXT WITH A GRADIENT MASK
+
+grad = color_gradient(moving_txt.size,p1=(0,2*h/3),
+                p2=(0,h/4),col1=0.0,col2=1.0)
+gradmask = ImageClip(grad,ismask=True)
+fl = lambda pic : np.minimum(pic,gradmask.img)
+moving_txt.mask = moving_txt.mask.fl_image(fl)
+
+
+# WARP THE TEXT INTO A TRAPEZOID (PERSPECTIVE EFFECT)
+
+def trapzWarp(pic,cx,cy,ismask=False):
+    """ Complicated function (will be latex packaged as a fx) """
+    Y,X = pic.shape[:2]
+    src = np.array([[0,0],[X,0],[X,Y],[0,Y]])
+    dst = np.array([[cx*X,cy*Y],[(1\-cx)*X,cy*Y],[X,Y],[0,Y]])
+    tform = tf.ProjectiveTransform()
+    tform.estimate(src,dst)
+    im = tf.warp(pic, tform.inverse, output_shape=(Y,X))
+    return im if ismask else (im*255).astype(\(aquint8\(aq)
+
+fl_im = lambda pic : trapzWarp(pic,0.2,0.3)
+fl_mask = lambda pic : trapzWarp(pic,0.2,0.3, ismask=True)
+warped_txt= moving_txt.fl_image(fl_im)
+warped_txt.mask = warped_txt.mask.fl_image(fl_mask)
+
+
+# BACKGROUND IMAGE, DARKENED AT 60%
+
+stars = ImageClip(\(aq../../videos/stars.jpg\(aq)
+stars_darkened = stars.fl_image(lambda pic: (0.6*pic).astype(\(aqint16\(aq))
+
+
+# COMPOSE THE MOVIE
+
+final = CompositeVideoClip([
+         stars_darkened,
+         warped_txt.set_pos((\(aqcenter\(aq,\(aqbottom\(aq))],
+         size = moviesize)
+
+
+# WRITE TO A FILE
+
+final.set_duration(8).write_videofile("starworms.avi", fps=5)
+
+# This script is heavy (30s of computations to render 8s of video)
+
+
+
+"""=====================================================================
+
+    CODE FOR THE VIDEO TUTORIAL
+
+  We will now code the video tutorial for this video.
+  When you think about it, it is a code for a video explaining how to
+  make another video using some code (this is so meta !).
+  This code uses the variables of the previous code (it should be placed
+  after that previous code to work).
+
+====================================================================="""
+
+
+
+def annotate(clip,txt,txt_color=\(aqwhite\(aq,bg_color=(0,0,255)):
+    """ Writes a text at the bottom of the clip. """
+    
+    txtclip = TextClip(txt, fontsize=20, font=\(aqUbuntu\-bold\(aq,
+                       color=txt_color)
+                       
+    txtclip = txtclip.on_color((clip.w,txtclip.h+6), color=(0,0,255),
+                        pos=(6,\(aqcenter\(aq))
+                        
+    cvc =  CompositeVideoClip([clip , txtclip.set_pos((0,\(aqbottom\(aq))])
+    
+    return cvc.set_duration(clip.duration)
+
+
+def resizeCenter(clip):
+    return clip.resize( height=h).set_pos(\(aqcenter\(aq)
+
+    
+def composeCenter(clip):
+    return CompositeVideoClip([clip.set_pos(\(aqcenter\(aq)],size=moviesize)
+
+
+
+annotated_clips = [ annotate(clip,text) for clip,text in [
+               
+(composeCenter(resizeCenter(stars)).subclip(0,3),
+    "This is a public domain picture of stars"),
+
+(CompositeVideoClip([stars],moviesize).subclip(0,3),
+    "We only keep one part."),
+
+(CompositeVideoClip([stars_darkened],moviesize).subclip(0,3),
+    "We darken it a little."),
+
+(composeCenter(resizeCenter(clip_txt)).subclip(0,3),
+    "We generate a text image."),
+
+(composeCenter(moving_txt.set_mask(None)).subclip(6,9),
+    "We scroll the text by cropping a moving region of it."),
+
+(composeCenter(gradmask.to_RGB()).subclip(0,2),
+    "We add this mask to the clip."),
+
+(composeCenter(moving_txt).subclip(6,9),
+    "Here is the result"),
+
+(composeCenter(warped_txt).subclip(6,9),
+    "We now warp this clip in a trapezoid."),
+
+(final.subclip(6,9),
+    "We finally superimpose with the stars.")
+]]
+
+# Concatenate and write to a file
+
+concatenate_videoclips(annotated_clips).write_videofile(\(aqtutorial.avi\(aq, fps=5)
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.SS Partially Hidden credits
+.sp
+First, see in autocredits how to make credits automatically with MoviePy. Before seeing the code for this video, here is a tutorial video that explains the different steps (also made with MoviePy):
+.sp
+And here is the code:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+from moviepy.editor import *
+from moviepy.video.tools.credits import credits1
+
+# Load the mountains clip, cut it, slow it down, make it look darker
+clip = (VideoFileClip(\(aq../../videos/badl\-0001.mov\(aq, audio=False)
+           .subclip(37,46)
+           .speedx( 0.4)
+           .fx( vfx.colorx, 0.7))
+
+# Save the first frame to later make a mask with GIMP (only once)
+#~ clip.save_frame(\(aq../../credits/mountainMask2.png\(aq)
+
+
+# Load the mountain mask made with GIMP
+mountainmask = ImageClip(\(aq../../credits/mountainMask2.png\(aq,ismask=True)
+
+# Generate the credits from a text file
+credits = credits1(\(aq../../credits/credits.txt\(aq,3*clip.w/4)
+scrolling_credits = credits.set_pos(lambda t:(\(aqcenter\(aq,\-10*t))
+
+
+# Make the credits scroll. Here, 10 pixels per second
+final = CompositeVideoClip([clip,
+                            scrolling_credits,
+                            clip.set_mask(mountainmask)])
+                            
+final.subclip(8,10).write_videofile("../../credits_mountains.avi")
+
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.SS Freezing a movie frame with a painting effect
+.sp
+That\(aqs an effect that we have seen a lot in westerns and such.
+.sp
+The recipe used to make a photo look like a painting:
+.INDENT 0.0
+.IP \(bu 2
+Find the edges of the image with the Sobel algorithm. You obtain
+what looks like a black and white hand\-drawing of the photo.
+.IP \(bu 2
+Multiply the image array to make the colors flashier, and add the contours
+obtained at the previous step.
+.UNINDENT
+.sp
+The final clip will be the concatenation of three part: the part before
+the effect, the part with the effect, and the part after the effect.
+The part with the effect is obtained as follows:
+.INDENT 0.0
+.IP \(bu 2
+Take the frame to freeze and make a "painted image" of it. Make it a clip.
+.IP \(bu 2
+Add a text clip saying "Audrey" to the "painted image" clip.
+.IP \(bu 2
+Overlay the painted clip over the original frame, but make it appear and
+disappear with a fading effect.
+.UNINDENT
+.sp
+Here you are for the code:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+""" requires scikit\-image installed (for vfx.painting) """
+ 
+from moviepy.editor import *
+
+# WE TAKE THE SUBCLIPS WHICH ARE 2 SECONDS BEFORE & AFTER THE FREEZE
+
+charade = VideoFileClip("../../videos/charade.mp4")
+tfreeze = cvsecs(19,21) # Time of the freeze, 19\(aq21
+
+# when using several subclips of a same clip, it can be faster
+# to create \(aqcoreaders\(aq of the clip (=other entrance points).
+clip_before = charade.coreader().subclip(tfreeze \-2,tfreeze)
+clip_after = charade.coreader().subclip(tfreeze ,tfreeze +2)
+
+
+# THE FRAME TO FREEZE
+
+im_freeze = charade.to_ImageClip(tfreeze)
+painting = (charade.fx( vfx.painting, saturation = 1.6,black = 0.006)
+                   .to_ImageClip(tfreeze)
+                 
+txt = TextClip(\(aqAudrey\(aq,font=\(aqAmiri\-regular\(aq,fontsize=35)
+
+painting_txt = (CompositeVideoClip([painting,txt.set_pos((10,180))])
+                   .add_mask()
+                   .set_duration(3)
+                   .crossfadein( 0.5)
+                   .crossfadeout( 0.5))
+
+# FADEIN/FADEOUT EFFECT ON THE PAINTED IMAGE
+
+painting_fading = CompositeVideoClip([im_freeze,painting_txt])
+
+# FINAL CLIP AND RENDERING
+
+final_clip =  concatenate_videoclips([ clip_before,
+                            painting_fading.set_duration(3),
+                            clip_after])
+
+final_clip.write_videofile(\(aq../../audrey.avi\(aq,fps=charade.fps,
+                        codec = "mpeg4", audio_bitrate="3000k")
+
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.SS Placing clips according to a picture
+.sp
+So how do you do some complex compositing like this ?
+.sp
+It takes a lot of bad taste, and a segmenting tool
+.sp
+In this script we will use this image (generated with Inkscape):
+.INDENT 0.0
+.INDENT 2.5
+[image]
+.UNINDENT
+.UNINDENT
+.sp
+We will find the regions of this image and fit the different clips into these regions:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+from moviepy.editor import *
+from moviepy.video.tools.segmenting import findObjects
+
+# Load the image specifying the regions.
+im = ImageClip("../../ultracompositing/motif.png")
+
+# Loacate the regions, return a list of ImageClips
+regions = findObjects(im)
+
+
+# Load 7 clips from the US National Parks. Public Domain :D
+clips = [VideoFileClip(n, audio=False).subclip(18,22) for n in
+     [ "../../videos/romo_0004.mov",
+      "../../videos/apis\-0001.mov",
+      "../../videos/romo_0001.mov",
+      "../../videos/elma_s0003.mov",
+      "../../videos/elma_s0002.mov",
+      "../../videos/calo\-0007.mov",
+      "../../videos/grsm_0005.mov"]]
+
+# fit each clip into its region
+comp_clips =  [c.resize(r.size)
+                .set_mask(r.mask)
+                .set_pos(r.screenpos)
+               for c,r in zip(clips,regions)]
+
+cc = CompositeVideoClip(comp_clips,im.size)
+cc.resize(0.6).write_videofile("../../composition.mp4")
+
+# Note that this particular composition takes quite a long time of
+# rendering (about 20s on my computer for just 4s of video).
+
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+(note that some pictures are distorted here as their size has been modified without care for their aspect ratio. This could be changed with a few more lines.)
+.SS "The End" effect
+.sp
+So let\(aqs explain this one: there is a clip with "The End" written in the middle, and \fIabove\fP this
+clip there is the actual movie. The actual movie has a mask which represents
+a white (=opaque) circle on a black (=transparent) background. At the begining,
+that circle is so large that you see all the actual movie and you don\(aqt see
+the "The End" clip. Then the circle becomes progressively smaller and as a
+consequence you see less of the actual movie and more of the "The End" clip.
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+from moviepy.editor import *
+from moviepy.video.tools.drawing import circle
+
+clip = VideoFileClip("../../videos/badl\-0006.mov", audio=False).\e
+           subclip(26,31).\e
+           add_mask()
+           
+w,h = clip.size
+
+# The mask is a circle with vanishing radius r(t) = 800\-200*t               
+clip.mask.get_frame = lambda t: circle(screensize=(clip.w,clip.h),
+                                       center=(clip.w/2,clip.h/4),
+                                       radius=max(0,int(800\-200*t)),
+                                       col1=1, col2=0, blur=4)
+
+
+the_end = TextClip("The End", font="Amiri\-bold", color="white",
+                   fontsize=70).set_duration(clip.duration)
+
+final = CompositeVideoClip([the_end.set_pos(\(aqcenter\(aq),clip],
+                           size =clip.size)
+                           
+final.write_videofile("../../theEnd.avi")
+
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.SH FAQ AND TROUBLESHOOTING
+.sp
+This section will fill up as MoviePy advances through the next steps of
+development (currently on the roadmap: MoviePy Studio, MoviePy WebApp, MoviePy OS, MoviePy
+Trust Inc., and the MoviePy Charity Fundation).
+.SS Common errors that are not bugs
+.sp
+These are very common errors which are not considered as bugs to be
+solved (but you can still ask for this to change). If these answers
+don\(aqt work for you, please open a bug report on \fI\%Github\fP, or on the dedicated forum on \fI\%Reddit\fP, or on the \fI\%librelist\fP\&.
+.SS MoviePy generated a video that cannot be read by my favorite player.
+.sp
+Known reason : one of the video\(aqs dimensions were not even,
+for instance 720x405, and you used a MPEG4 codec like libx264 (default
+in MoviePy). In this case the video generated uses a format that is
+readable only on some readers like VLC.
+.SS I can\(aqt seem to read any video with MoviePy
+.sp
+Known reason: you have a deprecated version of FFMPEG, install a recent version from the
+website, not from your OS\(aqs repositories ! (see installation).
+.SS Previewing videos make them slower than they are
+.sp
+It means that your computer is not good enough to render the clip in real time. Don\(aqt hesitate to play with the options of \fBpreview\fP: for instance, lower the fps of the sound (11000 Hz is still fine) and the video. Also, downsizing your video with \fBresize\fP can help.
+.SH REFERENCE MANUAL
+.sp
+The documentation may be a little messy for the moment, it will get better with time.
+If you want to hack into the code or locate a particular function, read codeorganization .
+.SS Clip
+.SS \fBClip\fP
+.SS Classes of Video Clips
+.SS \fBVideoClip\fP
+.INDENT 0.0
+.TP
+.B class moviepy.video.VideoClip.VideoClip(make_frame=None, ismask=False, duration=None, has_constant_size=True)
+Bases: \fBmoviepy.Clip.Clip\fP
+.sp
+Base class for video clips.
+.sp
+See \fBVideofileClip\fP, \fBImageClip\fP etc. for more user\-friendly
+classes.
+.INDENT 7.0
+.TP
+.B Parameters
+\fBismask\fP
+.INDENT 7.0
+.INDENT 3.5
+\fITrue\fP if the clip is going to be used as a mask.
+.UNINDENT
+.UNINDENT
+.UNINDENT
+Attributes
+.TS
+center;
+|l|l|.
+_
+T{
+size
+T}	T{
+The size of the clip, (width,heigth), in pixels.
+T}
+_
+T{
+w, h
+T}	T{
+The width and height of the clip, in pixels.
+T}
+_
+T{
+ismask
+T}	T{
+Boolean set to \fITrue\fP if the clip is a mask.
+T}
+_
+T{
+make_frame
+T}	T{
+A function \fBt\-> frame at time t\fP where \fBframe\fP is a w*h*3 RGB array.
+T}
+_
+T{
+mask (default None)
+T}	T{
+VideoClip mask attached to this clip. If mask is \fBNone\fP, The video clip is fully opaque.
+T}
+_
+T{
+audio (default None)
+T}	T{
+An AudioClip instance containing the audio of the video clip.
+T}
+_
+T{
+pos
+T}	T{
+A function \fBt\->(x,y)\fP where \fBx,y\fP is the position of the clip when it is composed with other clips. See \fBVideoClip.set_pos\fP for more details
+T}
+_
+T{
+relative_pos
+T}	T{
+See variable \fBpos\fP\&.
+T}
+_
+.TE
+.INDENT 7.0
+.TP
+.B add_mask()
+Add a mask VideoClip to the VideoClip.
+.sp
+Returns a copy of the clip with a completely opaque mask
+(made of ones). This makes computations slower compared to
+having a None mask but can be useful in many cases. Choose
+.sp
+Set \fBconstant_size\fP to  \fIFalse\fP for clips with moving
+image size.
+.UNINDENT
+.INDENT 7.0
+.TP
+.B afx(fun, *a, **k)
+Transform the clip\(aqs audio.
+.sp
+Return a new clip whose audio has been transformed by \fBfun\fP\&.
+.UNINDENT
+.INDENT 7.0
+.TP
+.B blit_on(picture, t)
+Returns the result of the blit of the clip\(aqs frame at time \fIt\fP
+on the given \fIpicture\fP, the position of the clip being given
+by the clip\(aqs \fBpos\fP attribute. Meant for compositing.
+.UNINDENT
+.INDENT 7.0
+.TP
+.B fl_image(image_func, apply_to=[])
+Modifies the images of a clip by replacing the frame
+\fIget_frame(t)\fP by another frame,  \fIimage_func(get_frame(t))\fP
+.UNINDENT
+.INDENT 7.0
+.TP
+.B on_color(size=None, color=(0, 0, 0), pos=None, col_opacity=None)
+Place the clip on a colored background.
+.sp
+Returns a clip made of the current clip overlaid on a color
+clip of a possibly bigger size. Can serve to flatten transparent
+clips.
+.INDENT 7.0
+.TP
+.B Parameters
+\fBsize\fP
+.INDENT 7.0
+.INDENT 3.5
+Size (width, height) in pixels of the final clip.
+By default it will be the size of the current clip.
+.UNINDENT
+.UNINDENT
+.sp
+\fBbg_color\fP
+.INDENT 7.0
+.INDENT 3.5
+Background color of the final clip ([R,G,B]).
+.UNINDENT
+.UNINDENT
+.sp
+\fBpos\fP
+.INDENT 7.0
+.INDENT 3.5
+Position of the clip in the final clip. \(aqcenter\(aq is the default
+.UNINDENT
+.UNINDENT
+.sp
+\fBcol_opacity\fP
+.INDENT 7.0
+.INDENT 3.5
+Parameter in 0..1 indicating the opacity of the colored
+background.
+.UNINDENT
+.UNINDENT
+.UNINDENT
+.UNINDENT
+.INDENT 7.0
+.TP
+.B save_frame(filename, t=0, withmask=True)
+Save a clip\(aqs frame to an image file.
+.sp
+Saves the frame of clip corresponding to time \fBt\fP in
+\(aqfilename\(aq. \fBt\fP can be expressed in seconds (15.35), in
+(min, sec), in (hour, min, sec), or as a string: \(aq01:03:05.35\(aq.
+.sp
+If \fBwithmask\fP is \fBTrue\fP the mask is saved in
+the alpha layer of the picture (only works with PNGs).
+.UNINDENT
+.INDENT 7.0
+.TP
+.B set_audio(audioclip)
+Attach an AudioClip to the VideoClip.
+.sp
+Returns a copy of the VideoClip instance, with the \fIaudio\fP
+attribute set to \fBaudio\fP, which must be an AudioClip instance.
+.UNINDENT
+.INDENT 7.0
+.TP
+.B set_make_frame(mf)
+Change the clip\(aqs \fBget_frame\fP\&.
+.sp
+Returns a copy of the VideoClip instance, with the make_frame
+attribute set to \fImf\fP\&.
+.UNINDENT
+.INDENT 7.0
+.TP
+.B set_mask(mask)
+Set the clip\(aqs mask.
+.sp
+Returns a copy of the VideoClip with the mask attribute set to
+\fBmask\fP, which must be a greyscale (values in 0\-1) VideoClip
+.UNINDENT
+.INDENT 7.0
+.TP
+.B set_opacity(op)
+Set the opacity/transparency level of the clip.
+.sp
+Returns a semi\-transparent copy of the clip where the mask is
+multiplied by \fBop\fP (any float, normally between 0 and 1).
+.UNINDENT
+.INDENT 7.0
+.TP
+.B set_pos(*a, **kw)
+The function \fBset_pos\fP is deprecated and is kept temporarily for backwards compatibility.
+Please use the new name, \fBset_position\fP, instead.
+.UNINDENT
+.INDENT 7.0
+.TP
+.B set_position(pos, relative=False)
+Set the clip\(aqs position in compositions.
+.sp
+Sets the position that the clip will have when included
+in compositions. The argument \fBpos\fP can be either a couple
+\fB(x,y)\fP or a function \fBt\-> (x,y)\fP\&. \fIx\fP and \fIy\fP mark the
+location of the top left corner of the clip, and can be
+of several types.
+Examples.sp
+.nf
+.ft C
+>>> clip.set_pos((45,150)) # x=45, y=150
+>>>
+>>> # clip horizontally centered, at the top of the picture
+>>> clip.set_pos(("center","top"))
+>>>
+>>> # clip is at 40% of the width, 70% of the height:
+>>> clip.set_pos((0.4,0.7), relative=True)
+>>>
+>>> # clip\(aqs position is horizontally centered, and moving up !
+>>> clip.set_pos(lambda t: (\(aqcenter\(aq, 50+t) )
+.ft P
+.fi
+.UNINDENT
+.INDENT 7.0
+.TP
+.B subfx(fx, ta=0, tb=None, **kwargs)
+Apply a transformation to a part of the clip.
+.sp
+Returns a new clip in which the function \fBfun\fP (clip\->clip)
+has been applied to the subclip between times \fIta\fP and \fItb\fP
+(in seconds).
+Examples.sp
+.nf
+.ft C
+>>> # The scene between times t=3s and t=6s in \(ga\(gaclip\(ga\(ga will be
+>>> # be played twice slower in \(ga\(ganewclip\(ga\(ga
+>>> newclip = clip.subapply(lambda c:c.speedx(0.5) , 3,6)
+.ft P
+.fi
+.UNINDENT
+.INDENT 7.0
+.TP
+.B to_ImageClip(t=0, with_mask=True)
+Returns an ImageClip made out of the clip\(aqs frame at time \fBt\fP,
+which can be expressed in seconds (15.35), in (min, sec),
+in (hour, min, sec), or as a string: \(aq01:03:05.35\(aq.
+.UNINDENT
+.INDENT 7.0
+.TP
+.B to_RGB()
+Returns a non\-mask video clip made from the mask video clip.
+.UNINDENT
+.INDENT 7.0
+.TP
+.B to_gif(*a, **kw)
+The function \fBto_gif\fP is deprecated and is kept temporarily for backwards compatibility.
+Please use the new name, \fBwrite_gif\fP, instead.
+.UNINDENT
+.INDENT 7.0
+.TP
+.B to_images_sequence(*a, **kw)
+The function \fBto_images_sequence\fP is deprecated and is kept temporarily for backwards compatibility.
+Please use the new name, \fBwrite_images_sequence\fP, instead.
+.UNINDENT
+.INDENT 7.0
+.TP
+.B to_mask(canal=0)
+Returns a mask a video clip made from the clip.
+.UNINDENT
+.INDENT 7.0
+.TP
+.B to_videofile(*a, **kw)
+The function \fBto_videofile\fP is deprecated and is kept temporarily for backwards compatibility.
+Please use the new name, \fBwrite_videofile\fP, instead.
+.UNINDENT
+.INDENT 7.0
+.TP
+.B without_audio()
+Remove the clip\(aqs audio.
+.sp
+Return a copy of the clip with audio set to None.
+.UNINDENT
+.INDENT 7.0
+.TP
+.B write_gif(filename, fps=None, program=\(aqimageio\(aq, opt=\(aqwu\(aq, fuzz=1, verbose=True, loop=0, dispose=False, colors=None, tempfiles=False)
+Write the VideoClip to a GIF file.
+.sp
+Converts a VideoClip into an animated GIF using ImageMagick
+or ffmpeg.
+.INDENT 7.0
+.TP
+.B Parameters
+\fBfilename\fP
+.INDENT 7.0
+.INDENT 3.5
+Name of the resulting gif file.
+.UNINDENT
+.UNINDENT
+.sp
+\fBfps\fP
+.INDENT 7.0
+.INDENT 3.5
+.INDENT 0.0
+.TP
+.B Number of frames per second (see note below). If it
+isn\(aqt provided, then the function will look for the clip\(aqs
+\fBfps\fP attribute (VideoFileClip, for instance, have one).
+.UNINDENT
+.UNINDENT
+.UNINDENT
+.sp
+\fBprogram\fP
+.INDENT 7.0
+.INDENT 3.5
+Software to use for the conversion, either \(aqimageio\(aq (this will use
+the library FreeImage through ImageIO), or \(aqImageMagick\(aq, or \(aqffmpeg\(aq.
+.UNINDENT
+.UNINDENT
+.sp
+\fBopt\fP
+.INDENT 7.0
+.INDENT 3.5
+Optimalization to apply. If program=\(aqimageio\(aq, opt must be either \(aqwu\(aq
+(Wu) or \(aqnq\(aq (Neuquant). If program=\(aqImageMagick\(aq,
+either \(aqoptimizeplus\(aq or \(aqOptimizeTransparency\(aq.
+.UNINDENT
+.UNINDENT
+.sp
+\fBfuzz\fP
+.INDENT 7.0
+.INDENT 3.5
+(ImageMagick only) Compresses the GIF by considering that
+the colors that are less than fuzz% different are in fact
+the same.
+.UNINDENT
+.UNINDENT
+.UNINDENT
+Notes
+.sp
+The gif will be playing the clip in real time (you can
+only change the frame rate). If you want the gif to be played
+slower than the clip you will use
+.INDENT 7.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+>>> # slow down clip 50% and make it a gif
+>>> myClip.speedx(0.5).to_gif(\(aqmyClip.gif\(aq)
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.UNINDENT
+.INDENT 7.0
+.TP
+.B write_images_sequence(nameformat, fps=None, verbose=True, withmask=True)
+Writes the videoclip to a sequence of image files.
+.INDENT 7.0
+.TP
+.B Parameters
+\fBnameformat\fP
+.INDENT 7.0
+.INDENT 3.5
+A filename specifying the numerotation format and extension
+of the pictures. For instance "frame%03d.png" for filenames
+indexed with 3 digits and PNG format. Also possible:
+"some_folder/frame%04d.jpeg", etc.
+.UNINDENT
+.UNINDENT
+.sp
+\fBfps\fP
+.INDENT 7.0
+.INDENT 3.5
+Number of frames per second to consider when writing the
+clip. If not specified, the clip\(aqs \fBfps\fP attribute will
+be used if it has one.
+.UNINDENT
+.UNINDENT
+.sp
+\fBwithmask\fP
+.INDENT 7.0
+.INDENT 3.5
+will save the clip\(aqs mask (if any) as an alpha canal (PNGs only)
+.UNINDENT
+.UNINDENT
+.sp
+\fBverbose\fP
+.INDENT 7.0
+.INDENT 3.5
+Verbose output ?
+.UNINDENT
+.UNINDENT
+.TP
+.B Returns
+names_list
+.INDENT 7.0
+.INDENT 3.5
+A list of all the files generated.
+.UNINDENT
+.UNINDENT
+.UNINDENT
+Notes
+.sp
+The resulting image sequence can be read using e.g. the class
+\fBDirectoryClip\fP\&.
+.UNINDENT
+.INDENT 7.0
+.TP
+.B write_videofile(filename, fps=None, codec=None, bitrate=None, audio=True, audio_fps=44100, preset=\(aqmedium\(aq, audio_nbytes=4, audio_codec=None, audio_bitrate=None, audio_bufsize=2000, temp_audiofile=None, rewrite_audio=True, remove_temp=True, write_logfile=False, verbose=True, threads=None, ffmpeg_params=None)
+Write the clip to a videofile.
+.INDENT 7.0
+.TP
+.B Parameters
+\fBfilename\fP
+.INDENT 7.0
+.INDENT 3.5
+Name of the video file to write in.
+The extension must correspond to the "codec" used (see below),
+or simply be \(aq.avi\(aq (which will work with any codec).
+.UNINDENT
+.UNINDENT
+.sp
+\fBfps\fP
+.INDENT 7.0
+.INDENT 3.5
+Number of frames per second in the resulting video file. If None is
+provided, and the clip has an fps attribute, this fps will be used.
+.UNINDENT
+.UNINDENT
+.sp
+\fBcodec\fP
+.INDENT 7.0
+.INDENT 3.5
+Codec to use for image encoding. Can be any codec supported
+by ffmpeg. If the filename is has extension \(aq.mp4\(aq, \(aq.ogv\(aq, \(aq.webm\(aq,
+the codec will be set accordingly, but you can still set it if you
+don\(aqt like the default. For other extensions, the output filename
+must be set accordingly.
+.sp
+Some examples of codecs are:
+.sp
+\fB\(aqlibx264\(aq\fP (default codec for file extension \fB\&.mp4\fP)
+makes well\-compressed videos (quality tunable using \(aqbitrate\(aq).
+.sp
+\fB\(aqmpeg4\(aq\fP (other codec for extension \fB\&.mp4\fP) can be an alternative
+to \fB\(aqlibx264\(aq\fP, and produces higher quality videos by default.
+.sp
+\fB\(aqrawvideo\(aq\fP (use file extension \fB\&.avi\fP) will produce
+a video of perfect quality, of possibly very huge size.
+.sp
+\fBpng\fP (use file extension \fB\&.avi\fP) will produce a video
+of perfect quality, of smaller size than with \fBrawvideo\fP
+.sp
+\fB\(aqlibvorbis\(aq\fP (use file extension \fB\&.ogv\fP) is a nice video
+format, which is completely free/ open source. However not
+everyone has the codecs installed by default on their machine.
+.sp
+\fB\(aqlibvpx\(aq\fP (use file extension \fB\&.webm\fP) is tiny a video
+format well indicated for web videos (with HTML5). Open source.
+.UNINDENT
+.UNINDENT
+.sp
+\fBaudio\fP
+.INDENT 7.0
+.INDENT 3.5
+Either \fBTrue\fP, \fBFalse\fP, or a file name.
+If \fBTrue\fP and the clip has an audio clip attached, this
+audio clip will be incorporated as a soundtrack in the movie.
+If \fBaudio\fP is the name of an audio file, this audio file
+will be incorporated as a soundtrack in the movie.
+.UNINDENT
+.UNINDENT
+.sp
+\fBaudiofps\fP
+.INDENT 7.0
+.INDENT 3.5
+frame rate to use when generating the sound.
+.UNINDENT
+.UNINDENT
+.sp
+\fBtemp_audiofile\fP
+.INDENT 7.0
+.INDENT 3.5
+the name of the temporary audiofile to be generated and
+incorporated in the the movie, if any.
+.UNINDENT
+.UNINDENT
+.sp
+\fBaudio_codec\fP
+.INDENT 7.0
+.INDENT 3.5
+Which audio codec should be used. Examples are \(aqlibmp3lame\(aq
+for \(aq.mp3\(aq, \(aqlibvorbis\(aq for \(aqogg\(aq, \(aqlibfdk_aac\(aq:\(aqm4a\(aq,
+\(aqpcm_s16le\(aq for 16\-bit wav and \(aqpcm_s32le\(aq for 32\-bit wav.
+Default is \(aqlibmp3lame\(aq, unless the video extension is \(aqogv\(aq
+or \(aqwebm\(aq, at which case the default is \(aqlibvorbis\(aq.
+.UNINDENT
+.UNINDENT
+.sp
+\fBaudio_bitrate\fP
+.INDENT 7.0
+.INDENT 3.5
+Audio bitrate, given as a string like \(aq50k\(aq, \(aq500k\(aq, \(aq3000k\(aq.
+Will determine the size/quality of audio in the output file.
+Note that it mainly an indicative goal, the bitrate won\(aqt
+necessarily be the this in the final file.
+.UNINDENT
+.UNINDENT
+.sp
+\fBpreset\fP
+.INDENT 7.0
+.INDENT 3.5
+Sets the time that FFMPEG will spend optimizing the compression.
+Choices are: ultrafast, superfast, fast, medium, slow, superslow.
+Note that this does not impact the quality of the video, only the
+size of the video file. So choose ultrafast when you are in a
+hurry and file size does not matter.
+.UNINDENT
+.UNINDENT
+.sp
+\fBthreads\fP
+.INDENT 7.0
+.INDENT 3.5
+Number of threads to use for ffmpeg. Can speed up the writing of
+the video on multicore computers
+.UNINDENT
+.UNINDENT
+.sp
+\fBffmpeg_params\fP
+.INDENT 7.0
+.INDENT 3.5
+Any additional ffmpeg parameters you would like to pass, as a list
+of terms, like [\(aq\-option1\(aq, \(aqvalue1\(aq, \(aq\-option2\(aq, \(aqvalue2\(aq]
+.UNINDENT
+.UNINDENT
+.sp
+\fBwrite_logfile\fP
+.INDENT 7.0
+.INDENT 3.5
+If true, will write log files for the audio and the video.
+These will be files ending with \(aq.log\(aq with the name of the
+output file in them.
+.UNINDENT
+.UNINDENT
+.UNINDENT
+Examples.sp
+.nf
+.ft C
+>>> from moviepy.editor import VideoFileClip
+>>> clip = VideoFileClip("myvideo.mp4").subclip(100,120)
+>>> clip.write_videofile("my_new_video.mp4")
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.SS \fBVideoFileClip\fP
+.INDENT 0.0
+.TP
+.B class moviepy.video.io.VideoFileClip.VideoFileClip(filename, has_mask=False, audio=True, audio_buffersize=200000, audio_fps=44100, audio_nbytes=2, verbose=False)
+Bases: \fI\%moviepy.video.VideoClip.VideoClip\fP
+.sp
+A video clip originating from a movie file. For instance:
+.INDENT 7.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+>>> clip = VideofileClip("myHolidays.mp4")
+>>> clip2 = VideofileClip("myMaskVideo.avi")
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.INDENT 7.0
+.TP
+.B Parameters
+\fBfilename:\fP
+.INDENT 7.0
+.INDENT 3.5
+The name of the video file. It can have any extension supported
+by ffmpeg: .ogv, .mp4, .mpeg, .avi, .mov etc.
+.UNINDENT
+.UNINDENT
+.sp
+\fBhas_mask:\fP
+.INDENT 7.0
+.INDENT 3.5
+Set this to \(aqTrue\(aq if there is a mask included in the videofile.
+Video files rarely contain masks, but some video codecs enable
+that. For istance if you have a MoviePy VideoClip with a mask you
+can save it to a videofile with a mask. (see also 
+\fBVideoClip.write_videofile\fP for more details).
+.UNINDENT
+.UNINDENT
+.sp
+\fBaudio:\fP
+.INDENT 7.0
+.INDENT 3.5
+Set to \fIFalse\fP if the clip doesn\(aqt have any audio or if you do not
+wish to read the audio.
+.UNINDENT
+.UNINDENT
+.UNINDENT
+Attributes
+.TS
+center;
+|l|l|.
+_
+T{
+filename:
+T}	T{
+Name of the original video file.
+T}
+_
+T{
+fps:
+T}	T{
+Frames per second in the original file.
+T}
+_
+.TE
+.UNINDENT
+.SS \fBImageClip\fP
+.INDENT 0.0
+.TP
+.B class moviepy.video.VideoClip.ImageClip(img, ismask=False, transparent=True, fromalpha=False, duration=None)
+Bases: \fI\%moviepy.video.VideoClip.VideoClip\fP
+.sp
+Class for non\-moving VideoClips.
+.sp
+A video clip originating from a picture. This clip will simply
+display the given picture at all times.
+.INDENT 7.0
+.TP
+.B Parameters
+\fBimg\fP
+.INDENT 7.0
+.INDENT 3.5
+Any picture file (png, tiff, jpeg, etc.) or any array representing
+an RGB image (for instance a frame from a VideoClip).
+.UNINDENT
+.UNINDENT
+.sp
+\fBismask\fP
+.INDENT 7.0
+.INDENT 3.5
+Set this parameter to \fITrue\fP if the clip is a mask.
+.UNINDENT
+.UNINDENT
+.sp
+\fBtransparent\fP
+.INDENT 7.0
+.INDENT 3.5
+Set this parameter to \fITrue\fP (default) if you want the alpha layer
+of the picture (if it exists) to be used as a mask.
+.UNINDENT
+.UNINDENT
+.UNINDENT
+Examples.sp
+.nf
+.ft C
+>>> clip = ImageClip("myHouse.jpeg")
+>>> clip = ImageClip( someArray ) # a Numpy array represent
+.ft P
+.fi
+Attributes
+.TS
+center;
+|l|l|.
+_
+T{
+img
+T}	T{
+Array representing the image of the clip.
+T}
+_
+.TE
+.INDENT 7.0
+.TP
+.B fl(fl, apply_to=[], keep_duration=True)
+General transformation filter.
+.sp
+Equivalent to VideoClip.fl . The result is no more an
+ImageClip, it has the class VideoClip (since it may be animated)
+.UNINDENT
+.INDENT 7.0
+.TP
+.B fl_image(image_func, apply_to=[])
+Image\-transformation filter.
+.sp
+Does the same as VideoClip.fl_image, but for ImageClip the
+tranformed clip is computed once and for all at the beginning,
+and not for each \(aqframe\(aq.
+.UNINDENT
+.INDENT 7.0
+.TP
+.B fl_time(time_func, apply_to=[\(aqmask\(aq, \(aqaudio\(aq], keep_duration=False)
+Time\-transformation filter.
+.sp
+Applies a transformation to the clip\(aqs timeline
+(see Clip.fl_time).
+.sp
+This method does nothing for ImageClips (but it may affect their
+masks or their audios). The result is still an ImageClip.
+.UNINDENT
+.UNINDENT
+.SS \fBColorClip\fP
+.INDENT 0.0
+.TP
+.B class moviepy.video.VideoClip.ColorClip(size, col=(0, 0, 0), ismask=False, duration=None)
+Bases: \fI\%moviepy.video.VideoClip.ImageClip\fP
+.sp
+An ImageClip showing just one color.
+.INDENT 7.0
+.TP
+.B Parameters
+\fBsize\fP
+.INDENT 7.0
+.INDENT 3.5
+Size (width, height) in pixels of the clip.
+.UNINDENT
+.UNINDENT
+.sp
+\fBcolor\fP
+.INDENT 7.0
+.INDENT 3.5
+If argument \fBismask\fP is False, \fBcolor\fP indicates
+the color in RGB of the clip (default is black). If \fIismask\(ga\fP
+is True, \fBcolor\fP must be  a float between 0 and 1 (default is 1)
+.UNINDENT
+.UNINDENT
+.sp
+\fBismask\fP
+.INDENT 7.0
+.INDENT 3.5
+Set to true if the clip will be used as a mask.
+.UNINDENT
+.UNINDENT
+.UNINDENT
+.UNINDENT
+.SS \fBTextClip\fP
+.INDENT 0.0
+.TP
+.B class moviepy.video.VideoClip.TextClip(txt=None, filename=None, size=None, color=\(aqblack\(aq, bg_color=\(aqtransparent\(aq, fontsize=None, font=\(aqCourier\(aq, stroke_color=None, stroke_width=1, method=\(aqlabel\(aq, kerning=None, align=\(aqcenter\(aq, interline=None, tempfilename=None, temptxt=None, transparent=True, remove_temp=True, print_cmd=False)
+Bases: \fI\%moviepy.video.VideoClip.ImageClip\fP
+.sp
+Class for autogenerated text clips.
+.sp
+Creates an ImageClip originating from a script\-generated text image.
+Requires ImageMagick.
+.INDENT 7.0
+.TP
+.B Parameters
+\fBtxt\fP
+.INDENT 7.0
+.INDENT 3.5
+A string of the text to write. Can be replaced by argument
+\fBfilename\fP\&.
+.UNINDENT
+.UNINDENT
+.sp
+\fBfilename\fP
+.INDENT 7.0
+.INDENT 3.5
+The name of a file in which there is the text to write.
+Can be provided instead of argument \fBtxt\fP
+.UNINDENT
+.UNINDENT
+.sp
+\fBsize\fP
+.INDENT 7.0
+.INDENT 3.5
+Size of the picture in pixels. Can be auto\-set if
+method=\(aqlabel\(aq, but mandatory if method=\(aqcaption\(aq.
+the height can be None, it will then be auto\-determined.
+.UNINDENT
+.UNINDENT
+.sp
+\fBbg_color\fP
+.INDENT 7.0
+.INDENT 3.5
+Color of the background. See \fBTextClip.list(\(aqcolor\(aq)\fP
+for a list of acceptable names.
+.UNINDENT
+.UNINDENT
+.sp
+\fBcolor\fP
+.INDENT 7.0
+.INDENT 3.5
+Color of the background. See \fBTextClip.list(\(aqcolor\(aq)\fP for a
+list of acceptable names.
+.UNINDENT
+.UNINDENT
+.sp
+\fBfont\fP
+.INDENT 7.0
+.INDENT 3.5
+Name of the font to use. See \fBTextClip.list(\(aqfont\(aq)\fP for
+the list of fonts you can use on your computer.
+.UNINDENT
+.UNINDENT
+.sp
+\fBstroke_color\fP
+.INDENT 7.0
+.INDENT 3.5
+Color of the stroke (=contour line) of the text. If \fBNone\fP,
+there will be no stroke.
+.UNINDENT
+.UNINDENT
+.sp
+\fBstroke_width\fP
+.INDENT 7.0
+.INDENT 3.5
+Width of the stroke, in pixels. Can be a float, like 1.5.
+.UNINDENT
+.UNINDENT
+.sp
+\fBmethod\fP
+.INDENT 7.0
+.INDENT 3.5
+Either \(aqlabel\(aq (default, the picture will be autosized so as to fit
+exactly the size) or \(aqcaption\(aq (the text will be drawn in a picture
+with fixed size provided with the \fBsize\fP argument). If \fIcaption\fP,
+the text will be wrapped automagically (sometimes it is buggy, not
+my fault, complain to the ImageMagick crew) and can be aligned or
+centered (see parameter \fBalign\fP).
+.UNINDENT
+.UNINDENT
+.sp
+\fBkerning\fP
+.INDENT 7.0
+.INDENT 3.5
+Changes the default spacing between letters. For
+nstance \fBkerning=\-1\fP will make the letters 1 pixel nearer from
+ach other compared to the default spacing.
+.UNINDENT
+.UNINDENT
+.sp
+\fBalign\fP
+.INDENT 7.0
+.INDENT 3.5
+center | East | West | South | North . Will only work if \fBmethod\fP
+is set to \fBcaption\fP
+.UNINDENT
+.UNINDENT
+.sp
+\fBtransparent\fP
+.INDENT 7.0
+.INDENT 3.5
+\fBTrue\fP (default) if you want to take into account the
+transparency in the image.
+.UNINDENT
+.UNINDENT
+.UNINDENT
+.INDENT 7.0
+.TP
+.B static list(arg)
+Returns the list of all valid entries for the argument of
+\fBTextClip\fP given (can be \fBfont\fP, \fBcolor\fP, etc...)
+.UNINDENT
+.INDENT 7.0
+.TP
+.B static search(string, arg)
+Returns the of all valid entries which contain \fBstring\fP for the
+argument \fBarg\fP of \fBTextClip\fP, for instance
+.sp
+.nf
+.ft C
+>>> # Find all the available fonts which contain "Courier"
+>>> print ( TextClip.search(\(aqCourier\(aq, \(aqfont\(aq) )
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.SS \fBCompositeVideoClip\fP
+.INDENT 0.0
+.TP
+.B class moviepy.video.compositing.CompositeVideoClip.CompositeVideoClip(clips, size=None, bg_color=None, use_bgclip=False, ismask=False)
+Bases: \fI\%moviepy.video.VideoClip.VideoClip\fP
+.sp
+A VideoClip made of other videoclips displayed together. This is the
+base class for most compositions.
+.INDENT 7.0
+.TP
+.B Parameters
+\fBsize\fP
+.INDENT 7.0
+.INDENT 3.5
+The size (height x width) of the final clip.
+.UNINDENT
+.UNINDENT
+.sp
+\fBclips\fP
+.INDENT 7.0
+.INDENT 3.5
+A list of videoclips. Each clip of the list will
+be displayed below the clips appearing after it in the list.
+For each clip:
+.INDENT 0.0
+.IP \(bu 2
+.INDENT 2.0
+.TP
+.B The attribute \fBpos\fP determines where the clip is placed.
+See \fBVideoClip.set_pos\fP
+.UNINDENT
+.IP \(bu 2
+The mask of the clip determines which parts are visible.
+.UNINDENT
+.sp
+Finally, if all the clips in the list have their \fBduration\fP
+attribute set, then the duration of the composite video clip
+is computed automatically
+.UNINDENT
+.UNINDENT
+.sp
+\fBbg_color\fP
+.INDENT 7.0
+.INDENT 3.5
+Color for the unmasked and unfilled regions. Set to None for these
+regions to be transparent (will be slower).
+.UNINDENT
+.UNINDENT
+.sp
+\fBuse_bgclip\fP
+.INDENT 7.0
+.INDENT 3.5
+Set to True if the first clip in the list should be used as the
+\(aqbackground\(aq on which all other clips are blitted. That first clip must
+have the same size as the final clip. If it has no transparency, the final
+clip will have no mask.
+.UNINDENT
+.UNINDENT
+.sp
+\fBIf all clips with a fps attribute have the same fps, it becomes the fps of\fP
+.sp
+\fBthe result.\fP
+.UNINDENT
+.INDENT 7.0
+.TP
+.B playing_clips(t=0)
+Returns a list of the clips in the composite clips that are
+actually playing at the given time \fIt\fP\&.
+.UNINDENT
+.UNINDENT
+.SS AudioClip
+.SS \fBAudioClip\fP
+.INDENT 0.0
+.TP
+.B class moviepy.audio.AudioClip.AudioClip(make_frame=None, duration=None)
+Bases: \fBmoviepy.Clip.Clip\fP
+.sp
+Base class for audio clips.
+.sp
+See \fBSoundClip\fP and \fBCompositeSoundClip\fP for usable classes.
+.sp
+An AudioClip is a Clip with a \fBmake_frame\fP  attribute of
+the form \(ga\(ga t \-> [ f_t ]\(ga\(ga for mono sound and
+\fBt\-> [ f1_t, f2_t ]\fP for stereo sound (the arrays are Numpy arrays).
+The \fIf_t\fP are floats between \-1 and 1. These bounds can be
+trespassed wihtout problems (the program will put the
+sound back into the bounds at conversion time, without much impact).
+.INDENT 7.0
+.TP
+.B Parameters
+\fBmake_frame\fP
+.INDENT 7.0
+.INDENT 3.5
+A function \fIt\-> frame at time t\fP\&. The frame does not mean much
+for a sound, it is just a float. What \(aqmakes\(aq the sound are
+the variations of that float in the time.
+.UNINDENT
+.UNINDENT
+.sp
+\fBnchannels\fP
+.INDENT 7.0
+.INDENT 3.5
+Number of channels (one or two for mono or stereo).
+.UNINDENT
+.UNINDENT
+.UNINDENT
+Examples.sp
+.nf
+.ft C
+>>> # Plays the note A (a sine wave of frequency 404HZ)
+>>> import numpy as np
+>>> make_frame = lambda t : 2*[ np.sin(404 * 2 * np.pi * t) ]
+>>> clip = AudioClip(make_frame, duration=5)
+>>> clip.preview()
+.ft P
+.fi
+.INDENT 7.0
+.TP
+.B iter_chunks(chunksize=None, chunk_duration=None, fps=None, quantize=False, nbytes=2, progress_bar=False)
+Iterator that returns the whole sound array of the clip by chunks
+.UNINDENT
+.INDENT 7.0
+.TP
+.B to_audiofile(*a, **kw)
+The function \fBto_audiofile\fP is deprecated and is kept temporarily for backwards compatibility.
+Please use the new name, \fBwrite_audiofile\fP, instead.
+.UNINDENT
+.INDENT 7.0
+.TP
+.B to_soundarray(tt=None, fps=None, quantize=False, nbytes=2, buffersize=50000)
+Transforms the sound into an array that can be played by pygame
+or written in a wav file. See \fBAudioClip.preview\fP\&.
+.INDENT 7.0
+.TP
+.B Parameters
+\fBfps\fP
+.INDENT 7.0
+.INDENT 3.5
+Frame rate of the sound for the conversion.
+44100 for top quality.
+.UNINDENT
+.UNINDENT
+.sp
+\fBnbytes\fP
+.INDENT 7.0
+.INDENT 3.5
+Number of bytes to encode the sound: 1 for 8bit sound,
+2 for 16bit, 4 for 32bit sound.
+.UNINDENT
+.UNINDENT
+.UNINDENT
+.UNINDENT
+.INDENT 7.0
+.TP
+.B write_audiofile(filename, fps=44100, nbytes=2, buffersize=2000, codec=None, bitrate=None, ffmpeg_params=None, write_logfile=False, verbose=True)
+Writes an audio file from the AudioClip.
+.INDENT 7.0
+.TP
+.B Parameters
+\fBfilename\fP
+.INDENT 7.0
+.INDENT 3.5
+Name of the output file
+.UNINDENT
+.UNINDENT
+.sp
+\fBfps\fP
+.INDENT 7.0
+.INDENT 3.5
+Frames per second
+.UNINDENT
+.UNINDENT
+.sp
+\fBnbyte\fP
+.INDENT 7.0
+.INDENT 3.5
+Sample width (set to 2 for 16\-bit sound, 4 for 32\-bit sound)
+.UNINDENT
+.UNINDENT
+.sp
+\fBcodec\fP
+.INDENT 7.0
+.INDENT 3.5
+Which audio codec should be used. If None provided, the codec is
+determined based on the extension of the filename. Choose
+\(aqpcm_s16le\(aq for 16\-bit wav and \(aqpcm_s32le\(aq for 32\-bit wav.
+.UNINDENT
+.UNINDENT
+.sp
+\fBbitrate\fP
+.INDENT 7.0
+.INDENT 3.5
+Audio bitrate, given as a string like \(aq50k\(aq, \(aq500k\(aq, \(aq3000k\(aq.
+Will determine the size and quality of the output file.
+Note that it mainly an indicative goal, the bitrate won\(aqt
+necessarily be the this in the output file.
+.UNINDENT
+.UNINDENT
+.sp
+\fBffmpeg_params\fP
+.INDENT 7.0
+.INDENT 3.5
+Any additional parameters you would like to pass, as a list
+of terms, like [\(aq\-option1\(aq, \(aqvalue1\(aq, \(aq\-option2\(aq, \(aqvalue2\(aq]
+.UNINDENT
+.UNINDENT
+.sp
+\fBwrite_logfile\fP
+.INDENT 7.0
+.INDENT 3.5
+If true, produces a detailed logfile named filename + \(aq.log\(aq
+when writing the file
+.UNINDENT
+.UNINDENT
+.sp
+\fBverbose\fP
+.INDENT 7.0
+.INDENT 3.5
+If True, displays informations
+.UNINDENT
+.UNINDENT
+.UNINDENT
+.UNINDENT
+.UNINDENT
+.SS \fBAudioFileClip\fP
+.INDENT 0.0
+.TP
+.B class moviepy.audio.io.AudioFileClip.AudioFileClip(filename, buffersize=200000, nbytes=2, fps=44100)
+Bases: \fI\%moviepy.audio.AudioClip.AudioClip\fP
+.sp
+An audio clip read from a sound file, or an array.
+The whole file is not loaded in memory. Instead, only a portion is
+read and stored in memory. this portion includes frames before
+and after the last frames read, so that it is fast to read the sound
+backward and forward.
+.INDENT 7.0
+.TP
+.B Parameters
+\fBsnd\fP
+.INDENT 7.0
+.INDENT 3.5
+Either a soundfile name (of any extension supported by ffmpeg)
+or an array representing a sound. If the soundfile is not a .wav,
+it will be converted to .wav first, using the \fBfps\fP and
+\fBbitrate\fP arguments.
+.UNINDENT
+.UNINDENT
+.sp
+\fBbuffersize:\fP
+.INDENT 7.0
+.INDENT 3.5
+Size to load in memory (in number of frames)
+.UNINDENT
+.UNINDENT
+.sp
+\fBtemp_wav:\fP
+.INDENT 7.0
+.INDENT 3.5
+Name for the temporary wav file in case conversion is required.
+If not provided, the default will be filename.wav with some prefix.
+If the temp_wav already exists it will not be rewritten.
+.UNINDENT
+.UNINDENT
+.UNINDENT
+Examples.sp
+.nf
+.ft C
+>>> snd = SoundClip("song.wav")
+>>> snd = SoundClip("song.mp3", fps = 44100, bitrate=3000)
+>>> snd = SoundClip(mySoundArray,fps=44100) # from a numeric array
+.ft P
+.fi
+Attributes
+.TS
+center;
+|l|l|.
+_
+T{
+nbytes
+T}	T{
+Number of bits per frame of the original audio file.
+T}
+_
+T{
+fps
+T}	T{
+Number of frames per second in the audio file
+T}
+_
+T{
+buffersize
+T}	T{
+See Parameters.
+T}
+_
+.TE
+.INDENT 7.0
+.TP
+.B coreader()
+Returns a copy of the AudioFileClip, i.e. a new entrance point
+to the audio file. Use copy when you have different clips
+watching the audio file at different times.
+.UNINDENT
+.UNINDENT
+.SS \fBCompositeAudioClip\fP
+.INDENT 0.0
+.TP
+.B class moviepy.audio.AudioClip.CompositeAudioClip(clips)
+Bases: \fI\%moviepy.audio.AudioClip.AudioClip\fP
+.sp
+Clip made by composing several AudioClips.
+.sp
+An audio clip made by putting together several audio clips.
+.INDENT 7.0
+.TP
+.B Parameters
+\fBclips\fP
+.INDENT 7.0
+.INDENT 3.5
+List of audio clips, which may start playing at different times or
+together. If all have their \fBduration\fP attribute set, the
+duration of the composite clip is computed automatically.
+.UNINDENT
+.UNINDENT
+.UNINDENT
+.UNINDENT
+.SS moviepy.video.fx (vfx)
+.sp
+The module \fBmoviepy.video.fx\fP regroups functions meant to be used with \fBvideoclip.fx()\fP\&.
+.sp
+Because this module is starting to be large and will be larger in the future, it allows two kinds of import.
+You can either im
+For all the other modifications, we use \fBclip.fx\fP and \fBclip.fl\fP\&. \fBclip.fx\fP is meant to make it easy to use already\-written transformation functions, while  \fBclip.fl\fP makes it easy to write new transformation functions.
+port a single function like this:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+from moviepy.video.fx.scroll import crop
+newclip = myclip.fx( vfx.crop, x1=15)
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+Or import everything:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+import moviepy.video.fx.all as vfx
+newclip = (myclip.fx( vfx.crop, x1=15)
+                 .fx( vfx.resize, width=200)
+                 .fx( vfx.freeze_at_end, 1))
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+When you type
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+from moviepy.editor import *
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+the module \fBvideo.fx\fP is loaded as \fBvfx\fP and you can use \fBvfx.colorx\fP, \fBvfx.resize\fP, etc.
+.TS
+center;
+|l|l|.
+_
+T{
+\fBaccel_decel\fP
+T}	T{
+new_duration
+T}
+_
+T{
+\fBblackwhite\fP
+T}	T{
+Desaturates the picture, makes it black and white.
+T}
+_
+T{
+\fBblink\fP
+T}	T{
+Makes the clip blink.
+T}
+_
+T{
+\fBcolorx\fP
+T}	T{
+multiplies the clip\(aqs colors by the given factor, can be used
+T}
+_
+T{
+\fBcrop\fP
+T}	T{
+Returns a new clip in which just a rectangular subregion of the original clip is conserved.
+T}
+_
+T{
+\fBeven_size\fP
+T}	T{
+Crops the clip to make dimensions even.
+T}
+_
+T{
+\fBfadein\fP
+T}	T{
+Makes the clip progressively appear from some color (black by default), over \fBduration\fP seconds at the beginning of the clip.
+T}
+_
+T{
+\fBfadeout\fP
+T}	T{
+Makes the clip progressively fade to some color (black by default), over \fBduration\fP seconds at the end of the clip.
+T}
+_
+T{
+\fBfreeze\fP
+T}	T{
+Momentarily freeze the clip at time t.
+T}
+_
+T{
+\fBfreeze_region\fP
+T}	T{
+Freezes one region of the clip while the rest remains animated.
+T}
+_
+T{
+\fBgamma_corr\fP
+T}	T{
+Gamma\-correction of a video clip
+T}
+_
+T{
+\fBheadblur\fP
+T}	T{
+Returns a filter that will blurr a moving part (a head ?) of the frames.
+T}
+_
+T{
+\fBinvert_colors\fP
+T}	T{
+Returns the color\-inversed clip.
+T}
+_
+T{
+\fBloop\fP
+T}	T{
+Returns a clip that plays the current clip in an infinite loop.
+T}
+_
+T{
+\fBlum_contrast\fP
+T}	T{
+luminosity\-contrast correction of a clip
+T}
+_
+T{
+\fBmake_loopable\fP
+T}	T{
+Makes the clip fade in progressively at its own end, this way it can be looped indefinitely.
+T}
+_
+T{
+\fBmargin\fP
+T}	T{
+Draws an external margin all around the frame.
+T}
+_
+T{
+\fBmask_and\fP
+T}	T{
+Returns the logical \(aqand\(aq (min) between two masks.
+T}
+_
+T{
+\fBmask_color\fP
+T}	T{
+Returns a new clip with a mask for transparency where the original clip is of the given color.
+T}
+_
+T{
+\fBmask_or\fP
+T}	T{
+Returns the logical \(aqor\(aq (max) between two masks.
+T}
+_
+T{
+\fBmirror_x\fP
+T}	T{
+flips the clip horizontally (and its mask too, by default)
+T}
+_
+T{
+\fBmirror_y\fP
+T}	T{
+flips the clip vertically (and its mask too, by default)
+T}
+_
+T{
+\fBpainting\fP
+T}	T{
+Transforms any photo into some kind of painting.
+T}
+_
+T{
+\fBresize\fP
+T}	T{
+Returns a video clip that is a resized version of the clip.
+T}
+_
+T{
+\fBrotation\fP
+T}	T{
+T}
+_
+T{
+\fBscroll\fP
+T}	T{
+Scrolls horizontally or vertically a clip, e.g.
+T}
+_
+T{
+\fBspeedx\fP
+T}	T{
+Returns a clip playing the current clip but at a speed multiplied by \fBfactor\fP\&.
+T}
+_
+T{
+\fBsupersample\fP
+T}	T{
+Replaces each frame at time t by the mean of \fInframes\fP equally spaced frames taken in the interval [t\-d, t+d].
+T}
+_
+T{
+\fBtime_mirror\fP
+T}	T{
+Returns a clip that plays the current clip backwards.
+T}
+_
+T{
+\fBtime_symmetrize\fP
+T}	T{
+Returns a clip that plays the current clip once forwards and then once backwards.
+T}
+_
+.TE
+.SS moviepy.video.fx.all.accel_decel
+.INDENT 0.0
+.TP
+.B moviepy.video.fx.all.accel_decel(clip, new_duration=None, abruptness=1.0, soonness=1.0)
+.INDENT 7.0
+.TP
+.B new_duration
+If None, will be that of the current clip.
+.TP
+.B abruptness
+negative abruptness (>\-1): speed up down up
+zero abruptness : no effect
+positive abruptness: speed down up down
+.TP
+.B soonness
+for positive abruptness, determines how soon the
+speedup occurs (0<soonness < inf)
+.UNINDENT
+.UNINDENT
+.SS moviepy.video.fx.all.blackwhite
+.INDENT 0.0
+.TP
+.B moviepy.video.fx.all.blackwhite(clip, RGB=[1, 1, 1], preserve_luminosity=True)
+Desaturates the picture, makes it black and white.
+Parameter RGB allows to set weights for the different color
+channels.
+If RBG is \(aqCRT_phosphor\(aq a special set of values is used.
+preserve_luminosity maintains the sum of RGB to 1.
+.UNINDENT
+.SS moviepy.video.fx.all.blink
+.INDENT 0.0
+.TP
+.B moviepy.video.fx.all.blink(clip, d_on, d_off)
+Makes the clip blink. At each blink it will be displayed \fBd_on\fP
+seconds and disappear \fBd_off\fP seconds. Will only work in
+composite clips.
+.UNINDENT
+.SS moviepy.video.fx.all.colorx
+.INDENT 0.0
+.TP
+.B moviepy.video.fx.all.colorx(clip, factor)
+multiplies the clip\(aqs colors by the given factor, can be used
+to decrease or increase the clip\(aqs brightness (is that the
+reight word ?)
+.UNINDENT
+.SS moviepy.video.fx.all.crop
+.INDENT 0.0
+.TP
+.B moviepy.video.fx.all.crop(clip, x1=None, y1=None, x2=None, y2=None, width=None, height=None, x_center=None, y_center=None)
+Returns a new clip in which just a rectangular subregion of the
+original clip is conserved. x1,y1 indicates the top left corner and
+x2,y2 is the lower right corner of the croped region.
+All coordinates are in pixels. Float numbers are accepted.
+.sp
+To crop an arbitrary rectangle:
+.sp
+.nf
+.ft C
+>>> crop(clip, x1=50, y1=60, x2=460, y2=275)
+.ft P
+.fi
+.sp
+Only remove the part above y=30:
+.sp
+.nf
+.ft C
+>>> crop(clip, y1=30)
+.ft P
+.fi
+.sp
+Crop a rectangle that starts 10 pixels left and is 200px wide
+.sp
+.nf
+.ft C
+>>> crop(clip, x1=10, width=200)
+.ft P
+.fi
+.sp
+Crop a rectangle centered in x,y=(300,400), width=50, height=150 :
+.sp
+.nf
+.ft C
+>>> crop(clip,  x_center=300 , y_center=400,
+                    width=50, height=150)
+.ft P
+.fi
+.sp
+Any combination of the above should work, like for this rectangle
+centered in x=300, with explicit y\-boundaries:
+.sp
+.nf
+.ft C
+>>> crop(x_center=300, width=400, y1=100, y2=600)
+.ft P
+.fi
+.UNINDENT
+.SS moviepy.video.fx.all.even_size
+.INDENT 0.0
+.TP
+.B moviepy.video.fx.all.even_size(clip)
+Crops the clip to make dimensions even.
+.UNINDENT
+.SS moviepy.video.fx.all.fadein
+.INDENT 0.0
+.TP
+.B moviepy.video.fx.all.fadein(clip, duration, initial_color=None)
+Makes the clip progressively appear from some color (black by default),
+over \fBduration\fP seconds at the beginning of the clip. Can be used for
+masks too, where the initial color must be a number between 0 and 1.
+For cross\-fading (progressive appearance or disappearance of a clip
+over another clip, see \fBcomposition.crossfade\fP
+.UNINDENT
+.SS moviepy.video.fx.all.fadeout
+.INDENT 0.0
+.TP
+.B moviepy.video.fx.all.fadeout(clip, duration, final_color=None)
+Makes the clip progressively fade to some color (black by default),
+over \fBduration\fP seconds at the end of the clip. Can be used for
+masks too, where the final color must be a number between 0 and 1.
+For cross\-fading (progressive appearance or disappearance of a clip
+over another clip, see \fBcomposition.crossfade\fP
+.UNINDENT
+.SS moviepy.video.fx.all.freeze
+.INDENT 0.0
+.TP
+.B moviepy.video.fx.all.freeze(clip, t=0, freeze_duration=None, total_duration=None, padding_end=0)
+Momentarily freeze the clip at time t.
+.sp
+Set \fIt=\(aqend\(aq\fP to freeze the clip at the end (actually it will freeze on the
+frame at time clip.duration \- padding_end seconds).
+With \fBduration\(ga\(gayou can specify the duration of the freeze.
+With \(ga\(gatotal_duration\fP you can specify the total duration of
+the clip and the freeze (i.e. the duration of the freeze is
+automatically calculated). One of them must be provided.
+.UNINDENT
+.SS moviepy.video.fx.all.freeze_region
+.INDENT 0.0
+.TP
+.B moviepy.video.fx.all.freeze_region(clip, t=0, region=None, outside_region=None, mask=None)
+Freezes one region of the clip while the rest remains animated.
+.sp
+You can choose one of three methods by providing either \fIregion\fP,
+\fIoutside_region\fP, or \fImask\fP\&.
+.INDENT 7.0
+.TP
+.B Parameters
+\fBt\fP
+.INDENT 7.0
+.INDENT 3.5
+Time at which to freeze the freezed region.
+.UNINDENT
+.UNINDENT
+.sp
+\fBregion\fP
+.INDENT 7.0
+.INDENT 3.5
+A tuple (x1, y1, x2, y2) defining the region of the screen (in pixels)
+which will be freezed. You can provide outside_region or mask instead.
+.UNINDENT
+.UNINDENT
+.sp
+\fBoutside_region\fP
+.INDENT 7.0
+.INDENT 3.5
+A tuple (x1, y1, x2, y2) defining the region of the screen (in pixels)
+which will be the only non\-freezed region.
+.UNINDENT
+.UNINDENT
+.sp
+\fBmask\fP
+.INDENT 7.0
+.INDENT 3.5
+If not None, will overlay a freezed version of the clip on the current clip,
+with the provided mask. In other words, the "visible" pixels in the mask
+indicate the freezed region in the final picture.
+.UNINDENT
+.UNINDENT
+.UNINDENT
+.UNINDENT
+.SS moviepy.video.fx.all.gamma_corr
+.INDENT 0.0
+.TP
+.B moviepy.video.fx.all.gamma_corr(clip, gamma)
+Gamma\-correction of a video clip
+.UNINDENT
+.SS moviepy.video.fx.all.headblur
+.INDENT 0.0
+.TP
+.B moviepy.video.fx.all.headblur(clip, fx, fy, r_zone, r_blur=None)
+Returns a filter that will blurr a moving part (a head ?) of
+the frames. The position of the blur at time t is
+defined by (fx(t), fy(t)), the radius of the blurring
+by \fBr_zone\fP and the intensity of the blurring by \fBr_blur\fP\&.
+Requires OpenCV for the circling and the blurring.
+Automatically deals with the case where part of the image goes
+offscreen.
+.UNINDENT
+.SS moviepy.video.fx.all.invert_colors
+.INDENT 0.0
+.TP
+.B moviepy.video.fx.all.invert_colors(clip)
+Returns the color\-inversed clip.
+.sp
+The values of all pixels are replaced with (255\-v) or (1\-v) for masks 
+Black becomes white, green becomes purple, etc.
+.UNINDENT
+.SS moviepy.video.fx.all.loop
+.INDENT 0.0
+.TP
+.B moviepy.video.fx.all.loop(self, n=None, duration=None)
+Returns a clip that plays the current clip in an infinite loop.
+Ideal for clips coming from gifs.
+.INDENT 7.0
+.TP
+.B Parameters
+\fBn\fP
+.INDENT 7.0
+.INDENT 3.5
+Number of times the clip should be played. If \fINone\fP the
+the clip will loop indefinitely (i.e. with no set duration).
+.UNINDENT
+.UNINDENT
+.sp
+\fBduration\fP
+.INDENT 7.0
+.INDENT 3.5
+Total duration of the clip. Can be specified instead of n.
+.UNINDENT
+.UNINDENT
+.UNINDENT
+.UNINDENT
+.SS moviepy.video.fx.all.lum_contrast
+.INDENT 0.0
+.TP
+.B moviepy.video.fx.all.lum_contrast(clip, lum=0, contrast=0, contrast_thr=127)
+luminosity\-contrast correction of a clip
+.UNINDENT
+.SS moviepy.video.fx.all.make_loopable
+.INDENT 0.0
+.TP
+.B moviepy.video.fx.all.make_loopable(clip, cross)
+Makes the clip fade in progressively at its own end, this way
+it can be looped indefinitely. \fBcross\fP is the duration in seconds
+of the fade\-in.
+.UNINDENT
+.SS moviepy.video.fx.all.margin
+.INDENT 0.0
+.TP
+.B moviepy.video.fx.all.margin(clip, mar=None, left=0, right=0, top=0, bottom=0, color=(0, 0, 0), opacity=1.0)
+Draws an external margin all around the frame.
+.INDENT 7.0
+.TP
+.B Parameters
+.INDENT 7.0
+.IP \(bu 2
+\fBmar\fP \-\- if not \fBNone\fP, then the new clip has a margin of
+size \fBmar\fP in pixels on the left, right, top, and bottom.
+.IP \(bu 2
+\fBright, top, bottom\fP (\fIleft,\fP) \-\- width of the margin in pixel
+in these directions.
+.IP \(bu 2
+\fBcolor\fP \-\- color of the margin.
+.IP \(bu 2
+\fBmask_margin\fP \-\- value of the mask on the margin. Setting
+this value to 0 yields transparent margins.
+.UNINDENT
+.UNINDENT
+.UNINDENT
+.SS moviepy.video.fx.all.mask_and
+.INDENT 0.0
+.TP
+.B moviepy.video.fx.all.mask_and(clip, other_clip)
+Returns the logical \(aqand\(aq (min) between two masks.
+other_clip can be a mask clip or a picture (np.array).
+The result has the duration of \(aqclip\(aq (if it has any)
+.UNINDENT
+.SS moviepy.video.fx.all.mask_color
+.INDENT 0.0
+.TP
+.B moviepy.video.fx.all.mask_color(clip, color=[0, 0, 0], thr=0, s=1)
+Returns a new clip with a mask for transparency where the original
+clip is of the given color.
+.sp
+You can also have a "progressive" mask by specifying a non\-nul distance
+threshold thr. In this case, if the distance between a pixel and the given
+color is d, the transparency will be
+.sp
+d**s / (thr**s + d**s)
+which is 1 when d>>thr and 0 for d<<thr, the stiffness of the effect being
+parametrized by s
+.UNINDENT
+.SS moviepy.video.fx.all.mask_or
+.INDENT 0.0
+.TP
+.B moviepy.video.fx.all.mask_or(clip, other_clip)
+Returns the logical \(aqor\(aq (max) between two masks.
+other_clip can be a mask clip or a picture (np.array).
+The result has the duration of \(aqclip\(aq (if it has any)
+.UNINDENT
+.SS moviepy.video.fx.all.mirror_x
+.INDENT 0.0
+.TP
+.B moviepy.video.fx.all.mirror_x(clip, apply_to=\(aqmask\(aq)
+flips the clip horizontally (and its mask too, by default)
+.UNINDENT
+.SS moviepy.video.fx.all.mirror_y
+.INDENT 0.0
+.TP
+.B moviepy.video.fx.all.mirror_y(clip, apply_to=\(aqmask\(aq)
+flips the clip vertically (and its mask too, by default)
+.UNINDENT
+.SS moviepy.video.fx.all.painting
+.INDENT 0.0
+.TP
+.B moviepy.video.fx.all.painting(clip, saturation=1.4, black=0.006)
+Transforms any photo into some kind of painting. Saturation
+tells at which point the colors of the result should be
+flashy. \fBblack\fP gives the anount of black lines wanted.
+Requires Scikit\-image or Scipy installed.
+.UNINDENT
+.SS moviepy.video.fx.all.resize
+.INDENT 0.0
+.TP
+.B moviepy.video.fx.all.resize(clip, newsize=None, height=None, width=None, apply_to_mask=True)
+Returns a video clip that is a resized version of the clip.
+.INDENT 7.0
+.TP
+.B Parameters
+\fBnewsize:\fP
+.INDENT 7.0
+.INDENT 3.5
+.INDENT 0.0
+.TP
+.B Can be either 
+.INDENT 7.0
+.IP \(bu 2
+\fB(height,width)\fP in pixels or a float representing
+.IP \(bu 2
+A scaling factor, like 0.5
+.IP \(bu 2
+A function of time returning one of these.
+.UNINDENT
+.UNINDENT
+.UNINDENT
+.UNINDENT
+.sp
+\fBwidth:\fP
+.INDENT 7.0
+.INDENT 3.5
+width of the new clip in pixel. The height is then computed so
+that the width/height ratio is conserved.
+.UNINDENT
+.UNINDENT
+.sp
+\fBheight:\fP
+.INDENT 7.0
+.INDENT 3.5
+height of the new clip in pixel. The width is then computed so
+that the width/height ratio is conserved.
+.UNINDENT
+.UNINDENT
+.UNINDENT
+Examples.sp
+.nf
+.ft C
+>>> myClip.resize( (460,720) ) # New resolution: (460,720)
+>>> myClip.resize(0.6) # width and heigth multiplied by 0.6
+>>> myClip.resize(width=800) # height computed automatically.
+>>> myClip.resize(lambda t : 1+0.02*t) # slow swelling of the clip
+.ft P
+.fi
+.UNINDENT
+.SS moviepy.video.fx.all.scroll
+.INDENT 0.0
+.TP
+.B moviepy.video.fx.all.scroll(clip, h=None, w=None, x_speed=0, y_speed=0, x_start=0, y_start=0, apply_to=\(aqmask\(aq)
+Scrolls horizontally or vertically a clip, e.g. to make end
+credits
+.UNINDENT
+.SS moviepy.video.fx.all.speedx
+.INDENT 0.0
+.TP
+.B moviepy.video.fx.all.speedx(clip, factor=None, final_duration=None)
+Returns a clip playing the current clip but at a speed multiplied
+by \fBfactor\fP\&. Instead of factor one can indicate the desired
+\fBfinal_duration\fP of the clip, and the factor will be automatically
+computed.
+The same effect is applied to the clip\(aqs audio and mask if any.
+.UNINDENT
+.SS moviepy.video.fx.all.supersample
+.INDENT 0.0
+.TP
+.B moviepy.video.fx.all.supersample(clip, d, nframes)
+Replaces each frame at time t by the mean of \fInframes\fP equally spaced frames
+taken in the interval [t\-d, t+d]. This results in motion blur.
+.UNINDENT
+.SS moviepy.video.fx.all.time_mirror
+.INDENT 0.0
+.TP
+.B moviepy.video.fx.all.time_mirror(self)
+Returns a clip that plays the current clip backwards.
+The clip must have its \fBduration\fP attribute set.
+The same effect is applied to the clip\(aqs audio and mask if any.
+.UNINDENT
+.SS moviepy.video.fx.all.time_symmetrize
+.INDENT 0.0
+.TP
+.B moviepy.video.fx.all.time_symmetrize(clip)
+Returns a clip that plays the current clip once forwards and
+then once backwards. This is very practival to make video that
+loop well, e.g. to create animated GIFs.
+This effect is automatically applied to the clip\(aqs mask and audio
+if they exist.
+.UNINDENT
+.SS audio.fx
+.sp
+The module \fBmoviepy.audio.fx\fP regroups functions meant to be used with \fBaudio.fx()\fP\&.
+Note that some of these functions such as \fBvolumex\fP (which multiplies the volume) can
+be applied directly to a video clip, at which case they will affect the audio clip attached to this
+video clip. Read the docs of the different functions to know when this is the case.
+.sp
+Because this module will be larger in the future, it allows two kinds of import.
+You can either import a single function like this:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+from moviepy.audio.fx.volumex import volumex
+newaudio = audioclip.fx( vfx.volumex, 0.5)
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+Or import everything:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+import moviepy.audio.fx.all as afx
+newaudio = (audioclip.afx( vfx.volumex, 0.5)
+                     .afx( vfx.audio_fadein, 1.0)
+                     .afx( vfx.audio_fadeout, 1.0))
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+When you type
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+from moviepy.editor import *
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+the module \fBaudio.fx\fP is loaded as \fBafx\fP and you can use \fBafx.volumex\fP, etc.
+.TS
+center;
+|l|l|.
+_
+T{
+\fBaudio_fadein\fP
+T}	T{
+Return an audio (or video) clip that is first mute, then the sound arrives progressively over \fBduration\fP seconds.
+T}
+_
+T{
+\fBaudio_fadeout\fP
+T}	T{
+Return a sound clip where the sound fades out progressively over \fBduration\fP seconds at the end of the clip.
+T}
+_
+T{
+\fBaudio_loop\fP
+T}	T{
+Loops over an audio clip.
+T}
+_
+T{
+\fBvolumex\fP
+T}	T{
+Returns a clip with audio volume multiplied by the value \fIfactor\fP\&.
+T}
+_
+.TE
+.SS moviepy.audio.fx.all.audio_fadein
+.INDENT 0.0
+.TP
+.B moviepy.audio.fx.all.audio_fadein(clip, duration)
+Return an audio (or video) clip that is first mute, then the
+sound arrives progressively over \fBduration\fP seconds.
+.UNINDENT
+.SS moviepy.audio.fx.all.audio_fadeout
+.INDENT 0.0
+.TP
+.B moviepy.audio.fx.all.audio_fadeout(clip, duration)
+Return a sound clip where the sound fades out progressively
+over \fBduration\fP seconds at the end of the clip.
+.UNINDENT
+.SS moviepy.audio.fx.all.audio_loop
+.INDENT 0.0
+.TP
+.B moviepy.audio.fx.all.audio_loop(audioclip, nloops=None, duration=None)
+Loops over an audio clip.
+.sp
+Returns an audio clip that plays the given clip either
+\fInloops\fP times, or during \fIduration\fP seconds.
+Examples.sp
+.nf
+.ft C
+>>> from moviepy.editor import *
+>>> videoclip = VideoFileClip(\(aqmyvideo.mp4\(aq)
+>>> music = AudioFileClip(\(aqmusic.ogg\(aq)
+>>> audio = afx.audio_loop( music, duration=videoclip.duration)
+>>> videoclip.set_audio(audio)
+.ft P
+.fi
+.UNINDENT
+.SS moviepy.audio.fx.all.volumex
+.INDENT 0.0
+.TP
+.B moviepy.audio.fx.all.volumex(clip, factor)
+Returns a clip with audio volume multiplied by the
+value \fIfactor\fP\&. Can be applied to both audio and video clips.
+.sp
+This effect is loaded as a clip method when you use moviepy.editor,
+so you can just write \fBclip.volumex(2)\fP
+Examples.sp
+.nf
+.ft C
+>>> newclip = volumex(clip, 2.0) # doubles audio volume
+>>> newclip = clip.fx( volumex, 0.5) # half audio, use with fx
+>>> newclip = clip.volumex(2) # only if you used "moviepy.editor"
+.ft P
+.fi
+.UNINDENT
+.SS video.tools
+.sp
+This module regroups advanced, useful (and less useful) functions for editing videos, by alphabetical order.
+.SS Credits
+.sp
+This module contains different functions to make end and opening
+credits, even though it is difficult to fill everyone needs in this
+matter.
+.INDENT 0.0
+.TP
+.B moviepy.video.tools.credits.credits1(creditfile, width, stretch=30, color=\(aqwhite\(aq, stroke_color=\(aqblack\(aq, stroke_width=2, font=\(aqImpact\-Normal\(aq, fontsize=60)
+.INDENT 7.0
+.TP
+.B Parameters
+\fBcreditfile\fP
+.INDENT 7.0
+.INDENT 3.5
+A text file whose content must be as follows:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+# This is a comment
+# The next line says : leave 4 blank lines
+\&.blank 4
+
+\&..Executive Story Editor
+MARCEL DURAND
+
+\&..Associate Producers
+MARTIN MARCEL
+DIDIER MARTIN
+
+\&..Music Supervisor
+JEAN DIDIER
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.UNINDENT
+.UNINDENT
+.sp
+\fBwidth\fP
+.INDENT 7.0
+.INDENT 3.5
+Total width of the credits text in pixels
+.UNINDENT
+.UNINDENT
+.sp
+\fBgap\fP
+.INDENT 7.0
+.INDENT 3.5
+Gap in pixels between the jobs and the names.
+.UNINDENT
+.UNINDENT
+.sp
+\fB**txt_kw\fP
+.INDENT 7.0
+.INDENT 3.5
+Additional argument passed to TextClip (font, colors, etc.)
+.UNINDENT
+.UNINDENT
+.TP
+.B Returns
+image
+.INDENT 7.0
+.INDENT 3.5
+An ImageClip instance that looks like this and can be scrolled
+to make some credits :
+.INDENT 0.0
+.INDENT 3.5
+.INDENT 0.0
+.TP
+.B Executive Story Editor    MARCEL DURAND
+.INDENT 7.0
+.TP
+.B Associate Producers    MARTIN MARCEL
+.INDENT 7.0
+.INDENT 3.5
+DIDIER MARTIN
+.UNINDENT
+.UNINDENT
+.sp
+Music Supervisor    JEAN DIDIER
+.UNINDENT
+.UNINDENT
+.UNINDENT
+.UNINDENT
+.UNINDENT
+.UNINDENT
+.UNINDENT
+.UNINDENT
+.SS Drawing
+.sp
+This module deals with making images (np arrays). It provides drawing
+methods that are difficult to do with the existing Python libraries.
+.INDENT 0.0
+.TP
+.B moviepy.video.tools.drawing.blit(im1, im2, pos=[0, 0], mask=None, ismask=False)
+Blit an image over another.
+.sp
+Blits \fBim1\fP on \fBim2\fP as position \fBpos=(x,y)\fP, using the
+\fBmask\fP if provided. If \fBim1\fP and \fBim2\fP are mask pictures
+(2D float arrays) then \fBismask\fP must be \fBTrue\fP\&.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B moviepy.video.tools.drawing.circle(screensize, center, radius, col1=1.0, col2=0, blur=1)
+Draw an image with a circle.
+.sp
+Draws a circle of color \fBcol1\fP, on a background of color \fBcol2\fP,
+on a screen of size \fBscreensize\fP at the position \fBcenter=(x,y)\fP,
+with a radius \fBradius\fP but slightly blurred on the border by \fBblur\fP
+pixels
+.UNINDENT
+.INDENT 0.0
+.TP
+.B moviepy.video.tools.drawing.color_gradient(size, p1, p2=None, vector=None, r=None, col1=0, col2=1.0, shape=\(aqlinear\(aq, offset=0)
+Draw a linear, bilinear, or radial gradient.
+.sp
+The result is a picture of size \fBsize\fP, whose color varies
+gradually from color \fIcol1\fP in position \fBp1\fP to color \fBcol2\fP
+in position \fBp2\fP\&.
+.sp
+If it is a RGB picture the result must be transformed into
+a \(aquint8\(aq array to be displayed normally:
+.INDENT 7.0
+.TP
+.B Parameters
+\fBsize\fP
+.INDENT 7.0
+.INDENT 3.5
+Size (width, height) in pixels of the final picture/array.
+.UNINDENT
+.UNINDENT
+.sp
+\fBp1, p2\fP
+.INDENT 7.0
+.INDENT 3.5
+Coordinates (x,y) in pixels of the limit point for \fBcol1\fP
+and \fBcol2\fP\&. The color \(aqbefore\(aq \fBp1\fP is \fBcol1\fP and it
+gradually changes in the direction of \fBp2\fP until it is \fBcol2\fP
+when it reaches \fBp2\fP\&.
+.UNINDENT
+.UNINDENT
+.sp
+\fBvector\fP
+.INDENT 7.0
+.INDENT 3.5
+A vector [x,y] in pixels that can be provided instead of \fBp2\fP\&.
+\fBp2\fP is then defined as (p1 + vector).
+.UNINDENT
+.UNINDENT
+.sp
+\fBcol1, col2\fP
+.INDENT 7.0
+.INDENT 3.5
+Either floats between 0 and 1 (for gradients used in masks)
+or [R,G,B] arrays (for colored gradients).
+.UNINDENT
+.UNINDENT
+.sp
+\fBshape\fP
+.INDENT 7.0
+.INDENT 3.5
+\(aqlinear\(aq, \(aqbilinear\(aq, or \(aqcircular\(aq.
+In a linear gradient the color varies in one direction,
+from point \fBp1\fP to point \fBp2\fP\&.
+In a bilinear gradient it also varies symetrically form \fBp1\fP
+in the other direction.
+In a circular gradient it goes from \fBcol1\fP to \fBcol2\fP in all
+directions.
+.UNINDENT
+.UNINDENT
+.sp
+\fBoffset\fP
+.INDENT 7.0
+.INDENT 3.5
+Real number between 0 and 1 indicating the fraction of the vector
+at which the gradient actually starts. For instance if \fBoffset\fP
+is 0.9 in a gradient going from p1 to p2, then the gradient will
+only occur near p2 (before that everything is of color \fBcol1\fP)
+If the offset is 0.9 in a radial gradient, the gradient will
+occur in the region located between 90% and 100% of the radius,
+this creates a blurry disc of radius d(p1,p2).
+.UNINDENT
+.UNINDENT
+.TP
+.B Returns
+image
+.INDENT 7.0
+.INDENT 3.5
+An Numpy array of dimensions (W,H,ncolors) of type float
+representing the image of the gradient.
+.UNINDENT
+.UNINDENT
+.UNINDENT
+Examples.sp
+.nf
+.ft C
+>>> grad = color_gradient(blabla).astype(\(aquint8\(aq)
+.ft P
+.fi
+.UNINDENT
+.INDENT 0.0
+.TP
+.B moviepy.video.tools.drawing.color_split(size, x=None, y=None, p1=None, p2=None, vector=None, col1=0, col2=1.0, grad_width=0)
+Make an image splitted in 2 colored regions.
+.sp
+Returns an array of size \fBsize\fP divided in two regions called 1 and
+2 in wht follows, and which will have colors col& and col2
+respectively.
+.INDENT 7.0
+.TP
+.B Parameters
+\fBx: (int)\fP
+.INDENT 7.0
+.INDENT 3.5
+If provided, the image is splitted horizontally in x, the left
+region being region 1.
+.UNINDENT
+.UNINDENT
+.sp
+\fBy: (int)\fP
+.INDENT 7.0
+.INDENT 3.5
+If provided, the image is splitted vertically in y, the top region
+being region 1.
+.UNINDENT
+.UNINDENT
+.sp
+\fBp1,p2:\fP
+.INDENT 7.0
+.INDENT 3.5
+Positions (x1,y1),(x2,y2) in pixels, where the numbers can be
+floats. Region 1 is defined as the whole region on the left when
+going from \fBp1\fP to \fBp2\fP\&.
+.UNINDENT
+.UNINDENT
+.sp
+\fBp1, vector:\fP
+.INDENT 7.0
+.INDENT 3.5
+\fBp1\fP is (x1,y1) and vector (v1,v2), where the numbers can be
+floats. Region 1 is then the region on the left when starting
+in position \fBp1\fP and going in the direction given by \fBvector\fP\&.
+.UNINDENT
+.UNINDENT
+.sp
+\fBgradient_width\fP
+.INDENT 7.0
+.INDENT 3.5
+If not zero, the split is not sharp, but gradual over a region of
+width \fBgradient_width\fP (in pixels). This is preferable in many
+situations (for instance for antialiasing).
+.UNINDENT
+.UNINDENT
+.UNINDENT
+Examples.sp
+.nf
+.ft C
+>>> size = [200,200]
+>>> # an image with all pixels with x<50 =0, the others =1
+>>> color_split(size, x=50, col1=0, col2=1)
+>>> # an image with all pixels with y<50 red, the others green
+>>> color_split(size, x=50, col1=[255,0,0], col2=[0,255,0])
+>>> # An image splitted along an arbitrary line (see below) 
+>>> color_split(size, p1=[20,50], p2=[25,70] col1=0, col2=1)
+.ft P
+.fi
+.UNINDENT
+.SS Segmenting
+.INDENT 0.0
+.TP
+.B moviepy.video.tools.segmenting.findObjects(clip, rem_thr=500, preview=False)
+Returns a list of ImageClips representing each a separate object on
+the screen.
+.INDENT 7.0
+.TP
+.B rem_thr
+all objects found with size < rem_Thr will be
+considered false positives and will be removed
+.UNINDENT
+.UNINDENT
+.SS Subtitles
+.sp
+Experimental module for subtitles support.
+.INDENT 0.0
+.TP
+.B class moviepy.video.tools.subtitles.SubtitlesClip(subtitles, make_textclip=None)
+Bases: \fBmoviepy.video.VideoClip.VideoClip\fP
+.sp
+A Clip that serves as "subtitle track" in videos.
+.sp
+One particularity of this class is that the images of the
+subtitle texts are not generated beforehand, but only if
+needed.
+.INDENT 7.0
+.TP
+.B Parameters
+\fBsubtitles\fP
+.INDENT 7.0
+.INDENT 3.5
+Either the name of a file, or a list
+.UNINDENT
+.UNINDENT
+.UNINDENT
+Examples.sp
+.nf
+.ft C
+>>> from moviepy.video.tools.subtitles import SubtitlesClip
+>>> from moviepy.video.io.VideoFileClip import VideoFileClip
+>>> generator = lambda txt: TextClip(txt, font=\(aqGeorgia\-Regular\(aq,
+                                    fontsize=24, color=\(aqwhite\(aq)
+>>> sub = SubtitlesClip("subtitles.srt", generator)
+>>> myvideo = VideoFileClip("myvideo.avi")
+>>> final = CompositeVideoClip([clip, subtitles])
+>>> final.to_videofile("final.mp4", fps=myvideo.fps)
+.ft P
+.fi
+.INDENT 7.0
+.TP
+.B in_subclip(t_start=None, t_end=None)
+Returns a sequence of [(t1,t2), txt] covering all the given subclip
+from t_start to t_end. The first and last times will be cropped so as
+to be exactly t_start and t_end if possible.
+.UNINDENT
+.UNINDENT
+.INDENT 0.0
+.TP
+.B moviepy.video.tools.subtitles.file_to_subtitles(filename)
+Converts a srt file into subtitles.
+.sp
+The returned list is of the form \fB[((ta,tb),\(aqsome text\(aq),...]\fP
+and can be fed to SubtitlesClip.
+.sp
+Only works for \(aq.srt\(aq format for the moment.
+.UNINDENT
+.SS Tracking
+.SS audio.tools
+.sp
+Currently empty
+.SS FFMPEG tools
+.sp
+Misc. bindings to ffmpeg and ImageMagick.
+.INDENT 0.0
+.TP
+.B moviepy.video.io.ffmpeg_tools.ffmpeg_extract_audio(inputfile, output, bitrate=3000, fps=44100)
+extract the sound from a video file and save it in \fBoutput\fP
+.UNINDENT
+.INDENT 0.0
+.TP
+.B moviepy.video.io.ffmpeg_tools.ffmpeg_extract_subclip(filename, t1, t2, targetname=None)
+makes a new video file playing video file \fBfilename\fP between
+the times \fBt1\fP and \fBt2\fP\&.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B moviepy.video.io.ffmpeg_tools.ffmpeg_merge_video_audio(video, audio, output, vcodec=\(aqcopy\(aq, acodec=\(aqcopy\(aq, ffmpeg_output=False, verbose=True)
+merges video file \fBvideo\fP and audio file \fBaudio\fP into one
+movie file \fBoutput\fP\&.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B moviepy.video.io.ffmpeg_tools.ffmpeg_movie_from_frames(filename, folder, fps, digits=6)
+Writes a movie out of the frames (picture files) in a folder.
+Almost deprecated.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B moviepy.video.io.ffmpeg_tools.ffmpeg_resize(video, output, size)
+resizes \fBvideo\fP to new size \fBsize\fP and write the result
+in file \fBoutput\fP\&.
+.UNINDENT
+.SS Decorators
+.sp
+These decorators are implemented to ease the writing of methods and effects in MoviePy
+.sp
+all decorators used in moviepy go there
+.INDENT 0.0
+.TP
+.B moviepy.decorators.add_mask_if_none(func)
+Add a mask to the clip if there is none.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B moviepy.decorators.apply_to_audio(func)
+This decorator will apply the function f to the audio of
+the clip created with f
+.UNINDENT
+.INDENT 0.0
+.TP
+.B moviepy.decorators.apply_to_mask(func)
+This decorator will apply the same function f to the mask of
+the clip created with f
+.UNINDENT
+.INDENT 0.0
+.TP
+.B moviepy.decorators.audio_video_fx(func)
+Use an audio function on a video/audio clip
+.sp
+This decorator tells that the function f (audioclip \-> audioclip)
+can be also used on a video clip, at which case it returns a
+videoclip with unmodified video and modified audio.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B moviepy.decorators.convert_masks_to_RGB(func)
+If the clip is a mask, convert it to RGB before running the function
+.UNINDENT
+.INDENT 0.0
+.TP
+.B moviepy.decorators.convert_to_seconds(varnames)
+Converts the specified variables to seconds
+.UNINDENT
+.INDENT 0.0
+.TP
+.B moviepy.decorators.outplace(func)
+Applies f(clip.copy(), 
+.nf
+*
+.fi
+a, 
+.nf
+**
+.fi
+k) and returns clip.copy()
+.UNINDENT
+.INDENT 0.0
+.TP
+.B moviepy.decorators.preprocess_args(fun, varnames)
+Applies fun to variables in varnames before launching the function
+.UNINDENT
+.INDENT 0.0
+.TP
+.B moviepy.decorators.requires_duration(func)
+Raise an error if the clip has no duration.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B moviepy.decorators.use_clip_fps_by_default(func)
+Will use clip.fps if no fps=... is provided in 
+.nf
+**
+.fi
+k
+.UNINDENT
+.sp
+MoviePy is an open source software originally written by \fI\%Zulko\fP and released under the MIT licence. It works on Windows, Mac, and Linux, with Python 2 or Python 3. The code is hosted on \fI\%Github\fP, where you can push improvements, report bugs and ask for help. There is also a MoviePy forum on \fI\%Reddit\fP and a mailing list on \fI\%librelist\fP .
+.SH AUTHOR
+Zulko
+.SH COPYRIGHT
+2017, Zulko
+.\" Generated by docutils manpage writer.
+.

@@ -1,0 +1,52 @@
+Source: moviepy
+Section: python
+Priority: optional
+Maintainer: Kerim Ölçer <kerimlcr@gmail.com>
+Build-Depends: debhelper (>=9),dh-python,python-all (>= 2.6.6-3~),python-setuptools,python3-all,python3-setuptools
+Build-Depends-Indep: python-docutils,
+                     python3-docutils,
+                     python-sphinx,
+                     python3-sphinx,
+                     python-sphinx-rtd-theme,
+                     python3-sphinx-rtd-theme,
+                     python-numpydoc,
+                     python3-numpydoc
+Standards-Version: 3.9.8
+Homepage: http://zulko.github.io/moviepy
+X-Python-Version: >= 2.6
+X-Python3-Version: >= 3.2
+#Vcs-Git: git://anonscm.debian.org/collab-maint/moviepy.git
+#Vcs-Browser: https://anonscm.debian.org/cgit/collab-maint/moviepy.git
+
+Package: python-moviepy
+Architecture: all
+Depends: ${python:Depends}, ${misc:Depends}, ffmpeg, python-numpy, python-decorator, python-tqdm, python-opencv, python-scipy, python-pil, python-scikits-learn
+Suggests: python-moviepy-doc, ipython
+Description: MoviePy is a Python module for video editing
+ MoviePy is a Python module for video editing, which can be used for basic
+ operations (like cuts, concatenations, title insertions), video compositing
+ (a.k.a. non-linear editing), video processing, or to create advanced effects
+ .
+ This package installs the library for Python 2.
+
+Package: python3-moviepy
+Architecture: all
+Depends: ${python3:Depends}, ${misc:Depends}, ffmpeg, python3-numpy, python3-decorator, python3-tqdm, python-opencv, python3-scipy, python3-pil, python3-scikits-learn
+Suggests: python-moviepy-doc, ipython3
+Description: MoviePy is a Python module for video editing
+ MoviePy is a Python module for video editing, which can be used for basic
+ operations (like cuts, concatenations, title insertions), video compositing
+ (a.k.a. non-linear editing), video processing, or to create advanced effects
+ .
+ This package installs the library for Python 3.
+
+Package: python-moviepy-doc
+Architecture: all
+Section: doc
+Depends: ${sphinxdoc:Depends}, ${misc:Depends}
+Description: MoviePy is a Python module for video editing
+ MoviePy is a Python module for video editing, which can be used for basic
+ operations (like cuts, concatenations, title insertions), video compositing
+ (a.k.a. non-linear editing), video processing, or to create advanced effects
+ .
+ This is the common documentation package.
